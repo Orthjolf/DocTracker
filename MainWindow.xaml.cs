@@ -35,6 +35,8 @@ namespace WpfApp
 			InitializeChildPanels();
 			CurrentPanel = MainPanel;
 			RootLayout.Children.Add(CurrentPanel);
+
+			var a = new DataAccessLayer();
 		}
 
 		private void SetRootPanelProperties()

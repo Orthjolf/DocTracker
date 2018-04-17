@@ -29,3 +29,14 @@ D:\work\WpfApp\bin\Debug\MahApps.Metro.IconPacks.pdb
 D:\work\WpfApp\bin\Debug\MahApps.Metro.IconPacks.xml
 D:\work\WpfApp\bin\Debug\MahApps.Metro.IconPacks.Modern.pdb
 D:\work\WpfApp\bin\Debug\MahApps.Metro.IconPacks.Modern.xml
+D:\work\WpfApp\bin\Debug\DnsClient.dll
+D:\work\WpfApp\bin\Debug\MongoDB.Bson.dll
+D:\work\WpfApp\bin\Debug\MongoDB.Driver.Core.dll
+D:\work\WpfApp\bin\Debug\MongoDB.Driver.dll
+D:\work\WpfApp\bin\Debug\System.Buffers.dll
+D:\work\WpfApp\bin\Debug\System.Configuration.dll
+D:\work\WpfApp\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\work\WpfApp\bin\Debug\DnsClient.xml
+D:\work\WpfApp\bin\Debug\MongoDB.Bson.xml
+D:\work\WpfApp\bin\Debug\MongoDB.Driver.xml
+D:\work\WpfApp\bin\Debug\MongoDB.Driver.Core.xml

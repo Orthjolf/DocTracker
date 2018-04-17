@@ -2,33 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a06753c-fc3f-4f4b-ae42-98ef4906f57e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Backend/UiBuilder.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Backend/UiConstants.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DbMock/Repository.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Entity.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Storage.cs" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/App.xaml" afterPath="$PROJECT_DIR$/App.xaml" />
-      <change beforePath="$PROJECT_DIR$/MainWindow.xaml" afterPath="$PROJECT_DIR$/MainWindow.xaml" />
+      <change beforePath="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" afterPath="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" />
       <change beforePath="$PROJECT_DIR$/MainWindow.xaml.cs" afterPath="$PROJECT_DIR$/MainWindow.xaml.cs" />
       <change beforePath="$PROJECT_DIR$/WpfApp.csproj" afterPath="$PROJECT_DIR$/WpfApp.csproj" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/App.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/App.g.cs" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/App.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/App.g.i.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/App.baml" afterPath="$PROJECT_DIR$/obj/Debug/App.baml" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.csproj.FileListAbsolute.txt" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.csprojResolveAssemblyReference.cache" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.cache" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.cache" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.lref" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/packages.config" afterPath="$PROJECT_DIR$/packages.config" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+            <state relative-caret-position="270">
+              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding>
                 <marker date="1523969541128" expanded="true" signature="0:1281" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
                 <marker date="1523969541128" expanded="true" signature="659:1257" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;.../&gt;" />
@@ -68,19 +56,19 @@
       <file leaf-file-name="MainWindow.xaml.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+            <state relative-caret-position="333">
+              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
               <folding>
-                <marker date="1523965077177" expanded="true" signature="6:168" ph="..." />
-                <marker date="1523965077177" expanded="true" signature="186:1226" ph="{...}" />
-                <marker date="1523965077177" expanded="true" signature="221:1224" ph="{...}" />
-                <marker date="1523965077177" expanded="true" signature="227:278" ph="/// Главная панель ... " />
-                <marker date="1523965077177" expanded="true" signature="421:472" ph="/// Текущая панель ... " />
-                <marker date="1523965077177" expanded="true" signature="543:603" ph="{...}" />
-                <marker date="1523965077177" expanded="true" signature="641:777" ph="{...}" />
-                <marker date="1523965077177" expanded="true" signature="818:998" ph="{...}" />
-                <marker date="1523965077177" expanded="true" signature="1038:1125" ph="{...}" />
-                <marker date="1523965077177" expanded="true" signature="1191:1221" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="6:168" ph="..." />
+                <marker date="1523970491436" expanded="true" signature="186:1261" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="221:1259" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="227:278" ph="/// Главная панель ... " />
+                <marker date="1523970491436" expanded="true" signature="421:472" ph="/// Текущая панель ... " />
+                <marker date="1523970491436" expanded="true" signature="543:603" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="641:812" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="853:1033" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="1073:1160" ph="{...}" />
+                <marker date="1523970491436" expanded="true" signature="1226:1256" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -158,14 +146,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataAccessLayer.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataAccessLayer.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            <state relative-caret-position="330">
+              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
-                <marker date="1523956784466" expanded="true" signature="23:66" ph="{...}" />
-                <marker date="1523956784466" expanded="true" signature="55:64" ph="{...}" />
+                <marker date="1523970453468" expanded="true" signature="6:93" ph="..." />
+                <marker date="1523970453468" expanded="true" signature="118:751" ph="{...}" />
+                <marker date="1523970453468" expanded="true" signature="150:749" ph="{...}" />
+                <marker date="1523970453468" expanded="true" signature="180:428" ph="{...}" />
+                <marker date="1523970453468" expanded="true" signature="496:746" ph="{...}" />
+                <marker date="1523970453468" expanded="true" signature="558:742" ph="{...}" />
+                <marker date="1523970453468" expanded="true" signature="675:737" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -231,16 +224,16 @@
         <option value="$PROJECT_DIR$/Backend/Item.cs" />
         <option value="$PROJECT_DIR$/Backend/Entity.cs" />
         <option value="$PROJECT_DIR$/DbMock/Repository.cs" />
-        <option value="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" />
         <option value="$PROJECT_DIR$/Backend/Storage.cs" />
         <option value="$PROJECT_DIR$/DbMock/Storages.cs" />
         <option value="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
         <option value="$PROJECT_DIR$/UiBuilder.cs" />
-        <option value="$PROJECT_DIR$/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/App.xaml" />
         <option value="$PROJECT_DIR$/Backend/UiConstants.cs" />
         <option value="$PROJECT_DIR$/Backend/UiBuilder.cs" />
         <option value="$PROJECT_DIR$/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" />
+        <option value="$PROJECT_DIR$/MainWindow.xaml.cs" />
       </list>
     </option>
   </component>
@@ -379,12 +372,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523945957240</updated>
-      <workItem from="1523945960167" duration="18343000" />
+      <workItem from="1523945960167" duration="19329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18343000" />
+    <option name="totallyTimeSpent" value="19329000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,16 +390,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.327654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.327654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5321101" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30799475" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.166875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32503277" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -430,7 +424,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs</url>
+          <line>11</line>
+          <properties documentPath="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" initialLine="11">
+            <startOffsets>
+              <startOffset value="188" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="242" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -529,17 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-          <folding>
-            <marker date="1523956784466" expanded="true" signature="23:66" ph="{...}" />
-            <marker date="1523956784466" expanded="true" signature="55:64" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/UiConstants.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -552,21 +550,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+        <state relative-caret-position="288">
+          <caret line="69" column="118" lean-forward="false" selection-start-line="69" selection-start-column="94" selection-end-line="69" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
-            <marker date="1523965077177" expanded="true" signature="6:168" ph="..." />
-            <marker date="1523965077177" expanded="true" signature="186:1226" ph="{...}" />
-            <marker date="1523965077177" expanded="true" signature="221:1224" ph="{...}" />
-            <marker date="1523965077177" expanded="true" signature="227:278" ph="/// Главная панель ... " />
-            <marker date="1523965077177" expanded="true" signature="421:472" ph="/// Текущая панель ... " />
-            <marker date="1523965077177" expanded="true" signature="543:603" ph="{...}" />
-            <marker date="1523965077177" expanded="true" signature="641:777" ph="{...}" />
-            <marker date="1523965077177" expanded="true" signature="818:998" ph="{...}" />
-            <marker date="1523965077177" expanded="true" signature="1038:1125" ph="{...}" />
-            <marker date="1523965077177" expanded="true" signature="1191:1221" ph="{...}" />
+            <marker date="1523969541128" expanded="true" signature="0:1281" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="659:1257" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="668:849" ph="&lt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="853:1035" ph="&lt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="1039:1248" ph="&lt;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;.../&gt;" />
           </folding>
         </state>
       </provider>
@@ -593,24 +594,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs">
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="69" column="118" lean-forward="false" selection-start-line="69" selection-start-column="94" selection-end-line="69" selection-end-column="118" />
-          <folding />
+        <state relative-caret-position="333">
+          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <marker date="1523970491436" expanded="true" signature="6:168" ph="..." />
+            <marker date="1523970491436" expanded="true" signature="186:1261" ph="{...}" />
+            <marker date="1523970491436" expanded="true" signature="221:1259" ph="{...}" />
+            <marker date="1523970491436" expanded="true" signature="227:278" ph="/// Главная панель ... " />
+            <marker date="1523970491436" expanded="true" signature="421:472" ph="/// Текущая панель ... " />
+            <marker date="1523970491436" expanded="true" signature="543:603" ph="{...}" />
+            <marker date="1523970491436" expanded="true" signature="641:812" ph="{...}" />
+            <marker date="1523970491436" expanded="true" signature="853:1033" ph="{...}" />
+            <marker date="1523970491436" expanded="true" signature="1073:1160" ph="{...}" />
+            <marker date="1523970491436" expanded="true" signature="1226:1256" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+    <entry file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+        <state relative-caret-position="330">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
-            <marker date="1523969541128" expanded="true" signature="0:1281" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-            <marker date="1523969541128" expanded="true" signature="659:1257" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;.../&gt;" />
-            <marker date="1523969541128" expanded="true" signature="668:849" ph="&lt;.../&gt;" />
-            <marker date="1523969541128" expanded="true" signature="853:1035" ph="&lt;.../&gt;" />
-            <marker date="1523969541128" expanded="true" signature="1039:1248" ph="&lt;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;.../&gt;" />
+            <marker date="1523970453468" expanded="true" signature="6:93" ph="..." />
+            <marker date="1523970453468" expanded="true" signature="118:751" ph="{...}" />
+            <marker date="1523970453468" expanded="true" signature="150:749" ph="{...}" />
+            <marker date="1523970453468" expanded="true" signature="180:428" ph="{...}" />
+            <marker date="1523970453468" expanded="true" signature="496:746" ph="{...}" />
+            <marker date="1523970453468" expanded="true" signature="558:742" ph="{...}" />
+            <marker date="1523970453468" expanded="true" signature="675:737" ph="{...}" />
           </folding>
         </state>
       </provider>
