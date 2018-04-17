@@ -6,11 +6,27 @@
       <e p="App.config" t="Include" />
       <e p="App.xaml" t="Include" />
       <e p="App.xaml.cs" t="Include" />
+      <e p="Backend" t="Include">
+        <e p="UiBuilder.cs" t="Include" />
+        <e p="UiConstants.cs" t="Include" />
+      </e>
       <e p="bin" t="ExcludeRecursive" />
+      <e p="DataProvider" t="Include">
+        <e p="StoragesRepository.cs" t="Include" />
+      </e>
+      <e p="DbMock" t="Include">
+        <e p="DataAccessLayer.cs" t="Include" />
+        <e p="Repository.cs" t="Include" />
+      </e>
+      <e p="Domain" t="Include">
+        <e p="Entity.cs" t="Include" />
+        <e p="Storage.cs" t="Include" />
+      </e>
       <e p="MainWindow.xaml" t="Include" />
       <e p="MainWindow.xaml.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="Resources.Designer.cs" t="Include" />

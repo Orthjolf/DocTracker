@@ -2,16 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a06753c-fc3f-4f4b-ae42-98ef4906f57e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Backend/UiBuilder.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Backend/UiConstants.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DbMock/Repository.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Entity.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Storage.cs" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/App.xaml" afterPath="$PROJECT_DIR$/App.xaml" />
       <change beforePath="$PROJECT_DIR$/MainWindow.xaml" afterPath="$PROJECT_DIR$/MainWindow.xaml" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.xaml.cs" afterPath="$PROJECT_DIR$/MainWindow.xaml.cs" />
+      <change beforePath="$PROJECT_DIR$/WpfApp.csproj" afterPath="$PROJECT_DIR$/WpfApp.csproj" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/App.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/App.g.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/App.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/App.g.i.cs" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.csproj.FileListAbsolute.txt" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.csprojResolveAssemblyReference.cache" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.cache" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.cache" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.lref" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,29 +39,133 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="375">
+              <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding>
-                <marker date="1523946898710" expanded="true" signature="0:470" ph="&lt;&lt;Grid&gt;&#10;&#9;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-                <marker date="1523946898710" expanded="true" signature="443:460" ph="&lt;.../&gt;" />
+                <marker date="1523969541128" expanded="true" signature="0:1281" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+                <marker date="1523969541128" expanded="true" signature="659:1257" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;.../&gt;" />
+                <marker date="1523969541128" expanded="true" signature="668:849" ph="&lt;.../&gt;" />
+                <marker date="1523969541128" expanded="true" signature="853:1035" ph="&lt;.../&gt;" />
+                <marker date="1523969541128" expanded="true" signature="1039:1248" ph="&lt;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;.../&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.xaml.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PackIconFontAwesomeKind.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="69" column="118" lean-forward="false" selection-start-line="69" selection-start-column="94" selection-end-line="69" selection-end-column="118" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.xaml.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="330">
+              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
               <folding>
-                <marker date="1523946229839" expanded="true" signature="16:189" ph="{...}" />
-                <marker date="1523946229839" expanded="true" signature="20:92" ph="/// Interaction logic for MainWindow.xaml ... " />
-                <marker date="1523946229839" expanded="true" signature="125:187" ph="{...}" />
-                <marker date="1523946229839" expanded="true" signature="150:184" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="6:168" ph="..." />
+                <marker date="1523965077177" expanded="true" signature="186:1226" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="221:1224" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="227:278" ph="/// Главная панель ... " />
+                <marker date="1523965077177" expanded="true" signature="421:472" ph="/// Текущая панель ... " />
+                <marker date="1523965077177" expanded="true" signature="543:603" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="641:777" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="818:998" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="1038:1125" ph="{...}" />
+                <marker date="1523965077177" expanded="true" signature="1191:1221" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiConstants.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/UiConstants.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="82" />
+              <folding>
+                <marker date="1523967638949" expanded="true" signature="6:63" ph="..." />
+                <marker date="1523967638949" expanded="true" signature="89:308" ph="{...}" />
+                <marker date="1523967638949" expanded="true" signature="124:306" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiBuilder.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/UiBuilder.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+              <folding>
+                <marker date="1523968029785" expanded="true" signature="6:175" ph="..." />
+                <marker date="1523968029785" expanded="true" signature="201:1496" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="227:1494" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="267:1315" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="300:507" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="542:804" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="876:942" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="977:1050" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="1089:1161" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="1192:1310" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="1238:1305" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="1357:1405" ph="{...}" />
+                <marker date="1523968029785" expanded="true" signature="1443:1491" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StoragesRepository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+              <folding>
+                <marker date="1523959116909" expanded="false" signature="6:240" ph="..." />
+                <marker date="1523959116909" expanded="true" signature="265:1092" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="300:1090" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="397:468" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="569:791" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="605:787" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="648:780" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="821:1022" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="877:956" ph="{...}" />
+                <marker date="1523959116909" expanded="true" signature="1055:1087" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DbMock/Repository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <marker date="1523957059812" expanded="true" signature="23:59" ph="{...}" />
+                <marker date="1523957059812" expanded="true" signature="50:57" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataAccessLayer.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+              <folding>
+                <marker date="1523956784466" expanded="true" signature="23:66" ph="{...}" />
+                <marker date="1523956784466" expanded="true" signature="55:64" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -64,20 +185,61 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="App.xaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App.xaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1523967091860" expanded="true" signature="0:1092" ph="&lt;&lt;Application.Resources&gt;&#10;&#9;&#9;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;&#10;&#9;&lt;/Application.Resources&gt;.../&gt;" />
+                <marker date="1523967091860" expanded="true" signature="225:1077" ph="&lt;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;.../&gt;" />
+                <marker date="1523967091860" expanded="true" signature="251:1051" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
+                <marker date="1523967091860" expanded="true" signature="275:1027" ph="&lt;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>arrow</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Backend/UiBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Backend/UiConstants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Storage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/App.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DbMock/Repository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Backend/Item.cs" />
+        <option value="$PROJECT_DIR$/Backend/Entity.cs" />
+        <option value="$PROJECT_DIR$/DbMock/Repository.cs" />
+        <option value="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" />
+        <option value="$PROJECT_DIR$/Backend/Storage.cs" />
+        <option value="$PROJECT_DIR$/DbMock/Storages.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
+        <option value="$PROJECT_DIR$/UiBuilder.cs" />
+        <option value="$PROJECT_DIR$/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/App.xaml" />
+        <option value="$PROJECT_DIR$/Backend/UiConstants.cs" />
+        <option value="$PROJECT_DIR$/Backend/UiBuilder.cs" />
         <option value="$PROJECT_DIR$/MainWindow.xaml" />
       </list>
     </option>
@@ -88,8 +250,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="36" />
+    <option name="y" value="2" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -126,6 +289,30 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Backend" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="DataProvider" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="DbMock" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Domain" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="App.xaml" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -144,6 +331,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="RiderNuGetCacheManager.AutoClear.global-packages" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
+    <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -187,12 +379,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523945957240</updated>
-      <workItem from="1523945960167" duration="898000" />
+      <workItem from="1523945960167" duration="18343000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="898000" />
+    <option name="totallyTimeSpent" value="18343000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -204,24 +396,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="814" height="867" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.327654" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24937344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5321101" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32503277" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -238,7 +429,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -250,13 +443,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+    <entry file="file://$PROJECT_DIR$/Backend/Item.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding>
-            <marker date="1523946898710" expanded="true" signature="0:470" ph="&lt;&lt;Grid&gt;&#10;&#9;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-            <marker date="1523946898710" expanded="true" signature="443:460" ph="&lt;.../&gt;" />
+            <marker date="1523956551972" expanded="true" signature="24:396" ph="{...}" />
+            <marker date="1523956551972" expanded="true" signature="28:99" ph="/// Хранилище коробок с договорами займа ... " />
+            <marker date="1523956551972" expanded="true" signature="130:394" ph="{...}" />
+            <marker date="1523956551972" expanded="true" signature="136:181" ph="/// Название ... " />
+            <marker date="1523956551972" expanded="true" signature="220:262" ph="/// Адрес ... " />
+            <marker date="1523956551972" expanded="true" signature="304:349" ph="/// Описание ... " />
           </folding>
         </state>
       </provider>
@@ -273,15 +486,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523967091860" expanded="true" signature="0:1092" ph="&lt;&lt;Application.Resources&gt;&#10;&#9;&#9;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;&#10;&#9;&lt;/Application.Resources&gt;.../&gt;" />
+            <marker date="1523967091860" expanded="true" signature="225:1077" ph="&lt;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;.../&gt;" />
+            <marker date="1523967091860" expanded="true" signature="251:1051" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
+            <marker date="1523967091860" expanded="true" signature="275:1027" ph="&lt;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <marker date="1523959116909" expanded="false" signature="6:240" ph="..." />
+            <marker date="1523959116909" expanded="true" signature="265:1092" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="300:1090" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="397:468" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="569:791" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="605:787" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="648:780" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="821:1022" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="877:956" ph="{...}" />
+            <marker date="1523959116909" expanded="true" signature="1055:1087" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbMock/Repository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <marker date="1523957059812" expanded="true" signature="23:59" ph="{...}" />
+            <marker date="1523957059812" expanded="true" signature="50:57" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <marker date="1523956784466" expanded="true" signature="23:66" ph="{...}" />
+            <marker date="1523956784466" expanded="true" signature="55:64" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/UiConstants.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="82" />
+          <folding>
+            <marker date="1523967638949" expanded="true" signature="6:63" ph="..." />
+            <marker date="1523967638949" expanded="true" signature="89:308" ph="{...}" />
+            <marker date="1523967638949" expanded="true" signature="124:306" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="330">
+          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
           <folding>
-            <marker date="1523946229839" expanded="true" signature="16:189" ph="{...}" />
-            <marker date="1523946229839" expanded="true" signature="20:92" ph="/// Interaction logic for MainWindow.xaml ... " />
-            <marker date="1523946229839" expanded="true" signature="125:187" ph="{...}" />
-            <marker date="1523946229839" expanded="true" signature="150:184" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="6:168" ph="..." />
+            <marker date="1523965077177" expanded="true" signature="186:1226" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="221:1224" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="227:278" ph="/// Главная панель ... " />
+            <marker date="1523965077177" expanded="true" signature="421:472" ph="/// Текущая панель ... " />
+            <marker date="1523965077177" expanded="true" signature="543:603" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="641:777" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="818:998" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="1038:1125" ph="{...}" />
+            <marker date="1523965077177" expanded="true" signature="1191:1221" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/UiBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <marker date="1523968029785" expanded="true" signature="6:175" ph="..." />
+            <marker date="1523968029785" expanded="true" signature="201:1496" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="227:1494" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="267:1315" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="300:507" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="542:804" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="876:942" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="977:1050" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="1089:1161" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="1192:1310" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="1238:1305" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="1357:1405" ph="{...}" />
+            <marker date="1523968029785" expanded="true" signature="1443:1491" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="69" column="118" lean-forward="false" selection-start-line="69" selection-start-column="94" selection-end-line="69" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <marker date="1523969541128" expanded="true" signature="0:1281" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt;&#10;&#10;&#9;&#9;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="659:1257" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;        Width=&quot;65&quot;&#10;&#9;&#9;        Click=&quot;RecognizeQrCode&quot; /&gt; &lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;&#10;&#9;&#9;&lt;/Border&gt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="668:849" ph="&lt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="853:1035" ph="&lt;.../&gt;" />
+            <marker date="1523969541128" expanded="true" signature="1039:1248" ph="&lt;&lt;StackPanel x:Name=&quot;RootLayout&quot; /&gt;.../&gt;" />
           </folding>
         </state>
       </provider>
