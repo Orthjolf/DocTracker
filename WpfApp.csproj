@@ -92,6 +92,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Domain\Action.cs" />
+    <Compile Include="Domain\ActionPerformed.cs" />
+    <Compile Include="Domain\Box.cs" />
+    <Compile Include="Domain\Contract.cs" />
+    <Compile Include="Domain\Entity.cs" />
+    <Compile Include="Domain\Storage.cs" />
     <Compile Include="SeparateDemo\SeparateDemo.cs" />
     <Compile Include="SeparateDemo\SeparateDemoView.xaml.cs" />
     <Compile Include="SeparateDemo\SeparateDemoViewModel.cs" />

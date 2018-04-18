@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a06753c-fc3f-4f4b-ae42-98ef4906f57e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Action.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/ActionPerformed.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Box.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Contract.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Entity.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Storage.cs" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" afterPath="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/WpfApp.csproj" afterPath="$PROJECT_DIR$/WpfApp.csproj" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,21 +45,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.xaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding>
-                <marker date="1524044315308" expanded="true" signature="0:1093" ph="&lt;&lt;Application.Resources&gt;&#10;&#9;&#9;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;&#10;&#9;&lt;/Application.Resources&gt;.../&gt;" />
-                <marker date="1524044315308" expanded="true" signature="226:1078" ph="&lt;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;.../&gt;" />
-                <marker date="1524044315308" expanded="true" signature="252:1052" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
-                <marker date="1524044315308" expanded="true" signature="276:1028" ph="&lt;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainWindow.xaml.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,27 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.xaml.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-              <folding>
-                <marker date="1524038619701" expanded="false" signature="6:209" ph="..." />
-                <marker date="1524038619701" expanded="true" signature="226:697" ph="{...}" />
-                <marker date="1524038619701" expanded="true" signature="230:295" ph="/// Interaction logic for App.xaml ... " />
-                <marker date="1524038619701" expanded="true" signature="334:695" ph="{...}" />
-                <marker date="1524038619701" expanded="true" signature="407:692" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindowViewModel.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainWindowViewModel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+            <state relative-caret-position="255">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <marker date="1524045565358" expanded="true" signature="6:132" ph="..." />
                 <marker date="1524045565358" expanded="true" signature="159:1069" ph="{...}" />
@@ -106,6 +78,99 @@
                 <marker date="1524045565358" expanded="true" signature="685:956" ph="{...}" />
                 <marker date="1524045565358" expanded="true" signature="996:1063" ph="{...}" />
                 <marker date="1524045565358" expanded="true" signature="1007:1059" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entity.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+              <folding>
+                <marker date="1524046007581" expanded="true" signature="23:237" ph="{...}" />
+                <marker date="1524046007581" expanded="true" signature="55:235" ph="{...}" />
+                <marker date="1524046007581" expanded="true" signature="61:111" ph="/// Идентификатор ... " />
+                <marker date="1524046007581" expanded="true" signature="145:190" ph="/// Описание ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Storage.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+              <folding>
+                <marker date="1524046123046" expanded="true" signature="23:285" ph="{...}" />
+                <marker date="1524046123046" expanded="true" signature="27:79" ph="/// Хранилище коробок ... " />
+                <marker date="1524046123046" expanded="true" signature="110:283" ph="{...}" />
+                <marker date="1524046123046" expanded="true" signature="116:161" ph="/// Название ... " />
+                <marker date="1524046123046" expanded="true" signature="200:242" ph="/// Адрес ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contract.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Contract.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+              <folding>
+                <marker date="1524046186934" expanded="true" signature="23:288" ph="{...}" />
+                <marker date="1524046186934" expanded="true" signature="27:69" ph="/// Договор ... " />
+                <marker date="1524046186934" expanded="true" signature="92:286" ph="{...}" />
+                <marker date="1524046186934" expanded="true" signature="98:150" ph="/// Номер контракта ... " />
+                <marker date="1524046186934" expanded="true" signature="191:249" ph="/// Идентификатор коробки ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Box.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Box.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+              <folding>
+                <marker date="1524046203869" expanded="true" signature="23:214" ph="{...}" />
+                <marker date="1524046203869" expanded="true" signature="27:82" ph="/// Коробка с договорами ... " />
+                <marker date="1524046203869" expanded="true" signature="109:212" ph="{...}" />
+                <marker date="1524046203869" expanded="true" signature="115:172" ph="/// Идентификатор склада ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Action.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Domain/Action.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding>
+                <marker date="1524046509806" expanded="true" signature="38:561" ph="{...}" />
+                <marker date="1524046509806" expanded="true" signature="42:112" ph="/// Действие, произведенное с договором ... " />
+                <marker date="1524046509806" expanded="true" signature="133:559" ph="{...}" />
+                <marker date="1524046509806" expanded="true" signature="139:199" ph="/// Идентификатор контракта ... " />
+                <marker date="1524046509806" expanded="true" signature="241:290" ph="/// Дата и время ... " />
+                <marker date="1524046509806" expanded="true" signature="335:380" ph="/// Действие ... " />
+                <marker date="1524046509806" expanded="true" signature="434:522" ph="/// Идентификатор пользователя, производившего действие ... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionPerformed.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/ActionPerformed.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+              <folding>
+                <marker date="1524046421474" expanded="true" signature="23:90" ph="{...}" />
+                <marker date="1524046421474" expanded="true" signature="54:88" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -124,72 +189,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeparateDemo.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-              <folding>
-                <marker date="1524044029196" expanded="true" signature="6:50" ph="..." />
-                <marker date="1524044029196" expanded="true" signature="81:578" ph="{...}" />
-                <marker date="1524044029196" expanded="true" signature="113:576" ph="{...}" />
-                <marker date="1524044029196" expanded="true" signature="285:349" ph="{...}" />
-                <marker date="1524044029196" expanded="true" signature="378:497" ph="{...}" />
-                <marker date="1524044029196" expanded="true" signature="525:573" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeparateDemoView.xaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
-              <folding>
-                <marker date="1524043974626" expanded="true" signature="0:812" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-                <marker date="1524043974626" expanded="true" signature="512:797" ph="&lt;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt; &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;.../&gt;" />
-                <marker date="1524043974626" expanded="true" signature="648:779" ph="&lt;.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeparateDemoViewModel.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding>
-                <marker date="1524044064545" expanded="true" signature="6:84" ph="..." />
-                <marker date="1524044064545" expanded="true" signature="115:966" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="184:964" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="296:345" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="415:567" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="455:563" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="604:612" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="718:877" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="729:873" ph="{...}" />
-                <marker date="1524044064545" expanded="true" signature="912:961" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeparateDemoView.xaml.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-              <folding>
-                <marker date="1524043968995" expanded="true" signature="61:186" ph="{...}" />
-                <marker date="1524043968995" expanded="true" signature="116:184" ph="{...}" />
-                <marker date="1524043968995" expanded="true" signature="147:181" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -202,6 +201,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Domain/Contract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Action.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/ActionPerformed.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
@@ -228,8 +230,11 @@
     <setting file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/View/BoxPartial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/View/BoxView.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/View/BoxView.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Storage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ViewModel/BoxViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Box.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -275,6 +280,12 @@
         <option value="$PROJECT_DIR$/App.xaml" />
         <option value="$PROJECT_DIR$/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
+        <option value="$PROJECT_DIR$/Domain/Entity.cs" />
+        <option value="$PROJECT_DIR$/Domain/Storage.cs" />
+        <option value="$PROJECT_DIR$/Domain/Contract.cs" />
+        <option value="$PROJECT_DIR$/Domain/Box.cs" />
+        <option value="$PROJECT_DIR$/Domain/ActionPerformed.cs" />
+        <option value="$PROJECT_DIR$/Domain/Action.cs" />
       </list>
     </option>
   </component>
@@ -322,6 +333,12 @@
               <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="DataProvider" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Domain" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -415,12 +432,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523945957240</updated>
       <workItem from="1523945960167" duration="28178000" />
-      <workItem from="1524035987803" duration="6322000" />
+      <workItem from="1524035987803" duration="7068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34500000" />
+    <option name="totallyTimeSpent" value="35246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -583,22 +600,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Item.cs" />
-    <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/UiConstants.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -922,7 +923,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
           <folding>
-            <marker date="1524043974626" expanded="true" signature="0:812" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+            <marker date="1524043974626" expanded="true" signature="0:812" ph="&lt;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;        &lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;        &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;    &lt;/StackPanel&gt;.../&gt;" />
             <marker date="1524043974626" expanded="true" signature="512:797" ph="&lt;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt; &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;.../&gt;" />
             <marker date="1524043974626" expanded="true" signature="648:779" ph="&lt;.../&gt;" />
           </folding>
@@ -1023,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        <state relative-caret-position="255">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <marker date="1524045565358" expanded="true" signature="6:132" ph="..." />
             <marker date="1524045565358" expanded="true" signature="159:1069" ph="{...}" />
@@ -1035,6 +1036,87 @@
             <marker date="1524045565358" expanded="true" signature="685:956" ph="{...}" />
             <marker date="1524045565358" expanded="true" signature="996:1063" ph="{...}" />
             <marker date="1524045565358" expanded="true" signature="1007:1059" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Contract.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <marker date="1524046186934" expanded="true" signature="23:288" ph="{...}" />
+            <marker date="1524046186934" expanded="true" signature="27:69" ph="/// Договор ... " />
+            <marker date="1524046186934" expanded="true" signature="92:286" ph="{...}" />
+            <marker date="1524046186934" expanded="true" signature="98:150" ph="/// Номер контракта ... " />
+            <marker date="1524046186934" expanded="true" signature="191:249" ph="/// Идентификатор коробки ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding>
+            <marker date="1524046007581" expanded="true" signature="23:237" ph="{...}" />
+            <marker date="1524046007581" expanded="true" signature="55:235" ph="{...}" />
+            <marker date="1524046007581" expanded="true" signature="61:111" ph="/// Идентификатор ... " />
+            <marker date="1524046007581" expanded="true" signature="145:190" ph="/// Описание ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding>
+            <marker date="1524046123046" expanded="true" signature="23:285" ph="{...}" />
+            <marker date="1524046123046" expanded="true" signature="27:79" ph="/// Хранилище коробок ... " />
+            <marker date="1524046123046" expanded="true" signature="110:283" ph="{...}" />
+            <marker date="1524046123046" expanded="true" signature="116:161" ph="/// Название ... " />
+            <marker date="1524046123046" expanded="true" signature="200:242" ph="/// Адрес ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Box.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+          <folding>
+            <marker date="1524046203869" expanded="true" signature="23:214" ph="{...}" />
+            <marker date="1524046203869" expanded="true" signature="27:82" ph="/// Коробка с договорами ... " />
+            <marker date="1524046203869" expanded="true" signature="109:212" ph="{...}" />
+            <marker date="1524046203869" expanded="true" signature="115:172" ph="/// Идентификатор склада ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/ActionPerformed.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <marker date="1524046421474" expanded="true" signature="23:90" ph="{...}" />
+            <marker date="1524046421474" expanded="true" signature="54:88" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Action.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <marker date="1524046509806" expanded="true" signature="38:561" ph="{...}" />
+            <marker date="1524046509806" expanded="true" signature="42:112" ph="/// Действие, произведенное с договором ... " />
+            <marker date="1524046509806" expanded="true" signature="133:559" ph="{...}" />
+            <marker date="1524046509806" expanded="true" signature="139:199" ph="/// Идентификатор контракта ... " />
+            <marker date="1524046509806" expanded="true" signature="241:290" ph="/// Дата и время ... " />
+            <marker date="1524046509806" expanded="true" signature="335:380" ph="/// Действие ... " />
+            <marker date="1524046509806" expanded="true" signature="434:522" ph="/// Идентификатор пользователя, производившего действие ... " />
           </folding>
         </state>
       </provider>
