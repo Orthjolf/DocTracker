@@ -32,6 +32,7 @@
         <e p="Resources.Designer.cs" t="Include" />
         <e p="Resources.resx" t="Include" />
       </e>
+      <e p="View" t="Include" />
       <e p="WpfApp.csproj" t="IncludeRecursive" />
       <e p="WpfApp.sln" t="IncludeFlat" />
     </e>
