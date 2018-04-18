@@ -5,31 +5,41 @@
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      xmlns:local="clr-namespace:WpfApp"
                       mc:Ignorable="d"
 
-                      Title="MainWindow">
+                      Title="MainWindow" Height="600" Width="800">
 	<Grid>
-		<Button Content="Назад"
-		        HorizontalAlignment="Left"
-		        Margin="10,10,0,0"
-		        VerticalAlignment="Top"
-		        Width="65"
-		        Click="RecognizeQrCode" />
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="180" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
 
-		<Button Content="Вперед"
-		        HorizontalAlignment="Left"
-		        Margin="85,10,0,0"
-		        VerticalAlignment="Top"
-		        Width="65"
-		        Click="RecognizeQrCode" />
+		<Grid>
+			<Button Content="Назад"
+			        HorizontalAlignment="Left"
+			        Margin="10,10,0,0"
+			        VerticalAlignment="Top"
+			        Width="65" />
 
-		<Border BorderBrush="LightGray"
-		        Margin="10,50,10,10"
-		        BorderThickness="1"
-		        Name="RootLayoutBorder"
-		        DockPanel.Dock="Top">
+			<Button Content="Вперед"
+			        HorizontalAlignment="Left"
+			        Margin="85,10,0,0"
+			        VerticalAlignment="Top"
+			        Width="65" />
+		</Grid>
 
-			<StackPanel x:Name="RootLayout" />
-		</Border>
+		<ListBox Grid.Column="0"
+		         Margin="10,50,10,10"
+		         ItemsSource="{Binding Modules}"
+		         SelectedItem="{Binding SelectedModule, Mode=TwoWay}">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<TextBlock Text="{Binding Name}" />
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<ContentPresenter x:Name="contentPresenter" Grid.Column="1"
+		                  Content="{Binding UserInterface}" />
 	</Grid>
 </controls:MetroWindow>

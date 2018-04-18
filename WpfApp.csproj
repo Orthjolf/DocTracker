@@ -92,6 +92,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SeparateDemo\SeparateDemo.cs" />
+    <Compile Include="SeparateDemo\SeparateDemoView.xaml.cs" />
+    <Compile Include="SeparateDemo\SeparateDemoViewModel.cs" />
+    <Compile Include="Service\MessageService.cs" />
+    <Compile Include="Utils\IModule.cs" />
+    <Compile Include="Utils\ModuleBase.cs" />
+    <Compile Include="Utils\ReflectionHelper.cs" />
+    <Compile Include="Utils\RelayCommand.cs" />
+    <Compile Include="ViewModel\BoxViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\StorageViewModel.cs" />
+    <Compile Include="View\BoxPartial.cs" />
+    <Compile Include="View\BoxView.xaml.cs" />
+    <Compile Include="View\StoragePartial.cs" />
+    <Compile Include="View\StorageView.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -100,17 +115,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Backend\UiBuilder.cs" />
-    <Compile Include="Backend\UiConstants.cs" />
     <Compile Include="DataProvider\StoragesRepository.cs" />
     <Compile Include="DbMock\DataAccessLayer.cs" />
     <Compile Include="DbMock\Repository.cs" />
-    <Compile Include="Domain\Entity.cs" />
-    <Compile Include="Domain\Storage.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SeparateDemo\SeparateDemoView.xaml" />
+    <Page Include="View\BoxView.xaml" />
+    <Page Include="View\StorageView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -129,9 +143,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
