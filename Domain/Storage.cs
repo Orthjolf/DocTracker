@@ -11,8 +11,8 @@ namespace WpfApp.Domain
 	public class Storage : Entity
 	{
 		[BsonIgnore]
-//		public static StoragesRepository Repository => ObjectFactory.Instance.GetObject<StoragesRepository>();
 		public static StoragesRepository Repository => new StoragesRepository();
+//		public static StoragesRepository Repository => ObjectFactory.Instance.GetObject<StoragesRepository>();
 
 		/// <summary>
 		/// Название

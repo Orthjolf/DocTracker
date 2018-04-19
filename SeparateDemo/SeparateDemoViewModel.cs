@@ -15,18 +15,28 @@ namespace WpfApp.SeparateDemo
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
 		private IReadOnlyCollection<BsonDocument> Storages { get; set; }
 
-		public SeparateDemoViewModel()
+		/// <summary>
+		/// Название
+		/// </summary>
+		public string Name { get; set; }
+
+		/// <summary>
+		/// Адрес
+		/// </summary>
+		public string Address { get; set; }
+
+		/// <summary>
+		/// Описание
+		/// </summary>
+		public string Description { get; set; }
+
+		public SeparateDemoViewModel(Storage storage)
 		{
-			var rep = Storage.Repository;
-			Storages = rep.GetAll();
-
-			var sb = new StringBuilder();
-			foreach (var bsonDocument in Storages)
-			{
-				sb.Append(bsonDocument);
-			}
-
-			HeadText = sb.ToString();
+			
+			Name = storage.Name;
+			Address = storage.Address;
+			Description = storage.Description;
+			HeadText = Name;
 		}
 
 		private string _headText;

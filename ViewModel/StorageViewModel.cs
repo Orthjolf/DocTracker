@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
+using MongoDB.Bson;
 using WpfApp.DataProvider;
 using WpfApp.Domain;
 using WpfApp.Utils;
@@ -32,12 +33,15 @@ namespace WpfApp.ViewModel
 
 		private RelayCommand _changeHeadTextCommand;
 
+		public StorageViewModel(BsonDocument storage)
+		{
+			HeadText = "storagevm";
+			
+		}
+
 		public RelayCommand ChangeHeadTextCommand
 		{
-			get
-			{
-				return _changeHeadTextCommand = _changeHeadTextCommand ?? new RelayCommand(OnChangeHeadText);
-			}
+			get { return _changeHeadTextCommand = _changeHeadTextCommand ?? new RelayCommand(OnChangeHeadText); }
 		}
 
 		private void OnChangeHeadText()
