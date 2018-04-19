@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Bson;
@@ -28,14 +29,8 @@ namespace WpfApp.DataProvider
 		public IReadOnlyCollection<BsonDocument> GetAll()
 		{
 			var collection = DataContext.Instance.Database.GetCollection<BsonDocument>("Storage");
-			var filter = new BsonDocument();
-			var people = collection.Find(filter).ToList();
-			var result = new List<BsonDocument>();
-			foreach(var doc in people)
-			{
-				result.Add(doc);
-			}
-			return result;
+			var emptyFilter = new BsonDocument();
+			return collection.Find(emptyFilter).ToList().AsReadOnly();
 		}
 	}
 }

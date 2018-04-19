@@ -36,7 +36,6 @@ namespace WpfApp.ViewModel
 		public StorageViewModel(BsonDocument storage)
 		{
 			HeadText = "storagevm";
-			
 		}
 
 		public RelayCommand ChangeHeadTextCommand

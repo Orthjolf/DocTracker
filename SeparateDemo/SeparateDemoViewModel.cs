@@ -32,7 +32,6 @@ namespace WpfApp.SeparateDemo
 
 		public SeparateDemoViewModel(Storage storage)
 		{
-			
 			Name = storage.Name;
 			Address = storage.Address;
 			Description = storage.Description;
