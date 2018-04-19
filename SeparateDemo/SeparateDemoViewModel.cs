@@ -36,6 +36,11 @@ namespace WpfApp.SeparateDemo
 			Address = storage.Address;
 			Description = storage.Description;
 			HeadText = Name;
+//			
+//			var storages = Entity.Repository.GetAll(DocumentType.Storage);
+//			var modules = storages.Select(storage => new SeparateDemo.SeparateDemo(storage)).ToList();
+//
+//			var vm = new MainWindowViewModel(modules);
 		}
 
 		private string _headText;
