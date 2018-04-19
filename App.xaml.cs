@@ -12,7 +12,7 @@ namespace WpfApp
 		{
 			var mainWindow = new MainWindow();
 			var storages = Entity.Repository.GetAll(DocumentType.Storage);
-			var modules = storages.Select(storage => new SeparateDemo.SeparateDemo(storage)).ToList();
+			var modules = storages.Select(storage => new SubPages.StoragePage.StoragePage(storage)).ToList();
 
 			var vm = new MainWindowViewModel(modules);
 

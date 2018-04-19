@@ -1,17 +1,14 @@
-﻿using WpfApp.Service;
-using WpfApp.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using MongoDB.Bson;
 using WpfApp.Domain;
-using WpfApp.Enum;
+using WpfApp.Service;
+using WpfApp.Utils;
 
-namespace WpfApp.SeparateDemo
+namespace WpfApp.SubPages.StoragePage
 {
-	class SeparateDemoViewModel : INotifyPropertyChanged, IDisposable
+	class StorageViewModel : INotifyPropertyChanged, IDisposable
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
 		private IReadOnlyCollection<BsonDocument> Storages { get; set; }
@@ -31,7 +28,7 @@ namespace WpfApp.SeparateDemo
 		/// </summary>
 		public string Description { get; set; }
 
-		public SeparateDemoViewModel(Storage storage)
+		public StorageViewModel(Storage storage)
 		{
 			Name = storage.Name;
 			Address = storage.Address;

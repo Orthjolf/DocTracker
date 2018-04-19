@@ -36,14 +36,17 @@
         <e p="Resources.Designer.cs" t="Include" />
         <e p="Resources.resx" t="Include" />
       </e>
-      <e p="SeparateDemo" t="Include">
-        <e p="SeparateDemo.cs" t="Include" />
-        <e p="SeparateDemoView.xaml" t="Include" />
-        <e p="SeparateDemoView.xaml.cs" t="Include" />
-        <e p="SeparateDemoViewModel.cs" t="Include" />
-      </e>
       <e p="Service" t="Include">
         <e p="MessageService.cs" t="Include" />
+      </e>
+      <e p="SubPages" t="Include">
+        <e p="BoxPage" t="Include" />
+        <e p="StoragePage" t="Include">
+          <e p="StoragePage.cs" t="Include" />
+          <e p="StorageView.xaml" t="Include" />
+          <e p="StorageView.xaml.cs" t="Include" />
+          <e p="StorageViewModel.cs" t="Include" />
+        </e>
       </e>
       <e p="Utils" t="Include">
         <e p="IModule.cs" t="Include" />
