@@ -51,18 +51,8 @@
         <e p="ReflectionHelper.cs" t="Include" />
         <e p="RelayCommand.cs" t="Include" />
       </e>
-      <e p="View" t="Include">
-        <e p="BoxPartial.cs" t="Include" />
-        <e p="BoxView.xaml" t="Include" />
-        <e p="BoxView.xaml.cs" t="Include" />
-        <e p="StoragePartial.cs" t="Include" />
-        <e p="StorageView.xaml" t="Include" />
-        <e p="StorageView.xaml.cs" t="Include" />
-      </e>
       <e p="ViewModel" t="Include">
-        <e p="BoxViewModel.cs" t="Include" />
         <e p="MainWindowViewModel.cs" t="Include" />
-        <e p="StorageViewModel.cs" t="Include" />
       </e>
       <e p="WpfApp.csproj" t="IncludeRecursive" />
       <e p="WpfApp.sln" t="IncludeFlat" />

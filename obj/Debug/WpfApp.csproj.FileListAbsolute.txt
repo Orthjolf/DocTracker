@@ -39,11 +39,7 @@ D:\work\WpfApp\bin\Debug\DnsClient.xml
 D:\work\WpfApp\bin\Debug\MongoDB.Bson.xml
 D:\work\WpfApp\bin\Debug\MongoDB.Driver.xml
 D:\work\WpfApp\bin\Debug\MongoDB.Driver.Core.xml
-D:\work\WpfApp\obj\Debug\View\BoxView.g.cs
-D:\work\WpfApp\obj\Debug\View\StorageView.g.cs
 D:\work\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
-D:\work\WpfApp\obj\Debug\View\BoxView.baml
-D:\work\WpfApp\obj\Debug\View\StorageView.baml
 D:\work\WpfApp\obj\Debug\SeparateDemo\SeparateDemoView.g.cs
 D:\work\WpfApp\obj\Debug\SeparateDemo\SeparateDemoView.baml
 D:\work\WpfApp\obj\Debug\App.baml

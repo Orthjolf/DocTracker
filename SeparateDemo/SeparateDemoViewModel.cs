@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using MongoDB.Bson;
 using WpfApp.Domain;
+using WpfApp.Enum;
 
 namespace WpfApp.SeparateDemo
 {
@@ -36,11 +37,9 @@ namespace WpfApp.SeparateDemo
 			Address = storage.Address;
 			Description = storage.Description;
 			HeadText = Name;
-//			
-//			var storages = Entity.Repository.GetAll(DocumentType.Storage);
+
+//			var storages = Entity.Repository.GetAll(DocumentType.Box);
 //			var modules = storages.Select(storage => new SeparateDemo.SeparateDemo(storage)).ToList();
-//
-//			var vm = new MainWindowViewModel(modules);
 		}
 
 		private string _headText;

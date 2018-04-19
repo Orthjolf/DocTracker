@@ -110,13 +110,7 @@
     <Compile Include="Utils\ModuleBase.cs" />
     <Compile Include="Utils\ReflectionHelper.cs" />
     <Compile Include="Utils\RelayCommand.cs" />
-    <Compile Include="ViewModel\BoxViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
-    <Compile Include="ViewModel\StorageViewModel.cs" />
-    <Compile Include="View\BoxPartial.cs" />
-    <Compile Include="View\BoxView.xaml.cs" />
-    <Compile Include="View\StoragePartial.cs" />
-    <Compile Include="View\StorageView.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -130,8 +124,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SeparateDemo\SeparateDemoView.xaml" />
-    <Page Include="View\BoxView.xaml" />
-    <Page Include="View\StorageView.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
