@@ -94,12 +94,14 @@
     </ApplicationDefinition>
     <Compile Include="DataProvider\DataContext.cs" />
     <Compile Include="DataProvider\ObjectFactory.cs" />
+    <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="Domain\Action.cs" />
-    <Compile Include="Domain\ActionPerformed.cs" />
     <Compile Include="Domain\Box.cs" />
     <Compile Include="Domain\Contract.cs" />
     <Compile Include="Domain\Entity.cs" />
     <Compile Include="Domain\Storage.cs" />
+    <Compile Include="Enum\ActionPerformed.cs" />
+    <Compile Include="Enum\DocumentType.cs" />
     <Compile Include="SeparateDemo\SeparateDemo.cs" />
     <Compile Include="SeparateDemo\SeparateDemoView.xaml.cs" />
     <Compile Include="SeparateDemo\SeparateDemoViewModel.cs" />
@@ -123,7 +125,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DataProvider\StoragesRepository.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -151,7 +152,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProvider\Repository\IStorageRepository.cs" />
+    <Compile Include="DataProvider\Repository\IDocumentRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

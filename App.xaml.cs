@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Windows;
 using WpfApp.Domain;
+using WpfApp.Enum;
 using WpfApp.ViewModel;
 
 namespace WpfApp
@@ -10,7 +11,7 @@ namespace WpfApp
 		private void Application_Startup(object sender, StartupEventArgs e)
 		{
 			var mainWindow = new MainWindow();
-			var storages = Storage.Repository.GetAll();
+			var storages = Entity.Repository.GetAll(DocumentType.Storage);
 			var modules = storages.Select(storage => new SeparateDemo.SeparateDemo(storage)).ToList();
 
 			var vm = new MainWindowViewModel(modules);

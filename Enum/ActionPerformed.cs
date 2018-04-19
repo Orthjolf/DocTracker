@@ -3,6 +3,6 @@
 	public enum ActionPerformed
 	{
 		PutInBox,
-		RemoveFromBox
+		RemovedFromBox
 	}
 }

@@ -10,10 +10,6 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
-		[BsonIgnore]
-		public static StoragesRepository Repository => new StoragesRepository();
-//		public static StoragesRepository Repository => ObjectFactory.Instance.GetObject<StoragesRepository>();
-
 		/// <summary>
 		/// Название
 		/// </summary>
@@ -21,7 +17,7 @@ namespace WpfApp.Domain
 
 		/// <summary>
 		/// Адрес
-		/// </summary>
+		/// </summary>ам
 		public string Address { get; set; }
 	}
 }
