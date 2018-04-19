@@ -1,45 +1,57 @@
 ﻿using WpfApp.Service;
 using WpfApp.Utils;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using MongoDB.Bson;
+using WpfApp.Domain;
 
 namespace WpfApp.SeparateDemo
 {
 	class SeparateDemoViewModel : INotifyPropertyChanged, IDisposable
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
+		private IReadOnlyCollection<BsonDocument> Storages { get; set; }
 
 		public SeparateDemoViewModel()
 		{
-			HeadText = "Это вьюшка SeparateDemo";
+			var rep = Storage.Repository;
+			Storages = rep.GetAll();
+
+			var sb = new StringBuilder();
+			foreach (var bsonDocument in Storages)
+			{
+				sb.Append(bsonDocument);
+			}
+
+			HeadText = sb.ToString();
 		}
 
-		//Properties
-		private string _HeadText;
+		private string _headText;
 
 		public string HeadText
 		{
-			get { return _HeadText; }
+			get { return _headText; }
 			set
 			{
-				_HeadText = value;
+				_headText = value;
 				PropertyChanged(this, new PropertyChangedEventArgs(nameof(HeadText)));
 			}
 		}
 
-		//Methods
 		public void Dispose()
 		{
 		}
 
-		//Commands
-		private RelayCommand _ChangeHeadTextCommand;
+		private RelayCommand _changeHeadTextCommand;
 
 		public RelayCommand ChangeHeadTextCommand
 		{
 			get
 			{
-				return _ChangeHeadTextCommand = _ChangeHeadTextCommand ??
+				return _changeHeadTextCommand = _changeHeadTextCommand ??
 				                                new RelayCommand(OnChangeHeadText);
 			}
 		}

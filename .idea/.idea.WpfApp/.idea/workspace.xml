@@ -2,15 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a06753c-fc3f-4f4b-ae42-98ef4906f57e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Action.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/ActionPerformed.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Box.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Contract.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Entity.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Domain/Storage.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DataProvider/DataContext.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/DataProvider/ObjectFactory.cs" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" afterPath="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
+      <change beforePath="$PROJECT_DIR$/DbMock/DataAccessLayer.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DbMock/Repository.cs" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Domain/Entity.cs" afterPath="$PROJECT_DIR$/Domain/Entity.cs" />
+      <change beforePath="$PROJECT_DIR$/Domain/Storage.cs" afterPath="$PROJECT_DIR$/Domain/Storage.cs" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.xaml" afterPath="$PROJECT_DIR$/MainWindow.xaml" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.xaml.cs" afterPath="$PROJECT_DIR$/MainWindow.xaml.cs" />
+      <change beforePath="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" afterPath="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" />
+      <change beforePath="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" afterPath="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
+      <change beforePath="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" afterPath="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" />
       <change beforePath="$PROJECT_DIR$/WpfApp.csproj" afterPath="$PROJECT_DIR$/WpfApp.csproj" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.cache" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp_MarkupCompile.cache" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,22 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+      <file leaf-file-name="DataContext.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/DataContext.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
               <folding>
-                <marker date="1524045417689" expanded="true" signature="0:1670" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;ListBox Grid.Column=&quot;0&quot;&#10;&#9;&#9;         Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;         ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;         SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="741:1646" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;ListBox Grid.Column=&quot;0&quot;&#10;&#9;&#9;         Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;         ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;         SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&lt;/ListBox&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;180&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="1208:1518" ph="&lt;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="1376:1505" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="1403:1478" ph="&lt;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;.../&gt;" />
-                <marker date="1524045417689" expanded="true" signature="1521:1637" ph="&lt;.../&gt;" />
+                <marker date="1524051161284" expanded="true" signature="6:122" ph="..." />
+                <marker date="1524051161284" expanded="true" signature="153:1286" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="181:1284" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="510:613" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="682:1281" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="782:1246" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="857:1241" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="1079:1235" ph="{...}" />
+                <marker date="1524051161284" expanded="true" signature="1169:1228" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -48,16 +62,12 @@
       <file leaf-file-name="MainWindow.xaml.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="165">
+              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
-                <marker date="1524042759722" expanded="true" signature="6:208" ph="..." />
-                <marker date="1524042759722" expanded="true" signature="226:3106" ph="{...}" />
-                <marker date="1524042759722" expanded="true" signature="261:3104" ph="{...}" />
-                <marker date="1524042759722" expanded="true" signature="267:318" ph="/// Главная панель ... " />
-                <marker date="1524042759722" expanded="true" signature="461:512" ph="/// Текущая панель ... " />
-                <marker date="1524042759722" expanded="true" signature="583:617" ph="{...}" />
-                <marker date="1524042759722" expanded="true" signature="618:3101" ph="/* static async Task MainAsync() ... */" />
+                <marker date="1524054447600" expanded="true" signature="48:147" ph="{...}" />
+                <marker date="1524054447600" expanded="true" signature="83:145" ph="{...}" />
+                <marker date="1524054447600" expanded="true" signature="108:142" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -66,33 +76,18 @@
       <file leaf-file-name="MainWindowViewModel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
               <folding>
-                <marker date="1524045565358" expanded="true" signature="6:132" ph="..." />
-                <marker date="1524045565358" expanded="true" signature="159:1069" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="213:1067" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="360:499" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="447:495" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="639:960" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="685:956" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="996:1063" ph="{...}" />
-                <marker date="1524045565358" expanded="true" signature="1007:1059" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Entity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-              <folding>
-                <marker date="1524046007581" expanded="true" signature="23:237" ph="{...}" />
-                <marker date="1524046007581" expanded="true" signature="55:235" ph="{...}" />
-                <marker date="1524046007581" expanded="true" signature="61:111" ph="/// Идентификатор ... " />
-                <marker date="1524046007581" expanded="true" signature="145:190" ph="/// Описание ... " />
+                <marker date="1524056420719" expanded="false" signature="6:132" ph="..." />
+                <marker date="1524056420719" expanded="true" signature="160:1033" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="214:1031" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="352:481" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="434:477" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="604:925" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="650:921" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="961:1028" ph="{...}" />
+                <marker date="1524056420719" expanded="true" signature="972:1024" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -101,89 +96,128 @@
       <file leaf-file-name="Storage.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-              <folding>
-                <marker date="1524046123046" expanded="true" signature="23:285" ph="{...}" />
-                <marker date="1524046123046" expanded="true" signature="27:79" ph="/// Хранилище коробок ... " />
-                <marker date="1524046123046" expanded="true" signature="110:283" ph="{...}" />
-                <marker date="1524046123046" expanded="true" signature="116:161" ph="/// Название ... " />
-                <marker date="1524046123046" expanded="true" signature="200:242" ph="/// Адрес ... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Contract.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/Contract.cs">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+              <caret line="13" column="110" lean-forward="false" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
               <folding>
-                <marker date="1524046186934" expanded="true" signature="23:288" ph="{...}" />
-                <marker date="1524046186934" expanded="true" signature="27:69" ph="/// Договор ... " />
-                <marker date="1524046186934" expanded="true" signature="92:286" ph="{...}" />
-                <marker date="1524046186934" expanded="true" signature="98:150" ph="/// Номер контракта ... " />
-                <marker date="1524046186934" expanded="true" signature="191:249" ph="/// Идентификатор коробки ... " />
+                <marker date="1524057224555" expanded="true" signature="6:109" ph="..." />
+                <marker date="1524057224555" expanded="true" signature="135:595" ph="{...}" />
+                <marker date="1524057224555" expanded="true" signature="139:191" ph="/// Хранилище коробок ... " />
+                <marker date="1524057224555" expanded="true" signature="222:593" ph="{...}" />
+                <marker date="1524057224555" expanded="true" signature="426:471" ph="/// Название ... " />
+                <marker date="1524057224555" expanded="true" signature="510:552" ph="/// Адрес ... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Box.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/Box.cs">
+      <file leaf-file-name="ObjectFactory.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/ObjectFactory.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="28" lean-forward="false" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            <state relative-caret-position="-6">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <marker date="1524046203869" expanded="true" signature="23:214" ph="{...}" />
-                <marker date="1524046203869" expanded="true" signature="27:82" ph="/// Коробка с договорами ... " />
-                <marker date="1524046203869" expanded="true" signature="109:212" ph="{...}" />
-                <marker date="1524046203869" expanded="true" signature="115:172" ph="/// Идентификатор склада ... " />
+                <marker date="1524051878700" expanded="true" signature="44:976" ph="{...}" />
+                <marker date="1524051878700" expanded="true" signature="48:99" ph="/// Фабрика объектов ... " />
+                <marker date="1524051878700" expanded="true" signature="127:974" ph="{...}" />
+                <marker date="1524051878700" expanded="true" signature="319:391" ph="/// Экземпляр-одиночка фабрики объектов ... " />
+                <marker date="1524051878700" expanded="true" signature="480:488" ph="{...}" />
+                <marker date="1524051878700" expanded="true" signature="492:614" ph="/// Инициализировать фабрику объектов ... " />
+                <marker date="1524051878700" expanded="true" signature="667:724" ph="{...}" />
+                <marker date="1524051878700" expanded="true" signature="728:862" ph="/// Получить объект ... " />
+                <marker date="1524051878700" expanded="true" signature="904:971" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Action.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Domain/Action.cs">
+      <file leaf-file-name="StoragesRepository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="399">
+              <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
-                <marker date="1524046509806" expanded="true" signature="38:561" ph="{...}" />
-                <marker date="1524046509806" expanded="true" signature="42:112" ph="/// Действие, произведенное с договором ... " />
-                <marker date="1524046509806" expanded="true" signature="133:559" ph="{...}" />
-                <marker date="1524046509806" expanded="true" signature="139:199" ph="/// Идентификатор контракта ... " />
-                <marker date="1524046509806" expanded="true" signature="241:290" ph="/// Дата и время ... " />
-                <marker date="1524046509806" expanded="true" signature="335:380" ph="/// Действие ... " />
-                <marker date="1524046509806" expanded="true" signature="434:522" ph="/// Идентификатор пользователя, производившего действие ... " />
+                <marker date="1524058025362" expanded="true" signature="6:231" ph="..." />
+                <marker date="1524058025362" expanded="true" signature="262:1007" ph="{...}" />
+                <marker date="1524058025362" expanded="true" signature="318:1005" ph="{...}" />
+                <marker date="1524058025362" expanded="true" signature="350:644" ph="{...}" />
+                <marker date="1524058025362" expanded="true" signature="510:582" ph="{...}" />
+                <marker date="1524058025362" expanded="true" signature="697:1002" ph="{...}" />
+                <marker date="1524058025362" expanded="true" signature="949:980" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionPerformed.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/ActionPerformed.cs">
+      <file leaf-file-name="IStorageRepository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/Repository/IStorageRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="255">
+              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding>
-                <marker date="1524046421474" expanded="true" signature="23:90" ph="{...}" />
-                <marker date="1524046421474" expanded="true" signature="54:88" ph="{...}" />
+                <marker date="1524058100709" expanded="false" signature="6:104" ph="..." />
+                <marker date="1524058100709" expanded="true" signature="146:507" ph="{...}" />
+                <marker date="1524058100709" expanded="true" signature="185:505" ph="{...}" />
+                <marker date="1524058100709" expanded="true" signature="191:344" ph="/// Получить хранилище по идентификатору ... " />
+                <marker date="1524058100709" expanded="true" signature="371:456" ph="/// Получить все хранилища ... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IModule.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utils/IModule.cs">
+      <file leaf-file-name="StorageViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ViewModel/StorageViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="183">
+              <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               <folding>
-                <marker date="1524037339422" expanded="true" signature="54:171" ph="{...}" />
-                <marker date="1524037339422" expanded="true" signature="82:169" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="6:168" ph="..." />
+                <marker date="1524058062197" expanded="true" signature="196:948" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="247:946" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="417:452" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="507:659" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="547:655" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="752:875" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="763:871" ph="{...}" />
+                <marker date="1524058062197" expanded="true" signature="910:943" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeparateDemoViewModel.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <marker date="1524058503559" expanded="true" signature="6:197" ph="..." />
+                <marker date="1524058503559" expanded="true" signature="228:1271" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="297:1269" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="476:690" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="617:656" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="745:897" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="785:893" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="922:930" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="1023:1182" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="1034:1178" ph="{...}" />
+                <marker date="1524058503559" expanded="true" signature="1217:1266" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeparateDemo.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+              <folding>
+                <marker date="1524044029196" expanded="false" signature="6:50" ph="..." />
+                <marker date="1524044029196" expanded="true" signature="81:578" ph="{...}" />
+                <marker date="1524044029196" expanded="true" signature="113:576" ph="{...}" />
+                <marker date="1524044029196" expanded="true" signature="285:349" ph="{...}" />
+                <marker date="1524044029196" expanded="true" signature="378:497" ph="{...}" />
+                <marker date="1524044029196" expanded="true" signature="525:573" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -204,36 +238,42 @@
     <setting file="file://$PROJECT_DIR$/Domain/Contract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/ActionPerformed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/IModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/ModuleBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/ObjectFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/ReflectionHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/RelayCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/Repository/IStorageRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Service/MessageService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/View/StoragePartial.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/View/StorageView.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/View/StorageView.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0AEBF9C1-5249-4BF7-8D98-F34FDA19D688/1b/380e1136/PropertyPathWorker.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ViewModel/StorageViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A43B7116-5A22-44B9-AAE5-FA8F55B2DF59/7f/31bd2aef/NullReferenceException.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/View/BoxPartial.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/View/BoxView.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/View/BoxView.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ViewModel/BoxViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0AEBF9C1-5249-4BF7-8D98-F34FDA19D688/49/3866a530/ClrBindingWorker.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A43B7116-5A22-44B9-AAE5-FA8F55B2DF59/4e/5717e0eb/AsyncTaskMethodBuilder`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A43B7116-5A22-44B9-AAE5-FA8F55B2DF59/5c/0c62aed6/ExecutionContext.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/App.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/App.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DbMock/Repository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/IModule.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/ModuleBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/ReflectionHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Utils/RelayCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4EA20F81-8C71-41A0-8349-D0EC5D55C97B/a0/2cb48cbd/PackIconFontAwesomeKind.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Service/MessageService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/StoragePartial.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/StorageView.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/StorageView.xaml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ViewModel/StorageViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/BoxPartial.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/BoxView.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/View/BoxView.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Storage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ViewModel/BoxViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Box.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -260,32 +300,36 @@
         <option value="$PROJECT_DIR$/View/BoxView.xaml" />
         <option value="$PROJECT_DIR$/View/BoxView.xaml.cs" />
         <option value="$PROJECT_DIR$/View/Box.cs" />
-        <option value="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
         <option value="$PROJECT_DIR$/View/BoxPartial.cs" />
         <option value="$PROJECT_DIR$/ViewModel/BoxViewModel.cs" />
         <option value="$PROJECT_DIR$/View/StoragePartial.cs" />
         <option value="$PROJECT_DIR$/Utils/RelayCommand.cs" />
         <option value="$PROJECT_DIR$/Utils/ModuleBase.cs" />
-        <option value="$PROJECT_DIR$/MainWindow.xaml.cs" />
         <option value="$PROJECT_DIR$/Separate/SeparateTest.cs" />
         <option value="$PROJECT_DIR$/Separate/SeparateTestView.xaml.cs" />
         <option value="$PROJECT_DIR$/Separate/SeparateTestView.xaml" />
-        <option value="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" />
         <option value="$PROJECT_DIR$/Separate/SeparateTestViewModel.cs" />
         <option value="$PROJECT_DIR$/App.xaml.cs" />
         <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs" />
         <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml.cs" />
         <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml" />
-        <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" />
         <option value="$PROJECT_DIR$/App.xaml" />
-        <option value="$PROJECT_DIR$/MainWindow.xaml" />
-        <option value="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
-        <option value="$PROJECT_DIR$/Domain/Entity.cs" />
-        <option value="$PROJECT_DIR$/Domain/Storage.cs" />
         <option value="$PROJECT_DIR$/Domain/Contract.cs" />
         <option value="$PROJECT_DIR$/Domain/Box.cs" />
         <option value="$PROJECT_DIR$/Domain/ActionPerformed.cs" />
         <option value="$PROJECT_DIR$/Domain/Action.cs" />
+        <option value="$PROJECT_DIR$/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/DataProvider/DataContext.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/ObjectFactory.cs" />
+        <option value="$PROJECT_DIR$/DbMock/StorageRepository.cs" />
+        <option value="$PROJECT_DIR$/Domain/Entity.cs" />
+        <option value="$PROJECT_DIR$/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
+        <option value="$PROJECT_DIR$/Domain/Storage.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/Repository/IStorageRepository.cs" />
+        <option value="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" />
+        <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" />
       </list>
     </option>
   </component>
@@ -338,6 +382,13 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="DataProvider" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Repository" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Domain" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
@@ -345,13 +396,6 @@
               <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="SeparateDemo" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="SeparateDemo" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="SeparateDemoView.xaml" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -371,6 +415,12 @@
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="ViewModel" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="App.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -387,7 +437,7 @@
     <property name="RiderNuGetCacheManager.AutoClear.http-cache" value="2" />
     <property name="RiderNuGetCacheManager.AutoClear.packages-cache" value="2" />
     <property name="RiderNuGetCacheManager.AutoClear.temp" value="1" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ExampleMenu2/ExampleMenu2/ExampleMenu2.sln" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -432,12 +482,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523945957240</updated>
       <workItem from="1523945960167" duration="28178000" />
-      <workItem from="1524035987803" duration="7068000" />
+      <workItem from="1524035987803" duration="16685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35246000" />
+    <option name="totallyTimeSpent" value="44863000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,7 +506,7 @@
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3263434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43774575" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -466,7 +516,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36604774" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36566186" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.166875" sideWeight="0.5068226" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -499,107 +549,63 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/App.xaml.cs</url>
-          <line>22</line>
-          <properties documentPath="$PROJECT_DIR$/App.xaml.cs" initialLine="22">
+          <url>file://$PROJECT_DIR$/ViewModel/StorageViewModel.cs</url>
+          <line>18</line>
+          <properties documentPath="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" initialLine="15">
             <startOffsets>
-              <startOffset value="522" />
+              <startOffset value="451" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="564" />
+              <endOffset value="452" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" initialLine="29">
+            <startOffsets>
+              <startOffset value="705" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="791" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" initialLine="18">
+            <startOffsets>
+              <startOffset value="491" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="512" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" initialLine="41">
+            <startOffsets>
+              <startOffset value="984" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="998" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="85" lean-forward="false" selection-start-line="6" selection-start-column="85" selection-end-line="6" selection-end-column="85" />
-          <folding>
-            <marker date="1524045417689" expanded="true" signature="0:1670" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;ListBox Grid.Column=&quot;0&quot;&#10;&#9;&#9;         Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;         ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;         SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="741:1646" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;ListBox Grid.Column=&quot;0&quot;&#10;&#9;&#9;         Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;         ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;         SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&lt;/ListBox&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;180&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1208:1518" ph="&lt;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1376:1505" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1403:1478" ph="&lt;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1521:1637" ph="&lt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="64" column="70" lean-forward="false" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="70" />
-          <folding>
-            <marker date="1524042759722" expanded="true" signature="6:208" ph="..." />
-            <marker date="1524042759722" expanded="true" signature="226:3106" ph="{...}" />
-            <marker date="1524042759722" expanded="true" signature="261:3104" ph="{...}" />
-            <marker date="1524042759722" expanded="true" signature="267:318" ph="/// Главная панель ... " />
-            <marker date="1524042759722" expanded="true" signature="461:512" ph="/// Текущая панель ... " />
-            <marker date="1524042759722" expanded="true" signature="583:617" ph="{...}" />
-            <marker date="1524042759722" expanded="true" signature="618:3101" ph="/* static async Task MainAsync() ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/UiConstants.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/UiBuilder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1524038619701" expanded="false" signature="6:209" ph="..." />
-            <marker date="1524038619701" expanded="true" signature="226:697" ph="{...}" />
-            <marker date="1524038619701" expanded="true" signature="230:295" ph="/// Interaction logic for App.xaml ... " />
-            <marker date="1524038619701" expanded="true" signature="334:695" ph="{...}" />
-            <marker date="1524038619701" expanded="true" signature="407:692" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DbMock/DataAccessLayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <marker date="1524033289274" expanded="true" signature="6:193" ph="..." />
-            <marker date="1524033289274" expanded="true" signature="250:1658" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="283:383" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="450:758" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="822:1655" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="865:1047" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="1088:1261" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="1302:1488" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Backend/Item.cs" />
     <entry file="file://$PROJECT_DIR$/Backend/UiConstants.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -618,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DbMock/Repository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <marker date="1523957059812" expanded="true" signature="50:57" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Backend/UiBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -640,16 +636,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1524033289274" expanded="true" signature="6:193" ph="..." />
-            <marker date="1524033289274" expanded="true" signature="250:1658" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="283:383" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="450:758" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="822:1655" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="865:1047" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="1088:1261" ph="{...}" />
-            <marker date="1524033289274" expanded="true" signature="1302:1488" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,16 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <marker date="1524042074802" expanded="true" signature="0:1196" ph="/* using System; ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/StorageView.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -692,19 +669,6 @@
             <marker date="1524037553371" expanded="true" signature="53:168" ph="{...}" />
             <marker date="1524037553371" expanded="true" signature="103:166" ph="{...}" />
             <marker date="1524037553371" expanded="true" signature="129:163" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/StoragePartial.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding>
-            <marker date="1524042716885" expanded="false" signature="6:74" ph="..." />
-            <marker date="1524042716885" expanded="true" signature="97:329" ph="{...}" />
-            <marker date="1524042716885" expanded="true" signature="129:327" ph="{...}" />
-            <marker date="1524042716885" expanded="true" signature="246:324" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -808,24 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ViewModel/StorageViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <marker date="1524043454341" expanded="false" signature="6:48" ph="..." />
-            <marker date="1524043454341" expanded="true" signature="76:765" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="127:763" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="234:269" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="324:476" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="364:472" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="569:692" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="580:688" ph="{...}" />
-            <marker date="1524043454341" expanded="true" signature="727:760" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Separate/SeparateTestView.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -891,21 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding>
-            <marker date="1524044029196" expanded="true" signature="6:50" ph="..." />
-            <marker date="1524044029196" expanded="true" signature="81:578" ph="{...}" />
-            <marker date="1524044029196" expanded="true" signature="113:576" ph="{...}" />
-            <marker date="1524044029196" expanded="true" signature="285:349" ph="{...}" />
-            <marker date="1524044029196" expanded="true" signature="378:497" ph="{...}" />
-            <marker date="1524044029196" expanded="true" signature="525:573" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -930,87 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <marker date="1524044064545" expanded="true" signature="6:84" ph="..." />
-            <marker date="1524044064545" expanded="true" signature="115:966" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="184:964" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="296:345" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="415:567" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="455:563" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="604:612" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="718:877" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="729:873" ph="{...}" />
-            <marker date="1524044064545" expanded="true" signature="912:961" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-          <folding>
-            <marker date="1524044315308" expanded="true" signature="0:1093" ph="&lt;&lt;Application.Resources&gt;&#10;&#9;&#9;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;&#10;&#9;&lt;/Application.Resources&gt;.../&gt;" />
-            <marker date="1524044315308" expanded="true" signature="226:1078" ph="&lt;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;.../&gt;" />
-            <marker date="1524044315308" expanded="true" signature="252:1052" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
-            <marker date="1524044315308" expanded="true" signature="276:1028" ph="&lt;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <marker date="1524038619701" expanded="false" signature="6:209" ph="..." />
-            <marker date="1524038619701" expanded="true" signature="226:697" ph="{...}" />
-            <marker date="1524038619701" expanded="true" signature="230:295" ph="/// Interaction logic for App.xaml ... " />
-            <marker date="1524038619701" expanded="true" signature="334:695" ph="{...}" />
-            <marker date="1524038619701" expanded="true" signature="407:692" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <marker date="1524042759722" expanded="true" signature="6:208" ph="..." />
-            <marker date="1524042759722" expanded="true" signature="226:3106" ph="{...}" />
-            <marker date="1524042759722" expanded="true" signature="261:3104" ph="{...}" />
-            <marker date="1524042759722" expanded="true" signature="267:318" ph="/// Главная панель ... " />
-            <marker date="1524042759722" expanded="true" signature="461:512" ph="/// Текущая панель ... " />
-            <marker date="1524042759722" expanded="true" signature="583:617" ph="{...}" />
-            <marker date="1524042759722" expanded="true" signature="618:3101" ph="/* static async Task MainAsync() ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" column="43" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <marker date="1524045417689" expanded="true" signature="0:1670" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;ListBox Grid.Column=&quot;0&quot;&#10;&#9;&#9;         Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;         ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;         SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="741:1646" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;ListBox Grid.Column=&quot;0&quot;&#10;&#9;&#9;         Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;         ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;         SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&lt;/ListBox&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;180&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1208:1518" ph="&lt;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1376:1505" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1403:1478" ph="&lt;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;.../&gt;" />
-            <marker date="1524045417689" expanded="true" signature="1521:1637" ph="&lt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/IModule.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1018,24 +868,6 @@
           <folding>
             <marker date="1524037339422" expanded="true" signature="54:171" ph="{...}" />
             <marker date="1524037339422" expanded="true" signature="82:169" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1524045565358" expanded="true" signature="6:132" ph="..." />
-            <marker date="1524045565358" expanded="true" signature="159:1069" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="213:1067" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="360:499" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="447:495" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="639:960" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="685:956" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="996:1063" ph="{...}" />
-            <marker date="1524045565358" expanded="true" signature="1007:1059" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1050,33 +882,6 @@
             <marker date="1524046186934" expanded="true" signature="92:286" ph="{...}" />
             <marker date="1524046186934" expanded="true" signature="98:150" ph="/// Номер контракта ... " />
             <marker date="1524046186934" expanded="true" signature="191:249" ph="/// Идентификатор коробки ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding>
-            <marker date="1524046007581" expanded="true" signature="23:237" ph="{...}" />
-            <marker date="1524046007581" expanded="true" signature="55:235" ph="{...}" />
-            <marker date="1524046007581" expanded="true" signature="61:111" ph="/// Идентификатор ... " />
-            <marker date="1524046007581" expanded="true" signature="145:190" ph="/// Описание ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <marker date="1524046123046" expanded="true" signature="23:285" ph="{...}" />
-            <marker date="1524046123046" expanded="true" signature="27:79" ph="/// Хранилище коробок ... " />
-            <marker date="1524046123046" expanded="true" signature="110:283" ph="{...}" />
-            <marker date="1524046123046" expanded="true" signature="116:161" ph="/// Название ... " />
-            <marker date="1524046123046" expanded="true" signature="200:242" ph="/// Адрес ... " />
           </folding>
         </state>
       </provider>
@@ -1107,8 +912,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Domain/Action.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="75">
+          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding>
             <marker date="1524046509806" expanded="true" signature="38:561" ph="{...}" />
             <marker date="1524046509806" expanded="true" signature="42:112" ph="/// Действие, произведенное с договором ... " />
@@ -1117,6 +922,484 @@
             <marker date="1524046509806" expanded="true" signature="241:290" ph="/// Дата и время ... " />
             <marker date="1524046509806" expanded="true" signature="335:380" ph="/// Действие ... " />
             <marker date="1524046509806" expanded="true" signature="434:522" ph="/// Идентификатор пользователя, производившего действие ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding>
+            <marker date="1524047357596" expanded="true" signature="0:1814" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox&#10;&#9;&#9;&#9;&#9;ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;&#9;SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="741:1790" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox&#10;&#9;&#9;&#9;&#9;ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;&#9;SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;/Border&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;180&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="1208:1662" ph="&lt;&lt;ListBox&#10;&#9;&#9;&#9;&#9;ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;&#9;SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="1396:1650" ph="&lt;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="1503:1636" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="1531:1608" ph="&lt;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;.../&gt;" />
+            <marker date="1524047357596" expanded="true" signature="1665:1781" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <marker date="1524044315308" expanded="true" signature="0:1093" ph="&lt;&lt;Application.Resources&gt;&#10;&#9;&#9;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;&#10;&#9;&lt;/Application.Resources&gt;.../&gt;" />
+            <marker date="1524044315308" expanded="true" signature="226:1078" ph="&lt;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;.../&gt;" />
+            <marker date="1524044315308" expanded="true" signature="252:1052" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
+            <marker date="1524044315308" expanded="true" signature="276:1028" ph="&lt;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <marker date="1524038619701" expanded="false" signature="6:209" ph="..." />
+            <marker date="1524038619701" expanded="true" signature="226:697" ph="{...}" />
+            <marker date="1524038619701" expanded="true" signature="230:295" ph="/// Interaction logic for App.xaml ... " />
+            <marker date="1524038619701" expanded="true" signature="334:695" ph="{...}" />
+            <marker date="1524038619701" expanded="true" signature="407:692" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/StoragePartial.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <marker date="1524042716885" expanded="false" signature="6:74" ph="..." />
+            <marker date="1524042716885" expanded="true" signature="97:329" ph="{...}" />
+            <marker date="1524042716885" expanded="true" signature="129:327" ph="{...}" />
+            <marker date="1524042716885" expanded="true" signature="246:324" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbMock/Repository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DbMock/StorageRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1524053410911" expanded="true" signature="69:294" ph="{...}" />
+            <marker date="1524053410911" expanded="true" signature="101:292" ph="{...}" />
+            <marker date="1524053410911" expanded="true" signature="107:157" ph="/// Идентификатор ... " />
+            <marker date="1524053410911" expanded="true" signature="202:247" ph="/// Описание ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A43B7116-5A22-44B9-AAE5-FA8F55B2DF59/7f/31bd2aef/NullReferenceException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0AEBF9C1-5249-4BF7-8D98-F34FDA19D688/49/3866a530/ClrBindingWorker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="264" column="8" lean-forward="false" selection-start-line="264" selection-start-column="8" selection-end-line="264" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A43B7116-5A22-44B9-AAE5-FA8F55B2DF59/4e/5717e0eb/AsyncTaskMethodBuilder`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="29" column="6" lean-forward="false" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A43B7116-5A22-44B9-AAE5-FA8F55B2DF59/5c/0c62aed6/ExecutionContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="315" column="6" lean-forward="false" selection-start-line="315" selection-start-column="6" selection-end-line="315" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/DataContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <marker date="1524051161284" expanded="true" signature="6:122" ph="..." />
+            <marker date="1524051161284" expanded="true" signature="153:1286" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="181:1284" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="510:613" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="682:1281" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="782:1246" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="857:1241" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="1079:1235" ph="{...}" />
+            <marker date="1524051161284" expanded="true" signature="1169:1228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/IStorageRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding>
+            <marker date="1524058100709" expanded="false" signature="6:104" ph="..." />
+            <marker date="1524058100709" expanded="true" signature="146:507" ph="{...}" />
+            <marker date="1524058100709" expanded="true" signature="185:505" ph="{...}" />
+            <marker date="1524058100709" expanded="true" signature="191:344" ph="/// Получить хранилище по идентификатору ... " />
+            <marker date="1524058100709" expanded="true" signature="371:456" ph="/// Получить все хранилища ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0AEBF9C1-5249-4BF7-8D98-F34FDA19D688/1b/380e1136/PropertyPathWorker.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="369" column="6" lean-forward="false" selection-start-line="369" selection-start-column="6" selection-end-line="369" selection-end-column="6" />
+          <folding>
+            <marker date="1524056569592" expanded="true" signature="0:376" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1524056569592" expanded="false" signature="384:691" ph="..." />
+            <marker date="1524056569592" expanded="true" signature="719:46865" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="785:46863" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="851:868" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="929:946" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="1864:1876" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2017:2089" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2163:2481" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2506:2580" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2522:2574" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2620:2687" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2636:2681" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2730:2967" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2746:2852" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="2862:2961" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3019:3100" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3142:3331" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3158:3325" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3363:3611" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3379:3605" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3651:4640" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3667:4634" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="3805:4626" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="4683:4916" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="4699:4761" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="4779:4910" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="4956:5043" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="5087:5138" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="5192:5514" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="5552:5603" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="5657:5878" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="5931:6078" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="6118:6286" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="6340:9199" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="6713:8729" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="6801:6896" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="6922:7145" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="7171:7479" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="7506:7585" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="7681:8346" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="7938:8185" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="8745:9177" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="9254:11052" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="9931:11046" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="10004:10085" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="10126:10224" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="10250:10352" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="10531:10734" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="11084:11267" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="11301:11697" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="11371:11615" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="11495:11607" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="11772:12335" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="11886:12312" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="12390:12468" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="12536:12808" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="12586:12802" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="12656:12794" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="12893:13221" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13043:13195" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13338:13934" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13403:13555" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13566:13928" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13628:13920" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13745:13910" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="13989:14181" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14241:14283" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14344:14641" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14385:14489" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14516:14616" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14669:14739" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14685:14733" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14774:14845" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14790:14839" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14880:14947" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="14896:14941" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="15027:15132" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="15256:17130" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="15359:15536" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="15815:16548" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="16150:16252" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="16578:17077" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="17195:24339" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="17519:18726" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="17800:18138" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="18167:18236" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="18249:18718" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="18842:19086" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="19301:19867" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="19878:24333" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="19938:20088" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="20101:21533" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="20346:20770" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="20856:21523" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="20945:21070" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="21087:21511" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="21258:21497" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="21563:21819" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="21832:24325" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="22282:23613" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="22639:22994" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="23027:23108" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="23125:23601" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="24397:25876" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="24744:25743" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="25926:26677" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="26119:26652" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="26730:26952" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="27043:34633" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="27533:27900" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="27993:28383" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="28394:34627" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="28524:29551" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="28688:29541" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="29667:34126" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="30377:30616" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="30471:30581" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="30659:30754" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="30782:30877" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="30906:31002" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="31282:31584" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="31422:31570" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="31709:31795" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="32030:32855" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="32095:32841" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="32186:32825" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="32427:32807" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="32623:32760" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="33021:33170" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="33193:33515" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="33672:34097" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="33873:34062" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="34689:35310" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="35111:35265" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="35435:37390" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="35578:37201" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="35790:35961" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="35974:37193" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="35998:36943" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="36088:36355" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="36372:36716" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="36974:37117" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="37144:37183" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="37469:37998" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="37523:37972" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="37879:37964" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="38034:39842" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="38466:39701" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="38683:38825" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="38837:38909" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="38938:39147" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="39170:39379" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="39446:39666" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="39997:40411" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="40469:41507" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="40695:40896" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="40923:41104" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="41131:41310" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="41574:43031" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="41684:41744" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="41779:41816" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="41843:41943" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="42134:43025" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="42254:42854" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="42360:42462" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="42495:42619" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="43081:43358" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="43419:43964" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="44056:44088" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="44167:44517" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="44590:44948" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="45027:45196" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="45281:45615" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="45678:45841" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="45888:46410" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="45989:46034" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46081:46209" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46243:46404" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46445:46661" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46514:46555" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46579:46655" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46599:46647" ph="{...}" />
+            <marker date="1524056569592" expanded="true" signature="46698:46859" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <marker date="1524054447600" expanded="true" signature="48:147" ph="{...}" />
+            <marker date="1524054447600" expanded="true" signature="83:145" ph="{...}" />
+            <marker date="1524054447600" expanded="true" signature="108:142" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="110" lean-forward="false" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
+          <folding>
+            <marker date="1524057224555" expanded="true" signature="6:109" ph="..." />
+            <marker date="1524057224555" expanded="true" signature="135:595" ph="{...}" />
+            <marker date="1524057224555" expanded="true" signature="139:191" ph="/// Хранилище коробок ... " />
+            <marker date="1524057224555" expanded="true" signature="222:593" ph="{...}" />
+            <marker date="1524057224555" expanded="true" signature="426:471" ph="/// Название ... " />
+            <marker date="1524057224555" expanded="true" signature="510:552" ph="/// Адрес ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/StoragesRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+          <folding>
+            <marker date="1524058025362" expanded="true" signature="6:231" ph="..." />
+            <marker date="1524058025362" expanded="true" signature="262:1007" ph="{...}" />
+            <marker date="1524058025362" expanded="true" signature="318:1005" ph="{...}" />
+            <marker date="1524058025362" expanded="true" signature="350:644" ph="{...}" />
+            <marker date="1524058025362" expanded="true" signature="510:582" ph="{...}" />
+            <marker date="1524058025362" expanded="true" signature="697:1002" ph="{...}" />
+            <marker date="1524058025362" expanded="true" signature="949:980" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="52" lean-forward="false" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+          <folding>
+            <marker date="1524044029196" expanded="false" signature="6:50" ph="..." />
+            <marker date="1524044029196" expanded="true" signature="81:578" ph="{...}" />
+            <marker date="1524044029196" expanded="true" signature="113:576" ph="{...}" />
+            <marker date="1524044029196" expanded="true" signature="285:349" ph="{...}" />
+            <marker date="1524044029196" expanded="true" signature="378:497" ph="{...}" />
+            <marker date="1524044029196" expanded="true" signature="525:573" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/ObjectFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1524051878700" expanded="true" signature="44:976" ph="{...}" />
+            <marker date="1524051878700" expanded="true" signature="48:99" ph="/// Фабрика объектов ... " />
+            <marker date="1524051878700" expanded="true" signature="127:974" ph="{...}" />
+            <marker date="1524051878700" expanded="true" signature="319:391" ph="/// Экземпляр-одиночка фабрики объектов ... " />
+            <marker date="1524051878700" expanded="true" signature="480:488" ph="{...}" />
+            <marker date="1524051878700" expanded="true" signature="492:614" ph="/// Инициализировать фабрику объектов ... " />
+            <marker date="1524051878700" expanded="true" signature="667:724" ph="{...}" />
+            <marker date="1524051878700" expanded="true" signature="728:862" ph="/// Получить объект ... " />
+            <marker date="1524051878700" expanded="true" signature="904:971" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding>
+            <marker date="1524056420719" expanded="false" signature="6:132" ph="..." />
+            <marker date="1524056420719" expanded="true" signature="160:1033" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="214:1031" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="352:481" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="434:477" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="604:925" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="650:921" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="961:1028" ph="{...}" />
+            <marker date="1524056420719" expanded="true" signature="972:1024" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViewModel/StorageViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding>
+            <marker date="1524058062197" expanded="true" signature="6:168" ph="..." />
+            <marker date="1524058062197" expanded="true" signature="196:948" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="247:946" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="417:452" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="507:659" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="547:655" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="752:875" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="763:871" ph="{...}" />
+            <marker date="1524058062197" expanded="true" signature="910:943" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1524058503559" expanded="true" signature="6:197" ph="..." />
+            <marker date="1524058503559" expanded="true" signature="228:1271" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="297:1269" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="476:690" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="617:656" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="745:897" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="785:893" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="922:930" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="1023:1182" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="1034:1178" ph="{...}" />
+            <marker date="1524058503559" expanded="true" signature="1217:1266" ph="{...}" />
           </folding>
         </state>
       </provider>

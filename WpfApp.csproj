@@ -92,6 +92,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataProvider\DataContext.cs" />
+    <Compile Include="DataProvider\ObjectFactory.cs" />
     <Compile Include="Domain\Action.cs" />
     <Compile Include="Domain\ActionPerformed.cs" />
     <Compile Include="Domain\Box.cs" />
@@ -122,8 +124,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataProvider\StoragesRepository.cs" />
-    <Compile Include="DbMock\DataAccessLayer.cs" />
-    <Compile Include="DbMock\Repository.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -149,6 +149,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataProvider\Repository\IStorageRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

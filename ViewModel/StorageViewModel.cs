@@ -1,4 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using WpfApp.DataProvider;
+using WpfApp.Domain;
 using WpfApp.Utils;
 
 namespace WpfApp.ViewModel
@@ -6,6 +10,8 @@ namespace WpfApp.ViewModel
 	class StorageViewModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+		private IReadOnlyCollection<Storage> Storages { get; set; }
 
 		public StorageViewModel()
 		{

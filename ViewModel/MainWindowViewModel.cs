@@ -3,29 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
+
 namespace WpfApp.ViewModel
 {
 	class MainWindowViewModel : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
-		//ctor
 		public MainWindowViewModel(IEnumerable<IModule> modules)
 		{
 			Modules = modules.OrderBy(m => m.Name).ToList();
-			if (this.Modules.Count > 0)
+			if (Modules.Count > 0)
 			{
-				SelectedModule = this.Modules[0];
+				SelectedModule = Modules[0];
 			}
 		}
 
-
-		//Properties
-
 		public List<IModule> Modules { get; private set; }
 
-
 		private IModule _selectedModule;
+
 		public IModule SelectedModule
 		{
 			get { return _selectedModule; }
@@ -46,6 +43,5 @@ namespace WpfApp.ViewModel
 				return SelectedModule?.UserInterface;
 			}
 		}
-
 	}
 }

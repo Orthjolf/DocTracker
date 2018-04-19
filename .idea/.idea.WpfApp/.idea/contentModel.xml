@@ -8,11 +8,12 @@
       <e p="App.xaml.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="DataProvider" t="Include">
+        <e p="DataContext.cs" t="Include" />
+        <e p="ObjectFactory.cs" t="Include" />
+        <e p="Repository" t="Include">
+          <e p="IStorageRepository.cs" t="Include" />
+        </e>
         <e p="StoragesRepository.cs" t="Include" />
-      </e>
-      <e p="DbMock" t="Include">
-        <e p="DataAccessLayer.cs" t="Include" />
-        <e p="Repository.cs" t="Include" />
       </e>
       <e p="Domain" t="Include">
         <e p="Action.cs" t="Include" />

@@ -29,16 +29,22 @@
 			        Width="65" />
 		</Grid>
 
-		<ListBox Grid.Column="0"
-		         Margin="10,50,10,10"
-		         ItemsSource="{Binding Modules}"
-		         SelectedItem="{Binding SelectedModule, Mode=TwoWay}">
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<TextBlock Text="{Binding Name}" />
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
+		<Border Grid.Column="0"
+		        BorderBrush="LightGray"
+		        Margin="10,50,10,10"
+		        BorderThickness="1"
+		        Name="RootLayoutBorder"
+		        DockPanel.Dock="Top">
+			<ListBox
+				ItemsSource="{Binding Modules}"
+				SelectedItem="{Binding SelectedModule, Mode=TwoWay}">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Name}" />
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</Border>
 		<ContentPresenter x:Name="contentPresenter" Grid.Column="1"
 		                  Content="{Binding UserInterface}" />
 	</Grid>
