@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
-using WpfApp.SeparateDemo;
 
 namespace WpfApp.ViewModel
 {

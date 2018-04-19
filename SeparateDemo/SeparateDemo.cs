@@ -24,7 +24,7 @@ namespace WpfApp.SeparateDemo
 			};
 		}
 
-		public string Name => "Вьюшка SeparateDemo";
+		public string Name => _storage.Name;
 
 		public UserControl UserInterface
 		{

@@ -6,9 +6,18 @@
              xmlns:local="clr-namespace:WpfApp.SeparateDemo"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-	<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
-        <TextBlock Text="{Binding HeadText}" />
-        <Button Content="Click Me!" Margin="0,10,0,0" Width="60"
-                Command="{Binding ChangeHeadTextCommand, Mode=OneTime}" />
-    </StackPanel>
+	<Border Grid.Column="0"
+	        BorderBrush="LightGray"
+	        Margin="10,50,10,10"
+	        BorderThickness="1"
+	        Name="StorageLayout"
+	        DockPanel.Dock="Top">
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
+
+			<TextBlock Text="{Binding HeadText}" />
+			<Button Content="Click Me!" Margin="0,10,0,0" Width="60"
+			        Command="{Binding ChangeHeadTextCommand, Mode=OneTime}" />
+
+		</StackPanel>
+	</Border>
 </UserControl>

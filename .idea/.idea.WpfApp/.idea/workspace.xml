@@ -3,16 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="8a06753c-fc3f-4f4b-ae42-98ef4906f57e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.WpfApp/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/App.xaml.cs" afterPath="$PROJECT_DIR$/App.xaml.cs" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entity.cs" afterPath="$PROJECT_DIR$/Domain/Entity.cs" />
-      <change beforePath="$PROJECT_DIR$/Domain/Storage.cs" afterPath="$PROJECT_DIR$/Domain/Storage.cs" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.xaml" afterPath="$PROJECT_DIR$/MainWindow.xaml" />
       <change beforePath="$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs" afterPath="$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs" />
-      <change beforePath="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" afterPath="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" />
+      <change beforePath="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml" afterPath="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml" />
       <change beforePath="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" afterPath="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
-      <change beforePath="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" afterPath="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.exe" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/bin/Debug/WpfApp.pdb" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.baml" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/MainWindow.g.i.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SeparateDemo/SeparateDemoView.baml" afterPath="$PROJECT_DIR$/obj/Debug/SeparateDemo/SeparateDemoView.baml" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SeparateDemo/SeparateDemoView.g.cs" afterPath="$PROJECT_DIR$/obj/Debug/SeparateDemo/SeparateDemoView.g.cs" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/SeparateDemo/SeparateDemoView.g.i.cs" afterPath="$PROJECT_DIR$/obj/Debug/SeparateDemo/SeparateDemoView.g.i.cs" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.exe" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.g.resources" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" afterPath="$PROJECT_DIR$/obj/Debug/WpfApp.pdb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +31,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainWindow.xaml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <folding>
+                <marker date="1524121313389" expanded="true" signature="0:1931" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;222&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;DataGrid Grid.Row=&quot;0&quot;&#10;&#9;&#9;&#9;          ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;          SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&#10;&#9;&#9;&#9;          AutoGenerateColumns=&quot;False&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&lt;/DataGrid&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="741:1907" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;222&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;DataGrid Grid.Row=&quot;0&quot;&#10;&#9;&#9;&#9;          ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;          SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&#10;&#9;&#9;&#9;          AutoGenerateColumns=&quot;False&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&lt;/DataGrid&gt;&#10;&#9;&#9;&lt;/Border&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;222&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="1208:1779" ph="&lt;&lt;DataGrid Grid.Row=&quot;0&quot;&#10;&#9;&#9;&#9;          ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;          SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&#10;&#9;&#9;&#9;          AutoGenerateColumns=&quot;False&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&lt;/DataGrid&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="1396:1767" ph="&lt;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="1576:1752" ph="&lt;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="1600:1728" ph="&lt;.../&gt;" />
+                <marker date="1524121313389" expanded="true" signature="1782:1898" ph="&lt;.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoxViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ViewModel/BoxViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+              <folding>
+                <marker date="1524042591937" expanded="false" signature="6:84" ph="..." />
+                <marker date="1524042591937" expanded="true" signature="112:1136" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="159:1134" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="262:302" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="357:509" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="397:505" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="567:722" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="608:718" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="815:938" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="826:934" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="973:1131" ph="{...}" />
+                <marker date="1524042591937" expanded="true" signature="1017:1101" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IModule.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/IModule.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+              <folding>
+                <marker date="1524037339422" expanded="true" signature="54:171" ph="{...}" />
+                <marker date="1524037339422" expanded="true" signature="82:169" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeparateDemo.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+              <folding>
+                <marker date="1524119235908" expanded="false" signature="6:125" ph="..." />
+                <marker date="1524119235908" expanded="true" signature="156:952" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="188:950" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="350:561" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="384:556" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="637:715" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="648:711" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="744:871" ph="{...}" />
+                <marker date="1524119235908" expanded="true" signature="899:947" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="App.xaml.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="74" lean-forward="false" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
+              <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
               <folding>
                 <marker date="1524116815129" expanded="true" signature="6:85" ph="..." />
                 <marker date="1524116815129" expanded="true" signature="103:568" ph="{...}" />
@@ -63,37 +145,17 @@
       <file leaf-file-name="MainWindowViewModel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+            <state relative-caret-position="195">
+              <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
-                <marker date="1524114678062" expanded="true" signature="6:159" ph="..." />
-                <marker date="1524114678062" expanded="true" signature="187:1052" ph="{...}" />
-                <marker date="1524114678062" expanded="true" signature="241:1050" ph="{...}" />
-                <marker date="1524114678062" expanded="true" signature="442:763" ph="{...}" />
-                <marker date="1524114678062" expanded="true" signature="488:759" ph="{...}" />
-                <marker date="1524114678062" expanded="true" signature="799:856" ph="{...}" />
-                <marker date="1524114678062" expanded="true" signature="917:1047" ph="{...}" />
-                <marker date="1524114678062" expanded="true" signature="1000:1043" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeparateDemo.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-              <folding>
-                <marker date="1524116445942" expanded="true" signature="6:125" ph="..." />
-                <marker date="1524116445942" expanded="true" signature="156:960" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="188:958" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="350:561" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="384:556" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="645:723" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="656:719" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="752:879" ph="{...}" />
-                <marker date="1524116445942" expanded="true" signature="907:955" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="6:132" ph="..." />
+                <marker date="1524120158125" expanded="true" signature="160:1025" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="214:1023" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="415:736" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="461:732" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="772:829" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="890:1020" ph="{...}" />
+                <marker date="1524120158125" expanded="true" signature="973:1016" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -119,52 +181,23 @@
       <file leaf-file-name="SeparateDemoView.xaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="195">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding>
-                <marker date="1524043974626" expanded="true" signature="0:812" ph="&lt;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;        &lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;        &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;    &lt;/StackPanel&gt;.../&gt;" />
-                <marker date="1524043974626" expanded="true" signature="512:797" ph="&lt;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt; &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;.../&gt;" />
-                <marker date="1524043974626" expanded="true" signature="648:779" ph="&lt;.../&gt;" />
+                <marker date="1524121169745" expanded="true" signature="0:987" ph="&lt;&lt;Border Grid.Column=&quot;0&quot;&#10;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;        Name=&quot;StorageLayout&quot;&#10;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;&#9;&#9;&#9;        Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;&#10;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&lt;/Border&gt;.../&gt;" />
+                <marker date="1524121169745" expanded="true" signature="512:972" ph="&lt;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;&#9;&#9;&#9;        Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;&#10;&#9;&#9;&lt;/StackPanel&gt;.../&gt;" />
+                <marker date="1524121169745" expanded="true" signature="691:961" ph="&lt;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt; &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;&#9;&#9;&#9;        Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;.../&gt;" />
+                <marker date="1524121169745" expanded="true" signature="818:944" ph="&lt;.../&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Entity.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-              <folding>
-                <marker date="1524115686535" expanded="true" signature="69:297" ph="{...}" />
-                <marker date="1524115686535" expanded="true" signature="101:295" ph="{...}" />
-                <marker date="1524115686535" expanded="true" signature="107:157" ph="/// Идентификатор ... " />
-                <marker date="1524115686535" expanded="true" signature="205:250" ph="/// Описание ... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.xaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding>
-                <marker date="1524044315308" expanded="true" signature="0:1093" ph="&lt;&lt;Application.Resources&gt;&#10;&#9;&#9;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;&#10;&#9;&lt;/Application.Resources&gt;.../&gt;" />
-                <marker date="1524044315308" expanded="true" signature="226:1078" ph="&lt;&lt;ResourceDictionary&gt;&#10;&#9;&#9;&#9;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&lt;/ResourceDictionary&gt;.../&gt;" />
-                <marker date="1524044315308" expanded="true" signature="252:1052" ph="&lt;&lt;ResourceDictionary.MergedDictionaries&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;!-- Accent and AppTheme setting --&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;&#10;&#9;&#9;&#9;&lt;/ResourceDictionary.MergedDictionaries&gt;.../&gt;" />
-                <marker date="1524044315308" expanded="true" signature="276:1028" ph="&lt;&lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml&quot; /&gt; &lt;ResourceDictionary Source=&quot;pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml&quot; /&gt;.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SeparateDemoViewModel.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SeparateDemoViewModel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="345">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <marker date="1524117080934" expanded="false" signature="6:197" ph="..." />
                 <marker date="1524117080934" expanded="true" signature="228:1455" ph="{...}" />
@@ -272,13 +305,11 @@
         <option value="$PROJECT_DIR$/Separate/SeparateTestView.xaml.cs" />
         <option value="$PROJECT_DIR$/Separate/SeparateTestView.xaml" />
         <option value="$PROJECT_DIR$/Separate/SeparateTestViewModel.cs" />
-        <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml" />
         <option value="$PROJECT_DIR$/App.xaml" />
         <option value="$PROJECT_DIR$/Domain/Contract.cs" />
         <option value="$PROJECT_DIR$/Domain/Box.cs" />
         <option value="$PROJECT_DIR$/Domain/ActionPerformed.cs" />
         <option value="$PROJECT_DIR$/Domain/Action.cs" />
-        <option value="$PROJECT_DIR$/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/DataProvider/DataContext.cs" />
         <option value="$PROJECT_DIR$/DataProvider/ObjectFactory.cs" />
         <option value="$PROJECT_DIR$/DbMock/StorageRepository.cs" />
@@ -286,13 +317,15 @@
         <option value="$PROJECT_DIR$/DataProvider/StoragesRepository.cs" />
         <option value="$PROJECT_DIR$/DataProvider/Repository/IStorageRepository.cs" />
         <option value="$PROJECT_DIR$/ViewModel/StorageViewModel.cs" />
-        <option value="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
         <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml.cs" />
         <option value="$PROJECT_DIR$/Domain/Entity.cs" />
         <option value="$PROJECT_DIR$/App.xaml.cs" />
-        <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs" />
         <option value="$PROJECT_DIR$/Domain/Storage.cs" />
         <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs" />
+        <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs" />
+        <option value="$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs" />
+        <option value="$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml" />
+        <option value="$PROJECT_DIR$/MainWindow.xaml" />
       </list>
     </option>
   </component>
@@ -377,6 +410,12 @@
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="App.xaml" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="WpfApp (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="MainWindow.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -438,12 +477,12 @@
       <option name="presentableId" value="Default" />
       <updated>1523945957240</updated>
       <workItem from="1523945960167" duration="28178000" />
-      <workItem from="1524035987803" duration="20751000" />
+      <workItem from="1524035987803" duration="24188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48929000" />
+    <option name="totallyTimeSpent" value="52366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,12 +495,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3263434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3263434" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43774575" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -778,26 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding>
-            <marker date="1524047357596" expanded="true" signature="0:1814" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox&#10;&#9;&#9;&#9;&#9;ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;&#9;SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="741:1790" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;180&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;ListBox&#10;&#9;&#9;&#9;&#9;ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;&#9;SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox&gt;&#10;&#9;&#9;&lt;/Border&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;180&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="1208:1662" ph="&lt;&lt;ListBox&#10;&#9;&#9;&#9;&#9;ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;&#9;SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&lt;/ListBox&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="1396:1650" ph="&lt;&lt;ListBox.ItemTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&lt;/ListBox.ItemTemplate&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="1503:1636" ph="&lt;&lt;DataTemplate&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;/DataTemplate&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="1531:1608" ph="&lt;&lt;TextBlock Text=&quot;{Binding Name}&quot; /&gt;.../&gt;" />
-            <marker date="1524047357596" expanded="true" signature="1665:1781" ph="&lt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DbMock/Repository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1071,18 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <marker date="1524054447600" expanded="true" signature="48:147" ph="{...}" />
-            <marker date="1524054447600" expanded="true" signature="83:145" ph="{...}" />
-            <marker date="1524054447600" expanded="true" signature="108:142" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataProvider/ObjectFactory.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6">
@@ -1106,38 +1114,6 @@
         <state relative-caret-position="150">
           <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils/IModule.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="8" selection-end-column="26" />
-          <folding>
-            <marker date="1524037339422" expanded="true" signature="54:171" ph="{...}" />
-            <marker date="1524037339422" expanded="true" signature="82:169" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ViewModel/BoxViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <marker date="1524042591937" expanded="false" signature="6:84" ph="..." />
-            <marker date="1524042591937" expanded="true" signature="112:1136" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="159:1134" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="262:302" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="357:509" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="397:505" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="567:722" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="608:718" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="815:938" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="826:934" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="973:1131" ph="{...}" />
-            <marker date="1524042591937" expanded="true" signature="1017:1101" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,46 +1173,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="42" column="8" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-          <folding>
-            <marker date="1524114678062" expanded="true" signature="6:159" ph="..." />
-            <marker date="1524114678062" expanded="true" signature="187:1052" ph="{...}" />
-            <marker date="1524114678062" expanded="true" signature="241:1050" ph="{...}" />
-            <marker date="1524114678062" expanded="true" signature="442:763" ph="{...}" />
-            <marker date="1524114678062" expanded="true" signature="488:759" ph="{...}" />
-            <marker date="1524114678062" expanded="true" signature="799:856" ph="{...}" />
-            <marker date="1524114678062" expanded="true" signature="917:1047" ph="{...}" />
-            <marker date="1524114678062" expanded="true" signature="1000:1043" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0AEBF9C1-5249-4BF7-8D98-F34FDA19D688/55/923a3e4f/Application.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="107" column="35" lean-forward="true" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <marker date="1524116445942" expanded="true" signature="6:125" ph="..." />
-            <marker date="1524116445942" expanded="true" signature="156:960" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="188:958" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="350:561" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="384:556" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="645:723" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="656:719" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="752:879" ph="{...}" />
-            <marker date="1524116445942" expanded="true" signature="907:955" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,19 +1190,6 @@
             <marker date="1524115686535" expanded="true" signature="101:295" ph="{...}" />
             <marker date="1524115686535" expanded="true" signature="107:157" ph="/// Идентификатор ... " />
             <marker date="1524115686535" expanded="true" signature="205:250" ph="/// Описание ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="74" lean-forward="false" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
-          <folding>
-            <marker date="1524116815129" expanded="true" signature="6:85" ph="..." />
-            <marker date="1524116815129" expanded="true" signature="103:568" ph="{...}" />
-            <marker date="1524116815129" expanded="true" signature="131:566" ph="{...}" />
-            <marker date="1524116815129" expanded="true" signature="204:563" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1309,22 +1237,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-          <folding>
-            <marker date="1524043974626" expanded="true" signature="0:812" ph="&lt;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;        &lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;        &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;    &lt;/StackPanel&gt;.../&gt;" />
-            <marker date="1524043974626" expanded="true" signature="512:797" ph="&lt;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt; &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;                Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;.../&gt;" />
-            <marker date="1524043974626" expanded="true" signature="648:779" ph="&lt;.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="345">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <marker date="1524117080934" expanded="false" signature="6:197" ph="..." />
             <marker date="1524117080934" expanded="true" signature="228:1455" ph="{...}" />
@@ -1339,6 +1255,131 @@
             <marker date="1524117080934" expanded="true" signature="1207:1366" ph="{...}" />
             <marker date="1524117080934" expanded="true" signature="1218:1362" ph="{...}" />
             <marker date="1524117080934" expanded="true" signature="1401:1450" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/IModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <marker date="1524037339422" expanded="true" signature="54:171" ph="{...}" />
+            <marker date="1524037339422" expanded="true" signature="82:169" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <marker date="1524054447600" expanded="true" signature="48:147" ph="{...}" />
+            <marker date="1524054447600" expanded="true" signature="83:145" ph="{...}" />
+            <marker date="1524054447600" expanded="true" signature="108:142" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+          <folding>
+            <marker date="1524116815129" expanded="true" signature="6:85" ph="..." />
+            <marker date="1524116815129" expanded="true" signature="103:568" ph="{...}" />
+            <marker date="1524116815129" expanded="true" signature="131:566" ph="{...}" />
+            <marker date="1524116815129" expanded="true" signature="204:563" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <marker date="1524119235908" expanded="false" signature="6:125" ph="..." />
+            <marker date="1524119235908" expanded="true" signature="156:952" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="188:950" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="350:561" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="384:556" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="637:715" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="648:711" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="744:871" ph="{...}" />
+            <marker date="1524119235908" expanded="true" signature="899:947" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViewModel/MainWindowViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="24" column="37" lean-forward="false" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <marker date="1524120158125" expanded="true" signature="6:132" ph="..." />
+            <marker date="1524120158125" expanded="true" signature="160:1025" ph="{...}" />
+            <marker date="1524120158125" expanded="true" signature="214:1023" ph="{...}" />
+            <marker date="1524120158125" expanded="true" signature="415:736" ph="{...}" />
+            <marker date="1524120158125" expanded="true" signature="461:732" ph="{...}" />
+            <marker date="1524120158125" expanded="true" signature="772:829" ph="{...}" />
+            <marker date="1524120158125" expanded="true" signature="890:1020" ph="{...}" />
+            <marker date="1524120158125" expanded="true" signature="973:1016" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViewModel/BoxViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <marker date="1524042591937" expanded="false" signature="6:84" ph="..." />
+            <marker date="1524042591937" expanded="true" signature="112:1136" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="159:1134" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="262:302" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="357:509" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="397:505" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="567:722" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="608:718" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="815:938" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="826:934" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="973:1131" ph="{...}" />
+            <marker date="1524042591937" expanded="true" signature="1017:1101" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeparateDemo/SeparateDemoView.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <marker date="1524121169745" expanded="true" signature="0:987" ph="&lt;&lt;Border Grid.Column=&quot;0&quot;&#10;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;        Name=&quot;StorageLayout&quot;&#10;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;&#9;&#9;&#9;        Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;&#10;&#9;&#9;&lt;/StackPanel&gt;&#10;&#9;&lt;/Border&gt;.../&gt;" />
+            <marker date="1524121169745" expanded="true" signature="512:972" ph="&lt;&lt;StackPanel VerticalAlignment=&quot;Center&quot; HorizontalAlignment=&quot;Center&quot; Margin=&quot;5&quot;&gt;&#10;&#10;&#9;&#9;&#9;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;&#9;&#9;&#9;        Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;&#10;&#10;&#9;&#9;&lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1524121169745" expanded="true" signature="691:961" ph="&lt;&lt;TextBlock Text=&quot;{Binding HeadText}&quot; /&gt; &lt;Button Content=&quot;Click Me!&quot; Margin=&quot;0,10,0,0&quot; Width=&quot;60&quot;&#10;&#9;&#9;&#9;        Command=&quot;{Binding ChangeHeadTextCommand, Mode=OneTime}&quot; /&gt;.../&gt;" />
+            <marker date="1524121169745" expanded="true" signature="818:944" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <marker date="1524121313389" expanded="true" signature="0:1931" ph="&lt;&lt;Grid&gt;&#10;&#9;&#9;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;222&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt;&#10;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#10;&#9;&#9;&lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;DataGrid Grid.Row=&quot;0&quot;&#10;&#9;&#9;&#9;          ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;          SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&#10;&#9;&#9;&#9;          AutoGenerateColumns=&quot;False&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&lt;/DataGrid&gt;&#10;&#9;&#9;&lt;/Border&gt;&#10;&#9;&#9;&lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;&#10;&#9;&lt;/Grid&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="741:1907" ph="&lt;&lt;Grid.ColumnDefinitions&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;222&quot; /&gt;&#10;&#9;&#9;&#9;&lt;ColumnDefinition Width=&quot;*&quot; /&gt;&#10;&#9;&#9;&lt;/Grid.ColumnDefinitions&gt; &lt;Grid&gt;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt; &lt;Border Grid.Column=&quot;0&quot;&#10;&#9;&#9;        BorderBrush=&quot;LightGray&quot;&#10;&#9;&#9;        Margin=&quot;10,50,10,10&quot;&#10;&#9;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;&#9;        Name=&quot;RootLayoutBorder&quot;&#10;&#9;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&#9;&lt;DataGrid Grid.Row=&quot;0&quot;&#10;&#9;&#9;&#9;          ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;          SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&#10;&#9;&#9;&#9;          AutoGenerateColumns=&quot;False&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&lt;/DataGrid&gt;&#10;&#9;&#9;&lt;/Border&gt; &lt;ContentPresenter x:Name=&quot;contentPresenter&quot; Grid.Column=&quot;1&quot;&#10;&#9;&#9;                  Content=&quot;{Binding UserInterface}&quot; /&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="750:872" ph="&lt;&lt;ColumnDefinition Width=&quot;222&quot; /&gt; &lt;ColumnDefinition Width=&quot;*&quot; /&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="876:1204" ph="&lt;&lt;Button Content=&quot;Назад&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;10,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt; &lt;Button Content=&quot;Вперед&quot;&#10;&#9;&#9;&#9;        HorizontalAlignment=&quot;Left&quot;&#10;&#9;&#9;&#9;        Margin=&quot;85,10,0,0&quot;&#10;&#9;&#9;&#9;        VerticalAlignment=&quot;Top&quot;&#10;&#9;&#9;&#9;        Width=&quot;65&quot; /&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="886:1037" ph="&lt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="1042:1194" ph="&lt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="1208:1779" ph="&lt;&lt;DataGrid Grid.Row=&quot;0&quot;&#10;&#9;&#9;&#9;          ItemsSource=&quot;{Binding Modules}&quot;&#10;&#9;&#9;&#9;          SelectedItem=&quot;{Binding SelectedModule, Mode=TwoWay}&quot;&#10;&#9;&#9;&#9;          AutoGenerateColumns=&quot;False&quot;&gt;&#10;&#9;&#9;&#9;&#9;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&lt;/DataGrid&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="1396:1767" ph="&lt;&lt;DataGrid.Columns&gt;&#10;&#9;&#9;&#9;&#9;&#9;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;&#10;&#9;&#9;&#9;&#9;&lt;/DataGrid.Columns&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="1576:1752" ph="&lt;&lt;DataGridTextColumn Header=&quot;Хранилище&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Binding=&quot;{Binding Name}&quot;&#10;&#9;&#9;&#9;&#9;&#9;                    Width=&quot;200&quot; /&gt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="1600:1728" ph="&lt;.../&gt;" />
+            <marker date="1524121313389" expanded="true" signature="1782:1898" ph="&lt;.../&gt;" />
           </folding>
         </state>
       </provider>

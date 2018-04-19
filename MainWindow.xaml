@@ -11,7 +11,7 @@
                       Title="MainWindow" Height="600" Width="800">
 	<Grid>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="180" />
+			<ColumnDefinition Width="222" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
@@ -35,15 +35,16 @@
 		        BorderThickness="1"
 		        Name="RootLayoutBorder"
 		        DockPanel.Dock="Top">
-			<ListBox
-				ItemsSource="{Binding Modules}"
-				SelectedItem="{Binding SelectedModule, Mode=TwoWay}">
-				<ListBox.ItemTemplate>
-					<DataTemplate>
-						<TextBlock Text="{Binding Name}" />
-					</DataTemplate>
-				</ListBox.ItemTemplate>
-			</ListBox>
+			<DataGrid Grid.Row="0"
+			          ItemsSource="{Binding Modules}"
+			          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
+			          AutoGenerateColumns="False">
+				<DataGrid.Columns>
+					<DataGridTextColumn Header="Хранилище"
+					                    Binding="{Binding Name}"
+					                    Width="200" />
+				</DataGrid.Columns>
+			</DataGrid>
 		</Border>
 		<ContentPresenter x:Name="contentPresenter" Grid.Column="1"
 		                  Content="{Binding UserInterface}" />
