@@ -5,44 +5,48 @@
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       mc:Ignorable="d"
-                      Title="MainWindow" Height="600" Width="800">
+                      Title="DocTracker" Height="600" Width="800">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="222" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
-
-		<Grid>
-			<Button Content="Назад"
-			        HorizontalAlignment="Left"
-			        Margin="10,10,0,0"
-			        VerticalAlignment="Top"
-			        Width="65" />
-
-			<Button Content="Вперед"
-			        HorizontalAlignment="Left"
-			        Margin="85,10,0,0"
-			        VerticalAlignment="Top"
-			        Width="65" />
-		</Grid>
-
 		<Border Grid.Column="0"
 		        BorderBrush="LightGray"
 		        Margin="10,50,10,10"
 		        BorderThickness="1"
-		        Name="RootLayoutBorder"
 		        DockPanel.Dock="Top">
-			<DataGrid ItemsSource="{Binding Modules}"
-			          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
-			          AutoGenerateColumns="False">
-				<DataGrid.Columns>
-					<DataGridTextColumn Header="Хранилище"
-					                    Binding="{Binding Name}"
-					                    Width="200" />
-				</DataGrid.Columns>
-			</DataGrid>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="30" />
+					<RowDefinition />
+					<RowDefinition Height="30" />
+				</Grid.RowDefinitions>
+				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				         controls:TextBoxHelper.ClearTextButton="True" />
+				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+				          ItemsSource="{Binding Modules}"
+				          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
+				          AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Хранилище"
+						                    Binding="{Binding Name}"
+						                    Width="200" />
+					</DataGrid.Columns>
+				</DataGrid>
+				<Button Grid.Row="2" Grid.Column="0"
+				        Style="{StaticResource AccentedSquareButtonStyle}"
+				        Content="Добавить" />
+				<Button Grid.Row="2" Grid.Column="1"
+				        Style="{StaticResource AccentedSquareButtonStyle}"
+				        Content="Удалить" />
+			</Grid>
 		</Border>
-		<ContentPresenter x:Name="contentPresenter" Grid.Column="1"
+		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
 		                  Content="{Binding UserInterface}" />
 	</Grid>
 </controls:MetroWindow>
