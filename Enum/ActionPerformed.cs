@@ -1,4 +1,4 @@
-﻿namespace WpfApp.Domain
+﻿namespace WpfApp.Enum
 {
 	public enum ActionPerformed
 	{

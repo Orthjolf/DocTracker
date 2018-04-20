@@ -11,6 +11,7 @@
         <e p="DataContext.cs" t="Include" />
         <e p="ObjectFactory.cs" t="Include" />
         <e p="Repository" t="Include">
+          <e p="BoxRepository.cs" t="Include" />
           <e p="DocumentRepository.cs" t="Include" />
           <e p="IDocumentRepository.cs" t="Include" />
         </e>

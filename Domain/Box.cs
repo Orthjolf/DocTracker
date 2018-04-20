@@ -1,5 +1,7 @@
 ﻿using System;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
 {
@@ -8,6 +10,8 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Box : Entity
 	{
+		public new static BoxRepository Repository => new BoxRepository();
+
 		/// <summary>
 		/// Идентификатор склада
 		/// </summary>
@@ -23,15 +27,27 @@ namespace WpfApp.Domain
 		/// </summary>
 		public DateTime MaxDate { get; set; }
 
-		public static Box Reconstitute(BsonDocument document)
+		public BsonDocument Serialize()
+		{
+			return new BsonDocument
+			{
+				{"_id", Id},
+				{"StorageId", StorageId},
+				{"MinDate", MinDate},
+				{"MaxDate", MaxDate},
+				{"Description", Description}
+			};
+		}
+
+		public static Box Reconstitute(BsonDocument bsonDocument)
 		{
 			return new Box
 			{
-				Id = document["_id"].ToString(),
-				StorageId = document["StorageId"].AsString,
-				MinDate = document["MinDate"].ToUniversalTime(),
-				MaxDate = document["MaxDate"].ToUniversalTime(),
-				Description = document["Description"].AsString
+				Id = bsonDocument["_id"].ToString(),
+				StorageId = bsonDocument["StorageId"].AsString,
+				MinDate = bsonDocument["MinDate"].ToUniversalTime(),
+				MaxDate = bsonDocument["MaxDate"].ToUniversalTime(),
+				Description = bsonDocument["Description"].AsString
 			};
 		}
 	}

@@ -1,9 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using WpfApp.DataProvider;
-using WpfApp.DataProvider.Repository;
-
-
-namespace WpfApp.Domain
+﻿namespace WpfApp.Domain
 {
 	/// <summary>
 	/// Хранилище коробок

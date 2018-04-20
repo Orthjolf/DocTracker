@@ -1,4 +1,5 @@
 ﻿using System;
+using WpfApp.Enum;
 
 namespace WpfApp.Domain
 {

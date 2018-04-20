@@ -40,19 +40,11 @@ namespace WpfApp.SubPages.StoragePage
 			Description = storage.Description;
 			HeadText = Name;
 
+			var documents = Box.Repository.GetByStorageId(storage.Id);
 			Boxes = new List<Box>();
-			var documents = Entity.Repository.GetAll(DocumentType.Box);
 			foreach (var bsonDocument in documents)
 			{
-				var box = new Box
-				{
-					Id = bsonDocument["_id"].ToString(),
-					StorageId = bsonDocument["StorageId"].AsString,
-					MinDate = bsonDocument["MinDate"].ToUniversalTime(),
-					MaxDate = bsonDocument["MaxDate"].ToUniversalTime(),
-					Description = bsonDocument["Description"].AsString
-				};
-				Boxes.Add(box);
+				Boxes.Add(Box.Reconstitute(bsonDocument));
 			}
 
 //			var modules = Boxes.Select(box => new BoxPage.BoxPage(box)).ToList();

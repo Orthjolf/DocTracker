@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
-using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.Enum;
 
