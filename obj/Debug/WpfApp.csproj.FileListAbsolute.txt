@@ -43,3 +43,5 @@ D:\work\WpfApp\obj\Debug\WpfApp_MarkupCompile.lref
 D:\work\WpfApp\obj\Debug\App.baml
 D:\work\WpfApp\obj\Debug\SubPages\StoragePage\StorageView.baml
 D:\work\WpfApp\obj\Debug\SubPages\StoragePage\StorageView.g.cs
+D:\work\WpfApp\obj\Debug\SubPages\BoxPage\BoxView.g.cs
+D:\work\WpfApp\obj\Debug\SubPages\BoxPage\BoxView.baml

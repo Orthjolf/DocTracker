@@ -103,6 +103,9 @@
     <Compile Include="Enum\ActionPerformed.cs" />
     <Compile Include="Enum\DocumentType.cs" />
     <Compile Include="Service\MessageService.cs" />
+    <Compile Include="SubPages\BoxPage\BoxPage.cs" />
+    <Compile Include="SubPages\BoxPage\BoxView.xaml.cs" />
+    <Compile Include="SubPages\BoxPage\BoxViewModel.cs" />
     <Compile Include="SubPages\StoragePage\StoragePage.cs" />
     <Compile Include="SubPages\StoragePage\StorageView.xaml.cs" />
     <Compile Include="SubPages\StoragePage\StorageViewModel.cs" />
@@ -123,6 +126,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SubPages\BoxPage\BoxView.xaml" />
     <Page Include="SubPages\StoragePage\StorageView.xaml" />
   </ItemGroup>
   <ItemGroup>
@@ -145,9 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider\Repository\IDocumentRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SubPages\BoxPage" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

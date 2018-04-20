@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\work\WpfApp\App.xaml
-2-612849702
+31936636985
 
-24-1195558731
+272079918879
 76156824025
-MainWindow.xaml;SubPages\StoragePage\StorageView.xaml;
+MainWindow.xaml;SubPages\BoxPage\BoxView.xaml;SubPages\StoragePage\StorageView.xaml;
 
 False
 

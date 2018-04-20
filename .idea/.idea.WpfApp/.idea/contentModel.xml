@@ -40,7 +40,12 @@
         <e p="MessageService.cs" t="Include" />
       </e>
       <e p="SubPages" t="Include">
-        <e p="BoxPage" t="Include" />
+        <e p="BoxPage" t="Include">
+          <e p="BoxPage.cs" t="Include" />
+          <e p="BoxView.xaml" t="Include" />
+          <e p="BoxView.xaml.cs" t="Include" />
+          <e p="BoxViewModel.cs" t="Include" />
+        </e>
         <e p="StoragePage" t="Include">
           <e p="StoragePage.cs" t="Include" />
           <e p="StorageView.xaml" t="Include" />
