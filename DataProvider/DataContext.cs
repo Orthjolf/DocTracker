@@ -20,7 +20,7 @@ namespace WpfApp.DataProvider
 		private DataContext()
 		{
 			Client = new MongoClient(ConnectionString);
-			Database = Client.GetDatabase("DocTracker");
+			Database = Client.GetDatabase(DbName);
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
@@ -10,10 +11,14 @@ namespace WpfApp.DataProvider.Repository
 {
 	public class DocumentRepository : IDocumentRepository
 	{
+		private IMongoCollection<BsonDocument> GetCollection(DocumentType type)
+		{
+			return DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
+		}
+
 		public Storage Get(string id, DocumentType type)
 		{
-			var document = DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString())
-				.Find(id).ToBsonDocument();
+			var document = GetCollection(type).Find(id).ToBsonDocument();
 
 			if (document == null)
 			{
@@ -25,15 +30,19 @@ namespace WpfApp.DataProvider.Repository
 
 		public IReadOnlyCollection<BsonDocument> GetAll(DocumentType type)
 		{
-			var collection = DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 			var emptyFilter = new BsonDocument();
-			return collection.Find(emptyFilter).ToList().AsReadOnly();
+			return GetCollection(type).Find(emptyFilter).ToList().AsReadOnly();
 		}
 
 		public IReadOnlyCollection<BsonDocument> GetFiltered(BsonDocument filter, DocumentType type)
 		{
 			var collection = DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 			return collection.Find(filter).ToList().AsReadOnly();
+		}
+
+		public async Task AddAndSave(BsonDocument document, DocumentType type)
+		{
+			await GetCollection(type).InsertOneAsync(document);
 		}
 	}
 }
