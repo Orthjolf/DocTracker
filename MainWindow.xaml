@@ -29,7 +29,14 @@
 				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
 				         controls:TextBoxHelper.ClearTextButton="True"
 				         controls:TextBoxHelper.Watermark="Фильтр"
-				         Text="{Binding InputText}" />
+				         Text="{Binding InputText}"
+				         Width="158"
+				         HorizontalAlignment="left" />
+				<Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				        Content="Поиск"
+				        Command="{Binding SearchStoragesCommand, Mode=OneTime}"
+				        Style="{DynamicResource SquareButtonStyle}"
+				        HorizontalAlignment="right" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 				          ItemsSource="{Binding Modules}"
 				          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
@@ -42,8 +49,7 @@
 				</DataGrid>
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Добавить"
-				        Command="{Binding SearchStoragesCommand, Mode=OneTime}" />
+				        Content="Добавить" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
