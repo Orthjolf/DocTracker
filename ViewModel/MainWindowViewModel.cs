@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
+using WpfApp.Domain;
+using WpfApp.Enum;
 using WpfApp.Service;
 
 namespace WpfApp.ViewModel
@@ -14,11 +16,11 @@ namespace WpfApp.ViewModel
 
 		public UserControl UserInterface => SelectedModule?.UserInterface;
 
-		private IReadOnlyCollection<IModule> AllModules { get; }
+		private List<IModule> AllModules { get; set; }
 
 		public MainWindowViewModel(IEnumerable<IModule> storages)
 		{
-			AllModules = storages.OrderBy(m => m.Name).ToList().AsReadOnly();
+			AllModules = storages.OrderBy(m => m.Name).ToList();
 			Modules = new List<IModule>(AllModules);
 			if (Modules.Count > 0)
 			{
@@ -75,6 +77,24 @@ namespace WpfApp.ViewModel
 				_inputText = value;
 				PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputText)));
 			}
+		}
+
+		/// <summary>
+		/// Удаление хранилища
+		/// </summary>
+		private RelayCommand _deleteStorageCommand;
+
+		public RelayCommand DeleteStorageCommand
+		{
+			get { return _deleteStorageCommand = _deleteStorageCommand ?? new RelayCommand(DeleteStorage); }
+		}
+
+		private void DeleteStorage()
+		{
+			AllModules = AllModules.Where(m => m.Id != SelectedModule.Id).ToList();
+			Modules = new List<IModule>(AllModules);
+			SelectedModule = Modules.First();
+			//TODO добавить удаление из базы
 		}
 
 		/// <summary>

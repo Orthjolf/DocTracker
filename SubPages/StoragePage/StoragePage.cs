@@ -23,6 +23,7 @@ namespace WpfApp.SubPages.StoragePage
 			};
 		}
 
+		public string Id => _storage.Id;
 		public string Name => _storage.Name;
 
 		public UserControl UserInterface

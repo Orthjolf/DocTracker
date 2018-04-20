@@ -46,7 +46,8 @@
 				        Command="{Binding SearchStoragesCommand, Mode=OneTime}" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Удалить" />
+				        Content="Удалить"
+				        Command="{Binding DeleteStorageCommand, Mode=OneTime}" />
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
