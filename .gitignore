@@ -191,3 +191,5 @@ StyleCop.Cache
 bin
 obj
 \.idea/\.idea\.WpfApp/\.idea/workspace\.xml
+
+\.idea/\.idea\.WpfApp/\.idea/
