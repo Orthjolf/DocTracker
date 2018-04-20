@@ -1,8 +1,10 @@
-﻿using WpfApp.Utils;
+﻿using System;
+using WpfApp.Utils;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
+using WpfApp.Service;
 
 namespace WpfApp.ViewModel
 {
@@ -10,7 +12,19 @@ namespace WpfApp.ViewModel
 	{
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
-		public List<IModule> Modules { get; private set; }
+		public UserControl UserInterface => SelectedModule?.UserInterface;
+
+		private IReadOnlyCollection<IModule> AllModules { get; }
+
+		public MainWindowViewModel(IEnumerable<IModule> storages)
+		{
+			AllModules = storages.OrderBy(m => m.Name).ToList().AsReadOnly();
+			Modules = new List<IModule>(AllModules);
+			if (Modules.Count > 0)
+			{
+				SelectedModule = Modules[0];
+			}
+		}
 
 		private IModule _selectedModule;
 
@@ -27,18 +41,61 @@ namespace WpfApp.ViewModel
 			}
 		}
 
-		public UserControl UserInterface
+		private List<IModule> _modules;
+
+		public List<IModule> Modules
 		{
-			get { return SelectedModule?.UserInterface; }
+			get { return _modules; }
+			set
+			{
+				_modules = value;
+				PropertyChanged(this, new PropertyChangedEventArgs(nameof(Modules)));
+			}
 		}
 
-		public MainWindowViewModel(IEnumerable<IModule> storages)
+		private string _headText;
+
+		public string HeadText
 		{
-			Modules = storages.OrderBy(m => m.Name).ToList();
-			if (Modules.Count > 0)
+			get { return _headText; }
+			set
 			{
-				SelectedModule = Modules[0];
+				_headText = value;
+				PropertyChanged(this, new PropertyChangedEventArgs(nameof(HeadText)));
 			}
+		}
+
+		private string _inputText;
+
+		public string InputText
+		{
+			get { return _inputText; }
+			set
+			{
+				_inputText = value;
+				PropertyChanged(this, new PropertyChangedEventArgs(nameof(InputText)));
+			}
+		}
+
+		/// <summary>
+		/// Поиск хранилищ
+		/// </summary>
+		private RelayCommand _searchStoragesCommand;
+
+		public RelayCommand SearchStoragesCommand
+		{
+			get { return _searchStoragesCommand = _searchStoragesCommand ?? new RelayCommand(SearchStorages); }
+		}
+
+		private void SearchStorages()
+		{
+			if (string.IsNullOrEmpty(InputText))
+			{
+				Modules = new List<IModule>(AllModules);
+			}
+
+			Modules = AllModules.Where(m => m.Name.Contains(InputText)).ToList();
+			SelectedModule = Modules.First();
 		}
 	}
 }

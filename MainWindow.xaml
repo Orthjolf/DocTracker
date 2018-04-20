@@ -27,7 +27,9 @@
 					<RowDefinition Height="30" />
 				</Grid.RowDefinitions>
 				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-				         controls:TextBoxHelper.ClearTextButton="True" />
+				         controls:TextBoxHelper.ClearTextButton="True"
+				         controls:TextBoxHelper.Watermark="Фильтр"
+				         Text="{Binding InputText}" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 				          ItemsSource="{Binding Modules}"
 				          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
@@ -40,7 +42,8 @@
 				</DataGrid>
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Добавить" />
+				        Content="Добавить"
+				        Command="{Binding SearchStoragesCommand, Mode=OneTime}" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить" />
