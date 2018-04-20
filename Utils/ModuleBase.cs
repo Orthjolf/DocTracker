@@ -9,6 +9,7 @@ namespace WpfApp.Utils
 
 		protected abstract UserControl CreateViewAndViewModel();
 
+		public abstract string Id { get; }
 		public abstract string Name { get; }
 
 		public UserControl UserInterface => view ?? (view = CreateViewAndViewModel());

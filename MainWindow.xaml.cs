@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace WpfApp
+﻿namespace WpfApp
 {
 	public partial class MainWindow
 	{

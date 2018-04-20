@@ -17,6 +17,7 @@ namespace WpfApp.SubPages.BoxPage
 			_box = box;
 		}
 
+		public string Id => _box.Id;
 		public string Name => _box.Description;
 
 		public UserControl UserInterface

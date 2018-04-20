@@ -96,6 +96,7 @@
     <Compile Include="DataProvider\ObjectFactory.cs" />
     <Compile Include="DataProvider\Repository\BoxRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
+    <Compile Include="DataProvider\Repository\StorageRepository.cs" />
     <Compile Include="Domain\Action.cs" />
     <Compile Include="Domain\Box.cs" />
     <Compile Include="Domain\Contract.cs" />

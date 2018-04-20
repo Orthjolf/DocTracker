@@ -16,22 +16,13 @@ namespace WpfApp.SubPages.StoragePage
 		public event PropertyChangedEventHandler PropertyChanged = delegate { };
 		private IReadOnlyCollection<BsonDocument> Storages { get; set; }
 
-		/// <summary>
-		/// Название
-		/// </summary>
 		public string Name { get; }
 
-		/// <summary>
-		/// Адрес
-		/// </summary>
 		public string Address { get; }
 
-		/// <summary>
-		/// Описание
-		/// </summary>
 		public string Description { get; }
 
-		public List<Box> Boxes { get; set; }
+		public List<Box> Boxes { get; }
 
 		public StorageViewModel(Storage storage)
 		{
