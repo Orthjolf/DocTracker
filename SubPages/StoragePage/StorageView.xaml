@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -16,6 +17,7 @@
 				<RowDefinition Height="30" />
 				<RowDefinition Height="25" />
 				<RowDefinition Height="25" />
+				<RowDefinition Height="25" />
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
@@ -27,25 +29,37 @@
 			<TextBlock FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Address}" />
 			<TextBlock FontSize="20" Grid.Row="2" Grid.Column="0" Text="Описание: " TextAlignment="Right" />
 			<TextBlock FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding Description}" />
-			<DataGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			<TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+			         mah:TextBoxHelper.Watermark=""
+			         Text="{Binding NewBoxName}"
+			         Width="150"
+			         HorizontalAlignment="left"/>
+			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+			         mah:TextBoxHelper.Watermark=""
+			         Content="Добавить"
+			         Width="150"
+			         HorizontalAlignment="left"
+			         Margin="150 0 0 0"/>
+			<DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
 			          Margin="0,5,0,0"
 			          ItemsSource="{Binding Boxes}"
 			          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
 			          AutoGenerateColumns="False">
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Мин. дата"
-					                    Binding="{Binding MinDate}"
-					                    Width="200" />
-					<DataGridTextColumn Header="Макс. дата"
-					                    Binding="{Binding MaxDate}"
-					                    Width="200" />
 					<DataGridTextColumn Header="Описание"
 					                    Binding="{Binding Description}"
+					                    Width="150" />
+					<DataGridTextColumn Header="Макс. дата"
+					                    Binding="{Binding MaxDate}"
+					                    Width="150" />
+					<DataGridTextColumn Header="Мин. дата"
+					                    Binding="{Binding MinDate}"
+					                    Width="150" />
+					<DataGridTextColumn Header="Кол-во договоров"
+					                    Binding="{Binding MinDate}"
 					                    Width="Auto" />
 				</DataGrid.Columns>
 			</DataGrid>
 		</Grid>
-		<!--			<Button Content="Click Me!" Margin="0,10,0,0" Width="60"-->
-		<!--			        Command="{Binding ChangeHeadTextCommand, Mode=OneTime}" />-->
 	</Border>
 </UserControl>
