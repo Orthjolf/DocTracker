@@ -5,6 +5,9 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
 using MongoDB.Bson;
+using MongoDB.Driver;
+using WpfApp.DataProvider;
+using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Service;
@@ -93,12 +96,12 @@ namespace WpfApp.ViewModel
 			get { return _deleteStorageCommand = _deleteStorageCommand ?? new RelayCommand(DeleteStorage); }
 		}
 
-		private void DeleteStorage()
+		private async void DeleteStorage()
 		{
 			AllModules = AllModules.Where(m => m.Id != SelectedModule.Id).ToList();
-			Modules = new List<IModule>(AllModules);
+			Modules = AllModules.ToList();
 			SelectedModule = Modules.First();
-			//TODO добавить удаление из базы
+			await StorageRepository.DeleteById(SelectedModule.Id);
 		}
 
 		/// <summary>
@@ -115,7 +118,7 @@ namespace WpfApp.ViewModel
 		{
 			if (string.IsNullOrEmpty(InputText))
 			{
-				Modules = new List<IModule>(AllModules);
+				Modules = AllModules.ToList();
 			}
 
 			Modules = AllModules.Where(m => m.Name.Contains(InputText)).ToList();
@@ -143,7 +146,7 @@ namespace WpfApp.ViewModel
 				{"Address", inputDialog.Address.Text},
 				{"Description", inputDialog.Description.Text},
 			};
-			Storage.Repository.AddAndSave(storage);
+			StorageRepository.AddAndSave(storage);
 
 			AllModules.Add(new StoragePage(storage));
 			Modules = AllModules.ToList();

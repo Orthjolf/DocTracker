@@ -11,12 +11,12 @@ namespace WpfApp.DataProvider.Repository
 {
 	public class DocumentRepository : IDocumentRepository
 	{
-		private IMongoCollection<BsonDocument> GetCollection(DocumentType type)
+		private static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
 		{
 			return DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 		}
 
-		public Storage Get(string id, DocumentType type)
+		public BsonDocument Get(string id, DocumentType type)
 		{
 			var document = GetCollection(type).Find(id).ToBsonDocument();
 
@@ -25,7 +25,7 @@ namespace WpfApp.DataProvider.Repository
 				throw new Exception($"Не найдено документа с Id = {id}");
 			}
 
-			return BsonSerializer.Deserialize<Storage>(document);
+			return document;
 		}
 
 		public IReadOnlyCollection<BsonDocument> GetAll(DocumentType type)
@@ -40,9 +40,14 @@ namespace WpfApp.DataProvider.Repository
 			return collection.Find(filter).ToList().AsReadOnly();
 		}
 
-		protected async Task AddAndSave(BsonDocument document, DocumentType type)
+		protected static async Task AddAndSave(BsonDocument document, DocumentType type)
 		{
 			await GetCollection(type).InsertOneAsync(document);
+		}
+
+		protected static async Task DeleteById(string id, DocumentType type)
+		{
+			await GetCollection(type).DeleteOneAsync(d => d["_id"] == new ObjectId(id));
 		}
 	}
 }

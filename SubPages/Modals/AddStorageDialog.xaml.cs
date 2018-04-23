@@ -6,7 +6,7 @@ namespace WpfApp.SubPages.Modals
 {
 	public partial class AddStorageDialog : Window
 	{
-		private bool IsValid;
+		private bool _isValid;
 
 		public AddStorageDialog()
 		{
@@ -27,8 +27,8 @@ namespace WpfApp.SubPages.Modals
 
 		private void Validate(object sender, TextChangedEventArgs e)
 		{
-			IsValid = Name.Text.Length > 0 && Address.Text.Length > 0;
-			if (IsValid)
+			_isValid = Name.Text.Length > 0 && Address.Text.Length > 0;
+			if (_isValid)
 			{
 				SubmitButton.IsEnabled = true;
 			}

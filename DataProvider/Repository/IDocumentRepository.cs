@@ -14,7 +14,7 @@ namespace WpfApp.DataProvider.Repository
 		/// <param name="id">Идентификатор</param>
 		/// <param name="type">Тип</param>
 		/// <returns>Документ из базы</returns>
-		Storage Get(string id, DocumentType type);
+		BsonDocument Get(string id, DocumentType type);
 
 		/// <summary>
 		/// Получить все документы данного типа
