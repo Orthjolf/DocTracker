@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
+using MongoDB.Bson;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Service;
+using WpfApp.SubPages;
+using WpfApp.SubPages.Modals;
+using WpfApp.SubPages.StoragePage;
 
 namespace WpfApp.ViewModel
 {
@@ -116,6 +120,34 @@ namespace WpfApp.ViewModel
 
 			Modules = AllModules.Where(m => m.Name.Contains(InputText)).ToList();
 			SelectedModule = Modules.First();
+		}
+
+		/// <summary>
+		/// Команда добавления хранилища
+		/// </summary>
+		private RelayCommand _addStorageCommand;
+
+		public RelayCommand AddStorageCommand
+		{
+			get { return _addStorageCommand = _addStorageCommand ?? new RelayCommand(AddStorage); }
+		}
+
+		private void AddStorage()
+		{
+			var inputDialog = new AddStorageDialog();
+			if (inputDialog.ShowDialog() != true) return;
+
+			var storage = new BsonDocument
+			{
+				{"Name", inputDialog.Name.Text},
+				{"Address", inputDialog.Address.Text},
+				{"Description", inputDialog.Description.Text},
+			};
+			Storage.Repository.AddAndSave(storage);
+
+			AllModules.Add(new StoragePage(storage));
+			Modules = AllModules.ToList();
+			SelectedModule = Modules.First(m => m.Id == storage["_id"].ToString());
 		}
 	}
 }

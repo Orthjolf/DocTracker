@@ -40,7 +40,7 @@ namespace WpfApp.DataProvider.Repository
 			return collection.Find(filter).ToList().AsReadOnly();
 		}
 
-		public async Task AddAndSave(BsonDocument document, DocumentType type)
+		protected async Task AddAndSave(BsonDocument document, DocumentType type)
 		{
 			await GetCollection(type).InsertOneAsync(document);
 		}

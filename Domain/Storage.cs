@@ -1,10 +1,14 @@
-﻿namespace WpfApp.Domain
+﻿using WpfApp.DataProvider.Repository;
+
+namespace WpfApp.Domain
 {
 	/// <summary>
 	/// Хранилище коробок
 	/// </summary>
 	public class Storage : Entity
 	{
+		public new static StorageRepository Repository => new StorageRepository();
+
 		/// <summary>
 		/// Название
 		/// </summary>

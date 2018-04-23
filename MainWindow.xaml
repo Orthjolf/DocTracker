@@ -5,7 +5,7 @@
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       mc:Ignorable="d"
-                      Title="DocTracker" Height="600" Width="800">
+                      Title="{Binding HeadText}" Height="600" Width="800">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="222" />
@@ -49,7 +49,8 @@
 				</DataGrid>
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Добавить" />
+				        Content="Добавить" 
+				        Command="{Binding AddStorageCommand}"/>
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
