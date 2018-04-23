@@ -27,7 +27,7 @@
 		         MinWidth="250"
 		         Margin="0,0,0,5"
 		         TextChanged="Validate" />
-		<Label Grid.Column="0" Grid.Row="2">Название</Label>
+		<Label Grid.Column="0" Grid.Row="2">Описание</Label>
 		<TextBox Name="Description"
 		         Grid.Column="1" Grid.Row="2"
 		         MinWidth="250"
@@ -37,9 +37,9 @@
 		<WrapPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,15,0,0">
 			<Button IsDefault="True" Name="SubmitButton" Click="btnDialogOk_Click" MinWidth="60" Margin="0,0,10,0"
 			        IsEnabled="false">
-				_Ok
+				Создать
 			</Button>
-			<Button IsCancel="True" MinWidth="60">_Cancel</Button>
+			<Button IsCancel="True" MinWidth="60">Отмена</Button>
 		</WrapPanel>
 	</Grid>
 </Window>
