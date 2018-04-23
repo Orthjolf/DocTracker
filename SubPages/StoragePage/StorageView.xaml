@@ -29,17 +29,24 @@
 			<TextBlock FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Address}" />
 			<TextBlock FontSize="20" Grid.Row="2" Grid.Column="0" Text="Описание: " TextAlignment="Right" />
 			<TextBlock FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding Description}" />
-			<TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
+			<TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			         mah:TextBoxHelper.Watermark=""
 			         Text="{Binding NewBoxName}"
 			         Width="150"
-			         HorizontalAlignment="left"/>
-			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
-			         mah:TextBoxHelper.Watermark=""
-			         Content="Добавить"
-			         Width="150"
-			         HorizontalAlignment="left"
-			         Margin="150 0 0 0"/>
+			         HorizontalAlignment="left" />
+			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			        mah:TextBoxHelper.Watermark=""
+			        Content="Добавить"
+			        Width="150"
+			        HorizontalAlignment="left"
+			        Margin="150 0 0 0" />
+			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			        mah:TextBoxHelper.Watermark=""
+			        Content="Просмотр"
+			        Width="150"
+			        HorizontalAlignment="left"
+			        Margin="300 0 0 0"
+			        Command="{Binding OpenBoxCommand}" />
 			<DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
 			          Margin="0,5,0,0"
 			          ItemsSource="{Binding Boxes}"

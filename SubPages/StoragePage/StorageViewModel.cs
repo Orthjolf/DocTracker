@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Threading;
 using MongoDB.Bson;
 using WpfApp.Domain;
-using WpfApp.Enum;
-using WpfApp.Service;
+using WpfApp.SubPages.Modals;
 using WpfApp.Utils;
 
 namespace WpfApp.SubPages.StoragePage
@@ -29,7 +26,6 @@ namespace WpfApp.SubPages.StoragePage
 			Name = storage.Name;
 			Address = storage.Address;
 			Description = storage.Description;
-			HeadText = Name;
 
 			var documents = Box.Repository.GetByStorageId(storage.Id);
 			Boxes = new List<Box>();
@@ -37,40 +33,28 @@ namespace WpfApp.SubPages.StoragePage
 			{
 				Boxes.Add(Box.Reconstitute(bsonDocument));
 			}
-
-//			var modules = Boxes.Select(box => new BoxPage.BoxPage(box)).ToList();
-		}
-
-		private string _headText;
-
-		public string HeadText
-		{
-			get { return _headText; }
-			set
-			{
-				_headText = value;
-				PropertyChanged(this, new PropertyChangedEventArgs(nameof(HeadText)));
-			}
 		}
 
 		public void Dispose()
 		{
 		}
 
-		private RelayCommand _changeHeadTextCommand;
+		/// <summary>
+		/// Команда добавления хранилища
+		/// </summary>
+		private RelayCommand _openBoxCommand;
 
-		public RelayCommand ChangeHeadTextCommand
+		public RelayCommand OpenBoxCommand
 		{
-			get
-			{
-				return _changeHeadTextCommand = _changeHeadTextCommand ??
-				                                new RelayCommand(OnChangeHeadText);
-			}
+			get { return _openBoxCommand = _openBoxCommand ?? new RelayCommand(OpenBox); }
 		}
 
-		private void OnChangeHeadText()
+		private void OpenBox()
 		{
-			MessageService.ShowMessage(HeadText);
+			var inputDialog = new BoxContentModal();
+			if (inputDialog.ShowDialog() != true) return;
+
+			
 		}
 	}
 }
