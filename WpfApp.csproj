@@ -108,6 +108,7 @@
     <Compile Include="Service\MessageService.cs" />
     <Compile Include="SubPages\ContentPartial.xaml.cs" />
     <Compile Include="SubPages\BoxContent.xaml.cs" />
+    <Compile Include="SubPages\ContractDetails.xaml.cs" />
     <Compile Include="SubPages\MainContent.xaml.cs" />
     <Compile Include="SubPages\Modals\AddBoxDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\AddStorageDialog.xaml.cs" />
@@ -128,6 +129,7 @@
     </Compile>
     <Page Include="SubPages\ContentPartial.xaml" />
     <Page Include="SubPages\BoxContent.xaml" />
+    <Page Include="SubPages\ContractDetails.xaml" />
     <Page Include="SubPages\MainContent.xaml" />
     <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
     <Page Include="SubPages\Modals\AddStorageDialog.xaml" />
