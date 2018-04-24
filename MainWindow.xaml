@@ -5,7 +5,7 @@
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       mc:Ignorable="d"
-                      Title="{Binding HeadText}" Height="600" Width="800">
+                      Title="Doctracker" Height="600" Width="800">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="222" />
@@ -30,17 +30,20 @@
 				         controls:TextBoxHelper.ClearTextButton="True"
 				         controls:TextBoxHelper.Watermark="Фильтр"
 				         Text="{Binding InputText}"
-				         Width="158"
-				         HorizontalAlignment="left" />
-				<Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-				        Content="Поиск"
-				        Command="{Binding SearchStoragesCommand, Mode=OneTime}"
-				        Style="{DynamicResource SquareButtonStyle}"
-				        HorizontalAlignment="right" />
+				         HorizontalAlignment="left"
+				         Width="200"
+				         Name="SearchInput"
+				         TextChanged="SearchInput_OnTextChanged" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-				          ItemsSource="{Binding Modules}"
-				          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
-				          AutoGenerateColumns="False">
+				          ItemsSource="{Binding Source=Storages}"
+				          SelectedItem="{Binding SelectedStorage, Mode=TwoWay}"
+				          AutoGenerateColumns="False"
+				          Name="StorageMenuItems"
+				          SelectionMode="Single"
+				          CanUserAddRows="False"
+				          CanUserDeleteRows="False"
+				          CanUserResizeColumns="False"
+				          SelectionChanged="StorageMenuItems_SelectionChanged">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Хранилище"
 						                    Binding="{Binding Name}"
@@ -49,8 +52,8 @@
 				</DataGrid>
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Добавить" 
-				        Command="{Binding AddStorageCommand}"/>
+				        Content="Добавить"
+				        Command="{Binding AddStorageCommand}" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
@@ -58,6 +61,6 @@
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
-		                  Content="{Binding UserInterface}" />
+		                  Content="{Binding MainContent}" />
 	</Grid>
 </controls:MetroWindow>

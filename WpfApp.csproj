@@ -108,6 +108,7 @@
     <Compile Include="SubPages\BoxPage\BoxPage.cs" />
     <Compile Include="SubPages\BoxPage\BoxView.xaml.cs" />
     <Compile Include="SubPages\BoxPage\BoxViewModel.cs" />
+    <Compile Include="SubPages\ContentPartial.xaml.cs" />
     <Compile Include="SubPages\Modals\AddStorageDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\BoxContentModal.xaml.cs" />
     <Compile Include="SubPages\Modals\ErrorDialog.xaml.cs" />
@@ -132,6 +133,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SubPages\BoxPage\BoxView.xaml" />
+    <Page Include="SubPages\ContentPartial.xaml" />
     <Page Include="SubPages\Modals\AddStorageDialog.xaml" />
     <Page Include="SubPages\Modals\BoxContentModal.xaml" />
     <Page Include="SubPages\Modals\ErrorDialog.xaml" />

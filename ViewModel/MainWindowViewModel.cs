@@ -25,6 +25,7 @@ namespace WpfApp.ViewModel
 
 		private List<IModule> AllModules { get; set; }
 
+		
 		public MainWindowViewModel(IEnumerable<IModule> storages)
 		{
 			AllModules = storages.OrderBy(m => m.Name).ToList();
@@ -137,20 +138,20 @@ namespace WpfApp.ViewModel
 
 		private void AddStorage()
 		{
-			var inputDialog = new AddStorageDialog();
-			if (inputDialog.ShowDialog() != true) return;
-
-			var storage = new BsonDocument
-			{
-				{"Name", inputDialog.Name.Text},
-				{"Address", inputDialog.Address.Text},
-				{"Description", inputDialog.Description.Text},
-			};
-			StorageRepository.AddAndSave(storage);
-
-			AllModules.Add(new StoragePage(storage));
-			Modules = AllModules.ToList();
-			SelectedModule = Modules.First(m => m.Id == storage["_id"].ToString());
+//			var inputDialog = new AddStorageDialog();
+//			if (inputDialog.ShowDialog() != true) return;
+//
+//			var storage = new BsonDocument
+//			{
+//				{"Name", inputDialog.Name.Text},
+//				{"Address", inputDialog.Address.Text},
+//				{"Description", inputDialog.Description.Text},
+//			};
+//			StorageRepository.AddAndSave(storage);
+//
+//			AllModules.Add(new StoragePage(storage));
+//			Modules = AllModules.ToList();
+//			SelectedModule = Modules.First(m => m.Id == storage["_id"].ToString());
 		}
 	}
 }

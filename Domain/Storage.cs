@@ -1,4 +1,6 @@
-﻿using WpfApp.DataProvider.Repository;
+﻿using System.Windows.Controls;
+using MongoDB.Bson;
+using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
 {
@@ -18,5 +20,16 @@ namespace WpfApp.Domain
 		/// Адрес
 		/// </summary>ам
 		public string Address { get; set; }
+
+		public static Storage Reconstitute(BsonDocument storage)
+		{
+			return new Storage
+			{
+				Id = storage["_id"].ToString(),
+				Name = storage["Name"].ToString(),
+				Address = storage["Address"].ToString(),
+				Description = storage["Description"].ToString()
+			};
+		}
 	}
 }
