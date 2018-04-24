@@ -55,6 +55,12 @@ namespace WpfApp.SubPages
 			BoxGridItems.ItemsSource = Boxes;
 		}
 
+		private void StorageMenuItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			var box = (Box) BoxGridItems.SelectedItem;
+			
+		}
+
 		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			var selected = (Box) BoxGridItems.SelectedItem;

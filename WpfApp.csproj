@@ -106,6 +106,8 @@
     <Compile Include="Enum\DocumentType.cs" />
     <Compile Include="Service\MessageService.cs" />
     <Compile Include="SubPages\ContentPartial.xaml.cs" />
+    <Compile Include="SubPages\BoxContent.xaml.cs" />
+    <Compile Include="SubPages\MainContent.xaml.cs" />
     <Compile Include="SubPages\Modals\AddBoxDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\AddStorageDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\BoxContentModal.xaml.cs" />
@@ -124,6 +126,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SubPages\ContentPartial.xaml" />
+    <Page Include="SubPages\BoxContent.xaml" />
+    <Page Include="SubPages\MainContent.xaml" />
     <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
     <Page Include="SubPages\Modals\AddStorageDialog.xaml" />
     <Page Include="SubPages\Modals\BoxContentModal.xaml" />
