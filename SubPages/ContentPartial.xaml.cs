@@ -54,5 +54,12 @@ namespace WpfApp.SubPages
 			Boxes = Boxes.Where(b => b.Id != selected.Id).ToList();
 			BoxGridItems.ItemsSource = Boxes;
 		}
+
+		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			var selected = (Box) BoxGridItems.SelectedItem;
+			var inputDialog = new BoxPrintForm(selected);
+			if (inputDialog.ShowDialog() != true) return;
+		}
 	}
 }

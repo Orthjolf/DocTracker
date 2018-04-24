@@ -48,7 +48,8 @@
 			        Content="Печать"
 			        Width="150"
 			        HorizontalAlignment="left"
-			        Margin="300 0 0 0" />
+			        Margin="300 0 0 0" 
+			        Click ="PrintButton_OnClick"/>
 			<DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
 			          Name="BoxGridItems"
 			          Margin="0,5,0,0"
