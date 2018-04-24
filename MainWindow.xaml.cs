@@ -1,27 +1,32 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Windows;
+﻿using System.Reflection.Emit;
 using System.Windows.Controls;
-using MongoDB.Bson;
-using WpfApp.DataProvider.Repository;
-using WpfApp.Domain;
 using WpfApp.SubPages;
-using WpfApp.SubPages.Modals;
 
 namespace WpfApp
 {
 	public partial class MainWindow
 	{
-		public static MainWindow Instance { get; private set; }
+		private static MainWindow _instance;
 
-		public readonly MainContent MainContent;
+		private static MainContent _mainContent;
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			Instance = this;
-			MainContent = new MainContent();
-			RootContent.Content = MainContent;
+			_instance = this;
+			_mainContent = new MainContent();
+			RootContent.Content = _mainContent;
+		}
+
+		public static void SetContent(UserControl content)
+		{
+			_instance.Content = content;
+		}
+
+		public static void SetDefault(string selectedStorageId)
+		{
+			_instance.Content = _mainContent;
+			_mainContent.SelectItem(selectedStorageId);
 		}
 	}
 }

@@ -12,9 +12,19 @@
 			<ColumnDefinition Width="222" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
-		<Border Grid.Column="0"
+		<Grid.RowDefinitions>
+			<RowDefinition Height="40"/>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Button Grid.Row="0" Grid.Column="0"
+		        Height="30"
+		        Margin="10,10,10,0"
+		        Style="{StaticResource AccentedSquareButtonStyle}"
+		        Content="Назад" 
+		        Click="BackButton_OnClick"/>
+		<Border Grid.Column="0" Grid.Row="1"
 		        BorderBrush="LightGray"
-		        Margin="10,50,10,10"
+		        Margin="10,10,10,10"
 		        BorderThickness="1"
 		        DockPanel.Dock="Top">
 			<Grid>
@@ -52,10 +62,9 @@
 				        Content="Добавить" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Удалить"/>
+				        Content="Удалить" />
 			</Grid>
 		</Border>
-		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
-		                  Content="{Binding MainContent}" />
+		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1" Grid.Row="1" />
 	</Grid>
 </UserControl>

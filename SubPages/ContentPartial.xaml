@@ -41,19 +41,22 @@
 			        Content="Удалить"
 			        Width="150"
 			        HorizontalAlignment="left"
-			        Margin="150 0 0 0" 
-			        Click="DeleteBoxButton_Onclick"/>
+			        Margin="150 0 0 0"
+			        Click="DeleteBoxButton_Onclick" />
 			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Печать"
 			        Width="150"
 			        HorizontalAlignment="left"
-			        Margin="300 0 0 0" 
-			        Click ="PrintButton_OnClick"/>
+			        Margin="300 0 0 0"
+			        Click="PrintButton_OnClick" />
 			<DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
 			          Name="BoxGridItems"
 			          Margin="0,5,0,0"
-			          AutoGenerateColumns="False">
+			          AutoGenerateColumns="False"
+			          CanUserAddRows="False"
+			          CanUserDeleteRows="False"
+			          SelectionChanged="BoxGridItems_SelectionChanged">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Название"
 					                    Binding="{Binding Name}"

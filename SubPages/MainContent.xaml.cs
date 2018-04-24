@@ -71,5 +71,11 @@ namespace WpfApp.SubPages
 			SetContent(Storages.First());
 			StorageMenuItems.ItemsSource = Storages;
 		}
+
+		public void SelectItem(string selectedStorageId)
+		{
+			var storage = Storages.First(s => s.Id == selectedStorageId);
+			SetContent(storage);
+		}
 	}
 }

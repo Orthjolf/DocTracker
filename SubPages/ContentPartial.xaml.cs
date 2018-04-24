@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using MongoDB.Bson;
-using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.SubPages.Modals;
 
@@ -55,10 +54,11 @@ namespace WpfApp.SubPages
 			BoxGridItems.ItemsSource = Boxes;
 		}
 
-		private void StorageMenuItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void BoxGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			var box = (Box) BoxGridItems.SelectedItem;
-			
+			if (box == null) return;
+			MainWindow.SetContent(new BoxContent(box));
 		}
 
 		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
