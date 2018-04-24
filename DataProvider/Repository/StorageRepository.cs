@@ -11,20 +11,22 @@ namespace WpfApp.DataProvider.Repository
 {
 	public class StorageRepository : DocumentRepository
 	{
+		private static DocumentType Type => DocumentType.Storage;
+
 		public IEnumerable<Storage> GetAll()
 		{
-			var bsonDocuments = base.GetAll(DocumentType.Storage);
+			var bsonDocuments = base.GetAll(Type);
 			return bsonDocuments.Select(Storage.Reconstitute).ToList().AsReadOnly();
 		}
 
-		public static async void AddAndSave(BsonDocument document)
+		public async void AddAndSave(BsonDocument document)
 		{
-			await AddAndSave(document, DocumentType.Storage);
+			await AddAndSave(document, Type);
 		}
 
-		public static async Task DeleteById(string id)
+		public async Task DeleteById(string id)
 		{
-			await DeleteById(id, DocumentType.Storage);
+			await DeleteById(id, Type);
 		}
 	}
 }
