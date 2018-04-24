@@ -105,17 +105,11 @@
     <Compile Include="Enum\ActionPerformed.cs" />
     <Compile Include="Enum\DocumentType.cs" />
     <Compile Include="Service\MessageService.cs" />
-    <Compile Include="SubPages\BoxPage\BoxPage.cs" />
-    <Compile Include="SubPages\BoxPage\BoxView.xaml.cs" />
-    <Compile Include="SubPages\BoxPage\BoxViewModel.cs" />
-    <Compile Include="SubPages\StoragePage\StoragePage.cs" />
-    <Compile Include="SubPages\StoragePage\StorageView.xaml.cs" />
-    <Compile Include="SubPages\StoragePage\StorageViewModel.cs" />
-    <Compile Include="Utils\IModule.cs" />
-    <Compile Include="Utils\ModuleBase.cs" />
-    <Compile Include="Utils\ReflectionHelper.cs" />
-    <Compile Include="Utils\RelayCommand.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="SubPages\ContentPartial.xaml.cs" />
+    <Compile Include="SubPages\Modals\AddBoxDialog.xaml.cs" />
+    <Compile Include="SubPages\Modals\AddStorageDialog.xaml.cs" />
+    <Compile Include="SubPages\Modals\BoxContentModal.xaml.cs" />
+    <Compile Include="SubPages\Modals\ErrorDialog.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -128,8 +122,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SubPages\BoxPage\BoxView.xaml" />
-    <Page Include="SubPages\StoragePage\StorageView.xaml" />
+    <Page Include="SubPages\ContentPartial.xaml" />
+    <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
+    <Page Include="SubPages\Modals\AddStorageDialog.xaml" />
+    <Page Include="SubPages\Modals\BoxContentModal.xaml" />
+    <Page Include="SubPages\Modals\ErrorDialog.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

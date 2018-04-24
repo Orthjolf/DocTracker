@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApp.SubPages.Modals.ErrorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ошибка" SizeToContent="WidthAndHeight">
+	<Grid Margin="25">
+		<TextBox Name="ErrorText"
+		         MinWidth="250"
+		         Margin="0,0,0,5" />
+		<WrapPanel HorizontalAlignment="Right" Margin="0,15,0,0">
+			<Button IsCancel="True" MinWidth="60">_Cancel</Button>
+		</WrapPanel>
+	</Grid>
+</Window>

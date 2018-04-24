@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApp.SubPages.Modals.BoxContentModal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        Title="Добавить хранилище"
+        Height="600" Width="800">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="222" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Border Grid.Column="0"
+		        BorderBrush="LightGray"
+		        Margin="10,50,10,10"
+		        BorderThickness="1"
+		        DockPanel.Dock="Top">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="30" />
+					<RowDefinition />
+					<RowDefinition Height="30" />
+				</Grid.RowDefinitions>
+				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				         mah:TextBoxHelper.ClearTextButton="True"
+				         mah:TextBoxHelper.Watermark="Фильтр"
+				         Text="{Binding InputText}"
+				         Width="158"
+				         HorizontalAlignment="left" />
+				<Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				        Content="Поиск"
+				        Command="{Binding SearchStoragesCommand, Mode=OneTime}"
+				        Style="{DynamicResource SquareButtonStyle}"
+				        HorizontalAlignment="right" />
+				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+				          ItemsSource="{Binding Modules}"
+				          SelectedItem="{Binding SelectedModule, Mode=TwoWay}"
+				          AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Договор"
+						                    Binding="{Binding Name}"
+						                    Width="200" />
+					</DataGrid.Columns>
+				</DataGrid>
+				<Button Grid.Row="2" Grid.Column="0"
+				        Style="{StaticResource AccentedSquareButtonStyle}"
+				        Content="Добавить"
+				        Command="{Binding AddStorageCommand}" />
+				<Button Grid.Row="2" Grid.Column="1"
+				        Style="{StaticResource AccentedSquareButtonStyle}"
+				        Content="Удалить"
+				        Command="{Binding DeleteStorageCommand, Mode=OneTime}" />
+			</Grid>
+		</Border>
+		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
+		                  Content="{Binding UserInterface}" />
+	</Grid>
+</Window>
