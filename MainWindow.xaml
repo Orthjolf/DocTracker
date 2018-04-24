@@ -35,8 +35,6 @@
 				         Name="SearchInput"
 				         TextChanged="SearchInput_OnTextChanged" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-				          ItemsSource="{Binding Source=Storages}"
-				          SelectedItem="{Binding SelectedStorage, Mode=TwoWay}"
 				          AutoGenerateColumns="False"
 				          Name="StorageMenuItems"
 				          SelectionMode="Single"
@@ -53,11 +51,11 @@
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Добавить"
-				        Command="{Binding AddStorageCommand}" />
+				        Click="AddStorageButton_OnClick" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
-				        Command="{Binding DeleteStorageCommand, Mode=OneTime}" />
+				        Click="DeleteStorageButton_OnClick"/>
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
