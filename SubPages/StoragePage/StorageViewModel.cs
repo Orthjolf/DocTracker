@@ -23,16 +23,16 @@ namespace WpfApp.SubPages.StoragePage
 
 		public StorageViewModel(Storage storage)
 		{
-			Name = storage.Name;
-			Address = storage.Address;
-			Description = storage.Description;
-
-			var documents = Box.Repository.GetByStorageId(storage.Id);
-			Boxes = new List<Box>();
-			foreach (var bsonDocument in documents)
-			{
-				Boxes.Add(Box.Reconstitute(bsonDocument));
-			}
+//			Name = storage.Name;
+//			Address = storage.Address;
+//			Description = storage.Description;
+//
+//			var documents = Box.Repository.GetByStorageId(storage.Id);
+//			Boxes = new List<Box>();
+//			foreach (var bsonDocument in documents)
+//			{
+//				Boxes.Add(Box.Reconstitute(bsonDocument));
+//			}
 		}
 
 		public void Dispose()

@@ -1,19 +1,45 @@
-﻿using System.Windows.Controls;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Windows;
+using System.Windows.Controls;
+using MongoDB.Bson;
+using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
+using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
-	public partial class ContentPartial : UserControl
+	public partial class ContentPartial
 	{
-		private Storage _storage { get; set; }
-		
+		private List<Box> Boxes { get; set; }
+
+		private Storage Storage { get; set; }
+
 		public ContentPartial(Storage storage)
 		{
 			InitializeComponent();
-			_storage = storage;
-			StorageName.Text = _storage.Name;
-			StorageAddress.Text = _storage.Address;
-			StorageDescription.Text = _storage.Description;
+			Storage = storage;
+			StorageName.Text = Storage.Name;
+			StorageAddress.Text = Storage.Address;
+			StorageDescription.Text = Storage.Description;
+
+			Boxes = Box.Repository.GetByStorageId(Storage.Id).ToList();
+			BoxGridItems.ItemsSource = Boxes;
+		}
+
+		private void AddBox_OnClick(object sender, RoutedEventArgs e)
+		{
+			var inputDialog = new AddBoxDialog(Boxes);
+			if (inputDialog.ShowDialog() != true) return;
+
+			var boxBson = new BsonDocument
+			{
+				{"StorageId", Storage.Id},
+				{"Name", inputDialog.Name.Text}
+			};
+			Box.Repository.AddAndSave(boxBson);
+			Boxes = Box.Repository.GetAll().ToList();
+			BoxGridItems.ItemsSource = Boxes;
 		}
 	}
 }

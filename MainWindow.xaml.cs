@@ -12,6 +12,8 @@ namespace WpfApp
 {
 	public partial class MainWindow
 	{
+		public static MainWindow Window { get; private set; }
+
 		private List<Storage> Storages { get; set; }
 
 		private Storage _selectedStorage;
@@ -19,6 +21,7 @@ namespace WpfApp
 		public MainWindow()
 		{
 			InitializeComponent();
+			Window = this;
 			Storages = Storage.Repository.GetAll().ToList();
 			StorageMenuItems.ItemsSource = Storages;
 			if (!Storages.Any()) return;
@@ -58,7 +61,7 @@ namespace WpfApp
 				{"Address", inputDialog.Address.Text},
 				{"Description", inputDialog.Description.Text},
 			};
-			StorageRepository.AddAndSave(storageBson);
+			Storage.Repository.AddAndSave(storageBson);
 			Storages = Storage.Repository.GetAll().ToList();
 			StorageMenuItems.ItemsSource = Storages;
 			SetContent(Storages.First(s => s.Id == storageBson["_id"].ToString()));
@@ -67,7 +70,7 @@ namespace WpfApp
 		private async void DeleteStorageButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			if (Storages.Count == 1) return;
-			await StorageRepository.DeleteById(_selectedStorage.Id);
+			await Storage.Repository.DeleteById(_selectedStorage.Id);
 			Storages = Storages.Where(s => s.Id != _selectedStorage.Id).ToList();
 			SetContent(Storages.First());
 			StorageMenuItems.ItemsSource = Storages;

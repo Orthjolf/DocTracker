@@ -18,6 +18,11 @@ namespace WpfApp.Domain
 		public string StorageId { get; set; }
 
 		/// <summary>
+		/// Название
+		/// </summary>
+		public string Name { get; set; }
+
+		/// <summary>
 		/// Самая ранняя дата договора
 		/// </summary>
 		public DateTime MinDate { get; set; }

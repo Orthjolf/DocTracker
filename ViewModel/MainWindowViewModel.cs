@@ -102,7 +102,7 @@ namespace WpfApp.ViewModel
 			AllModules = AllModules.Where(m => m.Id != SelectedModule.Id).ToList();
 			Modules = AllModules.ToList();
 			SelectedModule = Modules.First();
-			await StorageRepository.DeleteById(SelectedModule.Id);
+			await Storage.Repository.DeleteById(SelectedModule.Id);
 		}
 
 		/// <summary>
