@@ -13,6 +13,37 @@
 		/// <summary>
 		/// Идентификатор коробки
 		/// </summary>
-		private int BoxId { get; set; }
+		public int BoxId { get; set; }
+
+		/// <summary>
+		/// Имя клиента
+		/// </summary>
+		public string ClientFirstName { get; set; }
+
+		/// <summary>
+		/// Фамилия клиента
+		/// </summary>
+		public string ClientLastName { get; set; }
+
+		/// <summary>
+		/// Отчество клиента
+		/// </summary>
+		public string ClientPatronymic { get; set; }
+
+		/// <summary>
+		/// Номер телефона клиента
+		/// </summary>
+		public string PhoneNumber { get; set; }
+
+		/// <summary>
+		/// Идентификатор займа
+		/// </summary>
+		public string LoanId { get; set; }
+
+		/// <summary>
+		/// Префикс точки
+		/// </summary>
+		/// <returns></returns>
+		public string PrefixOfPlace { get; set; }
 	}
 }
