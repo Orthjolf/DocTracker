@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using MongoDB.Bson;
-using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.SubPages.Modals;
 
@@ -53,6 +52,20 @@ namespace WpfApp.SubPages
 			await Box.Repository.DeleteById(selected.Id);
 			Boxes = Boxes.Where(b => b.Id != selected.Id).ToList();
 			BoxGridItems.ItemsSource = Boxes;
+		}
+
+		private void BoxGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			var box = (Box) BoxGridItems.SelectedItem;
+			if (box == null) return;
+			MainWindow.SetContent(new BoxContent(box));
+		}
+
+		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			var selected = (Box) BoxGridItems.SelectedItem;
+			var inputDialog = new BoxPrintForm(selected);
+			if (inputDialog.ShowDialog() != true) return;
 		}
 	}
 }

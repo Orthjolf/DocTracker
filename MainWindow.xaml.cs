@@ -1,79 +1,70 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Windows;
+using System.Reflection.Emit;
 using System.Windows.Controls;
+using MahApps.Metro.Controls.Dialogs;
 using MongoDB.Bson;
-using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.SubPages;
-using WpfApp.SubPages.Modals;
 
 namespace WpfApp
 {
 	public partial class MainWindow
 	{
-		public static MainWindow Window { get; private set; }
+		private static MainWindow _instance;
 
-		private List<Storage> Storages { get; set; }
-
-		private Storage _selectedStorage;
+		private static MainContent _mainContent;
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			Window = this;
-			Storages = Storage.Repository.GetAll().ToList();
-			StorageMenuItems.ItemsSource = Storages;
-			if (!Storages.Any()) return;
-			SetContent(Storages.First());
+			_instance = this;
+			_mainContent = new MainContent();
+			RootContent.Content = _mainContent;
+
+//			for (var i = 0; i < 10; i++)
+//			{
+//				Contract.Repository.AddAndSave(new BsonDocument
+//				{
+//					{"Number", GetRandomString()},
+//					{"BoxId", "5adf29f3c0196120580ebe5d"},
+//					{"ClientFirstName", GetRandomString()},
+//					{"ClientLastName", GetRandomString()},
+//					{"ClientPatronymic", GetRandomString()},
+//					{"PhoneNumber", GetRandomString()},
+//					{"LoanId", GetRandomString()},
+//					{"PrefixOfPlace", GetRandomString()}
+//				});
+//			}
+
+//			showMsg();
 		}
 
-		private void SetContent(Storage storage)
+		static string GetRandomString()
 		{
-			_selectedStorage = storage;
-			ContentPresenter.Content = new ContentPartial(storage);
+			var random = new Random();
+			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			return new string(Enumerable.Repeat(chars, 10)
+				.Select(s => s[random.Next(s.Length)]).ToArray());
 		}
 
-		private void SearchInput_OnTextChanged(object sender, TextChangedEventArgs e)
+//		public async void showMsg()
+//		{
+//			await this.ShowMetroDialogAsync(MetroDialogSettings
+//			{
+//				
+//			}); // MessageAsync("This is the title", "Some message");
+//		}
+
+		public static void SetContent(UserControl content)
 		{
-			var filteredItems = Storages.Where(item => item.Name.ToLower().Contains(SearchInput.Text.ToLower())).ToList();
-			StorageMenuItems.ItemsSource = filteredItems;
-			if (!filteredItems.Any()) return;
-			SetContent(filteredItems.First());
+			_instance.Content = content;
 		}
 
-		private void StorageMenuItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		public static void SetDefault(string selectedStorageId)
 		{
-			var item = (Storage) StorageMenuItems.SelectedItem;
-			if (item == null) return;
-			if (item.Id == _selectedStorage.Id) return;
-			SetContent(item);
-		}
-
-		private void AddStorageButton_OnClick(object sender, RoutedEventArgs e)
-		{
-			var inputDialog = new AddStorageDialog();
-			if (inputDialog.ShowDialog() != true) return;
-
-			var storageBson = new BsonDocument
-			{
-				{"Name", inputDialog.Name.Text},
-				{"Address", inputDialog.Address.Text},
-				{"Description", inputDialog.Description.Text},
-			};
-			Storage.Repository.AddAndSave(storageBson);
-			Storages = Storage.Repository.GetAll().ToList();
-			StorageMenuItems.ItemsSource = Storages;
-			SetContent(Storages.First(s => s.Id == storageBson["_id"].ToString()));
-		}
-
-		private async void DeleteStorageButton_OnClick(object sender, RoutedEventArgs e)
-		{
-			if (Storages.Count == 1) return;
-			await Storage.Repository.DeleteById(_selectedStorage.Id);
-			Storages = Storages.Where(s => s.Id != _selectedStorage.Id).ToList();
-			SetContent(Storages.First());
-			StorageMenuItems.ItemsSource = Storages;
+			_instance.Content = _mainContent;
+			_mainContent.SelectItem(selectedStorageId);
 		}
 	}
 }

@@ -95,6 +95,7 @@
     <Compile Include="DataProvider\DataContext.cs" />
     <Compile Include="DataProvider\ObjectFactory.cs" />
     <Compile Include="DataProvider\Repository\BoxRepository.cs" />
+    <Compile Include="DataProvider\Repository\ContractRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
     <Compile Include="Domain\Action.cs" />
@@ -106,9 +107,13 @@
     <Compile Include="Enum\DocumentType.cs" />
     <Compile Include="Service\MessageService.cs" />
     <Compile Include="SubPages\ContentPartial.xaml.cs" />
+    <Compile Include="SubPages\BoxContent.xaml.cs" />
+    <Compile Include="SubPages\ContractDetails.xaml.cs" />
+    <Compile Include="SubPages\MainContent.xaml.cs" />
     <Compile Include="SubPages\Modals\AddBoxDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\AddStorageDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\BoxContentModal.xaml.cs" />
+    <Compile Include="SubPages\Modals\BoxPrintForm.xaml.cs" />
     <Compile Include="SubPages\Modals\ErrorDialog.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -123,9 +128,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SubPages\ContentPartial.xaml" />
+    <Page Include="SubPages\BoxContent.xaml" />
+    <Page Include="SubPages\ContractDetails.xaml" />
+    <Page Include="SubPages\MainContent.xaml" />
     <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
     <Page Include="SubPages\Modals\AddStorageDialog.xaml" />
     <Page Include="SubPages\Modals\BoxContentModal.xaml" />
+    <Page Include="SubPages\Modals\BoxPrintForm.xaml" />
     <Page Include="SubPages\Modals\ErrorDialog.xaml" />
   </ItemGroup>
   <ItemGroup>
