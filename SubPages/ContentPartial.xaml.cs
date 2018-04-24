@@ -45,5 +45,14 @@ namespace WpfApp.SubPages
 			Boxes = Box.Repository.GetByStorageId(Storage.Id).ToList();
 			BoxGridItems.ItemsSource = Boxes;
 		}
+
+		private async void DeleteBoxButton_Onclick(object sender, RoutedEventArgs e)
+		{
+			if (Boxes.Count == 1) return;
+			var selected = (Box) BoxGridItems.SelectedItem;
+			await Box.Repository.DeleteById(selected.Id);
+			Boxes = Boxes.Where(b => b.Id != selected.Id).ToList();
+			BoxGridItems.ItemsSource = Boxes;
+		}
 	}
 }

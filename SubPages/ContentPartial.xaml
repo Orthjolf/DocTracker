@@ -35,15 +35,20 @@
 			        Content="Добавить"
 			        Width="150"
 			        HorizontalAlignment="left"
-			        Margin="150 0 0 0" 
-			        Click="AddBox_OnClick"/>
+			        Click="AddBox_OnClick" />
 			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
-			        Content="Просмотр"
+			        Content="Удалить"
 			        Width="150"
 			        HorizontalAlignment="left"
-			        Margin="300 0 0 0"
-			        Command="{Binding OpenBoxCommand}" />
+			        Margin="150 0 0 0" 
+			        Click="DeleteBoxButton_Onclick"/>
+			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			        mah:TextBoxHelper.Watermark=""
+			        Content="Печать"
+			        Width="150"
+			        HorizontalAlignment="left"
+			        Margin="300 0 0 0" />
 			<DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
 			          Name="BoxGridItems"
 			          Margin="0,5,0,0"
