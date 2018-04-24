@@ -1,6 +1,5 @@
 ﻿using System;
 using MongoDB.Bson;
-using MongoDB.Bson.Serialization;
 using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
@@ -25,12 +24,12 @@ namespace WpfApp.Domain
 		/// <summary>
 		/// Самая ранняя дата договора
 		/// </summary>
-		public DateTime MinDate { get; set; }
+		public DateTime? MinDate { get; set; }
 
 		/// <summary>
 		/// Самая поздняя дата договора
 		/// </summary>
-		public DateTime MaxDate { get; set; }
+		public DateTime? MaxDate { get; set; }
 
 		public BsonDocument Serialize()
 		{
@@ -46,12 +45,18 @@ namespace WpfApp.Domain
 
 		public static Box Reconstitute(BsonDocument bsonDocument)
 		{
+			DateTime? minDate = bsonDocument["MinDate"].ToUniversalTime();
+			DateTime? maxDate = bsonDocument["MaxDate"].ToUniversalTime();
+			if (minDate == DateTime.MinValue) minDate = null;
+			if (maxDate == DateTime.MinValue) maxDate = null;
+
 			return new Box
 			{
 				Id = bsonDocument["_id"].ToString(),
+				Name = bsonDocument["Name"].AsString,
 				StorageId = bsonDocument["StorageId"].AsString,
-				MinDate = bsonDocument["MinDate"].ToUniversalTime(),
-				MaxDate = bsonDocument["MaxDate"].ToUniversalTime(),
+				MinDate = minDate,
+				MaxDate = maxDate,
 				Description = bsonDocument["Description"].AsString
 			};
 		}

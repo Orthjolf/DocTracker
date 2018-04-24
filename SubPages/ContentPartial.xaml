@@ -49,14 +49,14 @@
 			          Margin="0,5,0,0"
 			          AutoGenerateColumns="False">
 				<DataGrid.Columns>
-					<DataGridTextColumn Header="Описание"
-					                    Binding="{Binding Description}"
+					<DataGridTextColumn Header="Название"
+					                    Binding="{Binding Name}"
 					                    Width="150" />
 					<DataGridTextColumn Header="Макс. дата"
-					                    Binding="{Binding MaxDate}"
+					                    Binding='{Binding MaxDate, TargetNullValue="-"}'
 					                    Width="150" />
 					<DataGridTextColumn Header="Мин. дата"
-					                    Binding="{Binding MinDate}"
+					                    Binding='{Binding MinDate, TargetNullValue="-"}'
 					                    Width="150" />
 					<DataGridTextColumn Header="Кол-во договоров"
 					                    Binding="{Binding MinDate}"

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -35,10 +36,13 @@ namespace WpfApp.SubPages
 			var boxBson = new BsonDocument
 			{
 				{"StorageId", Storage.Id},
-				{"Name", inputDialog.Name.Text}
+				{"Name", inputDialog.Name.Text},
+				{"Description", ""},
+				{"MinDate", DateTime.MinValue},
+				{"MaxDate", DateTime.MinValue}
 			};
 			Box.Repository.AddAndSave(boxBson);
-			Boxes = Box.Repository.GetAll().ToList();
+			Boxes = Box.Repository.GetByStorageId(Storage.Id).ToList();
 			BoxGridItems.ItemsSource = Boxes;
 		}
 	}
