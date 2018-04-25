@@ -34,7 +34,7 @@
 				         HorizontalAlignment="left"
 				         Width="200"
 				         Name="SearchInput"
-				         TextChanged="SearchInput_OnTextChanged" />
+				         TextChanged="SearchStorages" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 				          AutoGenerateColumns="False"
 				          Name="StorageMenuItems"
@@ -42,7 +42,7 @@
 				          CanUserAddRows="False"
 				          CanUserDeleteRows="False"
 				          CanUserResizeColumns="False"
-				          SelectionChanged="StorageMenuItems_SelectionChanged">
+				          SelectionChanged="SelectStorage">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Хранилище"
 						                    Binding="{Binding Name, Mode=OneWay}"
@@ -52,11 +52,11 @@
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Добавить"
-				        Click="AddStorageButton_OnClick" />
+				        Click="AddStorage" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
-				        Click="DeleteStorageButton_OnClick" />
+				        Click="DeleteStorage" />
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"

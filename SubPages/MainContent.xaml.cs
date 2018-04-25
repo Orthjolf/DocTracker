@@ -47,7 +47,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Поиск хранилищ в списке
 		/// </summary>
-		private void SearchInput_OnTextChanged(object sender, TextChangedEventArgs e)
+		private void SearchStorages(object sender, TextChangedEventArgs e)
 		{
 			var filteredItems = Storages.Where(item => item.Name.ToLower().Contains(SearchInput.Text.ToLower())).ToList();
 			StorageMenuItems.ItemsSource = filteredItems;
@@ -58,7 +58,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Выбор хранилища
 		/// </summary>
-		private void StorageMenuItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void SelectStorage(object sender, SelectionChangedEventArgs e)
 		{
 			var item = (Storage) StorageMenuItems.SelectedItem;
 			if (item == null) return;
@@ -69,7 +69,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Добавление нового хранилища
 		/// </summary>
-		private void AddStorageButton_OnClick(object sender, RoutedEventArgs e)
+		private void AddStorage(object sender, RoutedEventArgs e)
 		{
 			var inputDialog = new AddStorageDialog();
 			if (inputDialog.ShowDialog() != true) return;
@@ -89,7 +89,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Удаление хранилища
 		/// </summary>
-		private async void DeleteStorageButton_OnClick(object sender, RoutedEventArgs e)
+		private async void DeleteStorage(object sender, RoutedEventArgs e)
 		{
 			if (Storages.Count == 1) return;
 			await Storage.Repository.DeleteById(_selectedStorage.Id);

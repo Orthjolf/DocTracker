@@ -31,7 +31,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Добавление коробки
 		/// </summary>
-		private void AddBox_OnClick(object sender, RoutedEventArgs e)
+		private void AddBox(object sender, RoutedEventArgs e)
 		{
 			var inputDialog = new AddBoxDialog(_boxes);
 			if (inputDialog.ShowDialog() != true) return;
@@ -53,7 +53,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Удаление коробки
 		/// </summary>
-		private async void DeleteBoxButton_OnClick(object sender, RoutedEventArgs e)
+		private async void DeleteBox(object sender, RoutedEventArgs e)
 		{
 			if (_boxes.Count == 1) return;
 			var selected = (Box) BoxGridItems.SelectedItem;
@@ -65,7 +65,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Выбор коробки
 		/// </summary>
-		private void BoxGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void SelectBox(object sender, SelectionChangedEventArgs e)
 		{
 			var box = (Box) BoxGridItems.SelectedItem;
 			if (box == null) return;

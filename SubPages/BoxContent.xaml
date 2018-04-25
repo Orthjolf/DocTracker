@@ -21,7 +21,7 @@
 		        Margin="10,10,10,0"
 		        Style="{StaticResource AccentedSquareButtonStyle}"
 		        Content="Назад"
-		        Click="BackButton_OnClick" />
+		        Click="BackOnMainScreen" />
 		<Border Grid.Column="0" Grid.Row="1"
 		        BorderBrush="LightGray"
 		        Margin="10,10,10,10"
@@ -42,14 +42,14 @@
 				         HorizontalAlignment="left"
 				         Width="122"
 				         Name="ContractNumberSearch"
-				         TextChanged="SearchField_OnTextChanged" />
+				         TextChanged="SearchContracts" />
 				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
 				         mah:TextBoxHelper.ClearTextButton="False"
 				         HorizontalAlignment="left"
 				         Margin="122,0,0,0"
 				         Width="256"
 				         Name="FullNameSearchField"
-				         TextChanged="SearchField_OnTextChanged" />
+				         TextChanged="SearchContracts" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 				          AutoGenerateColumns="False"
 				          Name="ContractGridItems"
@@ -57,7 +57,7 @@
 				          CanUserAddRows="False"
 				          CanUserDeleteRows="False"
 				          CanUserResizeColumns="False"
-				          SelectionChanged="ContractGridItems_SelectionChanged">
+				          SelectionChanged="SelectContract">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Номер Договора"
 						                    Binding="{Binding Number, Mode=OneWay}"

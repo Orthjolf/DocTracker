@@ -28,7 +28,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Выбор договора
 		/// </summary>
-		private void ContractGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void SelectContract(object sender, SelectionChangedEventArgs e)
 		{
 			var contract = (Contract) ContractGridItems.SelectedItem;
 			if (contract == null) return;
@@ -39,7 +39,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Возвращение на страницу с ранее открытым складом
 		/// </summary>
-		private void BackButton_OnClick(object sender, RoutedEventArgs e)
+		private void BackOnMainScreen(object sender, RoutedEventArgs e)
 		{
 			MainWindow.SetContentAsStoragesPage(_storageId);
 		}
@@ -47,7 +47,7 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Поиск договора
 		/// </summary>
-		private void SearchField_OnTextChanged(object sender, TextChangedEventArgs e)
+		private void SearchContracts(object sender, TextChangedEventArgs e)
 		{
 			var filteredItems = _contracts
 				.Where(item => item.Number.ToLower().Contains(ContractNumberSearch.Text.ToLower())).ToList();

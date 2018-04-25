@@ -35,14 +35,14 @@
 			        Content="Добавить"
 			        Width="150"
 			        HorizontalAlignment="left"
-			        Click="AddBox_OnClick" />
+			        Click="AddBox" />
 			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Удалить"
 			        Width="150"
 			        HorizontalAlignment="left"
 			        Margin="150 0 0 0"
-			        Click="DeleteBoxButton_OnClick" />
+			        Click="DeleteBox" />
 			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Печать"
@@ -56,7 +56,7 @@
 			          AutoGenerateColumns="False"
 			          CanUserAddRows="False"
 			          CanUserDeleteRows="False"
-			          SelectionChanged="BoxGridItems_SelectionChanged">
+			          SelectionChanged="SelectBox">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Название"
 					                    Binding="{Binding Name}"
