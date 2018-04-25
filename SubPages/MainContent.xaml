@@ -45,7 +45,7 @@
 				          SelectionChanged="StorageMenuItems_SelectionChanged">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Хранилище"
-						                    Binding="{Binding Name}"
+						                    Binding="{Binding Name, Mode=OneWay}"
 						                    Width="200" />
 					</DataGrid.Columns>
 				</DataGrid>
