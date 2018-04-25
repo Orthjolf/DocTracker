@@ -37,6 +37,11 @@ namespace WpfApp.Domain
 		public string ClientPatronymic { get; set; }
 
 		/// <summary>
+		/// Фамилия имя отчество
+		/// </summary>
+		public string ClientFullName => $"{ClientFirstName} {ClientPatronymic} {ClientLastName}";
+
+		/// <summary>
 		/// Номер телефона клиента
 		/// </summary>
 		public string PhoneNumber { get; set; }

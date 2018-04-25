@@ -6,21 +6,22 @@ using WpfApp.Domain;
 
 namespace WpfApp.SubPages
 {
-	public partial class BoxContent : UserControl
+	public partial class BoxContent
 	{
-		private Box _box;
+		private readonly Box _box;
 
-		private List<Contract> _contracts;
+		private readonly List<Contract> _contracts;
 
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
 			_box = box;
-
 			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
-			ContractGridItems.ItemsSource = _contracts;
-		}
+			if (!_contracts.Any()) return;
 
+			ContractGridItems.ItemsSource = _contracts;
+			ContractGridItems.SelectedItem = _contracts.First();
+		}
 
 		private void ContractGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
@@ -32,6 +33,18 @@ namespace WpfApp.SubPages
 		private void BackButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			MainWindow.SetDefault(_box.StorageId);
+		}
+
+		private void SearchField_OnTextChanged(object sender, TextChangedEventArgs e)
+		{
+			var filteredItems = _contracts
+				.Where(item => item.Number.ToLower().Contains(ContractNumberSearch.Text.ToLower()))
+				.Where(item => item.ClientFullName.ToLower().Contains(FullNameSearchField.Text.ToLower()))
+				.ToList();
+
+			ContractGridItems.ItemsSource = filteredItems;
+			if (!filteredItems.Any()) return;
+			ContractPresenter.Content = new ContractDetails(filteredItems.First());
 		}
 	}
 }
