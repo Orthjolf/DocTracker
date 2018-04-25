@@ -93,7 +93,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataProvider\DataContext.cs" />
-    <Compile Include="DataProvider\ObjectFactory.cs" />
     <Compile Include="DataProvider\Repository\BoxRepository.cs" />
     <Compile Include="DataProvider\Repository\ContractRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
