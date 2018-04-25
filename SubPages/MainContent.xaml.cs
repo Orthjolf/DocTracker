@@ -24,12 +24,29 @@ namespace WpfApp.SubPages
 			SetContent(Storages.First());
 		}
 
+		/// <summary>
+		/// Выбор хранилища из главного окна
+		/// </summary>
+		/// <param name="selectedStorageId">Id хранилища</param>
+		public void SelectItem(string selectedStorageId)
+		{
+			var storage = Storages.First(s => s.Id == selectedStorageId);
+			SetContent(storage);
+		}
+
+		/// <summary>
+		/// Установка панели с содержимым склада
+		/// </summary>
+		/// <param name="storage">Склад, содержимое которого будет отображаться</param>
 		private void SetContent(Storage storage)
 		{
 			_selectedStorage = storage;
 			ContentPresenter.Content = new ContentPartial(storage);
 		}
 
+		/// <summary>
+		/// Поиск хранилищ в списке
+		/// </summary>
 		private void SearchInput_OnTextChanged(object sender, TextChangedEventArgs e)
 		{
 			var filteredItems = Storages.Where(item => item.Name.ToLower().Contains(SearchInput.Text.ToLower())).ToList();
@@ -38,6 +55,9 @@ namespace WpfApp.SubPages
 			SetContent(filteredItems.First());
 		}
 
+		/// <summary>
+		/// Выбор хранилища
+		/// </summary>
 		private void StorageMenuItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			var item = (Storage) StorageMenuItems.SelectedItem;
@@ -46,6 +66,9 @@ namespace WpfApp.SubPages
 			SetContent(item);
 		}
 
+		/// <summary>
+		/// Добавление нового хранилища
+		/// </summary>
 		private void AddStorageButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			var inputDialog = new AddStorageDialog();
@@ -63,6 +86,9 @@ namespace WpfApp.SubPages
 			SetContent(Storages.First(s => s.Id == storageBson["_id"].ToString()));
 		}
 
+		/// <summary>
+		/// Удаление хранилища
+		/// </summary>
 		private async void DeleteStorageButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			if (Storages.Count == 1) return;
@@ -70,12 +96,6 @@ namespace WpfApp.SubPages
 			Storages = Storages.Where(s => s.Id != _selectedStorage.Id).ToList();
 			SetContent(Storages.First());
 			StorageMenuItems.ItemsSource = Storages;
-		}
-
-		public void SelectItem(string selectedStorageId)
-		{
-			var storage = Storages.First(s => s.Id == selectedStorageId);
-			SetContent(storage);
 		}
 	}
 }

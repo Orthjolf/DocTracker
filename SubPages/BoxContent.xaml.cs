@@ -25,6 +25,9 @@ namespace WpfApp.SubPages
 			SetContent(_contracts.First());
 		}
 
+		/// <summary>
+		/// Выбор договора
+		/// </summary>
 		private void ContractGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			var contract = (Contract) ContractGridItems.SelectedItem;
@@ -33,11 +36,17 @@ namespace WpfApp.SubPages
 			SetContent(contract);
 		}
 
+		/// <summary>
+		/// Возвращение на страницу с ранее открытым складом
+		/// </summary>
 		private void BackButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			MainWindow.SetDefault(_storageId);
+			MainWindow.SetContentAsStoragesPage(_storageId);
 		}
 
+		/// <summary>
+		/// Поиск договора
+		/// </summary>
 		private void SearchField_OnTextChanged(object sender, TextChangedEventArgs e)
 		{
 			var filteredItems = _contracts
@@ -55,6 +64,10 @@ namespace WpfApp.SubPages
 			SetContent(filteredItems.First());
 		}
 
+		/// <summary>
+		/// Установка содержимого панели с договором
+		/// </summary>
+		/// <param name="contract">Договор, который будет отображаться</param>
 		private void SetContent(Contract contract)
 		{
 			_selectedContractId = contract.Id;

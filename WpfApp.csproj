@@ -105,7 +105,6 @@
     <Compile Include="Domain\Storage.cs" />
     <Compile Include="Enum\ActionPerformed.cs" />
     <Compile Include="Enum\DocumentType.cs" />
-    <Compile Include="Service\MessageService.cs" />
     <Compile Include="SubPages\ContentPartial.xaml.cs" />
     <Compile Include="SubPages\BoxContent.xaml.cs" />
     <Compile Include="SubPages\ContractDetails.xaml.cs" />

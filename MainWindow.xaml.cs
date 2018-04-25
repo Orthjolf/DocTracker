@@ -42,6 +42,7 @@ namespace WpfApp
 		}
 
 		private static Random r = new Random();
+
 		static string GetRandomString()
 		{
 			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -57,12 +58,21 @@ namespace WpfApp
 //			}); // MessageAsync("This is the title", "Some message");
 //		}
 
+
+		/// <summary>
+		/// Устанавливает содержимое главного окна
+		/// </summary>
+		/// <param name="content">Содержимое, которе будет отображаться</param>
 		public static void SetContent(UserControl content)
 		{
 			_instance.Content = content;
 		}
 
-		public static void SetDefault(string selectedStorageId)
+		/// <summary>
+		/// Устанавливает содержимое главного окна панелью с ранее выбранным хранилищем
+		/// </summary>
+		/// <param name="selectedStorageId">Id ранее выбранного хранилища</param>
+		public static void SetContentAsStoragesPage(string selectedStorageId)
 		{
 			_instance.Content = _mainContent;
 			_mainContent.SelectItem(selectedStorageId);
