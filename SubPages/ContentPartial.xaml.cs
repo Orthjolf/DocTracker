@@ -11,47 +11,48 @@ namespace WpfApp.SubPages
 {
 	public partial class ContentPartial
 	{
-		private List<Box> Boxes { get; set; }
+		private List<Box> _boxes;
 
-		private Storage Storage { get; set; }
+		private readonly string _storageId;
 
 		public ContentPartial(Storage storage)
 		{
 			InitializeComponent();
-			Storage = storage;
-			StorageName.Text = Storage.Name;
-			StorageAddress.Text = Storage.Address;
-			StorageDescription.Text = Storage.Description;
+			_storageId = storage.Id;
 
-			Boxes = Box.Repository.GetByStorageId(Storage.Id).ToList();
-			BoxGridItems.ItemsSource = Boxes;
+			StorageName.Text = storage.Name;
+			StorageAddress.Text = storage.Address;
+			StorageDescription.Text = storage.Description;
+
+			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
+			BoxGridItems.ItemsSource = _boxes;
 		}
 
 		private void AddBox_OnClick(object sender, RoutedEventArgs e)
 		{
-			var inputDialog = new AddBoxDialog(Boxes);
+			var inputDialog = new AddBoxDialog(_boxes);
 			if (inputDialog.ShowDialog() != true) return;
 
 			var boxBson = new BsonDocument
 			{
-				{"StorageId", Storage.Id},
+				{"StorageId", _storageId},
 				{"Name", inputDialog.Name.Text},
 				{"Description", ""},
 				{"MinDate", DateTime.MinValue},
 				{"MaxDate", DateTime.MinValue}
 			};
 			Box.Repository.AddAndSave(boxBson);
-			Boxes = Box.Repository.GetByStorageId(Storage.Id).ToList();
-			BoxGridItems.ItemsSource = Boxes;
+			_boxes.Add(Box.Reconstitute(boxBson));
+			BoxGridItems.ItemsSource = _boxes.ToList();
 		}
 
-		private async void DeleteBoxButton_Onclick(object sender, RoutedEventArgs e)
+		private async void DeleteBoxButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			if (Boxes.Count == 1) return;
+			if (_boxes.Count == 1) return;
 			var selected = (Box) BoxGridItems.SelectedItem;
 			await Box.Repository.DeleteById(selected.Id);
-			Boxes = Boxes.Where(b => b.Id != selected.Id).ToList();
-			BoxGridItems.ItemsSource = Boxes;
+			_boxes = _boxes.Where(b => b.Id != selected.Id).ToList();
+			BoxGridItems.ItemsSource = _boxes;
 		}
 
 		private void BoxGridItems_SelectionChanged(object sender, SelectionChangedEventArgs e)

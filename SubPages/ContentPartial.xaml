@@ -42,7 +42,7 @@
 			        Width="150"
 			        HorizontalAlignment="left"
 			        Margin="150 0 0 0"
-			        Click="DeleteBoxButton_Onclick" />
+			        Click="DeleteBoxButton_OnClick" />
 			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Печать"
