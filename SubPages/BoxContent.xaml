@@ -60,10 +60,10 @@
 				          SelectionChanged="ContractGridItems_SelectionChanged">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Номер Договора"
-						                    Binding="{Binding Number}"
+						                    Binding="{Binding Number, Mode=OneWay}"
 						                    Width="122" />
 						<DataGridTextColumn Header="ФИО клиента"
-						                    Binding="{Binding ClientFullName}"
+						                    Binding="{Binding ClientFullName, Mode=OneWay}"
 						                    Width="*" />
 					</DataGrid.Columns>
 				</DataGrid>

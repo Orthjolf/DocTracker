@@ -21,13 +21,13 @@ namespace WpfApp
 			_instance = this;
 			_mainContent = new MainContent();
 			RootContent.Content = _mainContent;
-
+//
 //			for (var i = 0; i < 10; i++)
 //			{
 //				Contract.Repository.AddAndSave(new BsonDocument
 //				{
 //					{"Number", GetRandomString()},
-//					{"BoxId", "5adf29f3c0196120580ebe5d"},
+//					{"BoxId", "5ae01249c019612a845a32ee"},
 //					{"ClientFirstName", GetRandomString()},
 //					{"ClientLastName", GetRandomString()},
 //					{"ClientPatronymic", GetRandomString()},
@@ -45,7 +45,7 @@ namespace WpfApp
 		static string GetRandomString()
 		{
 			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			return new string(Enumerable.Repeat(chars, 10)
+			return new string(Enumerable.Repeat(chars, 14)
 				.Select(s => s[r.Next(s.Length)]).ToArray());
 		}
 
