@@ -32,6 +32,11 @@ namespace WpfApp.Domain
 		/// </summary>
 		public DateTime? MaxDate { get; set; }
 
+		/// <summary>
+		/// Количество договоров в коробке
+		/// </summary>
+		public int ContractsCount { get; set; }
+
 		public BsonDocument Serialize()
 		{
 			return new BsonDocument
@@ -40,7 +45,8 @@ namespace WpfApp.Domain
 				{"StorageId", StorageId},
 				{"MinDate", MinDate},
 				{"MaxDate", MaxDate},
-				{"Description", Description}
+				{"Description", Description},
+				{"ContractsCount", ContractsCount}
 			};
 		}
 
@@ -50,7 +56,6 @@ namespace WpfApp.Domain
 			DateTime? maxDate = bsonDocument["MaxDate"].ToUniversalTime();
 			if (minDate == DateTime.MinValue) minDate = null;
 			if (maxDate == DateTime.MinValue) maxDate = null;
-
 			return new Box
 			{
 				Id = bsonDocument["_id"].ToString(),
@@ -58,7 +63,8 @@ namespace WpfApp.Domain
 				StorageId = bsonDocument["StorageId"].AsString,
 				MinDate = minDate,
 				MaxDate = maxDate,
-				Description = bsonDocument["Description"].AsString
+				Description = bsonDocument["Description"].AsString,
+				ContractsCount = bsonDocument["ContractsCount"].AsInt32
 			};
 		}
 	}

@@ -68,7 +68,7 @@
 					                    Binding='{Binding MinDate, TargetNullValue="-"}'
 					                    Width="150" />
 					<DataGridTextColumn Header="Кол-во договоров"
-					                    Binding="{Binding MinDate}"
+					                    Binding="{Binding ContractsCount}"
 					                    Width="Auto" />
 				</DataGrid.Columns>
 			</DataGrid>

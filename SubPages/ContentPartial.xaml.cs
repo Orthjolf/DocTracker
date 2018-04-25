@@ -42,7 +42,8 @@ namespace WpfApp.SubPages
 				{"Name", inputDialog.Name.Text},
 				{"Description", ""},
 				{"MinDate", DateTime.MinValue},
-				{"MaxDate", DateTime.MinValue}
+				{"MaxDate", DateTime.MinValue},
+				{"ContractsCount", 0}
 			};
 			Box.Repository.AddAndSave(boxBson);
 			_boxes.Add(Box.Reconstitute(boxBson));
