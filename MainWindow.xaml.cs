@@ -33,19 +33,20 @@ namespace WpfApp
 //					{"ClientPatronymic", GetRandomString()},
 //					{"PhoneNumber", GetRandomString()},
 //					{"LoanId", GetRandomString()},
-//					{"PrefixOfPlace", GetRandomString()}
+//					{"PrefixOfPlace", GetRandomString()},
+//					{"ContractDate", DateTime.Now }
 //				});
 //			}
 
 //			showMsg();
 		}
 
+		private static Random r = new Random();
 		static string GetRandomString()
 		{
-			var random = new Random();
 			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 			return new string(Enumerable.Repeat(chars, 10)
-				.Select(s => s[random.Next(s.Length)]).ToArray());
+				.Select(s => s[r.Next(s.Length)]).ToArray());
 		}
 
 //		public async void showMsg()

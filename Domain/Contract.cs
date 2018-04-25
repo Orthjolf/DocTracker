@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
@@ -51,6 +52,11 @@ namespace WpfApp.Domain
 		/// <returns></returns>
 		public string PrefixOfPlace { get; set; }
 
+		/// <summary>
+		/// Дата выдачи займа
+		/// </summary>
+		public DateTime ContractDate { get; set; }
+
 		public static Contract Reconstitute(BsonDocument bsonDocument)
 		{
 			return new Contract
@@ -63,7 +69,8 @@ namespace WpfApp.Domain
 				ClientPatronymic = bsonDocument["ClientPatronymic"].AsString,
 				PhoneNumber = bsonDocument["PhoneNumber"].AsString,
 				LoanId = bsonDocument["LoanId"].AsString,
-				PrefixOfPlace = bsonDocument["PrefixOfPlace"].AsString
+				PrefixOfPlace = bsonDocument["PrefixOfPlace"].AsString,
+				ContractDate = bsonDocument["ContractDate"].ToUniversalTime()
 			};
 		}
 	}
