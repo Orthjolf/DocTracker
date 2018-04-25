@@ -9,13 +9,13 @@ using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
-	public partial class ContentPartial
+	public partial class StorageContent
 	{
 		private List<Box> _boxes;
 
 		private readonly string _storageId;
 
-		public ContentPartial(Storage storage)
+		public StorageContent(Storage storage)
 		{
 			InitializeComponent();
 			_storageId = storage.Id;

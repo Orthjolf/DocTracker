@@ -41,7 +41,7 @@ namespace WpfApp.SubPages
 		private void SetContent(Storage storage)
 		{
 			_selectedStorage = storage;
-			ContentPresenter.Content = new ContentPartial(storage);
+			ContentPresenter.Content = new StorageContent(storage);
 		}
 
 		/// <summary>

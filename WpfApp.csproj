@@ -104,7 +104,6 @@
     <Compile Include="Domain\Storage.cs" />
     <Compile Include="Enum\ActionPerformed.cs" />
     <Compile Include="Enum\DocumentType.cs" />
-    <Compile Include="SubPages\ContentPartial.xaml.cs" />
     <Compile Include="SubPages\BoxContent.xaml.cs" />
     <Compile Include="SubPages\ContractDetails.xaml.cs" />
     <Compile Include="SubPages\MainContent.xaml.cs" />
@@ -113,6 +112,7 @@
     <Compile Include="SubPages\Modals\BoxContentModal.xaml.cs" />
     <Compile Include="SubPages\Modals\BoxPrintForm.xaml.cs" />
     <Compile Include="SubPages\Modals\ErrorDialog.xaml.cs" />
+    <Compile Include="SubPages\StorageContent.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -125,7 +125,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SubPages\ContentPartial.xaml" />
     <Page Include="SubPages\BoxContent.xaml" />
     <Page Include="SubPages\ContractDetails.xaml" />
     <Page Include="SubPages\MainContent.xaml" />
@@ -134,6 +133,7 @@
     <Page Include="SubPages\Modals\BoxContentModal.xaml" />
     <Page Include="SubPages\Modals\BoxPrintForm.xaml" />
     <Page Include="SubPages\Modals\ErrorDialog.xaml" />
+    <Page Include="SubPages\StorageContent.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
