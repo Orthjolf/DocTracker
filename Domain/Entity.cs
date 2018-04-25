@@ -7,9 +7,6 @@ namespace WpfApp.Domain
 {
 	public abstract class Entity
 	{
-		[BsonIgnore]
-		public static DocumentRepository Repository => new DocumentRepository();
-
 		/// <summary>
 		/// Идентификатор
 		/// </summary>

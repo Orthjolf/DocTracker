@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using MongoDB.Bson;
 using WpfApp.DataProvider.Repository;
 
@@ -9,7 +10,8 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
-		public new static StorageRepository Repository => new StorageRepository();
+		public static StorageRepository Repository =>
+			new Lazy<StorageRepository>(() => new StorageRepository()).Value;
 
 		/// <summary>
 		/// Название

@@ -9,7 +9,8 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Contract : Entity
 	{
-		public new static ContractRepository Repository => new ContractRepository();
+		public static ContractRepository Repository =>
+			new Lazy<ContractRepository>(() => new ContractRepository()).Value;
 
 		/// <summary>
 		/// Номер контракта
