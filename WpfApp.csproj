@@ -104,6 +104,7 @@
     <Compile Include="Domain\Storage.cs" />
     <Compile Include="Enum\ActionPerformed.cs" />
     <Compile Include="Enum\DocumentType.cs" />
+    <Compile Include="Service\BarCodeDecoder.cs" />
     <Compile Include="SubPages\BoxContent.xaml.cs" />
     <Compile Include="SubPages\ContractDetails.xaml.cs" />
     <Compile Include="SubPages\MainContent.xaml.cs" />
