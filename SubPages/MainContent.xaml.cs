@@ -1,14 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Threading;
 using MongoDB.Bson;
 using WpfApp.Domain;
+using WpfApp.Service;
 using WpfApp.SubPages.Modals;
+using Action = System.Action;
 
 namespace WpfApp.SubPages
 {
-	public partial class MainContent : UserControl
+	public partial class MainContent
 	{
 		private List<Storage> Storages { get; set; }
 
@@ -18,10 +24,34 @@ namespace WpfApp.SubPages
 		{
 			InitializeComponent();
 
+			ThreadPool.QueueUserWorkItem(_ => GetStorages());
+			ThreadPool.QueueUserWorkItem(_ => UpdateUi());
+		}
+
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
+
+		private void GetStorages()
+		{
+			ConsoleWriter.Write("Загрузка складов");
 			Storages = Storage.Repository.GetAll().ToList();
-			StorageMenuItems.ItemsSource = Storages;
+			Thread.Sleep(10000);
+			_resetEvent.Set();
+		}
+
+		private void UpdateUi()
+		{
+			_resetEvent.WaitOne();
 			if (!Storages.Any()) return;
-			SetContent(Storages.First());
+
+			Storages.ForEach(s => ConsoleWriter.Write(s.Name));
+
+			Dispatcher.Invoke(() =>
+			{
+				SetContent(Storages.First());
+				StorageMenuItems.ItemsSource = Storages;
+				LoadingIndicator.IsActive = false;
+				LoadingIndicator.Visibility = Visibility.Hidden;
+			});
 		}
 
 		/// <summary>
