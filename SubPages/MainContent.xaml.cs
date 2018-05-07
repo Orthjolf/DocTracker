@@ -52,6 +52,8 @@ namespace WpfApp.SubPages
 				LoadingIndicator.IsActive = false;
 				LoadingIndicator.Visibility = Visibility.Hidden;
 				LoadingLabel.Visibility = Visibility.Hidden;
+				AddStorageButton.IsEnabled = true;
+				DeleteStorageButton.IsEnabled = true;
 			});
 		}
 

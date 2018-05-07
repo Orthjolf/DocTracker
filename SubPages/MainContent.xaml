@@ -67,14 +67,18 @@
 						                    Width="200" />
 					</DataGrid.Columns>
 				</DataGrid>
-				<Button Grid.Row="2" Grid.Column="0"
+				<Button Name="AddStorageButton"
+				        Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Добавить"
-				        Click="AddStorage" />
-				<Button Grid.Row="2" Grid.Column="1"
+				        Click="AddStorage"
+				        IsEnabled="false" />
+				<Button Name="DeleteStorageButton"
+				        Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
-				        Click="DeleteStorage" />
+				        Click="DeleteStorage"
+				        IsEnabled="false" />
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter"
