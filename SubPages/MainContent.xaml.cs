@@ -2,6 +2,7 @@
 using System.Data;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -24,8 +25,8 @@ namespace WpfApp.SubPages
 		{
 			InitializeComponent();
 
-			ThreadPool.QueueUserWorkItem(_ => GetStorages());
-			ThreadPool.QueueUserWorkItem(_ => UpdateUi());
+			Task.Factory.StartNew(GetStorages)
+				.ContinueWith(result => UpdateUi());
 		}
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
