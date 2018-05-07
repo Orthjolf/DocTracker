@@ -5,16 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:WpfApp.SubPages"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-             mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-	<Grid>
+             mc:Ignorable="d">
+	<Grid ShowGridLines="true">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="222" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
-		<Border Grid.Column="0"
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Label Name="LoadingLabel"
+		       Content="Загрузка"
+		       HorizontalAlignment="Right"
+		       FontSize="20"
+		       Grid.Column="1" Grid.Row="0"
+		       Margin="0,0,60,0"
+		       VerticalAlignment="Center" />
+		<mah:ProgressRing IsActive="True"
+		                  Visibility="Visible"
+		                  Name="LoadingIndicator"
+		                  Width="30"
+		                  Margin="0,0,20,0"
+		                  HorizontalAlignment="Right"
+		                  Grid.Column="1" Grid.Row="0" />
+		<Border Grid.Column="0" Grid.Row="1"
 		        BorderBrush="LightGray"
-		        Margin="10,50,10,10"
+		        Margin="10,0,10,10"
 		        BorderThickness="1"
 		        DockPanel.Dock="Top">
 			<Grid>
@@ -34,7 +52,7 @@
 				         HorizontalAlignment="left"
 				         Width="200"
 				         Name="SearchInput"
-				         TextChanged="SearchInput_OnTextChanged" />
+				         TextChanged="SearchStorages" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 				          AutoGenerateColumns="False"
 				          Name="StorageMenuItems"
@@ -42,24 +60,25 @@
 				          CanUserAddRows="False"
 				          CanUserDeleteRows="False"
 				          CanUserResizeColumns="False"
-				          SelectionChanged="StorageMenuItems_SelectionChanged">
+				          SelectionChanged="SelectStorage">
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Хранилище"
-						                    Binding="{Binding Name}"
+						                    Binding="{Binding Name, Mode=OneWay}"
 						                    Width="200" />
 					</DataGrid.Columns>
 				</DataGrid>
 				<Button Grid.Row="2" Grid.Column="0"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Добавить"
-				        Click="AddStorageButton_OnClick" />
+				        Click="AddStorage" />
 				<Button Grid.Row="2" Grid.Column="1"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
-				        Click="DeleteStorageButton_OnClick" />
+				        Click="DeleteStorage" />
 			</Grid>
 		</Border>
-		<ContentPresenter x:Name="ContentPresenter" Grid.Column="1"
+		<ContentPresenter x:Name="ContentPresenter"
+		                  Grid.Column="1" Grid.Row="1"
 		                  Content="{Binding MainContent}" />
 	</Grid>
 </UserControl>

@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
 	<Grid>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="222" />
+			<ColumnDefinition Width="400" />
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
@@ -21,7 +21,7 @@
 		        Margin="10,10,10,0"
 		        Style="{StaticResource AccentedSquareButtonStyle}"
 		        Content="Назад"
-		        Click="BackButton_OnClick" />
+		        Click="BackOnMainScreen" />
 		<Border Grid.Column="0" Grid.Row="1"
 		        BorderBrush="LightGray"
 		        Margin="10,10,10,10"
@@ -38,12 +38,18 @@
 					<RowDefinition Height="30" />
 				</Grid.RowDefinitions>
 				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-				         mah:TextBoxHelper.ClearTextButton="True"
-				         mah:TextBoxHelper.Watermark="Фильтр"
-				         Text="{Binding InputText}"
+				         mah:TextBoxHelper.ClearTextButton="False"
 				         HorizontalAlignment="left"
-				         Width="200"
-				         Name="SearchInput" />
+				         Width="122"
+				         Name="ContractNumberSearch"
+				         TextChanged="SearchContracts" />
+				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				         mah:TextBoxHelper.ClearTextButton="False"
+				         HorizontalAlignment="left"
+				         Margin="122,0,0,0"
+				         Width="256"
+				         Name="FullNameSearchField"
+				         TextChanged="SearchContracts" />
 				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
 				          AutoGenerateColumns="False"
 				          Name="ContractGridItems"
@@ -51,11 +57,14 @@
 				          CanUserAddRows="False"
 				          CanUserDeleteRows="False"
 				          CanUserResizeColumns="False"
-				          SelectionChanged="ContractGridItems_SelectionChanged">
+				          SelectionChanged="SelectContract">
 					<DataGrid.Columns>
-						<DataGridTextColumn Header="Договор"
-						                    Binding="{Binding Number}"
-						                    Width="200" />
+						<DataGridTextColumn Header="Номер Договора"
+						                    Binding="{Binding Number, Mode=OneWay}"
+						                    Width="122" />
+						<DataGridTextColumn Header="ФИО клиента"
+						                    Binding="{Binding ClientFullName, Mode=OneWay}"
+						                    Width="*" />
 					</DataGrid.Columns>
 				</DataGrid>
 				<Button Grid.Row="2" Grid.Column="0"

@@ -8,25 +8,36 @@
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
 	<Border BorderBrush="LightGray"
-	        Margin="0,50,10,10"
+	        Margin="0,10,10,10"
 	        BorderThickness="1"
 	        DockPanel.Dock="Top">
 		<Grid HorizontalAlignment="Stretch"
 		      VerticalAlignment="Stretch">
 			<Grid.RowDefinitions>
-				<RowDefinition Height="30" />
 				<RowDefinition Height="25" />
 				<RowDefinition Height="25" />
 				<RowDefinition Height="25" />
-				<RowDefinition Height="*" />
+				<RowDefinition Height="25" />
+				<RowDefinition Height="25" />
+				<RowDefinition Height="25" />
+				<RowDefinition Height="25" />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="105" />
+				<ColumnDefinition />
 				<ColumnDefinition />
 			</Grid.ColumnDefinitions>
-			<TextBlock FontSize="20" Grid.Row="1" Grid.Column="0" Text="Адрес: " TextAlignment="Right" />
-			<TextBlock Name="StorageAddress" FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Address}" />
-
+			<TextBlock Grid.Row="0" Grid.Column="0" FontSize="20" Text="Номер договора: " TextAlignment="Right" />
+			<TextBlock Grid.Row="0" Grid.Column="1" Name="ContractNumber" FontSize="20" />
+			<TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" Text="Id займа : " TextAlignment="Right" />
+			<TextBlock Grid.Row="1" Grid.Column="1" Name="LoanId" FontSize="20" />
+			<TextBlock Grid.Row="2" Grid.Column="0" FontSize="20" Text="Клиент : " TextAlignment="Right" />
+			<TextBlock Grid.Row="2" Grid.Column="1" Name="ClientFirstName" FontSize="20" />
+			<TextBlock Grid.Row="3" Grid.Column="1" Name="ClientLastName" FontSize="20" />
+			<TextBlock Grid.Row="4" Grid.Column="1" Name="ClientPatronymic" FontSize="20" />
+			<TextBlock Grid.Row="5" Grid.Column="0" FontSize="20" Text="Номер телефона : " TextAlignment="Right" />
+			<TextBlock Grid.Row="5" Grid.Column="1" Name="PhoneNumber" FontSize="20" />
+			<TextBlock Grid.Row="6" Grid.Column="0" FontSize="20" Text="Дата выдачи : " TextAlignment="Right" />
+			<TextBlock Grid.Row="6" Grid.Column="1" Name="ContractDate" FontSize="20" />
 		</Grid>
 	</Border>
 </UserControl>

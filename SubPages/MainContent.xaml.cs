@@ -1,14 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Threading;
 using MongoDB.Bson;
 using WpfApp.Domain;
+using WpfApp.Service;
 using WpfApp.SubPages.Modals;
+using Action = System.Action;
 
 namespace WpfApp.SubPages
 {
-	public partial class MainContent : UserControl
+	public partial class MainContent
 	{
 		private List<Storage> Storages { get; set; }
 
@@ -18,19 +24,61 @@ namespace WpfApp.SubPages
 		{
 			InitializeComponent();
 
-			Storages = Storage.Repository.GetAll().ToList();
-			StorageMenuItems.ItemsSource = Storages;
-			if (!Storages.Any()) return;
-			SetContent(Storages.First());
+			ThreadPool.QueueUserWorkItem(_ => GetStorages());
+			ThreadPool.QueueUserWorkItem(_ => UpdateUi());
 		}
 
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
+
+		private void GetStorages()
+		{
+			ConsoleWriter.Write("Загрузка складов");
+			Storages = Storage.Repository.GetAll().ToList();
+//			Thread.Sleep(10000);
+			_resetEvent.Set();
+		}
+
+		private void UpdateUi()
+		{
+			_resetEvent.WaitOne();
+			if (!Storages.Any()) return;
+
+			Storages.ForEach(s => ConsoleWriter.Write(s.Name));
+
+			Dispatcher.Invoke(() =>
+			{
+				SetContent(Storages.First());
+				StorageMenuItems.ItemsSource = Storages;
+				LoadingIndicator.IsActive = false;
+				LoadingIndicator.Visibility = Visibility.Hidden;
+				LoadingLabel.Visibility = Visibility.Hidden;
+			});
+		}
+
+		/// <summary>
+		/// Выбор хранилища из главного окна
+		/// </summary>
+		/// <param name="selectedStorageId">Id хранилища</param>
+		public void SelectItem(string selectedStorageId)
+		{
+			var storage = Storages.First(s => s.Id == selectedStorageId);
+			SetContent(storage);
+		}
+
+		/// <summary>
+		/// Установка панели с содержимым склада
+		/// </summary>
+		/// <param name="storage">Склад, содержимое которого будет отображаться</param>
 		private void SetContent(Storage storage)
 		{
 			_selectedStorage = storage;
-			ContentPresenter.Content = new ContentPartial(storage);
+			ContentPresenter.Content = new StorageContent(storage);
 		}
 
-		private void SearchInput_OnTextChanged(object sender, TextChangedEventArgs e)
+		/// <summary>
+		/// Поиск хранилищ в списке
+		/// </summary>
+		private void SearchStorages(object sender, TextChangedEventArgs e)
 		{
 			var filteredItems = Storages.Where(item => item.Name.ToLower().Contains(SearchInput.Text.ToLower())).ToList();
 			StorageMenuItems.ItemsSource = filteredItems;
@@ -38,7 +86,10 @@ namespace WpfApp.SubPages
 			SetContent(filteredItems.First());
 		}
 
-		private void StorageMenuItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		/// <summary>
+		/// Выбор хранилища
+		/// </summary>
+		private void SelectStorage(object sender, SelectionChangedEventArgs e)
 		{
 			var item = (Storage) StorageMenuItems.SelectedItem;
 			if (item == null) return;
@@ -46,7 +97,10 @@ namespace WpfApp.SubPages
 			SetContent(item);
 		}
 
-		private void AddStorageButton_OnClick(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// Добавление нового хранилища
+		/// </summary>
+		private void AddStorage(object sender, RoutedEventArgs e)
 		{
 			var inputDialog = new AddStorageDialog();
 			if (inputDialog.ShowDialog() != true) return;
@@ -63,19 +117,16 @@ namespace WpfApp.SubPages
 			SetContent(Storages.First(s => s.Id == storageBson["_id"].ToString()));
 		}
 
-		private async void DeleteStorageButton_OnClick(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// Удаление хранилища
+		/// </summary>
+		private async void DeleteStorage(object sender, RoutedEventArgs e)
 		{
 			if (Storages.Count == 1) return;
 			await Storage.Repository.DeleteById(_selectedStorage.Id);
 			Storages = Storages.Where(s => s.Id != _selectedStorage.Id).ToList();
 			SetContent(Storages.First());
 			StorageMenuItems.ItemsSource = Storages;
-		}
-
-		public void SelectItem(string selectedStorageId)
-		{
-			var storage = Storages.First(s => s.Id == selectedStorageId);
-			SetContent(storage);
 		}
 	}
 }

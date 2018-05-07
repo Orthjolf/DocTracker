@@ -21,31 +21,33 @@ namespace WpfApp
 			_instance = this;
 			_mainContent = new MainContent();
 			RootContent.Content = _mainContent;
-
+//
 //			for (var i = 0; i < 10; i++)
 //			{
 //				Contract.Repository.AddAndSave(new BsonDocument
 //				{
 //					{"Number", GetRandomString()},
-//					{"BoxId", "5adf29f3c0196120580ebe5d"},
+//					{"BoxId", "5ae01249c019612a845a32ee"},
 //					{"ClientFirstName", GetRandomString()},
 //					{"ClientLastName", GetRandomString()},
 //					{"ClientPatronymic", GetRandomString()},
 //					{"PhoneNumber", GetRandomString()},
 //					{"LoanId", GetRandomString()},
-//					{"PrefixOfPlace", GetRandomString()}
+//					{"PrefixOfPlace", GetRandomString()},
+//					{"ContractDate", DateTime.Now }
 //				});
 //			}
 
 //			showMsg();
 		}
 
+		private static Random r = new Random();
+
 		static string GetRandomString()
 		{
-			var random = new Random();
 			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			return new string(Enumerable.Repeat(chars, 10)
-				.Select(s => s[random.Next(s.Length)]).ToArray());
+			return new string(Enumerable.Repeat(chars, 14)
+				.Select(s => s[r.Next(s.Length)]).ToArray());
 		}
 
 //		public async void showMsg()
@@ -56,12 +58,21 @@ namespace WpfApp
 //			}); // MessageAsync("This is the title", "Some message");
 //		}
 
+
+		/// <summary>
+		/// Устанавливает содержимое главного окна
+		/// </summary>
+		/// <param name="content">Содержимое, которе будет отображаться</param>
 		public static void SetContent(UserControl content)
 		{
 			_instance.Content = content;
 		}
 
-		public static void SetDefault(string selectedStorageId)
+		/// <summary>
+		/// Устанавливает содержимое главного окна панелью с ранее выбранным хранилищем
+		/// </summary>
+		/// <param name="selectedStorageId">Id ранее выбранного хранилища</param>
+		public static void SetContentAsStoragesPage(string selectedStorageId)
 		{
 			_instance.Content = _mainContent;
 			_mainContent.SelectItem(selectedStorageId);

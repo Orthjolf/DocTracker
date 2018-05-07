@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System;
+using MongoDB.Bson;
 using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
@@ -8,7 +9,8 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Contract : Entity
 	{
-		public new static ContractRepository Repository => new ContractRepository();
+		public static ContractRepository Repository =>
+			new Lazy<ContractRepository>(() => new ContractRepository()).Value;
 
 		/// <summary>
 		/// Номер контракта
@@ -36,6 +38,11 @@ namespace WpfApp.Domain
 		public string ClientPatronymic { get; set; }
 
 		/// <summary>
+		/// Фамилия имя отчество
+		/// </summary>
+		public string ClientFullName => $"{ClientFirstName} {ClientPatronymic} {ClientLastName}";
+
+		/// <summary>
 		/// Номер телефона клиента
 		/// </summary>
 		public string PhoneNumber { get; set; }
@@ -51,6 +58,11 @@ namespace WpfApp.Domain
 		/// <returns></returns>
 		public string PrefixOfPlace { get; set; }
 
+		/// <summary>
+		/// Дата выдачи займа
+		/// </summary>
+		public DateTime ContractDate { get; set; }
+
 		public static Contract Reconstitute(BsonDocument bsonDocument)
 		{
 			return new Contract
@@ -63,7 +75,8 @@ namespace WpfApp.Domain
 				ClientPatronymic = bsonDocument["ClientPatronymic"].AsString,
 				PhoneNumber = bsonDocument["PhoneNumber"].AsString,
 				LoanId = bsonDocument["LoanId"].AsString,
-				PrefixOfPlace = bsonDocument["PrefixOfPlace"].AsString
+				PrefixOfPlace = bsonDocument["PrefixOfPlace"].AsString,
+				ContractDate = bsonDocument["ContractDate"].ToUniversalTime()
 			};
 		}
 	}
