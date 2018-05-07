@@ -35,7 +35,7 @@ namespace WpfApp.SubPages
 		{
 			ConsoleWriter.Write("Загрузка складов");
 			Storages = Storage.Repository.GetAll().ToList();
-			Thread.Sleep(5000);
+//			Thread.Sleep(5000);
 			_resetEvent.Set();
 		}
 
@@ -50,7 +50,6 @@ namespace WpfApp.SubPages
 			{
 				SetContent(Storages.First());
 				StorageMenuItems.ItemsSource = Storages;
-				LoadingIndicator.IsActive = false;
 				LoadingIndicator.Visibility = Visibility.Hidden;
 				LoadingLabel.Visibility = Visibility.Hidden;
 				AddStorageButton.IsEnabled = true;

@@ -54,17 +54,15 @@
 
 				<Label Name="LoadingLabel"
 				       Content="Загрузка"
-				       HorizontalAlignment="Right"
 				       FontSize="20"
 				       Grid.Row="1" Grid.Column="0"
-				       Margin="0,0,60,0"
+				       HorizontalAlignment="Center"
 				       VerticalAlignment="Center" />
 				<mah:ProgressRing IsActive="True"
 				                  Visibility="Visible"
 				                  Name="LoadingIndicator"
-				                  Width="30"
-				                  Margin="0,0,20,0"
-				                  HorizontalAlignment="Right"
+				                  Width="100"
+				                  HorizontalAlignment="Center"
 				                  Grid.Row="1" Grid.Column="0" />
 
 				<Button Name="AddStorageButton"

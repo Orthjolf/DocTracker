@@ -37,18 +37,24 @@ namespace WpfApp.SubPages
 		{
 			ConsoleWriter.Write("Загрузка коробок");
 			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
-			Thread.Sleep(10000);
+//			Thread.Sleep(2000);
 			_resetEvent.Set();
 		}
 
 		private void UpdateUi()
 		{
 			_resetEvent.WaitOne();
-			if (!_boxes.Any()) return;
+			if (_boxes.Any())
+			{
+				_boxes.ForEach(s => ConsoleWriter.Write(s.Name));
+				Dispatcher.Invoke(() => { BoxGridItems.ItemsSource = _boxes; });
+			}
 
-			_boxes.ForEach(s => ConsoleWriter.Write(s.Name));
-
-			Dispatcher.Invoke(() => { BoxGridItems.ItemsSource = _boxes; });
+			Dispatcher.Invoke(() =>
+			{
+				LoadingIndicator.Visibility = Visibility.Hidden;
+				LoadingLabel.Visibility = Visibility.Hidden;
+			});
 		}
 
 		/// <summary>
@@ -68,6 +74,7 @@ namespace WpfApp.SubPages
 				{"MaxDate", DateTime.MinValue},
 				{"ContractsCount", 0}
 			};
+
 			Box.Repository.AddAndSave(boxBson);
 			_boxes.Add(Box.Reconstitute(boxBson));
 			BoxGridItems.ItemsSource = _boxes.ToList();
@@ -98,6 +105,7 @@ namespace WpfApp.SubPages
 		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
 		{
 			var selected = (Box) BoxGridItems.SelectedItem;
+
 			var inputDialog = new BoxPrintForm(selected);
 			if (inputDialog.ShowDialog() != true) return;
 		}
