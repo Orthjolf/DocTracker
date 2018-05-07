@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Windows.Controls;
-using MahApps.Metro.Controls.Dialogs;
-using MongoDB.Bson;
-using WpfApp.Domain;
 using WpfApp.SubPages;
 
 namespace WpfApp
@@ -38,7 +34,7 @@ namespace WpfApp
 //				});
 //			}
 
-//			showMsg();
+			showMsg();
 		}
 
 		private static Random r = new Random();
@@ -50,13 +46,13 @@ namespace WpfApp
 				.Select(s => s[r.Next(s.Length)]).ToArray());
 		}
 
-//		public async void showMsg()
-//		{
-//			await this.ShowMetroDialogAsync(MetroDialogSettings
-//			{
-//				
-//			}); // MessageAsync("This is the title", "Some message");
-//		}
+		public async void showMsg()
+		{
+//			var diag_dialog = new ModalTest();
+//			diag_dialog.Close_Button.Click += Close_Dialog;
+
+//			await this.ShowMetroDialogAsync(diag_dialog);
+		}
 
 
 		/// <summary>

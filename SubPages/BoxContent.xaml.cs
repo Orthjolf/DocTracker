@@ -3,12 +3,15 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.Domain;
+using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
 	public partial class BoxContent
 	{
 		private readonly string _storageId;
+
+		private readonly string _boxId;
 
 		private readonly List<Contract> _contracts;
 
@@ -18,6 +21,7 @@ namespace WpfApp.SubPages
 		{
 			InitializeComponent();
 			_storageId = box.StorageId;
+			_boxId = box.Id;
 			_contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
 			if (!_contracts.Any()) return;
 
@@ -72,6 +76,11 @@ namespace WpfApp.SubPages
 		{
 			_selectedContractId = contract.Id;
 			ContractPresenter.Content = new ContractDetails(contract);
+		}
+
+		private void ShowAddContractModal(object sender, RoutedEventArgs e)
+		{
+			ContractPresenter.Content = new AddContract(_boxId);
 		}
 	}
 }
