@@ -34,7 +34,7 @@ namespace WpfApp.SubPages
 		{
 			ConsoleWriter.Write("Загрузка складов");
 			Storages = Storage.Repository.GetAll().ToList();
-			Thread.Sleep(10000);
+//			Thread.Sleep(10000);
 			_resetEvent.Set();
 		}
 
@@ -51,6 +51,7 @@ namespace WpfApp.SubPages
 				StorageMenuItems.ItemsSource = Storages;
 				LoadingIndicator.IsActive = false;
 				LoadingIndicator.Visibility = Visibility.Hidden;
+				LoadingLabel.Visibility = Visibility.Hidden;
 			});
 		}
 

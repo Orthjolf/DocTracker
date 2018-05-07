@@ -15,7 +15,14 @@
 			<RowDefinition Height="50" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
-		
+
+		<Label Name="LoadingLabel"
+		       Content="Загрузка"
+		       HorizontalAlignment="Right"
+		       FontSize="20"
+		       Grid.Column="1" Grid.Row="0"
+		       Margin="0,0,60,0"
+		       VerticalAlignment="Center" />
 		<mah:ProgressRing IsActive="True"
 		                  Visibility="Visible"
 		                  Name="LoadingIndicator"
