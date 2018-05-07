@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using MongoDB.Bson;
 using WpfApp.Domain;
+using WpfApp.Service;
 using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
@@ -15,6 +18,8 @@ namespace WpfApp.SubPages
 
 		private readonly string _storageId;
 
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
+
 		public StorageContent(Storage storage)
 		{
 			InitializeComponent();
@@ -24,8 +29,26 @@ namespace WpfApp.SubPages
 			StorageAddress.Text = storage.Address;
 			StorageDescription.Text = storage.Description;
 
+			Task.Factory.StartNew(GetBoxes)
+				.ContinueWith(result => UpdateUi());
+		}
+
+		private void GetBoxes()
+		{
+			ConsoleWriter.Write("Загрузка коробок");
 			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
-			BoxGridItems.ItemsSource = _boxes;
+			Thread.Sleep(10000);
+			_resetEvent.Set();
+		}
+
+		private void UpdateUi()
+		{
+			_resetEvent.WaitOne();
+			if (!_boxes.Any()) return;
+
+			_boxes.ForEach(s => ConsoleWriter.Write(s.Name));
+
+			Dispatcher.Invoke(() => { BoxGridItems.ItemsSource = _boxes; });
 		}
 
 		/// <summary>

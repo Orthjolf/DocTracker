@@ -35,7 +35,7 @@ namespace WpfApp.SubPages
 		{
 			ConsoleWriter.Write("Загрузка складов");
 			Storages = Storage.Repository.GetAll().ToList();
-//			Thread.Sleep(10000);
+			Thread.Sleep(5000);
 			_resetEvent.Set();
 		}
 
