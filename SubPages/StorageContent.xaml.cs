@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using MongoDB.Bson;
 using WpfApp.Domain;
 using WpfApp.Service;
@@ -19,6 +20,8 @@ namespace WpfApp.SubPages
 		private readonly string _storageId;
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
+
+		private Box _selectedBox;
 
 		public StorageContent(Storage storage)
 		{
@@ -35,9 +38,7 @@ namespace WpfApp.SubPages
 
 		private void GetBoxes()
 		{
-			ConsoleWriter.Write("Загрузка коробок");
 			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
-//			Thread.Sleep(2000);
 			_resetEvent.Set();
 		}
 
@@ -46,7 +47,6 @@ namespace WpfApp.SubPages
 			_resetEvent.WaitOne();
 			if (_boxes.Any())
 			{
-				_boxes.ForEach(s => ConsoleWriter.Write(s.Name));
 				Dispatcher.Invoke(() => { BoxGridItems.ItemsSource = _boxes; });
 			}
 
@@ -96,6 +96,14 @@ namespace WpfApp.SubPages
 		/// Выбор коробки
 		/// </summary>
 		private void SelectBox(object sender, SelectionChangedEventArgs e)
+		{
+			_selectedBox = (Box) BoxGridItems.SelectedItem;
+		}
+
+		/// <summary>
+		/// Выбор коробки
+		/// </summary>
+		private void OpenBox(object sender, MouseButtonEventArgs e)
 		{
 			var box = (Box) BoxGridItems.SelectedItem;
 			if (box == null) return;

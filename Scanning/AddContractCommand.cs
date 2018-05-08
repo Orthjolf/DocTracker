@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using WpfApp.Debug;
+﻿using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Service;
 
@@ -30,6 +29,7 @@ namespace WpfApp.Scanning
 			var contract = ContractFromDb.Get(id, contractNumber);
 			contract["BoxId"] = _boxId;
 			Contract.Repository.AddAndSave(contract);
+			ConsoleWriter.Write($"Договор с номером {contract["Number"]} добавлен");
 			IsWorking = false;
 		}
 	}

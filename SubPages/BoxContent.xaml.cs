@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,18 +26,14 @@ namespace WpfApp.SubPages
 
 		private IScanningCommand _command;
 
-		private readonly IScanningCommand _deleteContractCommand;
-
-		private readonly IScanningCommand _addContractCommand;
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
 			_boxId = box.Id;
 			_storageId = box.StorageId;
-			_deleteContractCommand = new DeleteContractCommand();
-			_addContractCommand = new AddContractCommand(_boxId);
-			_command = _addContractCommand;
+			_command = new AddContractCommand(_boxId);
 			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 			if (!_contracts.Any()) return;
 
@@ -45,7 +42,7 @@ namespace WpfApp.SubPages
 			SetContent(_contracts.First());
 		}
 
-		private void OnPartialLoaded(object sender, RoutedEventArgs e)
+		private void AddKeyDownHandler(object sender, RoutedEventArgs e)
 		{
 			var window = Window.GetWindow(this);
 			if (window == null) return;
@@ -68,6 +65,9 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private void BackOnMainScreen(object sender, RoutedEventArgs e)
 		{
+			var window = Window.GetWindow(this);
+			if (window == null) return;
+			window.KeyDown -= HandleKeyPress;
 			MainWindow.SetContentAsStoragesPage(_storageId);
 		}
 
@@ -104,17 +104,13 @@ namespace WpfApp.SubPages
 		private void SwitchScanningMode(object sender, RoutedEventArgs e)
 		{
 			_command = ScanningModeToggle.IsChecked.GetValueOrDefault()
-				? _deleteContractCommand
-				: _addContractCommand;
+				? (IScanningCommand) new DeleteContractCommand(_boxId)
+				: new AddContractCommand(_boxId);
 		}
 
 		private void HandleKeyPress(object sender, KeyEventArgs e)
 		{
-			if (_command.IsWorking)
-			{
-				ConsoleWriter.Write("Уже работает");
-				return;
-			}
+			if (_command.IsWorking) return;
 
 			Task.Factory.StartNew(PerformCommand)
 				.ContinueWith(result => UpdateUi());
@@ -135,6 +131,7 @@ namespace WpfApp.SubPages
 			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
 			_command.DoWork(barCode);
 			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
+			_resetEvent.Set();
 		}
 
 		/// <summary>
@@ -142,6 +139,7 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private void UpdateUi()
 		{
+			_resetEvent.WaitOne();
 			Dispatcher.Invoke(() =>
 			{
 				Success.Visibility = Visibility.Visible;
@@ -151,8 +149,6 @@ namespace WpfApp.SubPages
 				ContractGridItems.ItemsSource = _contracts;
 				SetContent(_contracts.First());
 			});
-
-			ConsoleWriter.Write("Закончил работу");
 		}
 	}
 }

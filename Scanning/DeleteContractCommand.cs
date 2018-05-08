@@ -13,15 +13,18 @@ namespace WpfApp.Scanning
 	{
 		public bool IsWorking { get; private set; }
 
-		public DeleteContractCommand()
+		private string _boxId;
+
+		public DeleteContractCommand(string boxId)
 		{
+			_boxId = boxId;
 			IsWorking = false;
 		}
 
 		public void DoWork(string barCode)
 		{
 			IsWorking = true;
-			var contracts = Contract.Repository.GetAll().ToList();
+			var contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 
 			if (contracts.Any())
 			{
