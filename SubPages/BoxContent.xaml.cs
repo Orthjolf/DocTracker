@@ -19,7 +19,7 @@ namespace WpfApp.SubPages
 
 		private readonly string _boxId;
 
-		private readonly List<Contract> _contracts;
+		private List<Contract> _contracts;
 
 		private string _selectedContractId;
 
@@ -32,12 +32,12 @@ namespace WpfApp.SubPages
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
-			_storageId = box.StorageId;
 			_boxId = box.Id;
-			_deleteContractCommand = new DeleteContractCommand(_boxId);
+			_storageId = box.StorageId;
+			_deleteContractCommand = new DeleteContractCommand();
 			_addContractCommand = new AddContractCommand(_boxId);
 			_command = _addContractCommand;
-			_contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
+			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
@@ -120,6 +120,9 @@ namespace WpfApp.SubPages
 				.ContinueWith(result => UpdateUi());
 		}
 
+		/// <summary>
+		/// Производит действие команды при сканировании
+		/// </summary>
 		private void PerformCommand()
 		{
 			Dispatcher.Invoke(() =>
@@ -129,9 +132,14 @@ namespace WpfApp.SubPages
 				LoadingIndicator.Visibility = Visibility.Visible;
 				ScanningModeToggle.IsEnabled = false;
 			});
-			_command.DoWork();
+			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
+			_command.DoWork(barCode);
+			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 		}
 
+		/// <summary>
+		/// Обновляет интерфейс после сканирования
+		/// </summary>
 		private void UpdateUi()
 		{
 			Dispatcher.Invoke(() =>
@@ -140,6 +148,8 @@ namespace WpfApp.SubPages
 				Processing.Visibility = Visibility.Hidden;
 				LoadingIndicator.Visibility = Visibility.Hidden;
 				ScanningModeToggle.IsEnabled = true;
+				ContractGridItems.ItemsSource = _contracts;
+				SetContent(_contracts.First());
 			});
 
 			ConsoleWriter.Write("Закончил работу");

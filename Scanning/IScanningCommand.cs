@@ -6,6 +6,6 @@
 	public interface IScanningCommand
 	{
 		bool IsWorking { get; }
-		void DoWork();
+		void DoWork(string barCode);
 	}
 }

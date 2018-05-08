@@ -20,19 +20,16 @@ namespace WpfApp.Scanning
 			_boxId = boxId;
 		}
 
-		public void DoWork()
+		public void DoWork(string barCode)
 		{
 			IsWorking = true;
-
-			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
-			var decoded = BarCodeDecoder.Reconstitute(barCode);
-			var id = decoded.Key;
-			var contractNumber = decoded.Value;
+			var decodedBarCode = BarCodeDecoder.Reconstitute(barCode);
+			var id = decodedBarCode.Key;
+			var contractNumber = decodedBarCode.Value;
 
 			var contract = ContractFromDb.Get(id, contractNumber);
 			contract["BoxId"] = _boxId;
 			Contract.Repository.AddAndSave(contract);
-			Thread.Sleep(2000);
 			IsWorking = false;
 		}
 	}
