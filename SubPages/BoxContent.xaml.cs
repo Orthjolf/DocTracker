@@ -23,21 +23,25 @@ namespace WpfApp.SubPages
 
 		private string _selectedContractId;
 
-		private bool _working = false;
-
-		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
-
 		private IScanningCommand _command;
+
+		private readonly IScanningCommand _deleteContractCommand;
+
+		private readonly IScanningCommand _addContractCommand;
 
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
 			_storageId = box.StorageId;
 			_boxId = box.Id;
+			_deleteContractCommand = new DeleteContractCommand(_boxId);
+			_addContractCommand = new AddContractCommand(_boxId);
+			_command = _addContractCommand;
 			_contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
+
 			SetContent(_contracts.First());
 		}
 
@@ -97,44 +101,35 @@ namespace WpfApp.SubPages
 			ContractPresenter.Content = new ContractDetails(contract);
 		}
 
-		private void ShowAddContractModal(object sender, RoutedEventArgs e)
+		private void SwitchScanningMode(object sender, RoutedEventArgs e)
 		{
-			ContractPresenter.Content = new AddContract(_boxId);
+			_command = ScanningModeToggle.IsChecked.GetValueOrDefault()
+				? _deleteContractCommand
+				: _addContractCommand;
 		}
 
 		private void HandleKeyPress(object sender, KeyEventArgs e)
 		{
-			if (_working)
+			if (_command.IsWorking)
 			{
 				ConsoleWriter.Write("Уже работает");
 				return;
 			}
 
-			Task.Factory.StartNew(SaveNewContract)
+			Task.Factory.StartNew(PerformCommand)
 				.ContinueWith(result => UpdateUi());
 		}
 
-		private void SaveNewContract()
+		private void PerformCommand()
 		{
-			ConsoleWriter.Write("Начал работу");
-
-			_working = true;
 			Dispatcher.Invoke(() =>
 			{
 				Success.Visibility = Visibility.Hidden;
 				Processing.Visibility = Visibility.Visible;
 				LoadingIndicator.Visibility = Visibility.Visible;
+				ScanningModeToggle.IsEnabled = false;
 			});
-
-			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
-			var decoded = BarCodeDecoder.Reconstitute(barCode);
-			var id = decoded.Key;
-			var contractNumber = decoded.Value;
-
-			var contract = ContractFromDb.Get(id, contractNumber);
-			contract["BoxId"] = _boxId;
-//			Contract.Repository.AddAndSave(contract);
-			Thread.Sleep(2000);
+			_command.DoWork();
 		}
 
 		private void UpdateUi()
@@ -144,8 +139,8 @@ namespace WpfApp.SubPages
 				Success.Visibility = Visibility.Visible;
 				Processing.Visibility = Visibility.Hidden;
 				LoadingIndicator.Visibility = Visibility.Hidden;
+				ScanningModeToggle.IsEnabled = true;
 			});
-			_working = false;
 
 			ConsoleWriter.Write("Закончил работу");
 		}
