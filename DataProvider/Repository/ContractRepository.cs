@@ -22,10 +22,10 @@ namespace WpfApp.DataProvider.Repository
 			return bsonDocuments.Select(Contract.Reconstitute).ToList().AsReadOnly();
 		}
 
-		public IEnumerable<Box> GetAll()
+		public IEnumerable<Contract> GetAll()
 		{
 			var bsonDocuments = base.GetAll(Type);
-			return bsonDocuments.Select(Box.Reconstitute).ToList().AsReadOnly();
+			return bsonDocuments.Select(Contract.Reconstitute).ToList().AsReadOnly();
 		}
 
 		public async void AddAndSave(BsonDocument document)
@@ -33,7 +33,7 @@ namespace WpfApp.DataProvider.Repository
 			await AddAndSave(document, Type);
 		}
 
-		public async Task DeleteById(string id)
+		public async void DeleteById(string id)
 		{
 			await DeleteById(id, Type);
 		}

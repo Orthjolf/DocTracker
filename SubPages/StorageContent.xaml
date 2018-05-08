@@ -56,22 +56,35 @@
 			          AutoGenerateColumns="False"
 			          CanUserAddRows="False"
 			          CanUserDeleteRows="False"
-			          SelectionChanged="SelectBox">
+			          SelectionChanged="SelectBox"
+			          MouseDoubleClick="OpenBox">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Название"
-					                    Binding="{Binding Name}"
+					                    Binding="{Binding Name, Mode=OneWay}"
 					                    Width="150" />
 					<DataGridTextColumn Header="Макс. дата"
-					                    Binding='{Binding MaxDate, TargetNullValue="-"}'
+					                    Binding='{Binding MaxDate, TargetNullValue="-",Mode=OneWay}'
 					                    Width="150" />
 					<DataGridTextColumn Header="Мин. дата"
-					                    Binding='{Binding MinDate, TargetNullValue="-"}'
+					                    Binding='{Binding MinDate, TargetNullValue="-", Mode=OneWay}'
 					                    Width="150" />
 					<DataGridTextColumn Header="Кол-во договоров"
-					                    Binding="{Binding ContractsCount}"
+					                    Binding="{Binding ContractsCount, Mode=OneWay}"
 					                    Width="Auto" />
 				</DataGrid.Columns>
 			</DataGrid>
+			<Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+			       Name="LoadingLabel"
+			       Content="Загрузка"
+			       FontSize="20"
+			       HorizontalAlignment="Center"
+			       VerticalAlignment="Center" />
+			<mah:ProgressRing Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+			                  IsActive="True"
+			                  Visibility="Visible"
+			                  Name="LoadingIndicator"
+			                  Width="100"
+			                  HorizontalAlignment="Center" />
 		</Grid>
 	</Border>
 </UserControl>

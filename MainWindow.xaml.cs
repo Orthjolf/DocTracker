@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Windows.Controls;
-using MahApps.Metro.Controls.Dialogs;
-using MongoDB.Bson;
-using WpfApp.Domain;
 using WpfApp.SubPages;
 
 namespace WpfApp
@@ -21,42 +17,17 @@ namespace WpfApp
 			_instance = this;
 			_mainContent = new MainContent();
 			RootContent.Content = _mainContent;
-//
-//			for (var i = 0; i < 10; i++)
-//			{
-//				Contract.Repository.AddAndSave(new BsonDocument
-//				{
-//					{"Number", GetRandomString()},
-//					{"BoxId", "5ae01249c019612a845a32ee"},
-//					{"ClientFirstName", GetRandomString()},
-//					{"ClientLastName", GetRandomString()},
-//					{"ClientPatronymic", GetRandomString()},
-//					{"PhoneNumber", GetRandomString()},
-//					{"LoanId", GetRandomString()},
-//					{"PrefixOfPlace", GetRandomString()},
-//					{"ContractDate", DateTime.Now }
-//				});
-//			}
 
-//			showMsg();
+			showMsg();
 		}
 
-		private static Random r = new Random();
-
-		static string GetRandomString()
+		public async void showMsg()
 		{
-			const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			return new string(Enumerable.Repeat(chars, 14)
-				.Select(s => s[r.Next(s.Length)]).ToArray());
-		}
+//			var diag_dialog = new ModalTest();
+//			diag_dialog.Close_Button.Click += Close_Dialog;
 
-//		public async void showMsg()
-//		{
-//			await this.ShowMetroDialogAsync(MetroDialogSettings
-//			{
-//				
-//			}); // MessageAsync("This is the title", "Some message");
-//		}
+//			await this.ShowMetroDialogAsync(diag_dialog);
+		}
 
 
 		/// <summary>

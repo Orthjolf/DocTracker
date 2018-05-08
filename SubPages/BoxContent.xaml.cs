@@ -1,8 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
+using WpfApp.Debug;
 using WpfApp.Domain;
+using WpfApp.Scanning;
+using WpfApp.Service;
+using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
@@ -10,19 +18,35 @@ namespace WpfApp.SubPages
 	{
 		private readonly string _storageId;
 
-		private readonly List<Contract> _contracts;
+		private readonly string _boxId;
+
+		private List<Contract> _contracts;
 
 		private string _selectedContractId;
+
+		private IScanningCommand _command;
+
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
+			_boxId = box.Id;
 			_storageId = box.StorageId;
-			_contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
+			_command = new AddContractCommand(_boxId);
+			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
+
 			SetContent(_contracts.First());
+		}
+
+		private void AddKeyDownHandler(object sender, RoutedEventArgs e)
+		{
+			var window = Window.GetWindow(this);
+			if (window == null) return;
+			window.KeyDown += HandleKeyPress;
 		}
 
 		/// <summary>
@@ -41,6 +65,9 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private void BackOnMainScreen(object sender, RoutedEventArgs e)
 		{
+			var window = Window.GetWindow(this);
+			if (window == null) return;
+			window.KeyDown -= HandleKeyPress;
 			MainWindow.SetContentAsStoragesPage(_storageId);
 		}
 
@@ -72,6 +99,56 @@ namespace WpfApp.SubPages
 		{
 			_selectedContractId = contract.Id;
 			ContractPresenter.Content = new ContractDetails(contract);
+		}
+
+		private void SwitchScanningMode(object sender, RoutedEventArgs e)
+		{
+			_command = ScanningModeToggle.IsChecked.GetValueOrDefault()
+				? (IScanningCommand) new DeleteContractCommand(_boxId)
+				: new AddContractCommand(_boxId);
+		}
+
+		private void HandleKeyPress(object sender, KeyEventArgs e)
+		{
+			if (_command.IsWorking) return;
+
+			Task.Factory.StartNew(PerformCommand)
+				.ContinueWith(result => UpdateUi());
+		}
+
+		/// <summary>
+		/// Производит действие команды при сканировании
+		/// </summary>
+		private void PerformCommand()
+		{
+			Dispatcher.Invoke(() =>
+			{
+				Success.Visibility = Visibility.Hidden;
+				Processing.Visibility = Visibility.Visible;
+				LoadingIndicator.Visibility = Visibility.Visible;
+				ScanningModeToggle.IsEnabled = false;
+			});
+			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
+			_command.DoWork(barCode);
+			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
+			_resetEvent.Set();
+		}
+
+		/// <summary>
+		/// Обновляет интерфейс после сканирования
+		/// </summary>
+		private void UpdateUi()
+		{
+			_resetEvent.WaitOne();
+			Dispatcher.Invoke(() =>
+			{
+				Success.Visibility = Visibility.Visible;
+				Processing.Visibility = Visibility.Hidden;
+				LoadingIndicator.Visibility = Visibility.Hidden;
+				ScanningModeToggle.IsEnabled = true;
+				ContractGridItems.ItemsSource = _contracts;
+				SetContent(_contracts.First());
+			});
 		}
 	}
 }

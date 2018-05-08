@@ -1,16 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Threading;
 using MongoDB.Bson;
 using WpfApp.Domain;
-using WpfApp.Service;
 using WpfApp.SubPages.Modals;
-using Action = System.Action;
 
 namespace WpfApp.SubPages
 {
@@ -20,38 +16,40 @@ namespace WpfApp.SubPages
 
 		private Storage _selectedStorage;
 
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
+
 		public MainContent()
 		{
 			InitializeComponent();
 
-			ThreadPool.QueueUserWorkItem(_ => GetStorages());
-			ThreadPool.QueueUserWorkItem(_ => UpdateUi());
+			Task.Factory.StartNew(GetStorages)
+				.ContinueWith(result => UpdateUi());
 		}
 
-		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
-
+		/// <summary>
+		/// Получение списка складов
+		/// </summary>
 		private void GetStorages()
 		{
-			ConsoleWriter.Write("Загрузка складов");
 			Storages = Storage.Repository.GetAll().ToList();
-//			Thread.Sleep(10000);
 			_resetEvent.Set();
 		}
 
 		private void UpdateUi()
 		{
 			_resetEvent.WaitOne();
-			if (!Storages.Any()) return;
-
-			Storages.ForEach(s => ConsoleWriter.Write(s.Name));
-
 			Dispatcher.Invoke(() =>
 			{
-				SetContent(Storages.First());
-				StorageMenuItems.ItemsSource = Storages;
-				LoadingIndicator.IsActive = false;
+				if (Storages.Any())
+				{
+					SetContent(Storages.First());
+					StorageMenuItems.ItemsSource = Storages;
+				}
+
 				LoadingIndicator.Visibility = Visibility.Hidden;
 				LoadingLabel.Visibility = Visibility.Hidden;
+				AddStorageButton.IsEnabled = true;
+				DeleteStorageButton.IsEnabled = true;
 			});
 		}
 

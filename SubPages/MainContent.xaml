@@ -16,36 +16,19 @@
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
 
-		<Label Name="LoadingLabel"
-		       Content="Загрузка"
-		       HorizontalAlignment="Right"
-		       FontSize="20"
-		       Grid.Column="1" Grid.Row="0"
-		       Margin="0,0,60,0"
-		       VerticalAlignment="Center" />
-		<mah:ProgressRing IsActive="True"
-		                  Visibility="Visible"
-		                  Name="LoadingIndicator"
-		                  Width="30"
-		                  Margin="0,0,20,0"
-		                  HorizontalAlignment="Right"
-		                  Grid.Column="1" Grid.Row="0" />
+
 		<Border Grid.Column="0" Grid.Row="1"
 		        BorderBrush="LightGray"
 		        Margin="10,0,10,10"
 		        BorderThickness="1"
 		        DockPanel.Dock="Top">
 			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition />
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="30" />
 					<RowDefinition />
 					<RowDefinition Height="30" />
 				</Grid.RowDefinitions>
-				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				<TextBox Grid.Row="0" Grid.Column="0"
 				         mah:TextBoxHelper.ClearTextButton="True"
 				         mah:TextBoxHelper.Watermark="Фильтр"
 				         Text="{Binding InputText}"
@@ -53,7 +36,8 @@
 				         Width="200"
 				         Name="SearchInput"
 				         TextChanged="SearchStorages" />
-				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+
+				<DataGrid Grid.Row="1" Grid.Column="0"
 				          AutoGenerateColumns="False"
 				          Name="StorageMenuItems"
 				          SelectionMode="Single"
@@ -67,14 +51,36 @@
 						                    Width="200" />
 					</DataGrid.Columns>
 				</DataGrid>
-				<Button Grid.Row="2" Grid.Column="0"
+
+				<Label Name="LoadingLabel"
+				       Content="Загрузка"
+				       FontSize="20"
+				       Grid.Row="1" Grid.Column="0"
+				       HorizontalAlignment="Center"
+				       VerticalAlignment="Center" />
+				<mah:ProgressRing IsActive="True"
+				                  Visibility="Visible"
+				                  Name="LoadingIndicator"
+				                  Width="100"
+				                  HorizontalAlignment="Center"
+				                  Grid.Row="1" Grid.Column="0" />
+
+				<Button Name="AddStorageButton"
+				        Grid.Row="2"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Добавить"
-				        Click="AddStorage" />
-				<Button Grid.Row="2" Grid.Column="1"
+				        Click="AddStorage"
+				        IsEnabled="false"
+				        Width="100"
+				        HorizontalAlignment="Left" />
+				<Button Name="DeleteStorageButton"
+				        Grid.Row="2"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
-				        Click="DeleteStorage" />
+				        Click="DeleteStorage"
+				        IsEnabled="false"
+				        Width="100"
+				        HorizontalAlignment="Right" />
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter"
