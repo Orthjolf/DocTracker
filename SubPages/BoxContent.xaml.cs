@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -9,8 +8,6 @@ using System.Windows.Input;
 using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Scanning;
-using WpfApp.Service;
-using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
