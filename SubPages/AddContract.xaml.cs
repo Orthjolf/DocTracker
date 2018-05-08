@@ -25,6 +25,7 @@ namespace WpfApp.SubPages
 		private void UserControl_Loaded(object sender, RoutedEventArgs e)
 		{
 			var window = Window.GetWindow(this);
+			if (window == null) return;
 			window.KeyDown += HandleKeyPress;
 		}
 
@@ -47,7 +48,8 @@ namespace WpfApp.SubPages
 			_working = true;
 			Dispatcher.Invoke(() =>
 			{
-				Status.Visibility = Visibility.Hidden;
+				Success.Visibility = Visibility.Hidden;
+				Processing.Visibility = Visibility.Visible;
 				LoadingIndicator.Visibility = Visibility.Visible;
 			});
 
@@ -58,7 +60,7 @@ namespace WpfApp.SubPages
 
 			var contract = ContractFromDb.Get(id, contractNumber);
 			contract["BoxId"] = _boxId;
-			Contract.Repository.AddAndSave(contract);
+//			Contract.Repository.AddAndSave(contract);
 			Thread.Sleep(2000);
 		}
 
@@ -66,7 +68,8 @@ namespace WpfApp.SubPages
 		{
 			Dispatcher.Invoke(() =>
 			{
-				Status.Visibility = Visibility.Visible;
+				Success.Visibility = Visibility.Visible;
+				Processing.Visibility = Visibility.Hidden;
 				LoadingIndicator.Visibility = Visibility.Hidden;
 			});
 			_working = false;

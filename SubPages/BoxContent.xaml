@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:WpfApp.SubPages"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300"
+             Loaded="OnPartialLoaded">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="400" />
@@ -15,6 +16,8 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="40" />
 			<RowDefinition />
+			<RowDefinition />
+			<RowDefinition Height="85" />
 		</Grid.RowDefinitions>
 		<Button Grid.Row="0" Grid.Column="0"
 		        Height="30"
@@ -22,35 +25,31 @@
 		        Style="{StaticResource AccentedSquareButtonStyle}"
 		        Content="Назад"
 		        Click="BackOnMainScreen" />
-		<Border Grid.Column="0" Grid.Row="1"
+		<Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"
 		        BorderBrush="LightGray"
 		        Margin="10,10,10,10"
 		        BorderThickness="1"
 		        DockPanel.Dock="Top">
 			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition />
-					<ColumnDefinition />
-				</Grid.ColumnDefinitions>
 				<Grid.RowDefinitions>
 					<RowDefinition Height="30" />
 					<RowDefinition />
 					<RowDefinition Height="30" />
 				</Grid.RowDefinitions>
-				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				<TextBox Grid.Row="0" Grid.Column="0"
 				         mah:TextBoxHelper.ClearTextButton="False"
 				         HorizontalAlignment="left"
 				         Width="122"
 				         Name="ContractNumberSearch"
 				         TextChanged="SearchContracts" />
-				<TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+				<TextBox Grid.Row="0" Grid.Column="0"
 				         mah:TextBoxHelper.ClearTextButton="False"
 				         HorizontalAlignment="left"
 				         Margin="122,0,0,0"
 				         Width="256"
 				         Name="FullNameSearchField"
 				         TextChanged="SearchContracts" />
-				<DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+				<DataGrid Grid.Row="1" Grid.Column="0"
 				          AutoGenerateColumns="False"
 				          Name="ContractGridItems"
 				          SelectionMode="Single"
@@ -67,15 +66,62 @@
 						                    Width="*" />
 					</DataGrid.Columns>
 				</DataGrid>
-				<Button Grid.Row="2" Grid.Column="0"
-				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Добавить" 
-				        Click="ShowAddContractModal"/>
-				<Button Grid.Row="2" Grid.Column="1"
-				        Style="{StaticResource AccentedSquareButtonStyle}"
-				        Content="Удалить" />
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContractPresenter" Grid.Column="1" Grid.Row="1" />
+
+		<Border Grid.Column="1" Grid.Row="2"
+		        BorderBrush="LightGray"
+		        Margin="0,10,10,0"
+		        BorderThickness="1"
+		        DockPanel.Dock="Top">
+			<Grid ShowGridLines="true">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="100" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="40" />
+				</Grid.RowDefinitions>
+
+				<Label Grid.Row="0"
+				       Content="Ожидание сканирования"
+				       FontSize="25"
+				       HorizontalAlignment="Center" />
+
+				<mah:ProgressRing IsActive="true"
+				                  Visibility="Hidden"
+				                  Name="LoadingIndicator"
+				                  Width="100"
+				                  HorizontalAlignment="Center"
+				                  Grid.Row="1" />
+
+				<Label Grid.Row="1"
+				       Name="Processing"
+				       Visibility="Hidden"
+				       Content="Обработка"
+				       FontSize="25"
+				       HorizontalAlignment="Center"
+				       VerticalAlignment="Center" />
+
+				<Label Grid.Row="1"
+				       Name="Success"
+				       Visibility="Hidden"
+				       Content="Успешно"
+				       FontSize="25"
+				       HorizontalAlignment="Center"
+				       VerticalAlignment="Center" />
+			</Grid>
+		</Border>
+
+		<Border Grid.Column="1" Grid.Row="3"
+		        BorderBrush="LightGray"
+		        Margin="0,10,10,10"
+		        BorderThickness="1"
+		        DockPanel.Dock="Top">
+			<mah:ToggleSwitch Header="Режим сканирования"
+			                  OnLabel="Сканировать для удаления"
+			                  OffLabel="Сканировать для добавления"
+			                  Margin="10,0,0,0" />
+		</Border>
 	</Grid>
 </UserControl>
