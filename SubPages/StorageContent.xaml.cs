@@ -21,8 +21,6 @@ namespace WpfApp.SubPages
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
-		private Box _selectedBox;
-
 		public StorageContent(Storage storage)
 		{
 			InitializeComponent();
@@ -54,6 +52,10 @@ namespace WpfApp.SubPages
 			{
 				LoadingIndicator.Visibility = Visibility.Hidden;
 				LoadingLabel.Visibility = Visibility.Hidden;
+				if (_boxes.Any())
+				{
+					BoxGridItems.SelectedItem = _boxes.FirstOrDefault();
+				}
 			});
 		}
 
@@ -78,6 +80,7 @@ namespace WpfApp.SubPages
 			Box.Repository.AddAndSave(boxBson);
 			_boxes.Add(Box.Reconstitute(boxBson));
 			BoxGridItems.ItemsSource = _boxes.ToList();
+			BoxGridItems.SelectedItem = _boxes.First(b => b.Name == inputDialog.Name.Text);
 		}
 
 		/// <summary>
@@ -85,19 +88,13 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private async void DeleteBox(object sender, RoutedEventArgs e)
 		{
-			if (_boxes.Count == 1) return;
+			if (!_boxes.Any()) return;
 			var selected = (Box) BoxGridItems.SelectedItem;
 			await Box.Repository.DeleteById(selected.Id);
 			_boxes = _boxes.Where(b => b.Id != selected.Id).ToList();
 			BoxGridItems.ItemsSource = _boxes;
-		}
-
-		/// <summary>
-		/// Выбор коробки
-		/// </summary>
-		private void SelectBox(object sender, SelectionChangedEventArgs e)
-		{
-			_selectedBox = (Box) BoxGridItems.SelectedItem;
+			if (!_boxes.Any()) return;
+			BoxGridItems.SelectedItem = _boxes.First();
 		}
 
 		/// <summary>

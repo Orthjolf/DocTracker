@@ -56,7 +56,6 @@
 			          AutoGenerateColumns="False"
 			          CanUserAddRows="False"
 			          CanUserDeleteRows="False"
-			          SelectionChanged="SelectBox"
 			          MouseDoubleClick="OpenBox">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Название"

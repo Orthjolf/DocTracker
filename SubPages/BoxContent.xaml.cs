@@ -9,6 +9,7 @@ using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Scanning;
+using static WpfApp.Service.ConsoleWriter;
 
 namespace WpfApp.SubPages
 {
@@ -108,6 +109,7 @@ namespace WpfApp.SubPages
 
 		private void HandleKeyPress(object sender, KeyEventArgs e)
 		{
+			Write("Просканировано");
 			if (ScanningCommand.IsWorking) return;
 
 			Task.Factory.StartNew(PerformCommand)
