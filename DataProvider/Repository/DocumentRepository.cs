@@ -11,7 +11,7 @@ namespace WpfApp.DataProvider.Repository
 {
 	public class DocumentRepository : IDocumentRepository
 	{
-		private static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
+		protected static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
 		{
 			return DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 		}

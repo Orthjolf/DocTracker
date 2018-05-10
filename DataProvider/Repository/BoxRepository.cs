@@ -11,6 +11,20 @@ namespace WpfApp.DataProvider.Repository
 	{
 		private static DocumentType Type => DocumentType.Box;
 
+		public Box Get(string boxId)
+		{
+			var bsonDocument = base.Get(boxId, Type);
+			return Box.Reconstitute(bsonDocument);
+		}
+
+		public async void Update(Box box)
+		{
+			await GetCollection(Type).UpdateOneAsync(
+				new BsonDocument("_id", box.Id),
+				box.Serialize()
+			);
+		}
+
 		public IEnumerable<Box> GetByStorageId(string storageId)
 		{
 			var filter = new BsonDocument
