@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using WpfApp.Debug;
 using WpfApp.Domain;
+using WpfApp.Enum;
 using WpfApp.Scanning;
 
 namespace WpfApp.SubPages
@@ -21,7 +22,7 @@ namespace WpfApp.SubPages
 
 		private string _selectedContractId;
 
-		private IScanningCommand _command;
+		private ActionPerformed _action;
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
@@ -30,7 +31,7 @@ namespace WpfApp.SubPages
 			InitializeComponent();
 			_boxId = box.Id;
 			_storageId = box.StorageId;
-			_command = new AddContractCommand(_boxId);
+			_action = ActionPerformed.PutInBox;
 			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 			if (!_contracts.Any()) return;
 
@@ -100,14 +101,14 @@ namespace WpfApp.SubPages
 
 		private void SwitchScanningMode(object sender, RoutedEventArgs e)
 		{
-			_command = ScanningModeToggle.IsChecked.GetValueOrDefault()
-				? (IScanningCommand) new DeleteContractCommand(_boxId)
-				: new AddContractCommand(_boxId);
+			_action = ScanningModeToggle.IsChecked.GetValueOrDefault()
+				? ActionPerformed.RemovedFromBox
+				: ActionPerformed.PutInBox;
 		}
 
 		private void HandleKeyPress(object sender, KeyEventArgs e)
 		{
-			if (_command.IsWorking) return;
+			if (ScanningCommand.IsWorking) return;
 
 			Task.Factory.StartNew(PerformCommand)
 				.ContinueWith(result => UpdateUi());
@@ -126,7 +127,7 @@ namespace WpfApp.SubPages
 				ScanningModeToggle.IsEnabled = false;
 			});
 			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
-			_command.DoWork(barCode);
+			ScanningCommand.DoWork(_boxId, barCode, _action);
 			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
 			_resetEvent.Set();
 		}

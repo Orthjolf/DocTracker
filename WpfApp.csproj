@@ -97,9 +97,7 @@
     <Compile Include="DataProvider\Repository\ContractRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
-    <Compile Include="Scanning\AddContractCommand.cs" />
-    <Compile Include="Scanning\DeleteContractCommand.cs" />
-    <Compile Include="Scanning\IScanningCommand.cs" />
+    <Compile Include="Scanning\ScanningCommand.cs" />
     <Compile Include="Temp\BarCodeEncoder.cs" />
     <Compile Include="Temp\ContractFromDb.cs" />
     <Compile Include="Temp\RandomBarCodeGenerator.cs" />
