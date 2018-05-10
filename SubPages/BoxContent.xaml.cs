@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -8,33 +7,33 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using WpfApp.Debug;
 using WpfApp.Domain;
+using WpfApp.Enum;
 using WpfApp.Scanning;
-using WpfApp.Service;
-using WpfApp.SubPages.Modals;
+using static WpfApp.Service.ConsoleWriter;
 
 namespace WpfApp.SubPages
 {
 	public partial class BoxContent
 	{
-		private readonly string _storageId;
+		private readonly Storage _storage;
 
-		private readonly string _boxId;
+		private readonly Box _box;
 
 		private List<Contract> _contracts;
 
 		private string _selectedContractId;
 
-		private IScanningCommand _command;
+		private ActionPerformed _action;
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
-			_boxId = box.Id;
-			_storageId = box.StorageId;
-			_command = new AddContractCommand(_boxId);
-			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
+			_box = box;
+			_storage = Storage.Repository.Get(box.StorageId);
+			_action = ActionPerformed.PutInBox;
+			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
@@ -68,7 +67,7 @@ namespace WpfApp.SubPages
 			var window = Window.GetWindow(this);
 			if (window == null) return;
 			window.KeyDown -= HandleKeyPress;
-			MainWindow.SetContentAsStoragesPage(_storageId);
+			MainWindow.SetContentAsStoragesPage(_storage.Id);
 		}
 
 		/// <summary>
@@ -98,19 +97,23 @@ namespace WpfApp.SubPages
 		private void SetContent(Contract contract)
 		{
 			_selectedContractId = contract.Id;
+			BreadCrumbs.Text = _storage.Name + " / " + _box.Name;
 			ContractPresenter.Content = new ContractDetails(contract);
 		}
 
 		private void SwitchScanningMode(object sender, RoutedEventArgs e)
 		{
-			_command = ScanningModeToggle.IsChecked.GetValueOrDefault()
-				? (IScanningCommand) new DeleteContractCommand(_boxId)
-				: new AddContractCommand(_boxId);
+			_action = ScanningModeToggle.IsChecked.GetValueOrDefault()
+				? ActionPerformed.RemovedFromBox
+				: ActionPerformed.PutInBox;
 		}
 
 		private void HandleKeyPress(object sender, KeyEventArgs e)
 		{
-			if (_command.IsWorking) return;
+			Write("Просканировано");
+			//@TODO убрать
+			if (e.Key != Key.Enter) return;
+			if (ScanningCommand.IsWorking) return;
 
 			Task.Factory.StartNew(PerformCommand)
 				.ContinueWith(result => UpdateUi());
@@ -129,8 +132,8 @@ namespace WpfApp.SubPages
 				ScanningModeToggle.IsEnabled = false;
 			});
 			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
-			_command.DoWork(barCode);
-			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
+			ScanningCommand.DoWork(_box.Id, barCode, _action);
+			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			_resetEvent.Set();
 		}
 

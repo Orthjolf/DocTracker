@@ -39,12 +39,14 @@ namespace WpfApp.Domain
 
 		public BsonDocument Serialize()
 		{
+			var minDate = MinDate ?? DateTime.MinValue;
+			var maxDate = MaxDate ?? DateTime.MinValue;
 			return new BsonDocument
 			{
-				{"_id", Id},
 				{"StorageId", StorageId},
-				{"MinDate", MinDate},
-				{"MaxDate", MaxDate},
+				{"Name", Name},
+				{"MinDate", minDate},
+				{"MaxDate", maxDate},
 				{"Description", Description},
 				{"ContractsCount", ContractsCount}
 			};

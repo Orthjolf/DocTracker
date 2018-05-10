@@ -17,46 +17,43 @@
 				<RowDefinition Height="30" />
 				<RowDefinition Height="25" />
 				<RowDefinition Height="25" />
-				<RowDefinition Height="25" />
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="105" />
 				<ColumnDefinition />
 			</Grid.ColumnDefinitions>
-			<TextBlock Name="StorageName" FontSize="25" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" />
-			<TextBlock FontSize="20" Grid.Row="1" Grid.Column="0" Text="Адрес: " TextAlignment="Right" />
-			<TextBlock Name="StorageAddress" FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Address}" />
-			<TextBlock FontSize="20" Grid.Row="2" Grid.Column="0" Text="Описание: " TextAlignment="Right" />
-			<TextBlock Name="StorageDescription" FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding Description}" />
+			<TextBlock FontSize="20" Grid.Row="0" Grid.Column="0" Text="Адрес: " TextAlignment="Right" />
+			<TextBlock Name="StorageAddress" FontSize="20" Grid.Row="0" Grid.Column="1" Text="{Binding Address}" />
+			<TextBlock FontSize="20" Grid.Row="1" Grid.Column="0" Text="Описание: " TextAlignment="Right" />
+			<TextBlock Name="StorageDescription" FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Description}" />
 
-			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Добавить"
 			        Width="150"
 			        HorizontalAlignment="left"
 			        Click="AddBox" />
-			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Удалить"
 			        Width="150"
 			        HorizontalAlignment="left"
 			        Margin="150 0 0 0"
 			        Click="DeleteBox" />
-			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+			<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
 			        mah:TextBoxHelper.Watermark=""
 			        Content="Печать"
 			        Width="150"
 			        HorizontalAlignment="left"
 			        Margin="300 0 0 0"
 			        Click="PrintButton_OnClick" />
-			<DataGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+			<DataGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			          Name="BoxGridItems"
 			          Margin="0,5,0,0"
 			          AutoGenerateColumns="False"
 			          CanUserAddRows="False"
 			          CanUserDeleteRows="False"
-			          SelectionChanged="SelectBox"
 			          MouseDoubleClick="OpenBox">
 				<DataGrid.Columns>
 					<DataGridTextColumn Header="Название"
@@ -73,13 +70,13 @@
 					                    Width="Auto" />
 				</DataGrid.Columns>
 			</DataGrid>
-			<Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+			<Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			       Name="LoadingLabel"
 			       Content="Загрузка"
 			       FontSize="20"
 			       HorizontalAlignment="Center"
 			       VerticalAlignment="Center" />
-			<mah:ProgressRing Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+			<mah:ProgressRing Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
 			                  IsActive="True"
 			                  Visibility="Visible"
 			                  Name="LoadingIndicator"

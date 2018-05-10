@@ -97,9 +97,7 @@
     <Compile Include="DataProvider\Repository\ContractRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
-    <Compile Include="Scanning\AddContractCommand.cs" />
-    <Compile Include="Scanning\DeleteContractCommand.cs" />
-    <Compile Include="Scanning\IScanningCommand.cs" />
+    <Compile Include="Scanning\ScanningCommand.cs" />
     <Compile Include="Temp\BarCodeEncoder.cs" />
     <Compile Include="Temp\ContractFromDb.cs" />
     <Compile Include="Temp\RandomBarCodeGenerator.cs" />
@@ -113,12 +111,10 @@
     <Compile Include="Enum\DocumentType.cs" />
     <Compile Include="Service\BarCodeDecoder.cs" />
     <Compile Include="Service\ConsoleWriter.cs" />
-    <Compile Include="SubPages\AddContract.xaml.cs" />
     <Compile Include="SubPages\BoxContent.xaml.cs" />
     <Compile Include="SubPages\ContractDetails.xaml.cs" />
     <Compile Include="SubPages\MainContent.xaml.cs" />
     <Compile Include="SubPages\Modals\AddBoxDialog.xaml.cs" />
-    <Compile Include="SubPages\Modals\AddContractModal.xaml.cs" />
     <Compile Include="SubPages\Modals\AddStorageDialog.xaml.cs" />
     <Compile Include="SubPages\Modals\BoxContentModal.xaml.cs" />
     <Compile Include="SubPages\Modals\BoxPrintForm.xaml.cs" />
@@ -136,12 +132,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="SubPages\AddContract.xaml" />
     <Page Include="SubPages\BoxContent.xaml" />
     <Page Include="SubPages\ContractDetails.xaml" />
     <Page Include="SubPages\MainContent.xaml" />
     <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
-    <Page Include="SubPages\Modals\AddContractModal.xaml" />
     <Page Include="SubPages\Modals\AddStorageDialog.xaml" />
     <Page Include="SubPages\Modals\BoxContentModal.xaml" />
     <Page Include="SubPages\Modals\BoxPrintForm.xaml" />

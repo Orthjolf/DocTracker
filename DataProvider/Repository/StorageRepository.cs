@@ -19,14 +19,20 @@ namespace WpfApp.DataProvider.Repository
 			return bsonDocuments.Select(Storage.Reconstitute).ToList().AsReadOnly();
 		}
 
-		public async void AddAndSave(BsonDocument document)
+		public Storage Get(string id)
 		{
-			await AddAndSave(document, Type);
+			var bsonDocument = base.Get(id, Type);
+			return Storage.Reconstitute(bsonDocument);
 		}
 
-		public async Task DeleteById(string id)
+		public void AddAndSave(BsonDocument document)
 		{
-			await DeleteById(id, Type);
+			base.AddAndSave(document, Type);
+		}
+
+		public void DeleteById(string id)
+		{
+			base.DeleteById(id, Type);
 		}
 	}
 }

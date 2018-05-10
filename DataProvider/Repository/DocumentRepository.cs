@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -11,21 +12,19 @@ namespace WpfApp.DataProvider.Repository
 {
 	public class DocumentRepository : IDocumentRepository
 	{
-		private static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
+		protected static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
 		{
 			return DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 		}
 
 		public BsonDocument Get(string id, DocumentType type)
 		{
-			var document = GetCollection(type).Find(id).ToBsonDocument();
-
-			if (document == null)
+			var filter = new BsonDocument
 			{
-				throw new Exception($"Не найдено документа с Id = {id}");
-			}
+				{"_id", new ObjectId(id)},
+			};
 
-			return document;
+			return GetFiltered(filter, type).FirstOrDefault();
 		}
 
 		public IReadOnlyCollection<BsonDocument> GetAll(DocumentType type)
@@ -40,14 +39,14 @@ namespace WpfApp.DataProvider.Repository
 			return collection.Find(filter).ToList().AsReadOnly();
 		}
 
-		protected static async Task AddAndSave(BsonDocument document, DocumentType type)
+		protected void AddAndSave(BsonDocument document, DocumentType type)
 		{
-			await GetCollection(type).InsertOneAsync(document);
+			GetCollection(type).InsertOneAsync(document);
 		}
 
-		protected static async Task DeleteById(string id, DocumentType type)
+		protected void DeleteById(string id, DocumentType type)
 		{
-			await GetCollection(type).DeleteOneAsync(d => d["_id"] == new ObjectId(id));
+			GetCollection(type).DeleteOneAsync(d => d["_id"] == new ObjectId(id));
 		}
 	}
 }
