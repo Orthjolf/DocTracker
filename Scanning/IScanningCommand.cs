@@ -1,4 +1,7 @@
-﻿namespace WpfApp.Scanning
+﻿using MongoDB.Bson;
+using WpfApp.Enum;
+
+namespace WpfApp.Scanning
 {
 	/// <summary>
 	/// Команда, выполняемая при сканировании документа

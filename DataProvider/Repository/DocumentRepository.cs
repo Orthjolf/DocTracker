@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -18,14 +19,12 @@ namespace WpfApp.DataProvider.Repository
 
 		public BsonDocument Get(string id, DocumentType type)
 		{
-			var document = GetCollection(type).Find(id).ToBsonDocument();
-
-			if (document == null)
+			var filter = new BsonDocument
 			{
-				throw new Exception($"Не найдено документа с Id = {id}");
-			}
+				{"_id", new ObjectId(id)},
+			};
 
-			return document;
+			return GetFiltered(filter, type).FirstOrDefault();
 		}
 
 		public IReadOnlyCollection<BsonDocument> GetAll(DocumentType type)

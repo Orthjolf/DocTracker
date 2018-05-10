@@ -19,8 +19,8 @@ namespace WpfApp.DataProvider.Repository
 
 		public async void Update(Box box)
 		{
-			await GetCollection(Type).UpdateOneAsync(
-				new BsonDocument("_id", box.Id),
+			await GetCollection(Type).ReplaceOneAsync(
+				new BsonDocument("_id", new ObjectId(box.Id)),
 				box.Serialize()
 			);
 		}

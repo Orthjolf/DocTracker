@@ -41,8 +41,8 @@ namespace WpfApp.Domain
 		{
 			return new BsonDocument
 			{
-				{"_id", Id},
 				{"StorageId", StorageId},
+				{"Name", Name},
 				{"MinDate", MinDate},
 				{"MaxDate", MaxDate},
 				{"Description", Description},
