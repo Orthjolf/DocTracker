@@ -118,10 +118,10 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Удаление хранилища
 		/// </summary>
-		private async void DeleteStorage(object sender, RoutedEventArgs e)
+		private void DeleteStorage(object sender, RoutedEventArgs e)
 		{
 			if (Storages.Count == 1) return;
-			await Storage.Repository.DeleteById(_selectedStorage.Id);
+			Storage.Repository.DeleteById(_selectedStorage.Id);
 			Storages = Storages.Where(s => s.Id != _selectedStorage.Id).ToList();
 			SetContent(Storages.First());
 			StorageMenuItems.ItemsSource = Storages;

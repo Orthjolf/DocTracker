@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Enum;
@@ -17,15 +18,12 @@ namespace WpfApp.Scanning
 			var decodedBarCode = BarCodeDecoder.Reconstitute(barCode);
 			var id = decodedBarCode.Key;
 			var contractNumber = decodedBarCode.Value;
-			if (action == ActionPerformed.PutInBox)
-			{
-				AddContract(boxId, id, contractNumber);
-			}
-			else
-			{
-				DeleteContract(boxId, id);
-			}
 
+			if (action == ActionPerformed.PutInBox)
+				AddContract(boxId, id, contractNumber);
+			else
+				DeleteContract(boxId, id);
+			Thread.Sleep(50);
 			UpdateBox(boxId);
 			IsWorking = false;
 		}
@@ -42,8 +40,7 @@ namespace WpfApp.Scanning
 		{
 			var contracts = Contract.Repository.GetByBoxId(boxId).ToList();
 			if (!contracts.Any()) return;
-			var random = new Random();
-			var randomContract = contracts[random.Next(0, contracts.Count - 1)];
+			var randomContract = contracts.Last();
 			Contract.Repository.DeleteById(randomContract.Id);
 			ConsoleWriter.Write($"Договор с номером {randomContract.Number} удален");
 		}
@@ -51,24 +48,22 @@ namespace WpfApp.Scanning
 		private static void UpdateBox(string boxId)
 		{
 			var contracts = Contract.Repository.GetByBoxId(boxId).ToList();
-			var maxDate = contracts.Max(c => c.ContractDate);
-			var minDate = contracts.Min(c => c.ContractDate);
-			var count = contracts.Count;
 
 			var box = Box.Repository.Get(boxId);
-
-			var newBox = new Box
+			if (contracts.Any())
 			{
-				Id = box.Id,
-				ContractsCount = count,
-				Description = box.Description,
-				MaxDate = maxDate,
-				MinDate = minDate,
-				Name = box.Name,
-				StorageId = box.StorageId
-			};
+				box.MaxDate = contracts.Max(c => c.ContractDate);
+				box.MinDate = contracts.Min(c => c.ContractDate);
+				box.ContractsCount = contracts.Count;
+			}
+			else
+			{
+				box.MaxDate = DateTime.MinValue;
+				box.MinDate = DateTime.MinValue;
+				box.ContractsCount = 0;
+			}
 
-			Box.Repository.Update(newBox);
+			Box.Repository.Update(box);
 		}
 	}
 }

@@ -39,14 +39,14 @@ namespace WpfApp.DataProvider.Repository
 			return collection.Find(filter).ToList().AsReadOnly();
 		}
 
-		protected static async Task AddAndSave(BsonDocument document, DocumentType type)
+		protected void AddAndSave(BsonDocument document, DocumentType type)
 		{
-			await GetCollection(type).InsertOneAsync(document);
+			GetCollection(type).InsertOneAsync(document);
 		}
 
-		protected static async Task DeleteById(string id, DocumentType type)
+		protected void DeleteById(string id, DocumentType type)
 		{
-			await GetCollection(type).DeleteOneAsync(d => d["_id"] == new ObjectId(id));
+			GetCollection(type).DeleteOneAsync(d => d["_id"] == new ObjectId(id));
 		}
 	}
 }

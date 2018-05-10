@@ -86,11 +86,11 @@ namespace WpfApp.SubPages
 		/// <summary>
 		/// Удаление коробки
 		/// </summary>
-		private async void DeleteBox(object sender, RoutedEventArgs e)
+		private void DeleteBox(object sender, RoutedEventArgs e)
 		{
 			if (!_boxes.Any()) return;
 			var selected = (Box) BoxGridItems.SelectedItem;
-			await Box.Repository.DeleteById(selected.Id);
+			Box.Repository.DeleteById(selected.Id);
 			_boxes = _boxes.Where(b => b.Id != selected.Id).ToList();
 			BoxGridItems.ItemsSource = _boxes;
 			if (!_boxes.Any()) return;
