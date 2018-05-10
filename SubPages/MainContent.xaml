@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WpfApp.SubPages"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d">
-	<Grid ShowGridLines="true">
+	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="222" />
 			<ColumnDefinition Width="*" />
@@ -15,8 +15,11 @@
 			<RowDefinition Height="50" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
-
-
+		<TextBlock Name="BreadCrumbs"
+		           Grid.Row="0" Grid.Column="1"
+		           FontSize="20"
+		           VerticalAlignment="Center"
+		           HorizontalAlignment="Left" />
 		<Border Grid.Column="0" Grid.Row="1"
 		        BorderBrush="LightGray"
 		        Margin="10,0,10,10"

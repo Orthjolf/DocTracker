@@ -15,9 +15,9 @@ namespace WpfApp.SubPages
 {
 	public partial class BoxContent
 	{
-		private readonly string _storageId;
+		private readonly Storage _storage;
 
-		private readonly string _boxId;
+		private readonly Box _box;
 
 		private List<Contract> _contracts;
 
@@ -30,10 +30,10 @@ namespace WpfApp.SubPages
 		public BoxContent(Box box)
 		{
 			InitializeComponent();
-			_boxId = box.Id;
-			_storageId = box.StorageId;
+			_box = box;
+			_storage = Storage.Repository.Get(box.StorageId);
 			_action = ActionPerformed.PutInBox;
-			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
+			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
@@ -67,7 +67,7 @@ namespace WpfApp.SubPages
 			var window = Window.GetWindow(this);
 			if (window == null) return;
 			window.KeyDown -= HandleKeyPress;
-			MainWindow.SetContentAsStoragesPage(_storageId);
+			MainWindow.SetContentAsStoragesPage(_storage.Id);
 		}
 
 		/// <summary>
@@ -97,6 +97,7 @@ namespace WpfApp.SubPages
 		private void SetContent(Contract contract)
 		{
 			_selectedContractId = contract.Id;
+			BreadCrumbs.Text = _storage.Name + " / " + _box.Name;
 			ContractPresenter.Content = new ContractDetails(contract);
 		}
 
@@ -110,6 +111,8 @@ namespace WpfApp.SubPages
 		private void HandleKeyPress(object sender, KeyEventArgs e)
 		{
 			Write("Просканировано");
+			//@TODO убрать
+			if (e.Key != Key.Enter) return;
 			if (ScanningCommand.IsWorking) return;
 
 			Task.Factory.StartNew(PerformCommand)
@@ -129,8 +132,8 @@ namespace WpfApp.SubPages
 				ScanningModeToggle.IsEnabled = false;
 			});
 			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
-			ScanningCommand.DoWork(_boxId, barCode, _action);
-			_contracts = Contract.Repository.GetByBoxId(_boxId).ToList();
+			ScanningCommand.DoWork(_box.Id, barCode, _action);
+			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			_resetEvent.Set();
 		}
 

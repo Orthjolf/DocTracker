@@ -19,6 +19,12 @@ namespace WpfApp.DataProvider.Repository
 			return bsonDocuments.Select(Storage.Reconstitute).ToList().AsReadOnly();
 		}
 
+		public Storage Get(string id)
+		{
+			var bsonDocument = base.Get(id, Type);
+			return Storage.Reconstitute(bsonDocument);
+		}
+
 		public void AddAndSave(BsonDocument document)
 		{
 			base.AddAndSave(document, Type);

@@ -14,20 +14,28 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="40" />
+			<RowDefinition Height="50" />
 			<RowDefinition />
 			<RowDefinition Height="180" />
 			<RowDefinition Height="85" />
 		</Grid.RowDefinitions>
-		<Button Grid.Row="0" Grid.Column="0"
+		<Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
 		        Height="30"
-		        Margin="10,10,10,0"
+		        Width="100"
+		        Margin="10,10,10,10"
 		        Style="{StaticResource AccentedSquareButtonStyle}"
 		        Content="Назад"
+		        HorizontalAlignment="Left"
 		        Click="BackOnMainScreen" />
+		<TextBlock Name="BreadCrumbs"
+		           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+		           FontSize="20"
+		           VerticalAlignment="Center"
+		           HorizontalAlignment="Left"
+		           Margin="222,0,0,0" />
 		<Border Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"
 		        BorderBrush="LightGray"
-		        Margin="10,10,10,10"
+		        Margin="10,0,10,10"
 		        BorderThickness="1"
 		        DockPanel.Dock="Top">
 			<Grid>

@@ -70,6 +70,7 @@ namespace WpfApp.SubPages
 		private void SetContent(Storage storage)
 		{
 			_selectedStorage = storage;
+			BreadCrumbs.Text = _selectedStorage.Name;
 			ContentPresenter.Content = new StorageContent(storage);
 		}
 

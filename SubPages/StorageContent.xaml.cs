@@ -26,7 +26,6 @@ namespace WpfApp.SubPages
 			InitializeComponent();
 			_storageId = storage.Id;
 
-			StorageName.Text = storage.Name;
 			StorageAddress.Text = storage.Address;
 			StorageDescription.Text = storage.Description;
 
