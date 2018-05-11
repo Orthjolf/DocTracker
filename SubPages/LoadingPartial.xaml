@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfApp.SubPages.Modals.BoxPrintForm"
+﻿<UserControl x:Class="WpfApp.SubPages.LoadingPartial"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,19 +7,19 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-	<Border BorderBrush="LightGray"
-	        Margin="10,10,10,10"
-	        BorderThickness="1"
-	        DockPanel.Dock="Top">
-		<Grid>
+	<Grid>
+		<mah:ProgressRing IsActive="true"
+		                  Visibility="Visible"
+		                  Name="LoadingIndicator"
+		                  Width="100"
+		                  HorizontalAlignment="Center" />
 
-
-			<Button Content="Print Simple Text" Height="37" HorizontalAlignment="Left" Margin="22,21,0,0"
-
-			        Name="PrintSimpleTextButton" VerticalAlignment="Top" Width="134"
-
-			        Click="PrintSimpleTextButton_Click" />
-			<FlowDocumentScrollViewer x:Name="DocumentViewer" />
-		</Grid>
-	</Border>
+		<Label
+			Name="Processing"
+			Visibility="Visible"
+			Content="Загрузка"
+			FontSize="25"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center" />
+	</Grid>
 </UserControl>

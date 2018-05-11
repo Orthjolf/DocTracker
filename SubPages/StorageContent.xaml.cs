@@ -7,9 +7,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using WpfApp.Domain;
 using WpfApp.Service;
 using WpfApp.SubPages.Modals;
+using Action = System.Action;
 
 namespace WpfApp.SubPages
 {
@@ -108,10 +110,9 @@ namespace WpfApp.SubPages
 
 		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			var selected = (Box) BoxGridItems.SelectedItem;
-
-			var inputDialog = new BoxPrintForm(selected);
-			if (inputDialog.ShowDialog() != true) return;
+			var box = (Box) BoxGridItems.SelectedItem;
+			if (box == null) return;
+			MainWindow.SetContent(new BoxPrintForm(box));
 		}
 	}
 }

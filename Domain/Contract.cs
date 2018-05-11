@@ -79,5 +79,10 @@ namespace WpfApp.Domain
 				ContractDate = bsonDocument["ContractDate"].ToUniversalTime()
 			};
 		}
+
+		public override string ToString()
+		{
+			return Number + " " + LoanId;
+		}
 	}
 }
