@@ -19,7 +19,7 @@ namespace WpfApp.Domain
 
 		/// <summary>
 		/// Адрес
-		/// </summary>ам
+		/// </summary>
 		public string Address { get; set; }
 
 		public static Storage Reconstitute(BsonDocument storage)

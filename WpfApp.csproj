@@ -43,6 +43,14 @@
     <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424">
       <HintPath>packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=1.6.1.4, Culture=neutral, PublicKeyToken=null">
       <HintPath>packages\MahApps.Metro.1.6.1\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -69,6 +77,7 @@
     <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
       <HintPath>packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll</HintPath>
     </Reference>
@@ -98,6 +107,7 @@
     <Compile Include="DataProvider\Repository\ContractRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
+    <Compile Include="DataProvider\SqlServerDataContext.cs" />
     <Compile Include="Scanning\ScanningCommand.cs" />
     <Compile Include="SubPages\LoadingPartial.xaml.cs" />
     <Compile Include="Temp\BarCodeEncoder.cs" />
@@ -122,6 +132,7 @@
     <Compile Include="SubPages\Modals\BoxPrintForm.xaml.cs" />
     <Compile Include="SubPages\Modals\ErrorDialog.xaml.cs" />
     <Compile Include="SubPages\StorageContent.xaml.cs" />
+    <Compile Include="Temp\TestDb.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -144,6 +155,7 @@
     <Page Include="SubPages\Modals\BoxPrintForm.xaml" />
     <Page Include="SubPages\Modals\ErrorDialog.xaml" />
     <Page Include="SubPages\StorageContent.xaml" />
+    <Page Include="Temp\TestDb.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
