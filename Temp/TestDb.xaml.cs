@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using MongoDB.Bson;
 using WpfApp.DataProvider;
+using WpfApp.DataProvider.SqlServer;
 using WpfApp.Domain;
 using WpfApp.Service;
 
@@ -19,6 +20,19 @@ namespace WpfApp.Temp
 		}
 
 		private void WindowLoaded(object sender, RoutedEventArgs e)
+		{
+			//testSqlDb();
+
+			TestNewThing();
+		}
+
+		private void TestNewThing()
+		{
+			var all = Storage.Repository1.GetAll();
+			var singleById = Storage.Repository1.Get("13ffad3a-7e33-4bb3-920a-4736fcfdf746");
+		}
+
+		private void testSqlDb()
 		{
 			using (var db = new SqlServerDataContext())
 			{

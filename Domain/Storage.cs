@@ -9,6 +9,9 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
+		public static Repository<Storage> Repository1 =>
+			new Lazy<Repository<Storage>>(() => new Repository<Storage>()).Value;
+
 		public static StorageRepository Repository =>
 			new Lazy<StorageRepository>(() => new StorageRepository()).Value;
 

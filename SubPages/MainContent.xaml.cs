@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -106,6 +107,7 @@ namespace WpfApp.SubPages
 
 			var storageBson = new BsonDocument
 			{
+				{"_id", Guid.NewGuid().ToString()},
 				{"Name", inputDialog.Name.Text},
 				{"Address", inputDialog.Address.Text},
 				{"Description", inputDialog.Description.Text},

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
+using WpfApp.DataProvider.MongoDb;
 using WpfApp.Domain;
 using WpfApp.Enum;
 
@@ -14,7 +15,7 @@ namespace WpfApp.DataProvider.Repository
 	{
 		protected static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
 		{
-			return DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
+			return MongoDbDataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 		}
 
 		public BsonDocument Get(string id, DocumentType type)
@@ -35,7 +36,7 @@ namespace WpfApp.DataProvider.Repository
 
 		public IReadOnlyCollection<BsonDocument> GetFiltered(BsonDocument filter, DocumentType type)
 		{
-			var collection = DataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
+			var collection = MongoDbDataContext.Instance.Database.GetCollection<BsonDocument>(type.ToString());
 			return collection.Find(filter).ToList().AsReadOnly();
 		}
 

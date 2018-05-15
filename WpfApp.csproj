@@ -102,12 +102,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataProvider\DataContext.cs" />
+    <Compile Include="DataProvider\MongoDb\BsonDocumentReconstituteExtension.cs" />
+    <Compile Include="DataProvider\MongoDb\MongoDbDataAccessLayer.cs" />
+    <Compile Include="DataProvider\MongoDb\MongoDbDataContext.cs" />
     <Compile Include="DataProvider\Repository\BoxRepository.cs" />
     <Compile Include="DataProvider\Repository\ContractRepository.cs" />
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
+    <Compile Include="DataProvider\Repository\IDocumentRepository1.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
-    <Compile Include="DataProvider\SqlServerDataContext.cs" />
+    <Compile Include="DataProvider\Repository\DataBaseAccessLayer.cs" />
+    <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
+    <Compile Include="Enum\ConnectionType.cs" />
     <Compile Include="Scanning\ScanningCommand.cs" />
     <Compile Include="SubPages\LoadingPartial.xaml.cs" />
     <Compile Include="Temp\BarCodeEncoder.cs" />
