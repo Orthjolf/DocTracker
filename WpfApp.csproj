@@ -111,7 +111,7 @@
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\IDocumentRepository1.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
-    <Compile Include="DataProvider\Repository\GenericRepository.cs" />
+    <Compile Include="DataProvider\Repository\Repository.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
     <Compile Include="Enum\ConnectionType.cs" />

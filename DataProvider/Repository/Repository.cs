@@ -20,7 +20,7 @@ namespace WpfApp.DataProvider.Repository
 			SetConnectionType(ConnectionType.Local);
 		}
 
-		public static IDocumentRepository1<T> DataAccessLayer;
+		private static IDocumentRepository1<T> _dataAccessLayer;
 
 		/// <summary>
 		/// Переключение активной базы данных с локальной на удаленную и наоборот
@@ -28,7 +28,7 @@ namespace WpfApp.DataProvider.Repository
 		/// <param name="type">Тип соединения с базой</param>
 		public static void SetConnectionType(ConnectionType type)
 		{
-			DataAccessLayer = type == ConnectionType.Local
+			_dataAccessLayer = type == ConnectionType.Local
 				? (IDocumentRepository1<T>) new MongoDbDataAccessLayer<T>()
 				: new SqlServerDataAccessLayer<T>();
 			ConsoleWriter.Write(typeof(T) + " теперь берет данные из " + (type == ConnectionType.Local ? "монго" : "sql"));
@@ -36,22 +36,22 @@ namespace WpfApp.DataProvider.Repository
 
 		public T Get(string id)
 		{
-			return DataAccessLayer.Get(id);
+			return _dataAccessLayer.Get(id);
 		}
 
 		public IReadOnlyCollection<T> GetAll()
 		{
-			return DataAccessLayer.GetAll();
+			return _dataAccessLayer.GetAll();
 		}
 
 		public IReadOnlyCollection<T> GetFiltered(string filter)
 		{
-			return DataAccessLayer.GetFiltered(filter);
+			return _dataAccessLayer.GetFiltered(filter);
 		}
 
 		public void Add(T entity)
 		{
-			DataAccessLayer.Add(entity);
+			_dataAccessLayer.Add(entity);
 		}
 	}
 }

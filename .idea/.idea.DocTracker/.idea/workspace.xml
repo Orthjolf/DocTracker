@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c87d6b0-66db-4521-a15f-dccbfb4ffa30" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/DataBaseAccessLayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Action.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Action.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/TestDb.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/TestDb.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/Repository/Repository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WpfApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,19 +17,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DataBaseSwitcher.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataBaseSwitcher.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <marker date="1526467604236" expanded="true" signature="6:123" ph="..." />
-                <marker date="1526467604236" expanded="true" signature="154:970" ph="{...}" />
-                <marker date="1526467604236" expanded="true" signature="194:968" ph="{...}" />
-                <marker date="1526467604236" expanded="true" signature="257:965" ph="{...}" />
-                <marker date="1526467604236" expanded="true" signature="389:454" ph="{...}" />
-                <marker date="1526467604236" expanded="true" signature="484:961" ph="{...}" />
-                <marker date="1526467604236" expanded="true" signature="662:956" ph="/* var dataAccessLayer = repository.GetProperty(&quot;DataAccessLayer&quot;); ... */" />
+                <marker date="1526468235237" expanded="true" signature="6:89" ph="..." />
+                <marker date="1526468235237" expanded="true" signature="120:768" ph="{...}" />
+                <marker date="1526468235237" expanded="true" signature="160:766" ph="{...}" />
+                <marker date="1526468235237" expanded="true" signature="166:321" ph="/// Переключает активную базу данных в дженерик репозиториях ... " />
+                <marker date="1526468235237" expanded="true" signature="381:763" ph="{...}" />
+                <marker date="1526468235237" expanded="true" signature="578:757" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -105,7 +103,7 @@
       <file leaf-file-name="Storage.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
+            <state relative-caret-position="150">
               <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
               <folding>
                 <marker date="1526464762854" expanded="false" signature="6:71" ph="..." />
@@ -121,24 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericRepository.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs">
+      <file leaf-file-name="Repository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-              <folding>
-                <marker date="1526467604218" expanded="true" signature="6:167" ph="..." />
-                <marker date="1526467604218" expanded="true" signature="209:1624" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="213:501" ph="/// Класс предоставляет набор методов для доступа к данным из локальной и удаленной базы данных, ... " />
-                <marker date="1526467604218" expanded="true" signature="572:1622" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="597:717" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="779:941" ph="/// Переключение активной базы данных с локальной на удаленную и наоборот ... " />
-                <marker date="1526467604218" expanded="true" signature="1001:1279" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="1306:1349" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="1391:1435" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="1495:1550" ph="{...}" />
-                <marker date="1526467604218" expanded="true" signature="1579:1619" ph="{...}" />
-              </folding>
+            <state relative-caret-position="308">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -203,7 +188,7 @@
     <setting file="file://$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/511AF08A-EBCE-4AFD-AD78-D888E1D89347/3a/676fa49f/MethodBase.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Storage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
@@ -218,8 +203,9 @@
         <option value="$PROJECT_DIR$/Domain/Storage.cs" />
         <option value="$PROJECT_DIR$/Temp/TestDb.xaml.cs" />
         <option value="$PROJECT_DIR$/Domain/Action.cs" />
-        <option value="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" />
         <option value="$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/DataAccessLayer.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" />
       </list>
     </option>
   </component>
@@ -350,12 +336,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526381202434</updated>
       <workItem from="1526381203885" duration="6000" />
-      <workItem from="1526457477704" duration="10109000" />
+      <workItem from="1526457477704" duration="10785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10115000" />
+    <option name="totallyTimeSpent" value="10791000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,11 +361,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" weight="0.3093682" />
       <window_info anchor="right" id="Database" order="3" />
@@ -405,19 +391,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs</url>
-          <line>23</line>
-          <properties documentPath="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" initialLine="32">
-            <startOffsets>
-              <startOffset value="494" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="551" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Temp/TestDb.xaml.cs</url>
           <line>35</line>
           <properties documentPath="$PROJECT_DIR$/Temp/TestDb.xaml.cs" initialLine="37">
@@ -431,27 +404,14 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs</url>
-          <line>21</line>
-          <properties documentPath="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" initialLine="24">
-            <startOffsets>
-              <startOffset value="460" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="484" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs</url>
+          <url>file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs</url>
           <line>29</line>
           <properties documentPath="$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs" initialLine="29">
             <startOffsets>
-              <startOffset value="1004" />
+              <startOffset value="1006" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="1005" />
+              <endOffset value="1007" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
@@ -533,23 +493,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding>
-            <marker date="1526464762854" expanded="false" signature="6:71" ph="..." />
-            <marker date="1526464762854" expanded="true" signature="96:874" ph="{...}" />
-            <marker date="1526464762854" expanded="true" signature="100:152" ph="/// Хранилище коробок ... " />
-            <marker date="1526464762854" expanded="true" signature="183:872" ph="{...}" />
-            <marker date="1526464762854" expanded="true" signature="432:477" ph="/// Название ... " />
-            <marker date="1526464762854" expanded="true" signature="516:558" ph="/// Адрес ... " />
-            <marker date="1526464762854" expanded="true" signature="656:869" ph="{...}" />
-            <marker date="1526464762854" expanded="true" signature="686:864" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -585,38 +528,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs">
+    <entry file="file://$PROJECT_DIR$/DataProvider/DataAccessLayer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        <state relative-caret-position="60">
+          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
           <folding>
-            <marker date="1526467604236" expanded="true" signature="6:123" ph="..." />
-            <marker date="1526467604236" expanded="true" signature="154:970" ph="{...}" />
-            <marker date="1526467604236" expanded="true" signature="194:968" ph="{...}" />
-            <marker date="1526467604236" expanded="true" signature="257:965" ph="{...}" />
-            <marker date="1526467604236" expanded="true" signature="389:454" ph="{...}" />
-            <marker date="1526467604236" expanded="true" signature="484:961" ph="{...}" />
-            <marker date="1526467604236" expanded="true" signature="662:956" ph="/* var dataAccessLayer = repository.GetProperty(&quot;DataAccessLayer&quot;); ... */" />
+            <marker date="1526464762854" expanded="false" signature="6:71" ph="..." />
+            <marker date="1526464762854" expanded="true" signature="96:874" ph="{...}" />
+            <marker date="1526464762854" expanded="true" signature="100:152" ph="/// Хранилище коробок ... " />
+            <marker date="1526464762854" expanded="true" signature="183:872" ph="{...}" />
+            <marker date="1526464762854" expanded="true" signature="432:477" ph="/// Название ... " />
+            <marker date="1526464762854" expanded="true" signature="516:558" ph="/// Адрес ... " />
+            <marker date="1526464762854" expanded="true" signature="656:869" ph="{...}" />
+            <marker date="1526464762854" expanded="true" signature="686:864" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs">
+    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        <state relative-caret-position="308">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <marker date="1526467604218" expanded="true" signature="6:167" ph="..." />
-            <marker date="1526467604218" expanded="true" signature="209:1624" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="213:501" ph="/// Класс предоставляет набор методов для доступа к данным из локальной и удаленной базы данных, ... " />
-            <marker date="1526467604218" expanded="true" signature="572:1622" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="597:717" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="779:941" ph="/// Переключение активной базы данных с локальной на удаленную и наоборот ... " />
-            <marker date="1526467604218" expanded="true" signature="1001:1279" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="1306:1349" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="1391:1435" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="1495:1550" ph="{...}" />
-            <marker date="1526467604218" expanded="true" signature="1579:1619" ph="{...}" />
+            <marker date="1526468235237" expanded="true" signature="6:89" ph="..." />
+            <marker date="1526468235237" expanded="true" signature="120:768" ph="{...}" />
+            <marker date="1526468235237" expanded="true" signature="160:766" ph="{...}" />
+            <marker date="1526468235237" expanded="true" signature="166:321" ph="/// Переключает активную базу данных в дженерик репозиториях ... " />
+            <marker date="1526468235237" expanded="true" signature="381:763" ph="{...}" />
+            <marker date="1526468235237" expanded="true" signature="578:757" ph="{...}" />
           </folding>
         </state>
       </provider>

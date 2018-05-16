@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using WpfApp.DataProvider.Repository;
 using WpfApp.Enum;
@@ -8,30 +7,21 @@ namespace WpfApp.DataProvider
 {
 	public static class DataBaseSwitcher
 	{
+		/// <summary>
+		/// Переключает активную базу данных в дженерик репозиториях
+		/// </summary>
+		/// <param name="type">Удаленная или локальная база</param>
 		public static void SetActiveDataBase(ConnectionType type)
 		{
-			var values = System.Enum.GetValues(typeof(DocumentType));
+			var values = System.Enum.GetValues(typeof(DocumentType)).Cast<DocumentType>();
+			var types = values.Select(value => Type.GetType("WpfApp.Domain." + value)).ToList();
 
-			var types = new List<Type>();
-			foreach (var value in values)
-			{
-				types.Add(Type.GetType("WpfApp.Domain." + value));
-			}
-
-
-			foreach (var t in types)
+			types.ForEach(t =>
 			{
 				var repository = typeof(Repository<>).MakeGenericType(t);
-
 				var method = repository.GetMethod("SetConnectionType");
-
 				method?.Invoke(null, new object[] {type});
-
-//				var dataAccessLayer = repository.GetProperty("DataAccessLayer");
-//				var sql = typeof(SqlServerDataAccessLayer<>).MakeGenericType(t);
-//				var mongo = typeof(MongoDbDataAccessLayer<>).MakeGenericType(t);
-//				dataAccessLayer.SetValue(null, type == ConnectionType.Local ? mongo : sql);
-			}
+			});
 		}
 	}
 }
