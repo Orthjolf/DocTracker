@@ -53,22 +53,25 @@ namespace WpfApp.DataProvider.MongoDb
 
 		public void Add(T entity)
 		{
-			throw new NotImplementedException();
+			GetCollection().InsertOneAsync(entity.ToBsonDocument());
 		}
 
 		public void Update(T entity)
 		{
-			throw new NotImplementedException();
+			GetCollection().ReplaceOneAsync(
+				new BsonDocument("_id", entity.Id),
+				entity.ToBsonDocument()
+			);
 		}
 
 		public void Delete(T entity)
 		{
-			throw new NotImplementedException();
+			GetCollection().DeleteOneAsync(d => d["_id"] == entity.Id);
 		}
 
 		public void DeleteById(string id)
 		{
-			throw new NotImplementedException();
+			GetCollection().DeleteOneAsync(d => d["_id"] == id);
 		}
 
 		public override string ToString()

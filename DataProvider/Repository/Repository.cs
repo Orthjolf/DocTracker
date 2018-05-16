@@ -16,7 +16,6 @@ namespace WpfApp.DataProvider.Repository
 	{
 		public Repository()
 		{
-			ConsoleWriter.Write("Новый экземпляр репозитория " + typeof(T));
 			SetConnectionType(ConnectionType.Local);
 		}
 
@@ -31,7 +30,6 @@ namespace WpfApp.DataProvider.Repository
 			_dataAccessLayer = type == ConnectionType.Local
 				? (IDocumentRepository<T>) new MongoDbDataAccessLayer<T>()
 				: new SqlServerDataAccessLayer<T>();
-			ConsoleWriter.Write(typeof(T) + " теперь берет данные из " + (type == ConnectionType.Local ? "монго" : "sql"));
 		}
 
 		public T Get(string id)

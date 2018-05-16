@@ -4,22 +4,15 @@
     <list default="true" id="6c87d6b0-66db-4521-a15f-dccbfb4ffa30" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DocTracker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/WpfApp/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WpfApp/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProvider/MongoDb/BsonDocumentReconstituteExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/MongoDb/BsonDocumentReconstituteExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/BoxRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/ContractRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/DocumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DataProvider/Repository/Repository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/Repository/Repository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/Repository/StorageRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Box.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Contract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Contract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Storage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SubPages/BoxContent.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SubPages/BoxContent.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SubPages/MainContent.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SubPages/MainContent.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SubPages/StorageContent.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SubPages/StorageContent.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/TestDb.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/TestDb.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scanning/ScanningCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scanning/ScanningCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/ContractFromDb.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/ContractFromDb.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WpfApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WpfApp.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,108 +24,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestDb.xaml.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-              <folding>
-                <marker date="1526469685963" expanded="false" signature="6:295" ph="..." />
-                <marker date="1526469685963" expanded="true" signature="318:1185" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="363:1183" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="384:418" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="481:527" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="558:758" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="786:1180" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="837:1176" ph="{...}" />
-                <marker date="1526469685963" expanded="true" signature="879:1003" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DocumentRepositoryOLD.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-              <folding>
-                <marker date="1526469734996" expanded="false" signature="6:247" ph="..." />
-                <marker date="1526469734996" expanded="true" signature="289:1434" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="324:1432" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="410:511" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="568:706" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="609:646" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="776:896" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="992:1160" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="1231:1288" ph="{...}" />
-                <marker date="1526469734996" expanded="true" signature="1347:1429" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDocumentRepository.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-              <folding>
-                <marker date="1526469777483" expanded="false" signature="6:141" ph="..." />
-                <marker date="1526469777483" expanded="true" signature="183:946" ph="{...}" />
-                <marker date="1526469777483" expanded="true" signature="226:944" ph="{...}" />
-                <marker date="1526469777483" expanded="true" signature="232:391" ph="/// Получить документ по идентификатору ... " />
-                <marker date="1526469777483" expanded="true" signature="415:539" ph="/// Получить все документы данного типа ... " />
-                <marker date="1526469777483" expanded="true" signature="578:782" ph="/// Получить документы, соответствующие фильтру ... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SqlServerDataAccessLayer.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-              <folding>
-                <marker date="1526469755219" expanded="false" signature="6:137" ph="..." />
-                <marker date="1526469755219" expanded="true" signature="178:1275" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="264:1273" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="365:424" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="451:600" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="502:596" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="642:718" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="778:858" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="887:942" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="974:1029" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="1061:1116" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="1153:1208" ph="{...}" />
-                <marker date="1526469755219" expanded="true" signature="1245:1270" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Repository.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="295">
+              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
               <folding>
-                <marker date="1526469777502" expanded="false" signature="6:167" ph="..." />
-                <marker date="1526469777502" expanded="true" signature="209:1861" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="213:501" ph="/// Класс предоставляет набор методов для доступа к данным из локальной и удаленной базы данных, ... " />
-                <marker date="1526469777502" expanded="true" signature="571:1859" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="596:716" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="779:941" ph="/// Переключение активной базы данных с локальной на удаленную и наоборот ... " />
-                <marker date="1526469777502" expanded="true" signature="1001:1279" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1306:1350" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1392:1437" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1497:1553" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1582:1623" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1655:1699" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1731:1775" ph="{...}" />
-                <marker date="1526469777502" expanded="true" signature="1812:1856" ph="{...}" />
+                <marker date="1526475794570" expanded="false" signature="6:167" ph="..." />
+                <marker date="1526475794570" expanded="true" signature="209:1678" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="213:501" ph="/// Класс предоставляет набор методов для доступа к данным из локальной и удаленной базы данных, ... " />
+                <marker date="1526475794570" expanded="true" signature="571:1676" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="596:648" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="711:873" ph="/// Переключение активной базы данных с локальной на удаленную и наоборот ... " />
+                <marker date="1526475794570" expanded="true" signature="933:1096" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1123:1167" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1209:1254" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1314:1370" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1399:1440" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1472:1516" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1548:1592" ph="{...}" />
+                <marker date="1526475794570" expanded="true" signature="1629:1673" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataBaseSwitcher.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+              <folding>
+                <marker date="1526475859522" expanded="true" signature="6:111" ph="..." />
+                <marker date="1526475859522" expanded="true" signature="142:926" ph="{...}" />
+                <marker date="1526475859522" expanded="true" signature="182:924" ph="{...}" />
+                <marker date="1526475859522" expanded="true" signature="188:343" ph="/// Переключает активную базу данных в дженерик репозиториях ... " />
+                <marker date="1526475859522" expanded="true" signature="403:921" ph="{...}" />
+                <marker date="1526475859522" expanded="true" signature="600:779" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -141,81 +69,64 @@
       <file leaf-file-name="MongoDbDataAccessLayer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+            <state relative-caret-position="368">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
               <folding>
-                <marker date="1526469777522" expanded="false" signature="6:167" ph="..." />
-                <marker date="1526469777522" expanded="true" signature="206:1910" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="210:416" ph="/// Слой доступа к данным в локальной базе MongoDb. ... " />
-                <marker date="1526469777522" expanded="true" signature="498:1908" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="569:628" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="632:758" ph="/// Получение коллекции Bson документов из базы ... " />
-                <marker date="1526469777522" expanded="true" signature="815:906" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="933:1097" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1139:1322" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1382:1519" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1548:1596" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1628:1676" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1708:1756" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1793:1841" ph="{...}" />
-                <marker date="1526469777522" expanded="true" signature="1878:1905" ph="{...}" />
+                <marker date="1526476759757" expanded="false" signature="6:167" ph="..." />
+                <marker date="1526476759757" expanded="true" signature="206:2039" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="210:416" ph="/// Слой доступа к данным в локальной базе MongoDb. ... " />
+                <marker date="1526476759757" expanded="true" signature="498:2037" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="569:628" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="632:758" ph="/// Получение коллекции Bson документов из базы ... " />
+                <marker date="1526476759757" expanded="true" signature="815:906" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="933:1097" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="1139:1322" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="1382:1519" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="1548:1616" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="1648:1766" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="1798:1869" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="1906:1970" ph="{...}" />
+                <marker date="1526476759757" expanded="true" signature="2007:2034" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StorageContent.xaml.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SubPages/StorageContent.xaml.cs">
+      <file leaf-file-name="BoxPrintForm.xaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+            <state relative-caret-position="360">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
-                <marker date="1526469474582" expanded="false" signature="6:358" ph="..." />
-                <marker date="1526469474582" expanded="true" signature="385:2997" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="424:2995" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="616:848" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="875:1077" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="883:967" ph="/* @TODO переписать ... */" />
-                <marker date="1526469474582" expanded="true" signature="1104:1472" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="1155:1234" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="1262:1466" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="1391:1461" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="1476:1531" ph="/// Добавление коробки ... " />
-                <marker date="1526469474582" expanded="true" signature="1587:2122" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="1716:1932" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="2126:2179" ph="/// Удаление коробки ... " />
-                <marker date="1526469474582" expanded="true" signature="2238:2546" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="2550:2600" ph="/// Выбор коробки ... " />
-                <marker date="1526469474582" expanded="true" signature="2662:2791" ph="{...}" />
-                <marker date="1526469474582" expanded="true" signature="2861:2992" ph="{...}" />
+                <marker date="1526372116440" expanded="true" signature="0:1026" ph="&lt;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;        Margin=&quot;10,10,10,10&quot;&#10;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Print Simple Text&quot; Height=&quot;37&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;22,21,0,0&quot;&#10;&#10;&#9;&#9;&#9;        Name=&quot;PrintSimpleTextButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;134&quot;&#10;&#10;&#9;&#9;&#9;        Click=&quot;PrintSimpleTextButton_Click&quot; /&gt;&#10;&#9;&#9;&#9;&lt;FlowDocumentScrollViewer x:Name=&quot;DocumentViewer&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#9;&lt;/Border&gt;.../&gt;" />
+                <marker date="1526372116440" expanded="true" signature="577:1011" ph="&lt;&lt;Grid&gt;&#10;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Print Simple Text&quot; Height=&quot;37&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;22,21,0,0&quot;&#10;&#10;&#9;&#9;&#9;        Name=&quot;PrintSimpleTextButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;134&quot;&#10;&#10;&#9;&#9;&#9;        Click=&quot;PrintSimpleTextButton_Click&quot; /&gt;&#10;&#9;&#9;&#9;&lt;FlowDocumentScrollViewer x:Name=&quot;DocumentViewer&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;.../&gt;" />
+                <marker date="1526372116440" expanded="true" signature="701:1000" ph="&lt;&lt;Button Content=&quot;Print Simple Text&quot; Height=&quot;37&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;22,21,0,0&quot;&#10;&#10;&#9;&#9;&#9;        Name=&quot;PrintSimpleTextButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;134&quot;&#10;&#10;&#9;&#9;&#9;        Click=&quot;PrintSimpleTextButton_Click&quot; /&gt; &lt;FlowDocumentScrollViewer x:Name=&quot;DocumentViewer&quot; /&gt;.../&gt;" />
+                <marker date="1526372116440" expanded="true" signature="713:934" ph="&lt;.../&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Contract.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Domain/Contract.cs">
+      <file leaf-file-name="BoxPrintForm.xaml.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+            <state relative-caret-position="143">
+              <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
               <folding>
-                <marker date="1526469529773" expanded="false" signature="6:71" ph="..." />
-                <marker date="1526469529773" expanded="true" signature="96:2121" ph="{...}" />
-                <marker date="1526469529773" expanded="true" signature="100:142" ph="/// Договор ... " />
-                <marker date="1526469529773" expanded="true" signature="174:2119" ph="{...}" />
-                <marker date="1526469529773" expanded="true" signature="307:359" ph="/// Номер контракта ... " />
-                <marker date="1526469529773" expanded="true" signature="400:458" ph="/// Идентификатор коробки ... " />
-                <marker date="1526469529773" expanded="true" signature="498:546" ph="/// Имя клиента ... " />
-                <marker date="1526469529773" expanded="true" signature="596:648" ph="/// Фамилия клиента ... " />
-                <marker date="1526469529773" expanded="true" signature="697:750" ph="/// Отчество клиента ... " />
-                <marker date="1526469529773" expanded="true" signature="801:858" ph="/// Фамилия имя отчество ... " />
-                <marker date="1526469529773" expanded="true" signature="954:1013" ph="/// Номер телефона клиента ... " />
-                <marker date="1526469529773" expanded="true" signature="1059:1115" ph="/// Идентификатор займа ... " />
-                <marker date="1526469529773" expanded="true" signature="1156:1232" ph="/// Префикс точки ... " />
-                <marker date="1526469529773" expanded="true" signature="1280:1334" ph="/// Дата выдачи займа ... " />
-                <marker date="1526469529773" expanded="true" signature="1445:2038" ph="{...}" />
-                <marker date="1526469529773" expanded="true" signature="1476:2033" ph="{...}" />
-                <marker date="1526469529773" expanded="true" signature="2075:2116" ph="{...}" />
+                <marker date="1526469651140" expanded="false" signature="6:406" ph="..." />
+                <marker date="1526469651140" expanded="true" signature="440:2399" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="477:2397" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="511:654" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="732:967" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="737:963" ph="/* var printDlg = new PrintDialog(); ... */" />
+                <marker date="1526469651140" expanded="true" signature="1011:1446" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="1226:1441" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="1498:1585" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="1649:1975" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="1794:1860" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="2043:2394" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="2108:2390" ph="{...}" />
+                <marker date="1526469651140" expanded="true" signature="2190:2385" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -224,8 +135,8 @@
       <file leaf-file-name="BoxContent.xaml.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SubPages/BoxContent.xaml.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="139" column="74" selection-start-line="139" selection-start-column="74" selection-end-line="139" selection-end-column="74" />
+            <state relative-caret-position="345">
+              <caret line="136" column="12" selection-start-line="136" selection-start-column="12" selection-end-line="136" selection-end-column="12" />
               <folding>
                 <marker date="1526469651158" expanded="false" signature="6:313" ph="..." />
                 <marker date="1526469651158" expanded="true" signature="340:4510" ph="{...}" />
@@ -254,26 +165,94 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoxPrintForm.xaml.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml.cs">
+      <file leaf-file-name="Contract.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Contract.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="100">
+              <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
               <folding>
-                <marker date="1526469651140" expanded="false" signature="6:406" ph="..." />
-                <marker date="1526469651140" expanded="true" signature="440:2399" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="477:2397" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="511:654" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="732:967" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="737:963" ph="/* var printDlg = new PrintDialog(); ... */" />
-                <marker date="1526469651140" expanded="true" signature="1011:1446" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="1226:1441" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="1498:1585" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="1649:1975" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="1794:1860" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="2043:2394" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="2108:2390" ph="{...}" />
-                <marker date="1526469651140" expanded="true" signature="2190:2385" ph="{...}" />
+                <marker date="1526469529773" expanded="false" signature="6:71" ph="..." />
+                <marker date="1526469529773" expanded="true" signature="96:2121" ph="{...}" />
+                <marker date="1526469529773" expanded="true" signature="100:142" ph="/// Договор ... " />
+                <marker date="1526469529773" expanded="true" signature="174:2119" ph="{...}" />
+                <marker date="1526469529773" expanded="true" signature="307:359" ph="/// Номер контракта ... " />
+                <marker date="1526469529773" expanded="true" signature="400:458" ph="/// Идентификатор коробки ... " />
+                <marker date="1526469529773" expanded="true" signature="498:546" ph="/// Имя клиента ... " />
+                <marker date="1526469529773" expanded="true" signature="596:648" ph="/// Фамилия клиента ... " />
+                <marker date="1526469529773" expanded="true" signature="697:750" ph="/// Отчество клиента ... " />
+                <marker date="1526469529773" expanded="true" signature="801:858" ph="/// Фамилия имя отчество ... " />
+                <marker date="1526469529773" expanded="true" signature="954:1013" ph="/// Номер телефона клиента ... " />
+                <marker date="1526469529773" expanded="true" signature="1059:1115" ph="/// Идентификатор займа ... " />
+                <marker date="1526469529773" expanded="true" signature="1156:1232" ph="/// Префикс точки ... " />
+                <marker date="1526469529773" expanded="true" signature="1280:1334" ph="/// Дата выдачи займа ... " />
+                <marker date="1526469529773" expanded="true" signature="1445:2038" ph="{...}" />
+                <marker date="1526469529773" expanded="true" signature="1476:2033" ph="{...}" />
+                <marker date="1526469529773" expanded="true" signature="2075:2116" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BsonDocumentReconstituteExtension.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProvider/MongoDb/BsonDocumentReconstituteExtension.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-455">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding>
+                <marker date="1526476199238" expanded="false" signature="6:54" ph="..." />
+                <marker date="1526476199238" expanded="true" signature="93:2051" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="150:2049" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="232:532" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="592:1136" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="848:1131" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="1204:1423" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="1236:1418" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="1493:2046" ph="{...}" />
+                <marker date="1526476199238" expanded="true" signature="1524:2041" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScanningCommand.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scanning/ScanningCommand.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+              <folding>
+                <marker date="1526476485198" expanded="true" signature="6:157" ph="..." />
+                <marker date="1526476485198" expanded="true" signature="184:2002" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="223:2000" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="362:722" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="805:1009" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="1072:1388" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="1435:1997" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="1681:1841" ph="{...}" />
+                <marker date="1526476485198" expanded="true" signature="1849:1961" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Box.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/Box.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <folding>
+                <marker date="1526469241589" expanded="false" signature="6:71" ph="..." />
+                <marker date="1526469241589" expanded="true" signature="96:1799" ph="{...}" />
+                <marker date="1526469241589" expanded="true" signature="100:155" ph="/// Коробка с договорами ... " />
+                <marker date="1526469241589" expanded="true" signature="182:1797" ph="{...}" />
+                <marker date="1526469241589" expanded="true" signature="300:357" ph="/// Идентификатор склада ... " />
+                <marker date="1526469241589" expanded="true" signature="401:446" ph="/// Название ... " />
+                <marker date="1526469241589" expanded="true" signature="485:548" ph="/// Самая ранняя дата договора ... " />
+                <marker date="1526469241589" expanded="true" signature="593:657" ph="/// Самая поздняя дата договора ... " />
+                <marker date="1526469241589" expanded="true" signature="702:769" ph="/// Количество договоров в коробке ... " />
+                <marker date="1526469241589" expanded="true" signature="846:1161" ph="{...}" />
+                <marker date="1526469241589" expanded="true" signature="975:1156" ph="{...}" />
+                <marker date="1526469241589" expanded="true" signature="1222:1794" ph="{...}" />
+                <marker date="1526469241589" expanded="true" signature="1486:1789" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -293,19 +272,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/511AF08A-EBCE-4AFD-AD78-D888E1D89347/3a/676fa49f/MethodBase.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SubPages/Modals/AddBoxDialog.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Temp/TestDb.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataProvider/MongoDb/BsonDocumentReconstituteExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39A675C3-A0A5-4D88-8B5C-807B3B134209/a5/f1c6b4c3/ExecutionContext.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/511AF08A-EBCE-4AFD-AD78-D888E1D89347/3a/676fa49f/MethodBase.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9663450F-265D-430C-B371-8A01E3D6AC98/40/33d26d50/Enumerable.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Temp/TestDb.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Temp/ContractFromDb.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scanning/ScanningCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SubPages/ContractDetails.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39A675C3-A0A5-4D88-8B5C-807B3B134209/1b/18322f68/Task.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Domain/Box.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SubPages/BoxContent.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Storage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Action.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SubPages/MainContent.xaml.cs" root0="FORCE_HIGHLIGHTING" />
@@ -319,12 +307,9 @@
         <option value="$PROJECT_DIR$/Domain/Action.cs" />
         <option value="$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs" />
         <option value="$PROJECT_DIR$/DataProvider/DataAccessLayer.cs" />
-        <option value="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" />
         <option value="$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository1.cs" />
         <option value="$PROJECT_DIR$/Domain/Storage.cs" />
-        <option value="$PROJECT_DIR$/SubPages/MainContent.xaml.cs" />
         <option value="$PROJECT_DIR$/Domain/Box.cs" />
-        <option value="$PROJECT_DIR$/SubPages/StorageContent.xaml.cs" />
         <option value="$PROJECT_DIR$/Domain/Contract.cs" />
         <option value="$PROJECT_DIR$/SubPages/BoxContent.xaml.cs" />
         <option value="$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml.cs" />
@@ -332,7 +317,14 @@
         <option value="$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs" />
         <option value="$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository.cs" />
         <option value="$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs" />
+        <option value="$PROJECT_DIR$/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/SubPages/StorageContent.xaml.cs" />
+        <option value="$PROJECT_DIR$/SubPages/MainContent.xaml.cs" />
+        <option value="$PROJECT_DIR$/Temp/ContractFromDb.cs" />
         <option value="$PROJECT_DIR$/DataProvider/Repository/Repository.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs" />
+        <option value="$PROJECT_DIR$/DataProvider/MongoDb/BsonDocumentReconstituteExtension.cs" />
+        <option value="$PROJECT_DIR$/Scanning/ScanningCommand.cs" />
         <option value="$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs" />
       </list>
     </option>
@@ -417,14 +409,15 @@
               <item name="DocTracker (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="SubPages" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="MainContent.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Modals" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BoxPrintForm.xaml" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="DocTracker (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="SubPages" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="StorageContent.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BoxContent.xaml" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -438,6 +431,12 @@
               <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Temp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="TestDb.xaml" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="DocTracker (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="WpfApp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="MainWindow.xaml" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -491,12 +490,12 @@
       <option name="presentableId" value="Default" />
       <updated>1526381202434</updated>
       <workItem from="1526381203885" duration="6000" />
-      <workItem from="1526457477704" duration="12303000" />
+      <workItem from="1526457477704" duration="19273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12309000" />
+    <option name="totallyTimeSpent" value="19279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -513,20 +512,21 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="XAML Preview" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25373134" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17803837" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" weight="0.3093682" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3409586" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -563,16 +563,42 @@
           <line>29</line>
           <properties documentPath="$PROJECT_DIR$/DataProvider/Repository/GenericRepository.cs" initialLine="29">
             <startOffsets>
-              <startOffset value="1004" />
+              <startOffset value="936" />
             </startOffsets>
             <endOffsets>
-              <endOffset value="1005" />
+              <endOffset value="937" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SubPages/BoxContent.xaml.cs</url>
+          <line>128</line>
+          <properties documentPath="$PROJECT_DIR$/SubPages/BoxContent.xaml.cs" initialLine="128">
+            <startOffsets>
+              <startOffset value="3519" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="3742" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Scanning/ScanningCommand.cs</url>
+          <line>33</line>
+          <properties documentPath="$PROJECT_DIR$/Scanning/ScanningCommand.cs" initialLine="33">
+            <startOffsets>
+              <startOffset value="813" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="867" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="24" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -607,21 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <marker date="1526468235237" expanded="true" signature="6:89" ph="..." />
-            <marker date="1526468235237" expanded="true" signature="120:768" ph="{...}" />
-            <marker date="1526468235237" expanded="true" signature="160:766" ph="{...}" />
-            <marker date="1526468235237" expanded="true" signature="166:321" ph="/// Переключает активную базу данных в дженерик репозиториях ... " />
-            <marker date="1526468235237" expanded="true" signature="381:763" ph="{...}" />
-            <marker date="1526468235237" expanded="true" signature="578:757" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Domain/Storage.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -639,90 +650,334 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SubPages/MainContent.xaml.cs">
+    <entry file="file://$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="60">
+          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
           <folding>
-            <marker date="1526468848361" expanded="false" signature="6:244" ph="..." />
-            <marker date="1526468848361" expanded="true" signature="271:3485" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="307:3483" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="498:612" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="616:677" ph="/// Получение списка складов ... " />
-            <marker date="1526468848361" expanded="true" signature="706:788" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="815:1189" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="872:1183" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="901:994" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="1193:1321" ph="/// Выбор хранилища из главного окна ... " />
-            <marker date="1526468848361" expanded="true" signature="1372:1469" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="1473:1628" ph="/// Установка панели с содержимым склада ... " />
-            <marker date="1526468848361" expanded="true" signature="1671:1814" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="1818:1878" ph="/// Поиск хранилищ в списке ... " />
-            <marker date="1526468848361" expanded="true" signature="1947:2193" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="2197:2249" ph="/// Выбор хранилища ... " />
-            <marker date="1526468848361" expanded="true" signature="2322:2482" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="2486:2550" ph="/// Добавление нового хранилища ... " />
-            <marker date="1526468848361" expanded="true" signature="2610:3109" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="2745:2909" ph="{...}" />
-            <marker date="1526468848361" expanded="true" signature="3113:3168" ph="/// Удаление хранилища ... " />
-            <marker date="1526468848361" expanded="true" signature="3231:3480" ph="{...}" />
+            <marker date="1526469755219" expanded="false" signature="6:137" ph="..." />
+            <marker date="1526469755219" expanded="true" signature="178:1275" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="264:1273" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="365:424" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="451:600" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="502:596" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="642:718" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="778:858" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="887:942" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="974:1029" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="1061:1116" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="1153:1208" ph="{...}" />
+            <marker date="1526469755219" expanded="true" signature="1245:1270" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/Box.cs">
+    <entry file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+        <state relative-caret-position="120">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
-            <marker date="1526469241589" expanded="false" signature="6:71" ph="..." />
-            <marker date="1526469241589" expanded="true" signature="96:1799" ph="{...}" />
-            <marker date="1526469241589" expanded="true" signature="100:155" ph="/// Коробка с договорами ... " />
-            <marker date="1526469241589" expanded="true" signature="182:1797" ph="{...}" />
-            <marker date="1526469241589" expanded="true" signature="300:357" ph="/// Идентификатор склада ... " />
-            <marker date="1526469241589" expanded="true" signature="401:446" ph="/// Название ... " />
-            <marker date="1526469241589" expanded="true" signature="485:548" ph="/// Самая ранняя дата договора ... " />
-            <marker date="1526469241589" expanded="true" signature="593:657" ph="/// Самая поздняя дата договора ... " />
-            <marker date="1526469241589" expanded="true" signature="702:769" ph="/// Количество договоров в коробке ... " />
-            <marker date="1526469241589" expanded="true" signature="846:1161" ph="{...}" />
-            <marker date="1526469241589" expanded="true" signature="975:1156" ph="{...}" />
-            <marker date="1526469241589" expanded="true" signature="1222:1794" ph="{...}" />
-            <marker date="1526469241589" expanded="true" signature="1486:1789" ph="{...}" />
+            <marker date="1526469685963" expanded="false" signature="6:295" ph="..." />
+            <marker date="1526469685963" expanded="true" signature="318:1185" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="363:1183" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="384:418" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="481:527" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="558:758" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="786:1180" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="837:1176" ph="{...}" />
+            <marker date="1526469685963" expanded="true" signature="879:1003" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Entity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1526376508455" expanded="false" signature="6:116" ph="..." />
+            <marker date="1526376508455" expanded="true" signature="141:358" ph="{...}" />
+            <marker date="1526376508455" expanded="true" signature="173:356" ph="{...}" />
+            <marker date="1526376508455" expanded="true" signature="179:229" ph="/// Идентификатор ... " />
+            <marker date="1526376508455" expanded="true" signature="266:311" ph="/// Описание ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="88" selection-start-line="15" selection-start-column="88" selection-end-line="15" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SubPages/Modals/AddBoxDialog.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <marker date="1526372088986" expanded="false" signature="6:140" ph="..." />
+            <marker date="1526372088986" expanded="true" signature="174:779" ph="{...}" />
+            <marker date="1526372088986" expanded="true" signature="220:777" ph="{...}" />
+            <marker date="1526372088986" expanded="true" signature="315:402" ph="{...}" />
+            <marker date="1526372088986" expanded="true" signature="470:502" ph="{...}" />
+            <marker date="1526372088986" expanded="true" signature="569:615" ph="{...}" />
+            <marker date="1526372088986" expanded="true" signature="679:774" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39A675C3-A0A5-4D88-8B5C-807B3B134209/a5/f1c6b4c3/ExecutionContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="306" column="8" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
+          <folding>
+            <marker date="1526470516841" expanded="true" signature="0:333" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1526470516841" expanded="false" signature="341:590" ph="..." />
+            <marker date="1526470516841" expanded="true" signature="618:28018" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="843:28016" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="1466:1816" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="1482:1627" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="1637:1810" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="1852:2165" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="1868:1968" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="1978:2159" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2223:2334" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2262:2328" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2375:2521" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2391:2515" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2626:2638" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2769:2897" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="2981:3077" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="3206:4246" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="3875:4180" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="4419:6150" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="4584:5148" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="4645:5140" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="5393:5982" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="5454:5974" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="5639:5964" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6009:6144" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6202:6496" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6237:6403" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6432:6490" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6552:6818" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6568:6742" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6752:6812" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6878:7147" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="6962:7012" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7090:7141" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7213:7494" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7297:7353" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7431:7488" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7550:7701" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7566:7625" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7635:7695" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7747:8124" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7831:7885" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="7963:8118" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="8295:8549" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="8555:9486" ph="///Runs a method in a specified execution context on the current thread. ... " />
+            <marker date="1526470516841" expanded="true" signature="9640:10025" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="10201:10301" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="10503:11630" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="10788:11573" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="11203:11308" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="11321:11540" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="11587:11624" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="11740:11841" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="12003:12535" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="12772:14937" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="13666:14801" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="13918:14166" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="14271:14543" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="14820:14892" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="14943:15313" ph="///Creates a copy of the current execution context. ... " />
+            <marker date="1526470516841" expanded="true" signature="15381:16467" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="16111:16286" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="16545:17641" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="16939:17121" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="17647:17971" ph="///Suppresses the flow of the execution context across asynchronous threads. ... " />
+            <marker date="1526470516841" expanded="true" signature="18044:18359" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="18365:18604" ph="///Restores the flow of the execution context across asynchronous threads. ... " />
+            <marker date="1526470516841" expanded="true" signature="18668:18993" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="18999:19223" ph="///Indicates whether the flow of the execution context is currently suppressed. ... " />
+            <marker date="1526470516841" expanded="true" signature="19265:19357" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="19363:19588" ph="///Captures the execution context from the current thread. ... " />
+            <marker date="1526470516841" expanded="true" signature="19736:19905" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="20057:20289" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="20429:22941" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="21041:21496" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="21696:21913" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="22947:23627" ph="///Sets the specified &lt;see cref=&quot;T:System.Runtime.Serialization.SerializationInfo&quot; /&gt; object with the logical con ... " />
+            <marker date="1526470516841" expanded="true" signature="23730:23989" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="24092:24366" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="24203:24360" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="24447:24805" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="24829:24942" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="24970:27875" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25055:25095" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25160:25202" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25228:25312" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25248:25304" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25395:25471" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25507:25705" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25578:25697" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25762:25818" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25878:26055" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="25898:26047" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26121:26304" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26141:26296" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26357:26585" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26446:26577" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26644:26831" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26683:26823" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26894:27087" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="26933:27079" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="27166:27415" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="27502:27695" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="27756:27869" ph="{...}" />
+            <marker date="1526470516841" expanded="true" signature="27928:28012" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9663450F-265D-430C-B371-8A01E3D6AC98/40/33d26d50/Enumerable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="1944" column="6" selection-start-line="1944" selection-start-column="6" selection-end-line="1944" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SubPages/StorageContent.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+        <state relative-caret-position="166">
+          <caret line="41" selection-start-line="34" selection-start-column="52" selection-end-line="41" />
           <folding>
-            <marker date="1526469474582" expanded="false" signature="6:358" ph="..." />
-            <marker date="1526469474582" expanded="true" signature="385:2997" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="424:2995" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="616:848" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="875:1077" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="883:967" ph="/* @TODO переписать ... */" />
-            <marker date="1526469474582" expanded="true" signature="1104:1472" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="1155:1234" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="1262:1466" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="1391:1461" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="1476:1531" ph="/// Добавление коробки ... " />
-            <marker date="1526469474582" expanded="true" signature="1587:2122" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="1716:1932" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="2126:2179" ph="/// Удаление коробки ... " />
-            <marker date="1526469474582" expanded="true" signature="2238:2546" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="2550:2600" ph="/// Выбор коробки ... " />
-            <marker date="1526469474582" expanded="true" signature="2662:2791" ph="{...}" />
-            <marker date="1526469474582" expanded="true" signature="2861:2992" ph="{...}" />
+            <marker date="1526472676785" expanded="false" signature="6:358" ph="..." />
+            <marker date="1526472676785" expanded="true" signature="385:2997" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="424:2995" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="616:848" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="875:1077" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="883:967" ph="/* @TODO переписать ... */" />
+            <marker date="1526472676785" expanded="true" signature="1104:1472" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="1155:1234" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="1262:1466" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="1391:1461" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="1476:1531" ph="/// Добавление коробки ... " />
+            <marker date="1526472676785" expanded="true" signature="1587:2122" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="1716:1932" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="2126:2179" ph="/// Удаление коробки ... " />
+            <marker date="1526472676785" expanded="true" signature="2238:2546" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="2550:2600" ph="/// Выбор коробки ... " />
+            <marker date="1526472676785" expanded="true" signature="2662:2791" ph="{...}" />
+            <marker date="1526472676785" expanded="true" signature="2861:2992" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SubPages/ContractDetails.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1526372088984" expanded="false" signature="6:48" ph="..." />
+            <marker date="1526372088984" expanded="true" signature="75:562" ph="{...}" />
+            <marker date="1526372088984" expanded="true" signature="115:560" ph="{...}" />
+            <marker date="1526372088984" expanded="true" signature="162:557" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SubPages/MainContent.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <marker date="1526472700893" expanded="false" signature="6:244" ph="..." />
+            <marker date="1526472700893" expanded="true" signature="271:3485" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="307:3483" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="498:612" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="616:677" ph="/// Получение списка складов ... " />
+            <marker date="1526472700893" expanded="true" signature="706:788" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="815:1189" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="872:1183" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="901:994" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="1193:1321" ph="/// Выбор хранилища из главного окна ... " />
+            <marker date="1526472700893" expanded="true" signature="1372:1469" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="1473:1628" ph="/// Установка панели с содержимым склада ... " />
+            <marker date="1526472700893" expanded="true" signature="1671:1814" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="1818:1878" ph="/// Поиск хранилищ в списке ... " />
+            <marker date="1526472700893" expanded="true" signature="1947:2193" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="2197:2249" ph="/// Выбор хранилища ... " />
+            <marker date="1526472700893" expanded="true" signature="2322:2482" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="2486:2550" ph="/// Добавление нового хранилища ... " />
+            <marker date="1526472700893" expanded="true" signature="2610:3109" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="2745:2909" ph="{...}" />
+            <marker date="1526472700893" expanded="true" signature="3113:3168" ph="/// Удаление хранилища ... " />
+            <marker date="1526472700893" expanded="true" signature="3231:3480" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp/ContractFromDb.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <marker date="1526475085125" expanded="true" signature="6:53" ph="..." />
+            <marker date="1526475085125" expanded="true" signature="76:814" ph="{...}" />
+            <marker date="1526475085125" expanded="true" signature="114:812" ph="{...}" />
+            <marker date="1526475085125" expanded="true" signature="232:564" ph="{...}" />
+            <marker date="1526475085125" expanded="true" signature="263:559" ph="{...}" />
+            <marker date="1526475085125" expanded="true" signature="607:809" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainWindow.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <marker date="1526469987432" expanded="false" signature="6:105" ph="..." />
+            <marker date="1526469987432" expanded="true" signature="123:1246" ph="{...}" />
+            <marker date="1526469987432" expanded="true" signature="158:1244" ph="{...}" />
+            <marker date="1526469987432" expanded="true" signature="267:454" ph="{...}" />
+            <marker date="1526469987432" expanded="true" signature="485:638" ph="{...}" />
+            <marker date="1526469987432" expanded="true" signature="490:634" ph="/* var diag_dialog = new ModalTest(); ... */" />
+            <marker date="1526469987432" expanded="true" signature="643:792" ph="/// Устанавливает содержимое главного окна ... " />
+            <marker date="1526469987432" expanded="true" signature="845:885" ph="{...}" />
+            <marker date="1526469987432" expanded="true" signature="889:1077" ph="/// Устанавливает содержимое главного окна панелью с ранее выбранным хранилищем ... " />
+            <marker date="1526469987432" expanded="true" signature="1149:1241" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/39A675C3-A0A5-4D88-8B5C-807B3B134209/1b/18322f68/Task.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1418" column="8" selection-start-line="1418" selection-start-column="8" selection-end-line="1418" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+          <folding>
+            <marker date="1526469777483" expanded="false" signature="6:141" ph="..." />
+            <marker date="1526469777483" expanded="true" signature="183:946" ph="{...}" />
+            <marker date="1526469777483" expanded="true" signature="226:944" ph="{...}" />
+            <marker date="1526469777483" expanded="true" signature="232:391" ph="/// Получить документ по идентификатору ... " />
+            <marker date="1526469777483" expanded="true" signature="415:539" ph="/// Получить все документы данного типа ... " />
+            <marker date="1526469777483" expanded="true" signature="578:782" ph="/// Получить документы, соответствующие фильтру ... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Domain/Contract.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="73" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+        <state relative-caret-position="100">
+          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
           <folding>
             <marker date="1526469529773" expanded="false" signature="6:71" ph="..." />
             <marker date="1526469529773" expanded="true" signature="96:2121" ph="{...}" />
@@ -745,10 +1000,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/DataBaseSwitcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <marker date="1526475859522" expanded="true" signature="6:111" ph="..." />
+            <marker date="1526475859522" expanded="true" signature="142:926" ph="{...}" />
+            <marker date="1526475859522" expanded="true" signature="182:924" ph="{...}" />
+            <marker date="1526475859522" expanded="true" signature="188:343" ph="/// Переключает активную базу данных в дженерик репозиториях ... " />
+            <marker date="1526475859522" expanded="true" signature="403:921" ph="{...}" />
+            <marker date="1526475859522" expanded="true" signature="600:779" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/MongoDb/BsonDocumentReconstituteExtension.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-455">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding>
+            <marker date="1526476199238" expanded="false" signature="6:54" ph="..." />
+            <marker date="1526476199238" expanded="true" signature="93:2051" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="150:2049" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="232:532" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="592:1136" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="848:1131" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="1204:1423" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="1236:1418" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="1493:2046" ph="{...}" />
+            <marker date="1526476199238" expanded="true" signature="1524:2041" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SubPages/BoxContent.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="139" column="74" selection-start-line="139" selection-start-column="74" selection-end-line="139" selection-end-column="74" />
+        <state relative-caret-position="345">
+          <caret line="136" column="12" selection-start-line="136" selection-start-column="12" selection-end-line="136" selection-end-column="12" />
           <folding>
             <marker date="1526469651158" expanded="false" signature="6:313" ph="..." />
             <marker date="1526469651158" expanded="true" signature="340:4510" ph="{...}" />
@@ -776,10 +1065,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/Box.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <marker date="1526469241589" expanded="false" signature="6:71" ph="..." />
+            <marker date="1526469241589" expanded="true" signature="96:1799" ph="{...}" />
+            <marker date="1526469241589" expanded="true" signature="100:155" ph="/// Коробка с договорами ... " />
+            <marker date="1526469241589" expanded="true" signature="182:1797" ph="{...}" />
+            <marker date="1526469241589" expanded="true" signature="300:357" ph="/// Идентификатор склада ... " />
+            <marker date="1526469241589" expanded="true" signature="401:446" ph="/// Название ... " />
+            <marker date="1526469241589" expanded="true" signature="485:548" ph="/// Самая ранняя дата договора ... " />
+            <marker date="1526469241589" expanded="true" signature="593:657" ph="/// Самая поздняя дата договора ... " />
+            <marker date="1526469241589" expanded="true" signature="702:769" ph="/// Количество договоров в коробке ... " />
+            <marker date="1526469241589" expanded="true" signature="846:1161" ph="{...}" />
+            <marker date="1526469241589" expanded="true" signature="975:1156" ph="{...}" />
+            <marker date="1526469241589" expanded="true" signature="1222:1794" ph="{...}" />
+            <marker date="1526469241589" expanded="true" signature="1486:1789" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scanning/ScanningCommand.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+          <folding>
+            <marker date="1526476485198" expanded="true" signature="6:157" ph="..." />
+            <marker date="1526476485198" expanded="true" signature="184:2002" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="223:2000" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="362:722" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="805:1009" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="1072:1388" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="1435:1997" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="1681:1841" ph="{...}" />
+            <marker date="1526476485198" expanded="true" signature="1849:1961" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+          <folding>
+            <marker date="1526475794570" expanded="false" signature="6:167" ph="..." />
+            <marker date="1526475794570" expanded="true" signature="209:1678" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="213:501" ph="/// Класс предоставляет набор методов для доступа к данным из локальной и удаленной базы данных, ... " />
+            <marker date="1526475794570" expanded="true" signature="571:1676" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="596:648" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="711:873" ph="/// Переключение активной базы данных с локальной на удаленную и наоборот ... " />
+            <marker date="1526475794570" expanded="true" signature="933:1096" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1123:1167" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1209:1254" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1314:1370" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1399:1440" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1472:1516" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1548:1592" ph="{...}" />
+            <marker date="1526475794570" expanded="true" signature="1629:1673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <marker date="1526476759757" expanded="false" signature="6:167" ph="..." />
+            <marker date="1526476759757" expanded="true" signature="206:2039" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="210:416" ph="/// Слой доступа к данным в локальной базе MongoDb. ... " />
+            <marker date="1526476759757" expanded="true" signature="498:2037" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="569:628" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="632:758" ph="/// Получение коллекции Bson документов из базы ... " />
+            <marker date="1526476759757" expanded="true" signature="815:906" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="933:1097" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="1139:1322" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="1382:1519" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="1548:1616" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="1648:1766" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="1798:1869" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="1906:1970" ph="{...}" />
+            <marker date="1526476759757" expanded="true" signature="2007:2034" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <marker date="1526372116440" expanded="true" signature="0:1026" ph="&lt;&lt;Border BorderBrush=&quot;LightGray&quot;&#10;&#9;        Margin=&quot;10,10,10,10&quot;&#10;&#9;        BorderThickness=&quot;1&quot;&#10;&#9;        DockPanel.Dock=&quot;Top&quot;&gt;&#10;&#9;&#9;&lt;Grid&gt;&#10;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Print Simple Text&quot; Height=&quot;37&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;22,21,0,0&quot;&#10;&#10;&#9;&#9;&#9;        Name=&quot;PrintSimpleTextButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;134&quot;&#10;&#10;&#9;&#9;&#9;        Click=&quot;PrintSimpleTextButton_Click&quot; /&gt;&#10;&#9;&#9;&#9;&lt;FlowDocumentScrollViewer x:Name=&quot;DocumentViewer&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;&#10;&#9;&lt;/Border&gt;.../&gt;" />
+            <marker date="1526372116440" expanded="true" signature="577:1011" ph="&lt;&lt;Grid&gt;&#10;&#10;&#10;&#9;&#9;&#9;&lt;Button Content=&quot;Print Simple Text&quot; Height=&quot;37&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;22,21,0,0&quot;&#10;&#10;&#9;&#9;&#9;        Name=&quot;PrintSimpleTextButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;134&quot;&#10;&#10;&#9;&#9;&#9;        Click=&quot;PrintSimpleTextButton_Click&quot; /&gt;&#10;&#9;&#9;&#9;&lt;FlowDocumentScrollViewer x:Name=&quot;DocumentViewer&quot; /&gt;&#10;&#9;&#9;&lt;/Grid&gt;.../&gt;" />
+            <marker date="1526372116440" expanded="true" signature="701:1000" ph="&lt;&lt;Button Content=&quot;Print Simple Text&quot; Height=&quot;37&quot; HorizontalAlignment=&quot;Left&quot; Margin=&quot;22,21,0,0&quot;&#10;&#10;&#9;&#9;&#9;        Name=&quot;PrintSimpleTextButton&quot; VerticalAlignment=&quot;Top&quot; Width=&quot;134&quot;&#10;&#10;&#9;&#9;&#9;        Click=&quot;PrintSimpleTextButton_Click&quot; /&gt; &lt;FlowDocumentScrollViewer x:Name=&quot;DocumentViewer&quot; /&gt;.../&gt;" />
+            <marker date="1526372116440" expanded="true" signature="713:934" ph="&lt;.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SubPages/Modals/BoxPrintForm.xaml.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="143">
+          <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
           <folding>
             <marker date="1526469651140" expanded="false" signature="6:406" ph="..." />
             <marker date="1526469651140" expanded="true" signature="440:2399" ph="{...}" />
@@ -795,127 +1184,6 @@
             <marker date="1526469651140" expanded="true" signature="2043:2394" ph="{...}" />
             <marker date="1526469651140" expanded="true" signature="2108:2390" ph="{...}" />
             <marker date="1526469651140" expanded="true" signature="2190:2385" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Temp/TestDb.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <marker date="1526469685963" expanded="false" signature="6:295" ph="..." />
-            <marker date="1526469685963" expanded="true" signature="318:1185" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="363:1183" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="384:418" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="481:527" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="558:758" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="786:1180" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="837:1176" ph="{...}" />
-            <marker date="1526469685963" expanded="true" signature="879:1003" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/IDocumentRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <marker date="1526469777483" expanded="false" signature="6:141" ph="..." />
-            <marker date="1526469777483" expanded="true" signature="183:946" ph="{...}" />
-            <marker date="1526469777483" expanded="true" signature="226:944" ph="{...}" />
-            <marker date="1526469777483" expanded="true" signature="232:391" ph="/// Получить документ по идентификатору ... " />
-            <marker date="1526469777483" expanded="true" signature="415:539" ph="/// Получить все документы данного типа ... " />
-            <marker date="1526469777483" expanded="true" signature="578:782" ph="/// Получить документы, соответствующие фильтру ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/SqlServer/SqlServerDataAccessLayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-          <folding>
-            <marker date="1526469755219" expanded="false" signature="6:137" ph="..." />
-            <marker date="1526469755219" expanded="true" signature="178:1275" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="264:1273" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="365:424" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="451:600" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="502:596" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="642:718" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="778:858" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="887:942" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="974:1029" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="1061:1116" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="1153:1208" ph="{...}" />
-            <marker date="1526469755219" expanded="true" signature="1245:1270" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/Repository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <marker date="1526469777502" expanded="false" signature="6:167" ph="..." />
-            <marker date="1526469777502" expanded="true" signature="209:1861" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="213:501" ph="/// Класс предоставляет набор методов для доступа к данным из локальной и удаленной базы данных, ... " />
-            <marker date="1526469777502" expanded="true" signature="571:1859" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="596:716" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="779:941" ph="/// Переключение активной базы данных с локальной на удаленную и наоборот ... " />
-            <marker date="1526469777502" expanded="true" signature="1001:1279" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1306:1350" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1392:1437" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1497:1553" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1582:1623" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1655:1699" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1731:1775" ph="{...}" />
-            <marker date="1526469777502" expanded="true" signature="1812:1856" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/MongoDb/MongoDbDataAccessLayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
-          <folding>
-            <marker date="1526469777522" expanded="false" signature="6:167" ph="..." />
-            <marker date="1526469777522" expanded="true" signature="206:1910" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="210:416" ph="/// Слой доступа к данным в локальной базе MongoDb. ... " />
-            <marker date="1526469777522" expanded="true" signature="498:1908" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="569:628" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="632:758" ph="/// Получение коллекции Bson документов из базы ... " />
-            <marker date="1526469777522" expanded="true" signature="815:906" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="933:1097" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1139:1322" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1382:1519" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1548:1596" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1628:1676" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1708:1756" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1793:1841" ph="{...}" />
-            <marker date="1526469777522" expanded="true" signature="1878:1905" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProvider/Repository/DocumentRepositoryOLD.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding>
-            <marker date="1526469734996" expanded="false" signature="6:247" ph="..." />
-            <marker date="1526469734996" expanded="true" signature="289:1434" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="324:1432" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="410:511" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="568:706" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="609:646" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="776:896" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="992:1160" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="1231:1288" ph="{...}" />
-            <marker date="1526469734996" expanded="true" signature="1347:1429" ph="{...}" />
           </folding>
         </state>
       </provider>

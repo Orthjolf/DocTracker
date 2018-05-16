@@ -5,6 +5,7 @@ using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Service;
+using WpfApp.Temp;
 
 namespace WpfApp.Scanning
 {
@@ -30,40 +31,43 @@ namespace WpfApp.Scanning
 
 		private static void AddContract(string boxId, string id, string contractNumber)
 		{
-//			var contract = ContractFromDb.Get(id, contractNumber);
-//			contract["BoxId"] = boxId;
-//			Contract.Repository.AddAndSave(contract);
-//			ConsoleWriter.Write($"Договор с номером {contract["Number"]} добавлен");
+			var contract = ContractFromDb.Get(id, contractNumber);
+			contract.BoxId = boxId;
+			Contract.Repository.Add(contract);
+			ConsoleWriter.Write($"Договор с номером {contract.Number} добавлен");
 		}
 
 		private static void DeleteContract(string boxId, string id)
 		{
-//			var contracts = Contract.Repository.GetByBoxId(boxId).ToList();
-//			if (!contracts.Any()) return;
-//			var randomContract = contracts.Last();
-//			Contract.Repository.DeleteById(randomContract.Id);
-//			ConsoleWriter.Write($"Договор с номером {randomContract.Number} удален");
+			//TODO переделать
+			var contracts = Contract.Repository.GetAll().Where(c => c.BoxId == boxId).ToList();
+			if (!contracts.Any()) return;
+			var lastContract = contracts.Last();
+			Contract.Repository.DeleteById(lastContract.Id);
+			ConsoleWriter.Write($"Договор с номером {lastContract.Number} удален");
 		}
 
 		private static void UpdateBox(string boxId)
 		{
+			//TODO переделать
+			var contracts = Contract.Repository.GetAll().Where(c => c.BoxId == boxId).ToList();
 //			var contracts = Contract.Repository.GetByBoxId(boxId).ToList();
-//
-//			var box = Box.Repository.Get(boxId);
-//			if (contracts.Any())
-//			{
-//				box.MaxDate = contracts.Max(c => c.ContractDate);
-//				box.MinDate = contracts.Min(c => c.ContractDate);
-//				box.ContractsCount = contracts.Count;
-//			}
-//			else
-//			{
-//				box.MaxDate = DateTime.MinValue;
-//				box.MinDate = DateTime.MinValue;
-//				box.ContractsCount = 0;
-//			}
-//
-//			Box.Repository.Update(box);
+
+			var box = Box.Repository.Get(boxId);
+			if (contracts.Any())
+			{
+				box.MaxDate = contracts.Max(c => c.ContractDate);
+				box.MinDate = contracts.Min(c => c.ContractDate);
+				box.ContractsCount = contracts.Count;
+			}
+			else
+			{
+				box.MaxDate = DateTime.MinValue;
+				box.MinDate = DateTime.MinValue;
+				box.ContractsCount = 0;
+			}
+
+			Box.Repository.Update(box);
 		}
 	}
 }

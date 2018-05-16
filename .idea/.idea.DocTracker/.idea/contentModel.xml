@@ -15,7 +15,6 @@
           <e p="MongoDbDataContext.cs" t="Include" />
         </e>
         <e p="Repository" t="Include">
-          <e p="DocumentRepositoryOLD.cs" t="Include" />
           <e p="IDocumentRepository.cs" t="Include" />
           <e p="Repository.cs" t="Include" />
         </e>
