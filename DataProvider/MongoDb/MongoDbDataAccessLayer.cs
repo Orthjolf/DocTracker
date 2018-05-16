@@ -55,5 +55,10 @@ namespace WpfApp.DataProvider.MongoDb
 		{
 			throw new NotImplementedException();
 		}
+		
+		public override string ToString()
+		{
+			return "Mongo";
+		}
 	}
 }

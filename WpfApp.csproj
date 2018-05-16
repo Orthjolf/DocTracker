@@ -102,6 +102,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataProvider\DataBaseSwitcher.cs" />
     <Compile Include="DataProvider\MongoDb\BsonDocumentReconstituteExtension.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataAccessLayer.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataContext.cs" />
@@ -110,7 +111,8 @@
     <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\IDocumentRepository1.cs" />
     <Compile Include="DataProvider\Repository\StorageRepository.cs" />
-    <Compile Include="DataProvider\Repository\DataBaseAccessLayer.cs" />
+    <Compile Include="DataProvider\Repository\GenericRepository.cs" />
+    <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
     <Compile Include="Enum\ConnectionType.cs" />
     <Compile Include="Scanning\ScanningCommand.cs" />

@@ -6,7 +6,7 @@ namespace WpfApp.Domain
 	/// <summary>
 	/// Действие, произведенное с договором
 	/// </summary>
-	public class Action
+	public class Action : Entity
 	{
 		/// <summary>
 		/// Идентификатор контракта
