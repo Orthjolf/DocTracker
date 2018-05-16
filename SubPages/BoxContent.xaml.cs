@@ -33,7 +33,9 @@ namespace WpfApp.SubPages
 			_box = box;
 			_storage = Storage.Repository.Get(box.StorageId);
 			_action = ActionPerformed.PutInBox;
-			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
+			//TODO перепилить
+			_contracts = Contract.Repository.GetAll().Where(c => c.BoxId == _box.Id).ToList();
+//			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
@@ -133,7 +135,9 @@ namespace WpfApp.SubPages
 			});
 			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
 			ScanningCommand.DoWork(_box.Id, barCode, _action);
-			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
+			//TODO перепилить
+			_contracts = Contract.Repository.GetAll().Where(c => c.BoxId == _box.Id).ToList();
+//			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			_resetEvent.Set();
 		}
 

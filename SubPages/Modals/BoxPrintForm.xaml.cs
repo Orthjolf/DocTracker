@@ -37,7 +37,9 @@ namespace WpfApp.SubPages.Modals
 
 		private List<string> GetBoxInfo(Box box)
 		{
-			var contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
+			//TODO перепилить
+			var contracts = Contract.Repository.GetAll().Where(c => c.BoxId == box.Id).ToList();
+//			var contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
 			return new List<string>
 			{
 				box.Name,

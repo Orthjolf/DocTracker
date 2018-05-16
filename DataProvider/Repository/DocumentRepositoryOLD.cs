@@ -11,7 +11,7 @@ using WpfApp.Enum;
 
 namespace WpfApp.DataProvider.Repository
 {
-	public class DocumentRepository : IDocumentRepository
+	public class DocumentRepository
 	{
 		protected static IMongoCollection<BsonDocument> GetCollection(DocumentType type)
 		{

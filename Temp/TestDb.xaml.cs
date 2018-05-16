@@ -18,7 +18,6 @@ namespace WpfApp.Temp
 		public TestDb()
 		{
 			InitializeComponent();
-			ConsoleWriter.Write("Test");
 		}
 
 		private void WindowLoaded(object sender, RoutedEventArgs e)
@@ -30,7 +29,7 @@ namespace WpfApp.Temp
 
 		private void TestNewThing()
 		{
-			var all = Storage.Repository1.GetAll();
+			var all = Storage.Repository.GetAll();
 //			var singleById = Storage.Repository1.Get("13ffad3a-7e33-4bb3-920a-4736fcfdf746");
 
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);

@@ -13,7 +13,7 @@ namespace WpfApp.DataProvider.MongoDb
 	/// Предоставляет методы получения элементов из базы типа T
 	/// </summary>
 	/// <typeparam name="T">Тип возвращаемых значений</typeparam>
-	public class MongoDbDataAccessLayer<T> : IDocumentRepository1<T> where T : Entity
+	public class MongoDbDataAccessLayer<T> : IDocumentRepository<T> where T : Entity
 	{
 		private readonly string _type;
 
@@ -55,7 +55,22 @@ namespace WpfApp.DataProvider.MongoDb
 		{
 			throw new NotImplementedException();
 		}
-		
+
+		public void Update(T entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void Delete(T entity)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeleteById(string id)
+		{
+			throw new NotImplementedException();
+		}
+
 		public override string ToString()
 		{
 			return "Mongo";

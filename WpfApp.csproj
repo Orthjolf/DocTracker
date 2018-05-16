@@ -106,11 +106,8 @@
     <Compile Include="DataProvider\MongoDb\BsonDocumentReconstituteExtension.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataAccessLayer.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataContext.cs" />
-    <Compile Include="DataProvider\Repository\BoxRepository.cs" />
-    <Compile Include="DataProvider\Repository\ContractRepository.cs" />
-    <Compile Include="DataProvider\Repository\DocumentRepository.cs" />
-    <Compile Include="DataProvider\Repository\IDocumentRepository1.cs" />
-    <Compile Include="DataProvider\Repository\StorageRepository.cs" />
+    <Compile Include="DataProvider\Repository\DocumentRepositoryOLD.cs" />
+    <Compile Include="DataProvider\Repository\IDocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\Repository.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
@@ -181,9 +178,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="DataProvider\Repository\IDocumentRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

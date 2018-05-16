@@ -6,7 +6,7 @@ using WpfApp.Domain;
 
 namespace WpfApp.DataProvider.SqlServer
 {
-	public class SqlServerDataAccessLayer<T> : IDocumentRepository1<T> where T : Entity
+	public class SqlServerDataAccessLayer<T> : IDocumentRepository<T> where T : Entity
 	{
 		private readonly string _type;
 
@@ -40,6 +40,21 @@ namespace WpfApp.DataProvider.SqlServer
 		}
 
 		public void Add(T entity)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void Update(T entity)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void Delete(T entity)
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void DeleteById(string id)
 		{
 			throw new System.NotImplementedException();
 		}

@@ -15,13 +15,9 @@
           <e p="MongoDbDataContext.cs" t="Include" />
         </e>
         <e p="Repository" t="Include">
-          <e p="BoxRepository.cs" t="Include" />
-          <e p="ContractRepository.cs" t="Include" />
-          <e p="DocumentRepository.cs" t="Include" />
+          <e p="DocumentRepositoryOLD.cs" t="Include" />
           <e p="IDocumentRepository.cs" t="Include" />
-          <e p="IDocumentRepository1.cs" t="Include" />
           <e p="Repository.cs" t="Include" />
-          <e p="StorageRepository.cs" t="Include" />
         </e>
         <e p="SqlServer" t="Include">
           <e p="SqlServerDataAccessLayer.cs" t="Include" />
