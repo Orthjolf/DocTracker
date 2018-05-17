@@ -16,7 +16,8 @@ namespace WpfApp.DataProvider.Repository
 	{
 		public Repository()
 		{
-			SetConnectionType(ConnectionType.Local);
+//			SetConnectionType(ConnectionType.Local);
+			SetConnectionType(ConnectionType.Remote);
 		}
 
 		private static IDocumentRepository<T> _dataAccessLayer;

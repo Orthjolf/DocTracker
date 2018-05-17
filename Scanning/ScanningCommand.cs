@@ -6,6 +6,7 @@ using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Service;
 using WpfApp.Temp;
+using Console = WpfApp.Service.Console;
 
 namespace WpfApp.Scanning
 {
@@ -34,7 +35,7 @@ namespace WpfApp.Scanning
 			var contract = ContractFromDb.Get(id, contractNumber);
 			contract.BoxId = boxId;
 			Contract.Repository.Add(contract);
-			ConsoleWriter.Write($"Договор с номером {contract.Number} добавлен");
+			Console.Write($"Договор с номером {contract.Number} добавлен");
 		}
 
 		private static void DeleteContract(string boxId, string id)
@@ -44,7 +45,7 @@ namespace WpfApp.Scanning
 			if (!contracts.Any()) return;
 			var lastContract = contracts.Last();
 			Contract.Repository.DeleteById(lastContract.Id);
-			ConsoleWriter.Write($"Договор с номером {lastContract.Number} удален");
+			Console.Write($"Договор с номером {lastContract.Number} удален");
 		}
 
 		private static void UpdateBox(string boxId)

@@ -3,6 +3,7 @@ using System.Linq;
 using WpfApp.DataProvider.Repository;
 using WpfApp.Enum;
 using WpfApp.Service;
+using Console = WpfApp.Service.Console;
 
 namespace WpfApp.DataProvider
 {
@@ -24,7 +25,7 @@ namespace WpfApp.DataProvider
 				method?.Invoke(null, new object[] {type});
 			});
 
-			ConsoleWriter.Write(
+			Console.Write(
 				"Активная база данных переключена на" +
 				(type == ConnectionType.Local ? "MongoDb" : "SqlServer")
 			);

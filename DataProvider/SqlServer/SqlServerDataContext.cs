@@ -12,8 +12,7 @@ namespace WpfApp.DataProvider.SqlServer
 		/// <summary>
 		/// Экземпляр контекста
 		/// </summary>
-		public static SqlServerDataContext Instance =>
-			new Lazy<SqlServerDataContext>(() => new SqlServerDataContext()).Value;
+		public static SqlServerDataContext Instance => new SqlServerDataContext();
 
 		public DbSet<Storage> Storages { get; set; }
 		public DbSet<Box> Boxes { get; set; }
@@ -21,7 +20,7 @@ namespace WpfApp.DataProvider.SqlServer
 
 		private const string ConnectionString = "DefaultConnection";
 
-		public SqlServerDataContext() : base(ConnectionString)
+		private SqlServerDataContext() : base(ConnectionString)
 		{
 		}
 	}

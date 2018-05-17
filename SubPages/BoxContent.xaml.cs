@@ -9,7 +9,7 @@ using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Scanning;
-using static WpfApp.Service.ConsoleWriter;
+using static WpfApp.Service.Console;
 
 namespace WpfApp.SubPages
 {

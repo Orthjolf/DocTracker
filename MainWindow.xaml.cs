@@ -16,9 +16,9 @@ namespace WpfApp
 		{
 			InitializeComponent();
 			_instance = this;
-			_mainContent = new MainContent();
-			RootContent.Content = _mainContent;
-//			RootContent.Content = new TestDb();
+//			_mainContent = new MainContent();
+//			RootContent.Content = _mainContent;
+			RootContent.Content = new TestDb();
 
 			showMsg();
 		}

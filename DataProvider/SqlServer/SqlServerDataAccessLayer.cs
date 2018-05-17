@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
@@ -10,53 +11,60 @@ namespace WpfApp.DataProvider.SqlServer
 	{
 		private readonly string _type;
 
-		private DbSet<T> _dbSet;
+		private readonly DbSet<T> _dbSet;
+
+		private readonly SqlServerDataContext _db;
 
 		public SqlServerDataAccessLayer()
 		{
 			_type = typeof(T).ToString().Split('.').Last();
+			_db = SqlServerDataContext.Instance;
+
+			_dbSet = _db.Set<T>();
 		}
 
 		public T Get(string id)
 		{
-			using (var db = new SqlServerDataContext())
-			{
-				var query = from b in _dbSet select b;
-				return query.First(e => e.Id == id);
-			}
+			var query = from b in _dbSet select b;
+			return query.First(e => e.Id == id);
 		}
 
 		public IReadOnlyCollection<T> GetAll()
 		{
-			var query = from b in _dbSet select b;
+			var set = _dbSet;
+			var query = from b in set select b;
 			return query.ToList();
 		}
 
 		public IReadOnlyCollection<T> GetFiltered(string filter)
 		{
-			
 			var query = from b in _dbSet select b;
 			return query.ToList();
+			
 		}
 
 		public void Add(T entity)
 		{
-			throw new System.NotImplementedException();
+			_dbSet.Add(entity);
+			_db.SaveChanges();
 		}
 
 		public void Update(T entity)
 		{
-			throw new System.NotImplementedException();
+			_dbSet.AddOrUpdate(entity);
+			_db.SaveChanges();
 		}
 
 		public void Delete(T entity)
 		{
-			throw new System.NotImplementedException();
+			_dbSet.Remove(entity);
+			_db.SaveChanges();
 		}
 
 		public void DeleteById(string id)
 		{
-			throw new System.NotImplementedException();
+			_dbSet.Remove(_dbSet.First(e => e.Id == id));
+			_db.SaveChanges();
 		}
 
 		public override string ToString()
