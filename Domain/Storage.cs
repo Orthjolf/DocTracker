@@ -9,8 +9,8 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
-		public static StorageRepository Repository =>
-			new Lazy<StorageRepository>(() => new StorageRepository()).Value;
+		public static Repository<Storage> Repository =>
+			new Lazy<Repository<Storage>>(() => new Repository<Storage>()).Value;
 
 		/// <summary>
 		/// Название
@@ -19,7 +19,7 @@ namespace WpfApp.Domain
 
 		/// <summary>
 		/// Адрес
-		/// </summary>ам
+		/// </summary>
 		public string Address { get; set; }
 
 		public static Storage Reconstitute(BsonDocument storage)

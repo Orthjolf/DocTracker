@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows.Controls;
 using WpfApp.SubPages;
+using WpfApp.Temp;
 
 namespace WpfApp
 {
@@ -15,8 +16,9 @@ namespace WpfApp
 		{
 			InitializeComponent();
 			_instance = this;
-			_mainContent = new MainContent();
-			RootContent.Content = _mainContent;
+//			_mainContent = new MainContent();
+//			RootContent.Content = _mainContent;
+			RootContent.Content = new TestDb();
 
 			showMsg();
 		}

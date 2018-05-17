@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Wilhelm\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_DocTracker.-516314326.00" t="ExcludeRecursive" />
+    <e p="C:\Work\DocTracker" t="IncludeRecursive">
+      <e p="App.config" t="Include" />
+      <e p="App.xaml" t="Include" />
+      <e p="App.xaml.cs" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="DataProvider" t="Include">
+        <e p="DataBaseSwitcher.cs" t="Include" />
+        <e p="MongoDb" t="Include">
+          <e p="BsonDocumentReconstituteExtension.cs" t="Include" />
+          <e p="MongoDbDataAccessLayer.cs" t="Include" />
+          <e p="MongoDbDataContext.cs" t="Include" />
+        </e>
+        <e p="Repository" t="Include">
+          <e p="IDocumentRepository.cs" t="Include" />
+          <e p="Repository.cs" t="Include" />
+        </e>
+        <e p="SqlServer" t="Include">
+          <e p="SqlServerDataAccessLayer.cs" t="Include" />
+          <e p="SqlServerDataContext.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DocTracker.sln" t="IncludeFlat" />
+      <e p="Domain" t="Include">
+        <e p="Action.cs" t="Include" />
+        <e p="Box.cs" t="Include" />
+        <e p="Contract.cs" t="Include" />
+        <e p="Entity.cs" t="Include" />
+        <e p="Storage.cs" t="Include" />
+      </e>
+      <e p="Enum" t="Include">
+        <e p="ActionPerformed.cs" t="Include" />
+        <e p="ConnectionType.cs" t="Include" />
+        <e p="DocumentType.cs" t="Include" />
+      </e>
+      <e p="MainWindow.xaml" t="Include" />
+      <e p="MainWindow.xaml.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+      </e>
+      <e p="Scanning" t="Include">
+        <e p="ScanningCommand.cs" t="Include" />
+      </e>
+      <e p="Service" t="Include">
+        <e p="BarCodeDecoder.cs" t="Include" />
+        <e p="ConsoleWriter.cs" t="Include" />
+      </e>
+      <e p="SubPages" t="Include">
+        <e p="BoxContent.xaml" t="Include" />
+        <e p="BoxContent.xaml.cs" t="Include" />
+        <e p="ContractDetails.xaml" t="Include" />
+        <e p="ContractDetails.xaml.cs" t="Include" />
+        <e p="LoadingPartial.xaml" t="Include" />
+        <e p="LoadingPartial.xaml.cs" t="Include" />
+        <e p="MainContent.xaml" t="Include" />
+        <e p="MainContent.xaml.cs" t="Include" />
+        <e p="Modals" t="Include">
+          <e p="AddBoxDialog.xaml" t="Include" />
+          <e p="AddBoxDialog.xaml.cs" t="Include" />
+          <e p="AddStorageDialog.xaml" t="Include" />
+          <e p="AddStorageDialog.xaml.cs" t="Include" />
+          <e p="BoxContentModal.xaml" t="Include" />
+          <e p="BoxContentModal.xaml.cs" t="Include" />
+          <e p="BoxPrintForm.xaml" t="Include" />
+          <e p="BoxPrintForm.xaml.cs" t="Include" />
+          <e p="ErrorDialog.xaml" t="Include" />
+          <e p="ErrorDialog.xaml.cs" t="Include" />
+        </e>
+        <e p="StorageContent.xaml" t="Include" />
+        <e p="StorageContent.xaml.cs" t="Include" />
+      </e>
+      <e p="Temp" t="Include">
+        <e p="BarCodeEncoder.cs" t="Include" />
+        <e p="ContractFromDb.cs" t="Include" />
+        <e p="RandomBarCodeGenerator.cs" t="Include" />
+        <e p="RandomContractFactory.cs" t="Include" />
+        <e p="TestDb.xaml" t="Include" />
+        <e p="TestDb.xaml.cs" t="Include" />
+      </e>
+      <e p="WpfApp.csproj" t="IncludeRecursive" />
+    </e>
+  </component>
+</project>

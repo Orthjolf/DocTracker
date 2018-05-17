@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -104,16 +105,18 @@ namespace WpfApp.SubPages
 			var inputDialog = new AddStorageDialog();
 			if (inputDialog.ShowDialog() != true) return;
 
-			var storageBson = new BsonDocument
+			var newStorage = new Storage
 			{
-				{"Name", inputDialog.Name.Text},
-				{"Address", inputDialog.Address.Text},
-				{"Description", inputDialog.Description.Text},
+				Id = Guid.NewGuid().ToString(),
+				Name = inputDialog.Name.Text,
+				Address = inputDialog.Address.Text,
+				Description = inputDialog.Description.Text,
 			};
-			Storage.Repository.AddAndSave(storageBson);
+
+			Storage.Repository.Add(newStorage);
 			Storages = Storage.Repository.GetAll().ToList();
 			StorageMenuItems.ItemsSource = Storages;
-			SetContent(Storages.First(s => s.Id == storageBson["_id"].ToString()));
+			SetContent(Storages.First(s => s.Id == newStorage.Id));
 		}
 
 		/// <summary>

@@ -10,7 +10,6 @@ namespace WpfApp.Domain
 		/// <summary>
 		/// Идентификатор
 		/// </summary>
-		[BsonId]
 		public string Id { get; set; }
 
 		/// <summary>

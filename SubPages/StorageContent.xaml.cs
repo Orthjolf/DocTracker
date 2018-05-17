@@ -7,9 +7,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using WpfApp.Domain;
 using WpfApp.Service;
 using WpfApp.SubPages.Modals;
+using Action = System.Action;
 
 namespace WpfApp.SubPages
 {
@@ -35,7 +37,9 @@ namespace WpfApp.SubPages
 
 		private void GetBoxes()
 		{
-			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
+			//@TODO переписать
+//			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
+			_boxes = Box.Repository.GetAll().Where(b => b.StorageId == _storageId).ToList();
 			_resetEvent.Set();
 		}
 
@@ -66,18 +70,19 @@ namespace WpfApp.SubPages
 			var inputDialog = new AddBoxDialog(_boxes);
 			if (inputDialog.ShowDialog() != true) return;
 
-			var boxBson = new BsonDocument
+			var newBox = new Box
 			{
-				{"StorageId", _storageId},
-				{"Name", inputDialog.Name.Text},
-				{"Description", ""},
-				{"MinDate", DateTime.MinValue},
-				{"MaxDate", DateTime.MinValue},
-				{"ContractsCount", 0}
+				Id = Guid.NewGuid().ToString(),
+				StorageId = _storageId,
+				Name = inputDialog.Name.Text,
+				Description = "",
+				MinDate = DateTime.MinValue,
+				MaxDate = DateTime.MinValue,
+				ContractsCount = 0,
 			};
 
-			Box.Repository.AddAndSave(boxBson);
-			_boxes.Add(Box.Reconstitute(boxBson));
+			Box.Repository.Add(newBox);
+			_boxes.Add(newBox);
 			BoxGridItems.ItemsSource = _boxes.ToList();
 			BoxGridItems.SelectedItem = _boxes.First(b => b.Name == inputDialog.Name.Text);
 		}
@@ -108,10 +113,9 @@ namespace WpfApp.SubPages
 
 		private void PrintButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			var selected = (Box) BoxGridItems.SelectedItem;
-
-			var inputDialog = new BoxPrintForm(selected);
-			if (inputDialog.ShowDialog() != true) return;
+			var box = (Box) BoxGridItems.SelectedItem;
+			if (box == null) return;
+			MainWindow.SetContent(new BoxPrintForm(box));
 		}
 	}
 }

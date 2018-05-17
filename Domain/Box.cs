@@ -9,8 +9,8 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Box : Entity
 	{
-		public static BoxRepository Repository =>
-			new Lazy<BoxRepository>(() => new BoxRepository()).Value;
+		public static Repository<Box> Repository =>
+			new Lazy<Repository<Box>>(() => new Repository<Box>()).Value;
 
 		/// <summary>
 		/// Идентификатор склада

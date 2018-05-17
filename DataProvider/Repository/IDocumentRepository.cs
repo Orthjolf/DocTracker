@@ -1,31 +1,40 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using MongoDB.Bson;
 using WpfApp.Domain;
 using WpfApp.Enum;
 
 namespace WpfApp.DataProvider.Repository
 {
-	public interface IDocumentRepository
+	public interface IDocumentRepository<T>
 	{
 		/// <summary>
 		/// Получить документ по идентификатору
 		/// </summary>
 		/// <param name="id">Идентификатор</param>
-		/// <param name="type">Тип</param>
 		/// <returns>Документ из базы</returns>
-		BsonDocument Get(string id, DocumentType type);
+		T Get(string id);
 
 		/// <summary>
 		/// Получить все документы данного типа
 		/// </summary>
-		/// <returns></returns>
-		IReadOnlyCollection<BsonDocument> GetAll(DocumentType type);
+		/// <returns>Все документы данного типа</returns>
+		IReadOnlyCollection<T> GetAll();
 
 		/// <summary>
-		/// Получить все документы
+		/// Получить документы, соответствующие фильтру
 		/// </summary>
-		/// <returns></returns>
-		IReadOnlyCollection<BsonDocument> GetFiltered(BsonDocument filter, DocumentType type);
+		/// <param name="filter">Строка-фильтр в формате Json</param>
+		/// <returns>Документы, соответствующие фильтру</returns>
+		IReadOnlyCollection<T> GetFiltered(string filter);
+
+		void Add(T entity);
+
+		void Update(T entity);
+
+		void Delete(T entity);
+
+		void DeleteById(string id);
 	}
 }

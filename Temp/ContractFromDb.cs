@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Linq;
-using MongoDB.Bson;
+using WpfApp.Domain;
 
-namespace WpfApp.Debug
+namespace WpfApp.Temp
 {
 	public static class ContractFromDb
 	{
 		private static readonly Random R = new Random();
 
-		public static BsonDocument Get(string id, string contractNumber)
+		public static Contract Get(string id, string contractNumber)
 		{
-			return new BsonDocument
+			return new Contract
 			{
-				{"Number", contractNumber},
-				{"ClientFirstName", GetRandomString()},
-				{"ClientLastName", GetRandomString()},
-				{"ClientPatronymic", GetRandomString()},
-				{"PhoneNumber", GetRandomString()},
-				{"LoanId", id},
-				{"PrefixOfPlace", GetRandomString()},
-				{"ContractDate", DateTime.Now}
+				Id = id,
+				Number = contractNumber,
+				ClientFirstName = GetRandomString(),
+				ClientLastName = GetRandomString(),
+				ClientPatronymic = GetRandomString(),
+				PhoneNumber = GetRandomString(),
+				LoanId = id,
+				PrefixOfPlace = GetRandomString(),
+				ContractDate = DateTime.Now
 			};
 		}
 
