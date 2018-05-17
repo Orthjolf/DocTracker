@@ -31,16 +31,13 @@ namespace WpfApp.DataProvider.SqlServer
 
 		public IReadOnlyCollection<T> GetAll()
 		{
-			var set = _dbSet;
-			var query = from b in set select b;
-			return query.ToList();
+			return _dbSet.ToList();
 		}
 
 		public IReadOnlyCollection<T> GetFiltered(string filter)
 		{
 			var query = from b in _dbSet select b;
 			return query.ToList();
-			
 		}
 
 		public void Add(T entity)
@@ -57,7 +54,7 @@ namespace WpfApp.DataProvider.SqlServer
 
 		public void Delete(T entity)
 		{
-			_dbSet.Remove(entity);
+			_dbSet.Remove(_dbSet.First(e => e.Id == entity.Id));
 			_db.SaveChanges();
 		}
 

@@ -5,6 +5,7 @@ using WpfApp.DataProvider;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Service;
+using WpfApp.Tests;
 
 namespace WpfApp.Temp
 {
@@ -53,16 +54,18 @@ namespace WpfApp.Temp
 
 //			Contract.Repository.Add(ContractFromDb.Get("12312312", "wqeqweqwewqwe"));
 
-			var storages = Storage.Repository.GetAll().ToList();
-			storages.ForEach(b => Console.Write(b.Id));
-			Storage.Repository.DeleteById("20e48107-c01f-4e08-b4ae-cd179bf96dc6");
+//			var storages = Storage.Repository.GetAll().ToList();
+//			storages.ForEach(b => Console.Write(b.Id));
+//			Storage.Repository.DeleteById("20e48107-c01f-4e08-b4ae-cd179bf96dc6");
+//
+//			Console.Write("" + storages.Count);
+//			Console.Write("удаление");
+//
+//			storages = Storage.Repository.GetAll().ToList();
+//			storages.ForEach(b => Console.Write(b.Id));
+//			Console.Write("" + storages.Count);
 
-			Console.Write("" + storages.Count);
-			Console.Write("удаление");
-
-			storages = Storage.Repository.GetAll().ToList();
-			storages.ForEach(b => Console.Write(b.Id));
-			Console.Write("" + storages.Count);
+			Test.RunAllTestSets();
 		}
 	}
 }
