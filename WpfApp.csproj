@@ -102,6 +102,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classifiers\ObjectFactory.cs" />
     <Compile Include="DataProvider\DataBaseSwitcher.cs" />
     <Compile Include="DataProvider\MongoDb\BsonDocumentReconstituteExtension.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataAccessLayer.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
     <Compile Include="Enum\ConnectionType.cs" />
     <Compile Include="Scanning\ScanningCommand.cs" />
+    <Compile Include="Service\ConnectionChecker.cs" />
     <Compile Include="SubPages\LoadingPartial.xaml.cs" />
     <Compile Include="Temp\BarCodeEncoder.cs" />
     <Compile Include="Temp\ContractFromDb.cs" />
