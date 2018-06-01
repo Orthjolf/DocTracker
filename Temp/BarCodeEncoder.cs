@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace WpfApp.Service
+namespace WpfApp.Temp
 {
 	public static class BarCodeEncoder
 	{

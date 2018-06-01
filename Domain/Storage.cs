@@ -21,16 +21,5 @@ namespace WpfApp.Domain
 		/// Адрес
 		/// </summary>
 		public string Address { get; set; }
-
-		public static Storage Reconstitute(BsonDocument storage)
-		{
-			return new Storage
-			{
-				Id = storage["_id"].ToString(),
-				Name = storage["Name"].ToString(),
-				Address = storage["Address"].ToString(),
-				Description = storage["Description"].ToString()
-			};
-		}
 	}
 }

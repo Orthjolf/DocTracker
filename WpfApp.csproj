@@ -111,10 +111,18 @@
     <Compile Include="DataProvider\Repository\Repository.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
+    <Compile Include="Domain\LoginInformation.cs" />
+    <Compile Include="Domain\User.cs" />
     <Compile Include="Enum\ConnectionType.cs" />
+    <Compile Include="Enum\UserRole.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Scanning\ScanningCommand.cs" />
     <Compile Include="Service\ConnectionChecker.cs" />
+    <Compile Include="Service\PasswordEncoder.cs" />
     <Compile Include="SubPages\LoadingPartial.xaml.cs" />
+    <Compile Include="SubPages\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Temp\BarCodeEncoder.cs" />
     <Compile Include="Temp\ContractFromDb.cs" />
     <Compile Include="Temp\RandomBarCodeGenerator.cs" />
@@ -155,6 +163,7 @@
     <Page Include="SubPages\BoxContent.xaml" />
     <Page Include="SubPages\ContractDetails.xaml" />
     <Page Include="SubPages\LoadingPartial.xaml" />
+    <Page Include="SubPages\Login.xaml" />
     <Page Include="SubPages\MainContent.xaml" />
     <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
     <Page Include="SubPages\Modals\AddStorageDialog.xaml" />

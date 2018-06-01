@@ -7,10 +7,19 @@ namespace WpfApp.Service
 	public static class ConnectionChecker
 	{
 		/// <summary>
-		/// Проверяет наличие соединения с интернетом пингуя гугл.
+		/// Возвращает тип соединения с базой данных
 		/// </summary>
 		/// <returns>Тип соединения на данный момент. Локальный или удаленный</returns>
 		public static ConnectionType GetConnection()
+		{
+			return ConnectionIsAvailable() ? ConnectionType.Remote : ConnectionType.Local;
+		}
+
+		/// <summary>
+		/// Проверяет доступно ли подключение к интернету
+		/// </summary>
+		/// <returns>Доступно ли подключение к интернету</returns>
+		public static bool ConnectionIsAvailable()
 		{
 			const string host = "google.com";
 			const int timeout = 1000;
@@ -22,12 +31,12 @@ namespace WpfApp.Service
 				var pingOptions = new PingOptions();
 				var reply = myPing.Send(host, timeout, buffer, pingOptions);
 
-				if (reply == null) return ConnectionType.Remote;
-				return reply.Status == IPStatus.Success ? ConnectionType.Remote : ConnectionType.Local;
+				if (reply == null) return false;
+				return reply.Status == IPStatus.Success;
 			}
 			catch (Exception)
 			{
-				return ConnectionType.Local;
+				return false;
 			}
 		}
 	}
