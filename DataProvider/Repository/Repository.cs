@@ -16,7 +16,7 @@ namespace WpfApp.DataProvider.Repository
 	{
 		public Repository()
 		{
-			var connectionType = ConnectionChecker.GetConnection();
+			var connectionType = ConnectionChecker.GetConnectionType();
 			SetConnectionType(connectionType);
 		}
 

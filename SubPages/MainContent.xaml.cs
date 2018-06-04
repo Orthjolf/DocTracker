@@ -60,7 +60,11 @@ namespace WpfApp.SubPages
 		/// <param name="selectedStorageId">Id хранилища</param>
 		public void SelectItem(string selectedStorageId)
 		{
-			var storage = Storages.First(s => s.Id == selectedStorageId);
+			var storage = selectedStorageId == string.Empty
+				? Storages.FirstOrDefault()
+				: Storages.First(s => s.Id == selectedStorageId);
+
+			if (storage == null) return;
 			SetContent(storage);
 		}
 

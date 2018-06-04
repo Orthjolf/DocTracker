@@ -10,9 +10,18 @@ namespace WpfApp.Service
 		/// Возвращает тип соединения с базой данных
 		/// </summary>
 		/// <returns>Тип соединения на данный момент. Локальный или удаленный</returns>
-		public static ConnectionType GetConnection()
+		public static ConnectionType GetConnectionType()
 		{
 			return ConnectionIsAvailable() ? ConnectionType.Remote : ConnectionType.Local;
+		}
+
+		/// <summary>
+		/// Проверяет не доступно ли подключение к интернету
+		/// </summary>
+		/// <returns>Не доступно ли подключение к интернету</returns>
+		public static bool ConnectionIsNotAvailable()
+		{
+			return !ConnectionIsAvailable();
 		}
 
 		/// <summary>

@@ -1,45 +1,36 @@
-﻿using System;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
+using MahApps.Metro.Controls.Dialogs;
 using WpfApp.Domain;
-using WpfApp.Enum;
 using WpfApp.Service;
 
 namespace WpfApp.SubPages
 {
-	public partial class Login : UserControl
+	public partial class Login
 	{
 		public Login()
 		{
 			InitializeComponent();
 		}
 
-		private void Validate(object sender, TextChangedEventArgs e)
+		/// <summary>
+		/// Попытаться войти в программу под учетными данными
+		/// </summary>
+		private void TryToLogin(object sender, RoutedEventArgs e)
 		{
-		}
-
-		private void ValidatePassword(object sender, TextChangedEventArgs e)
-		{
-		}
-
-		private void PasswordChangedHandler(object sender, RoutedEventArgs e)
-		{
-		}
-
-		private void LoginButtonClick(object sender, RoutedEventArgs e)
-		{
-			if (!ConnectionChecker.ConnectionIsAvailable())
+			if (ConnectionChecker.ConnectionIsNotAvailable())
 			{
 				Info.Content = "Отсутствует соединение с интернетом";
+				MainWindow.Instance.ShowMessageAsync("Ошибка входа", "Отсутствует соединение с интернетом");
 				return;
 			}
 
+			//todo сделать нормальный репозиторий
 			var user = User.Repository.GetAll().FirstOrDefault(u => u.Name == UserName.Text);
 			if (user == null)
 			{
 				Info.Content = "Не найден пользователь с именем " + UserName.Text;
+				MainWindow.Instance.ShowMessageAsync("Ошибка входа", "Не найден пользователь с именем " + UserName.Text);
 				return;
 			}
 
@@ -53,11 +44,12 @@ namespace WpfApp.SubPages
 				}
 
 				LoginInformation.SetCurrentUser(user);
-				MainWindow.SetContent(new MainContent());
+				MainWindow.ToMainScreen();
 			}
 			else
 			{
 				Info.Content = "Неверный пароль";
+				MainWindow.Instance.ShowMessageAsync("Ошибка входа", "Неверный пароль");
 			}
 		}
 	}

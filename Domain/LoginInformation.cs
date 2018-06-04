@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.IO;
+using System.Linq;
 
 namespace WpfApp.Domain
 {
@@ -6,21 +8,39 @@ namespace WpfApp.Domain
 	{
 		public static User CurrentUser { get; set; }
 
+		/// <summary>
+		/// Название файла, в котором хранится Id ранее вошедшего пользователя
+		/// </summary>
+		private const string FileName = @"UserInfo.txt";
+
+		/// <summary>
+		/// Запоминает пользователя. Сохраняет Id пользователя в текстовый файл
+		/// </summary>
+		/// <param name="user">Пользователь</param>
 		public static void Remember(User user)
 		{
-			string[] lines = {"First line", "Second line", "Third line"};
-			// WriteAllLines creates a file, writes a collection of strings to the file,
-			// and then closes the file.  You do NOT need to call Flush() or Close().
-			System.IO.File.WriteAllLines(@"WriteLines.txt", lines);
+			string[] lines = {user.Id};
+			File.WriteAllLines(FileName, lines);
 		}
 
 		/// <summary>
 		/// Установка информации о текущем пользователе
 		/// </summary>
-		/// <param name="user"></param>
+		/// <param name="user">Пользователь</param>
 		public static void SetCurrentUser(User user)
 		{
 			CurrentUser = user;
+		}
+
+		/// <summary>
+		/// Возвращает последнего пользователя, если таковой был
+		/// </summary>
+		/// <returns>Последний вошедший пользователь</returns>
+		public static User GetLastUser()
+		{
+			if (!File.Exists(FileName)) return null;
+			var id = File.ReadAllLines(FileName)[0];
+			return User.Repository.Get(id);
 		}
 	}
 }
