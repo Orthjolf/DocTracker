@@ -1,6 +1,5 @@
-﻿using System;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
+using WpfApp.SubPages;
 
 namespace WpfApp.Domain
 {
@@ -21,6 +20,15 @@ namespace WpfApp.Domain
 		{
 			string[] lines = {user.Id};
 			File.WriteAllLines(FileName, lines);
+		}
+
+		/// <summary>
+		/// "Забыть" пользователя. Удалить из системы информацию о ранее вошедшем пользователе
+		/// </summary>
+		public static void Forget()
+		{
+			if (File.Exists(FileName))
+				File.Delete(FileName);
 		}
 
 		/// <summary>

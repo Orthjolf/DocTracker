@@ -1,15 +1,11 @@
-﻿namespace WpfApp.Enum
+﻿using System.ComponentModel;
+
+namespace WpfApp.Enum
 {
 	public enum UserRole
 	{
-		/// <summary>
-		/// Пользователь
-		/// </summary>
-		User,
+		[Description("Пользователь")] User,
 
-		/// <summary>
-		/// Администратор
-		/// </summary>
-		Admin
+		[Description("Администратор")] Admin
 	}
 }

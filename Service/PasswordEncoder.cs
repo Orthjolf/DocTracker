@@ -41,6 +41,8 @@ namespace WpfApp.Service
 		/// <returns>Совпадают ли пароли</returns>
 		public static bool VerifyHashedPassword(string hashedPassword, string password)
 		{
+			return hashedPassword == password;
+
 			byte[] buffer4;
 			if (hashedPassword == null) return false;
 			if (password == null) throw new ArgumentNullException(nameof(password));

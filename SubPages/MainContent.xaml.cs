@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using MongoDB.Bson;
+using MahApps.Metro.Controls.Dialogs;
 using WpfApp.Domain;
 using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
-	public partial class MainContent
+	public partial class MainContent : UserControl
 	{
 		private List<Storage> Storages { get; set; }
 
@@ -19,12 +20,14 @@ namespace WpfApp.SubPages
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
-		public MainContent()
+		public MainContent(User user)
 		{
 			InitializeComponent();
 
-			Task.Factory.StartNew(GetStorages)
-				.ContinueWith(result => UpdateUi());
+			NavBar.Content = new NavBar(user);
+
+			Storages = Storage.Repository.GetAll().ToList();
+			UpdateUi();
 		}
 
 		/// <summary>
@@ -38,20 +41,16 @@ namespace WpfApp.SubPages
 
 		private void UpdateUi()
 		{
-			_resetEvent.WaitOne();
-			Dispatcher.Invoke(() =>
+			if (Storages.Any())
 			{
-				if (Storages.Any())
-				{
-					SetContent(Storages.First());
-					StorageMenuItems.ItemsSource = Storages;
-				}
+				SetContent(Storages.First());
+				StorageMenuItems.ItemsSource = Storages;
+			}
 
-				LoadingIndicator.Visibility = Visibility.Hidden;
-				LoadingLabel.Visibility = Visibility.Hidden;
-				AddStorageButton.IsEnabled = true;
-				DeleteStorageButton.IsEnabled = true;
-			});
+			LoadingIndicator.Visibility = Visibility.Hidden;
+			LoadingLabel.Visibility = Visibility.Hidden;
+			AddStorageButton.IsEnabled = true;
+			DeleteStorageButton.IsEnabled = true;
 		}
 
 		/// <summary>

@@ -34,8 +34,17 @@ namespace WpfApp.DataProvider.MongoDb
 		public T Get(string id)
 		{
 			var filter = new BsonDocument("_id", id).ToJson();
-			var bsonDocument = GetCollection().Find(filter).First();
-			return bsonDocument.Reconstitute<T>();
+			BsonDocument document;
+			try
+			{
+				document = GetCollection().Find(filter).First();
+			}
+			catch (Exception e)
+			{
+				return null;
+			}
+
+			return document.Reconstitute<T>();
 		}
 
 		public IReadOnlyCollection<T> GetAll()

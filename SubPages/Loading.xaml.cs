@@ -2,9 +2,9 @@
 
 namespace WpfApp.SubPages
 {
-	public partial class LoadingPartial : UserControl
+	public partial class Loading : UserControl
 	{
-		public LoadingPartial()
+		public Loading()
 		{
 			InitializeComponent();
 		}

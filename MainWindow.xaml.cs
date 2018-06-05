@@ -1,10 +1,5 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Controls;
-using MahApps.Metro.Controls.Dialogs;
-using WpfApp.Domain;
+﻿using System.Windows.Controls;
 using WpfApp.SubPages;
-using WpfApp.Temp;
 
 namespace WpfApp
 {
@@ -12,24 +7,13 @@ namespace WpfApp
 	{
 		public static MainWindow Instance;
 
-		private static MainContent _mainContent;
+		public static MainContent MainContent;
 
 		public MainWindow()
 		{
 			InitializeComponent();
 			Instance = this;
-
-			var user = LoginInformation.GetLastUser();
-			if (user == null)
-			{
-				RootContent.Content = new Login();
-			}
-			else
-			{
-				_mainContent = new MainContent();
-				RootContent.Content = _mainContent;
-			}
-
+			RootContent.Content = new Login();
 //			RootContent.Content = new TestDb();
 		}
 
@@ -48,8 +32,8 @@ namespace WpfApp
 		/// <param name="selectedStorageId">Id ранее выбранного хранилища</param>
 		public static void ToMainScreen(string selectedStorageId = "")
 		{
-			Instance.Content = _mainContent;
-			_mainContent.SelectItem(selectedStorageId);
+			Instance.Content = MainContent;
+			MainContent.SelectItem(selectedStorageId);
 		}
 	}
 }

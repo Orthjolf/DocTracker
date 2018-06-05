@@ -111,17 +111,26 @@
     <Compile Include="DataProvider\Repository\Repository.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
+    <Compile Include="DataProvider\Synchronizer\DbSynchronizer.cs" />
     <Compile Include="Domain\LoginInformation.cs" />
+    <Compile Include="Domain\TableActualityInfo.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Enum\ConnectionType.cs" />
     <Compile Include="Enum\UserRole.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Scanning\ScanningCommand.cs" />
     <Compile Include="Service\ConnectionChecker.cs" />
     <Compile Include="Service\PasswordEncoder.cs" />
-    <Compile Include="SubPages\LoadingPartial.xaml.cs" />
+    <Compile Include="SubPages\Administraion.xaml.cs">
+      <DependentUpon>Administraion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\Loading.xaml.cs" />
     <Compile Include="SubPages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubPages\NavBar.xaml.cs">
+      <DependentUpon>NavBar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Temp\BarCodeEncoder.cs" />
     <Compile Include="Temp\ContractFromDb.cs" />
@@ -160,9 +169,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SubPages\Administraion.xaml" />
     <Page Include="SubPages\BoxContent.xaml" />
     <Page Include="SubPages\ContractDetails.xaml" />
-    <Page Include="SubPages\LoadingPartial.xaml" />
+    <Page Include="SubPages\Loading.xaml" />
     <Page Include="SubPages\Login.xaml" />
     <Page Include="SubPages\MainContent.xaml" />
     <Page Include="SubPages\Modals\AddBoxDialog.xaml" />
@@ -170,6 +180,7 @@
     <Page Include="SubPages\Modals\BoxContentModal.xaml" />
     <Page Include="SubPages\Modals\BoxPrintForm.xaml" />
     <Page Include="SubPages\Modals\ErrorDialog.xaml" />
+    <Page Include="SubPages\NavBar.xaml" />
     <Page Include="SubPages\StorageContent.xaml" />
     <Page Include="Temp\TestDb.xaml" />
   </ItemGroup>

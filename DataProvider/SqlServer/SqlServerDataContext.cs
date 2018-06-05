@@ -18,6 +18,7 @@ namespace WpfApp.DataProvider.SqlServer
 		public DbSet<Box> Boxes { get; set; }
 		public DbSet<Contract> Contracts { get; set; }
 		public DbSet<User> Users { get; set; }
+		public DbSet<TableActualityInfo> TableActualityInfos { get; set; }
 
 		private const string ConnectionString = "DefaultConnection";
 

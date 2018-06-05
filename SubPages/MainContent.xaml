@@ -13,14 +13,17 @@
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="50" />
+			<RowDefinition Height="50" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
+		<ContentPresenter x:Name="NavBar"
+		                  Grid.Row="0" Grid.ColumnSpan="2" />
 		<TextBlock Name="BreadCrumbs"
-		           Grid.Row="0" Grid.Column="1"
+		           Grid.Row="1" Grid.Column="1"
 		           FontSize="20"
 		           VerticalAlignment="Center"
 		           HorizontalAlignment="Left" />
-		<Border Grid.Column="0" Grid.Row="1"
+		<Border Grid.Column="0" Grid.Row="2"
 		        BorderBrush="LightGray"
 		        Margin="10,0,10,10"
 		        BorderThickness="1"
@@ -40,7 +43,7 @@
 				         Name="SearchInput"
 				         TextChanged="SearchStorages" />
 
-				<DataGrid Grid.Row="1" Grid.Column="0"
+				<DataGrid Grid.Row="2" Grid.Column="0"
 				          AutoGenerateColumns="False"
 				          Name="StorageMenuItems"
 				          SelectionMode="Single"
@@ -87,7 +90,7 @@
 			</Grid>
 		</Border>
 		<ContentPresenter x:Name="ContentPresenter"
-		                  Grid.Column="1" Grid.Row="1"
+		                  Grid.Column="1" Grid.Row="2"
 		                  Content="{Binding MainContent}" />
 	</Grid>
 </UserControl>
