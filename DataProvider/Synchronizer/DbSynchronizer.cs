@@ -22,5 +22,16 @@ namespace WpfApp.DataProvider.Synchronizer
 
 			return localTableActualityInfos.Max(i => i.LastTimeUpdated) < remoteTalbeActualityInfos.Max(i => i.LastTimeUpdated);
 		}
+
+		public static void GetActualDataFromRemote()
+		{
+			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
+
+			var storages = Storage.Repository.GetAll().ToList();
+
+			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Local);
+
+			Storage.Repository.AddAll(storages);
+		}
 	}
 }

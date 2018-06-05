@@ -30,15 +30,6 @@ namespace WpfApp.SubPages
 			UpdateUi();
 		}
 
-		/// <summary>
-		/// Получение списка складов
-		/// </summary>
-		private void GetStorages()
-		{
-			Storages = Storage.Repository.GetAll().ToList();
-			_resetEvent.Set();
-		}
-
 		private void UpdateUi()
 		{
 			if (Storages.Any())
@@ -46,11 +37,6 @@ namespace WpfApp.SubPages
 				SetContent(Storages.First());
 				StorageMenuItems.ItemsSource = Storages;
 			}
-
-			LoadingIndicator.Visibility = Visibility.Hidden;
-			LoadingLabel.Visibility = Visibility.Hidden;
-			AddStorageButton.IsEnabled = true;
-			DeleteStorageButton.IsEnabled = true;
 		}
 
 		/// <summary>

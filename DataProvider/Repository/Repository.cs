@@ -53,6 +53,11 @@ namespace WpfApp.DataProvider.Repository
 			_dataAccessLayer.Add(entity);
 		}
 
+		public void AddAll(List<T> entities)
+		{
+			_dataAccessLayer.AddAll(entities);
+		}
+
 		public void Update(T entity)
 		{
 			_dataAccessLayer.Update(entity);

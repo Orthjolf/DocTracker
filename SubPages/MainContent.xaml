@@ -43,7 +43,7 @@
 				         Name="SearchInput"
 				         TextChanged="SearchStorages" />
 
-				<DataGrid Grid.Row="2" Grid.Column="0"
+				<DataGrid Grid.Row="1" Grid.Column="0"
 				          AutoGenerateColumns="False"
 				          Name="StorageMenuItems"
 				          SelectionMode="Single"
@@ -58,33 +58,16 @@
 					</DataGrid.Columns>
 				</DataGrid>
 
-				<Label Name="LoadingLabel"
-				       Content="Загрузка"
-				       FontSize="20"
-				       Grid.Row="1" Grid.Column="0"
-				       HorizontalAlignment="Center"
-				       VerticalAlignment="Center" />
-				<mah:ProgressRing IsActive="True"
-				                  Visibility="Visible"
-				                  Name="LoadingIndicator"
-				                  Width="100"
-				                  HorizontalAlignment="Center"
-				                  Grid.Row="1" Grid.Column="0" />
-
-				<Button Name="AddStorageButton"
-				        Grid.Row="2"
+				<Button Grid.Row="2"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Добавить"
 				        Click="AddStorage"
-				        IsEnabled="false"
 				        Width="100"
 				        HorizontalAlignment="Left" />
-				<Button Name="DeleteStorageButton"
-				        Grid.Row="2"
+				<Button Grid.Row="2"
 				        Style="{StaticResource AccentedSquareButtonStyle}"
 				        Content="Удалить"
 				        Click="DeleteStorage"
-				        IsEnabled="false"
 				        Width="100"
 				        HorizontalAlignment="Right" />
 			</Grid>

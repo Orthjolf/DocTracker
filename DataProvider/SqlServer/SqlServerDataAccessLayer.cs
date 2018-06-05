@@ -46,6 +46,12 @@ namespace WpfApp.DataProvider.SqlServer
 			_db.SaveChanges();
 		}
 
+		public void AddAll(List<T> entities)
+		{
+			entities.ForEach(e => _dbSet.AddOrUpdate(e));
+			_db.SaveChanges();
+		}
+
 		public void Update(T entity)
 		{
 			_dbSet.AddOrUpdate(entity);

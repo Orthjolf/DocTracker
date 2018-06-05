@@ -31,6 +31,8 @@ namespace WpfApp.DataProvider.Repository
 
 		void Add(T entity);
 
+		void AddAll(List<T> entities);
+
 		void Update(T entity);
 
 		void Delete(T entity);
