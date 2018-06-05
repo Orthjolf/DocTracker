@@ -67,7 +67,8 @@ namespace WpfApp.DataProvider.MongoDb
 
 		public void AddAll(List<T> entities)
 		{
-			GetCollection().InsertManyAsync(entities.Select(e => e.ToBsonDocument()));
+			var documents = entities.Select(e => e.ToBsonDocument());
+			GetCollection().InsertManyAsync(documents);
 		}
 
 		public void Update(T entity)

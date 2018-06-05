@@ -6,8 +6,7 @@ namespace WpfApp.Domain
 {
 	public class User : Entity
 	{
-		public static Repository<User> Repository =>
-			new Lazy<Repository<User>>(() => new Repository<User>()).Value;
+		public static Repository<User> Repository => Repository<User>.Instance;
 
 		public string Login { get; set; }
 

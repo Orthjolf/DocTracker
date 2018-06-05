@@ -6,19 +6,24 @@
              xmlns:local="clr-namespace:WpfApp.SubPages"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Margin="10">
-        <Label Name="UserName"
-               HorizontalAlignment="Right"
-               Margin="0,0,50,0" />
-        <Button HorizontalAlignment="Left"
-                Name="AdministrationButton"
-                Click="Administrate"
-                Margin="100,0,0,0">
-            Администрирование
-        </Button>
-        <Button HorizontalAlignment="Right"
-                Click="Logout">
-            Выйти
-        </Button>
-    </Grid>
+	<Grid Margin="10">
+		<Label Name="UserName"
+		       HorizontalAlignment="Right"
+		       Margin="0,0,50,0" />
+		<Button HorizontalAlignment="Left"
+		        Name="AdministrationButton"
+		        Click="Administrate"
+		        Margin="100,0,0,0">
+			Администрирование
+		</Button>
+		<Button HorizontalAlignment="Left"
+		        Click="UpdateLocalDb"
+		        Margin="200,0,0,0">
+			Обновить локальную базу
+		</Button>
+		<Button HorizontalAlignment="Right"
+		        Click="Logout">
+			Выйти
+		</Button>
+	</Grid>
 </UserControl>

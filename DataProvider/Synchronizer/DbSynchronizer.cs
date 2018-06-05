@@ -23,7 +23,7 @@ namespace WpfApp.DataProvider.Synchronizer
 			return localTableActualityInfos.Max(i => i.LastTimeUpdated) < remoteTalbeActualityInfos.Max(i => i.LastTimeUpdated);
 		}
 
-		public static void GetActualDataFromRemote()
+		public static void UpdateLocalDb()
 		{
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
 

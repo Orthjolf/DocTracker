@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using WpfApp.DataProvider.Synchronizer;
 using WpfApp.Domain;
 using WpfApp.Enum;
 using WpfApp.Extensions;
@@ -31,6 +32,11 @@ namespace WpfApp.SubPages
 		private void Administrate(object sender, RoutedEventArgs e)
 		{
 			MainWindow.SetContent(new Administraion());
+		}
+
+		private void UpdateLocalDb(object sender, RoutedEventArgs e)
+		{
+			DbSynchronizer.UpdateLocalDb();
 		}
 	}
 }
