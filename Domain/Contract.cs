@@ -9,7 +9,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Contract : Entity
 	{
-		public static Repository<Contract> Repository => Repository<Contract>.Instance;
+		public new static Repository<Contract> Repository => Repository<Contract>.Instance;
 
 		/// <summary>
 		/// Номер контракта

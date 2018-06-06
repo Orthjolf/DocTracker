@@ -6,7 +6,7 @@ namespace WpfApp.Domain
 {
 	public class User : Entity
 	{
-		public static Repository<User> Repository => Repository<User>.Instance;
+		public new static Repository<User> Repository => Repository<User>.Instance;
 
 		public string Login { get; set; }
 

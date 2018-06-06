@@ -7,6 +7,8 @@ namespace WpfApp.Domain
 {
 	public abstract class Entity
 	{
+		public static Repository<Entity> Repository => Repository<Entity>.Instance;
+
 		/// <summary>
 		/// Идентификатор
 		/// </summary>

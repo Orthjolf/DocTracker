@@ -1,6 +1,4 @@
-﻿using System;
-using MongoDB.Bson;
-using WpfApp.DataProvider.Repository;
+﻿using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
 {
@@ -9,7 +7,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
-		public static Repository<Storage> Repository => Repository<Storage>.Instance;
+		public new static Repository<Storage> Repository => Repository<Storage>.Instance;
 
 		/// <summary>
 		/// Название

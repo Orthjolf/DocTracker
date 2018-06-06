@@ -9,7 +9,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Box : Entity
 	{
-		public static Repository<Box> Repository => Repository<Box>.Instance;
+		public new static Repository<Box> Repository => Repository<Box>.Instance;
 
 		/// <summary>
 		/// Идентификатор склада

@@ -5,7 +5,7 @@ namespace WpfApp.Domain
 {
 	public class TableActualityInfo : Entity
 	{
-		public static Repository<TableActualityInfo> Repository => Repository<TableActualityInfo>.Instance;
+		public new static Repository<TableActualityInfo> Repository => Repository<TableActualityInfo>.Instance;
 
 		public string TableName { get; set; }
 
