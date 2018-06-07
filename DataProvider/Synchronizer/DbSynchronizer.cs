@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.Enum;
@@ -9,36 +9,51 @@ namespace WpfApp.DataProvider.Synchronizer
 {
 	public static class DbSynchronizer
 	{
+		private const string FileName = @"LocalDbIsActual.txt";
+
 		/// <summary>
-		/// Проверка локальной базы данных на актуальность
+		/// Информация о датах последних изменений таблиц в локальной базе
 		/// </summary>
-		/// <returns>Актуальна ли локальная база данных</returns>
-		public static bool IsLocalDbActual()
+		private static List<LastTimeModifiedTableInfo> LocalDbActualityInfo { get; set; }
+
+		/// <summary>
+		/// Информация о датах последних изменений таблиц в удаленной базе
+		/// </summary>
+		private static List<LastTimeModifiedTableInfo> RemoteDbActualityInfo { get; set; }
+
+		/// <summary>
+		/// Актуальна ли на данный момент локальная база данных.
+		/// Определяется путем сравнения дат последнего изменения таблицы
+		/// </summary>
+		public static bool LocalDbIsActual()
 		{
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Local);
-
-			var localTableActualityInfos = TableActualityInfo.Repository.GetAll();
-			if (localTableActualityInfos == null) return false;
+			LocalDbActualityInfo = LastTimeModifiedTableInfo.Repository.GetAll().ToList();
 
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
-			var remoteTalbeActualityInfos = TableActualityInfo.Repository.GetAll();
+			RemoteDbActualityInfo = LastTimeModifiedTableInfo.Repository.GetAll().ToList();
 
-			return localTableActualityInfos.Max(i => i.LastTimeUpdated) < remoteTalbeActualityInfos.Max(i => i.LastTimeUpdated);
+			return RemoteDbActualityInfo.Max(i => i.LastTimeModified) <= LocalDbActualityInfo.Max(i => i.LastTimeModified);
 		}
 
 		/// <summary>
 		/// Обновление локальной базы данных.
-		/// Проходит по всем типам документов, описанных в Enum DocumentType и поочередно обновляет таблицы
+		/// Обновляет устаревшие таблицы в локальной базе.
 		/// </summary>
 		public static void UpdateLocalDb()
 		{
-			var enumValues = System.Enum.GetValues(typeof(DocumentType)).Cast<DocumentType>();
-			var typesOfDocuments = enumValues.Select(value => Type.GetType("WpfApp.Domain." + value)).ToList();
+			var tablesToUpdate = RemoteDbActualityInfo
+				.Where((t, i) => t.LastTimeModified > LocalDbActualityInfo[i].LastTimeModified)
+				.Select(t => t.Id).ToList();
 
-			typesOfDocuments.ForEach(t =>
+			tablesToUpdate.Add("LastTimeModifiedTableInfo");
+
+			var typesToUpdate = tablesToUpdate.Select(s => Type.GetType("WpfApp.Domain." + s)).ToList();
+
+			typesToUpdate.ForEach(t =>
 			{
-				var updateLocalTable = typeof(DbSynchronizer).GetMethod("UpdateLocalTable")?.MakeGenericMethod(t);
-				updateLocalTable?.Invoke(null, null);
+				var updateLocalTableGenericMethod = typeof(DbSynchronizer).GetMethod("UpdateLocalTable")?.MakeGenericMethod(t);
+				updateLocalTableGenericMethod?.Invoke(null, null);
 			});
 
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
@@ -49,11 +64,13 @@ namespace WpfApp.DataProvider.Synchronizer
 		/// </summary>
 		public static void UpdateLocalTable<T>() where T : Entity
 		{
-			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
 			var repository = (Repository<T>) typeof(T).GetProperty("Repository")?.GetValue(null, null);
+
+			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
 			var documents = repository?.GetAll().ToList();
 
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Local);
+			repository?.DeleteAll();
 			repository?.AddAll(documents);
 		}
 	}

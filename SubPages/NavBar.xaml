@@ -12,14 +12,22 @@
 		       Margin="0,0,50,0" />
 		<Button HorizontalAlignment="Left"
 		        Name="AdministrationButton"
+		        Visibility="Hidden"
 		        Click="Administrate"
 		        Margin="100,0,0,0">
 			Администрирование
 		</Button>
-		<Button HorizontalAlignment="Left"
+		<Button Name="UpdateButton"
+		        HorizontalAlignment="Left"
 		        Click="UpdateLocalDb"
 		        Margin="200,0,0,0">
 			Обновить локальную базу
+		</Button>
+		<Button Name="UnloadButton"
+		        HorizontalAlignment="Left"
+		        Click="UpdateLocalDb"
+		        Margin="400,0,0,0">
+			Выгрузить изменения на сервер
 		</Button>
 		<Button HorizontalAlignment="Right"
 		        Click="Logout">

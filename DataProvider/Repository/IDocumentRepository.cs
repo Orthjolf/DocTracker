@@ -29,14 +29,39 @@ namespace WpfApp.DataProvider.Repository
 		/// <returns>Документы, соответствующие фильтру</returns>
 		IReadOnlyCollection<T> GetFiltered(string filter);
 
+		/// <summary>
+		/// Добавить документ в базу данных
+		/// </summary>
+		/// <param name="entity">Документ</param>
 		void Add(T entity);
 
+		/// <summary>
+		/// Добавить коллекцию документов в базу данных
+		/// </summary>
+		/// <param name="entities">Коллекция документов</param>
 		void AddAll(List<T> entities);
 
+		/// <summary>
+		/// Обновить документ в базе данных
+		/// </summary>
+		/// <param name="entity">Обновляемый документ</param>
 		void Update(T entity);
 
+		/// <summary>
+		/// Удалить документ из базы данных
+		/// </summary>
+		/// <param name="entity">Удаляемый документ</param>
 		void Delete(T entity);
 
+		/// <summary>
+		/// Удалить документ из базы данных по идентификатору
+		/// </summary>
+		/// <param name="id">Удаляемый документ</param>
 		void DeleteById(string id);
+
+		/// <summary>
+		/// Удалить все элементы из таблицы
+		/// </summary>
+		void DeleteAll();
 	}
 }

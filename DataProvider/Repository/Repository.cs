@@ -14,14 +14,12 @@ namespace WpfApp.DataProvider.Repository
 	/// <typeparam name="T">Тип репозитория документов</typeparam>
 	public class Repository<T> : IDocumentRepository<T> where T : Entity
 	{
-		private static Repository<T> _instance = null;
+		private static Repository<T> _instance;
 
 		public static Repository<T> Instance => _instance ?? (_instance = new Repository<T>());
 
 		private Repository()
 		{
-			var connectionType = ConnectionChecker.GetConnectionType();
-			SetConnectionType(connectionType);
 		}
 
 		private static IDocumentRepository<T> _dataAccessLayer;
@@ -75,6 +73,11 @@ namespace WpfApp.DataProvider.Repository
 		public void DeleteById(string id)
 		{
 			_dataAccessLayer.DeleteById(id);
+		}
+
+		public void DeleteAll()
+		{
+			_dataAccessLayer.DeleteAll();
 		}
 	}
 }

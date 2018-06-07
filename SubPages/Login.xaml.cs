@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -60,10 +59,9 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private void TryToLogin(User user)
 		{
-			if (ConnectionChecker.ConnectionIsNotAvailable())
+			if (ConnectionChecker.ConnectionIsNotAvailable)
 			{
-				var localDbIsActual = DbSynchronizer.IsLocalDbActual();
-				if (localDbIsActual)
+				if (DbSynchronizer.LocalDbIsActual())
 				{
 					MainWindow.Instance.ShowMessageAsync("Автономный режим",
 						"Отсутствует соединение с интернетом, доступена только работа в автономном режиме");

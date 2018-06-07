@@ -16,42 +16,42 @@ namespace WpfApp.SubPages
 			Users = User.Repository.GetAll().ToList();
 
 			var marginTop = 0;
-			Users.ForEach(user =>
-			{
-				UsersTable.Children.Add(new Label
-				{
-					Name = user.Name,
-					Content = user.Name,
-					VerticalAlignment = VerticalAlignment.Top,
-					Margin = new Thickness
-					{
-						Top = marginTop
-					}
-				});
-				UsersTable.Children.Add(new Label
-				{
-					Name = user.Name,
-					Content = user.Login,
-					VerticalAlignment = VerticalAlignment.Top,
-					Margin = new Thickness
-					{
-						Top = marginTop,
-						Left = 100
-					}
-				});
-				UsersTable.Children.Add(new Label
-				{
-					Name = user.Name,
-					Content = user.Role,
-					VerticalAlignment = VerticalAlignment.Top,
-					Margin = new Thickness
-					{
-						Top = marginTop,
-						Left = 200
-					}
-				});
-				marginTop += 30;
-			});
+//			Users.ForEach(user =>
+//			{
+//				UsersTable.Children.Add(new Label
+//				{
+//					Name = user.Name.ToString(),
+//					Content = user.Name,
+//					VerticalAlignment = VerticalAlignment.Top,
+//					Margin = new Thickness
+//					{
+//						Top = marginTop
+//					}
+//				});
+//				UsersTable.Children.Add(new Label
+//				{
+//					Name = user.Name,
+//					Content = user.Login,
+//					VerticalAlignment = VerticalAlignment.Top,
+//					Margin = new Thickness
+//					{
+//						Top = marginTop,
+//						Left = 100
+//					}
+//				});
+//				UsersTable.Children.Add(new Label
+//				{
+//					Name = user.Name,
+//					Content = user.Role,
+//					VerticalAlignment = VerticalAlignment.Top,
+//					Margin = new Thickness
+//					{
+//						Top = marginTop,
+//						Left = 200
+//					}
+//				});
+//				marginTop += 30;
+//			});
 		}
 	}
 }

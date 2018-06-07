@@ -20,6 +20,16 @@
 		/// <summary>
 		/// Договор
 		/// </summary>
-		Contract
+		Contract,
+
+		/// <summary>
+		/// Пользователь
+		/// </summary>
+		User,
+
+		/// <summary>
+		/// Информация об дате последнего изменения таблицы
+		/// </summary>
+		LastTimeModifiedTableInfo
 	}
 }

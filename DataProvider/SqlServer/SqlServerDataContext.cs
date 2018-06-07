@@ -14,11 +14,11 @@ namespace WpfApp.DataProvider.SqlServer
 		/// </summary>
 		public static SqlServerDataContext Instance => new SqlServerDataContext();
 
-		public DbSet<Storage> Storages { get; set; }
 		public DbSet<Box> Boxes { get; set; }
-		public DbSet<Contract> Contracts { get; set; }
 		public DbSet<User> Users { get; set; }
-		public DbSet<TableActualityInfo> TableActualityInfos { get; set; }
+		public DbSet<Storage> Storages { get; set; }
+		public DbSet<Contract> Contracts { get; set; }
+		public DbSet<LastTimeModifiedTableInfo> TableActualityInfos { get; set; }
 
 		private const string ConnectionString = "DefaultConnection";
 

@@ -1,45 +1,40 @@
 ﻿using System;
 using System.Net.NetworkInformation;
+using System.Windows;
+using System.Windows.Threading;
+using MahApps.Metro.Controls;
+using WpfApp.DataProvider;
 using WpfApp.Enum;
+using WpfApp.SubPages;
 
 namespace WpfApp.Service
 {
-	public static class ConnectionChecker
+	public class ConnectionChecker
 	{
 		/// <summary>
-		/// Возвращает тип соединения с базой данных
+		/// Соединение с интернетом доступно
 		/// </summary>
-		/// <returns>Тип соединения на данный момент. Локальный или удаленный</returns>
-		public static ConnectionType GetConnectionType()
-		{
-			return ConnectionIsAvailable() ? ConnectionType.Remote : ConnectionType.Local;
-		}
+		public static bool ConnectionIsAvailable = CheckConnection();
 
 		/// <summary>
-		/// Проверяет не доступно ли подключение к интернету
+		/// Соединение с интернетом не доступно
 		/// </summary>
-		/// <returns>Не доступно ли подключение к интернету</returns>
-		public static bool ConnectionIsNotAvailable()
+		public static bool ConnectionIsNotAvailable = !ConnectionIsAvailable;
+
+		private ConnectionChecker()
 		{
-			return !ConnectionIsAvailable();
+			ConnectionIsAvailable = CheckConnection();
+			ConnectionIsNotAvailable = !ConnectionIsAvailable;
 		}
 
-		/// <summary>
-		/// Проверяет доступно ли подключение к интернету
-		/// </summary>
-		/// <returns>Доступно ли подключение к интернету</returns>
-		public static bool ConnectionIsAvailable()
+		private static bool CheckConnection()
 		{
 			const string host = "google.com";
 			const int timeout = 1000;
 			var buffer = new byte[32];
-
 			try
 			{
-				var myPing = new Ping();
-				var pingOptions = new PingOptions();
-				var reply = myPing.Send(host, timeout, buffer, pingOptions);
-
+				var reply = new Ping().Send(host, timeout, buffer, new PingOptions());
 				if (reply == null) return false;
 				return reply.Status == IPStatus.Success;
 			}
@@ -47,6 +42,32 @@ namespace WpfApp.Service
 			{
 				return false;
 			}
+		}
+
+		/// <summary>
+		/// Обработчик события подключения/отключения интернета
+		/// </summary>
+		public static void ConnectionChanged(object sender, NetworkAvailabilityEventArgs e)
+		{
+			DataBaseSwitcher.SetActiveDataBase(e.IsAvailable ? ConnectionType.Remote : ConnectionType.Local);
+			Console.Write(e.IsAvailable ? "Network connected!" : "Network dis connected!");
+			ConnectionIsAvailable = e.IsAvailable;
+			ConnectionIsNotAvailable = e.IsAvailable;
+
+			MainWindow.ToLoginScreen();
+
+//			Dispatcher.CurrentDispatcher.Invoke(MainWindow.ToLoginScreen);
+//			Application.Current.MainWindow?.Dispatcher.Invoke(MainWindow.ToLoginScreen);
+		}
+
+
+		/// <summary>
+		/// Возвращает тип соединения с базой данных
+		/// </summary>
+		/// <returns>Тип соединения на данный момент. Локальный или удаленный</returns>
+		public static ConnectionType GetConnectionType()
+		{
+			return ConnectionIsAvailable ? ConnectionType.Remote : ConnectionType.Local;
 		}
 	}
 }

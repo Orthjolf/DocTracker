@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.NetworkInformation;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using MahApps.Metro.Controls.Dialogs;
 using WpfApp.Domain;
 using WpfApp.SubPages.Modals;
 
@@ -18,25 +14,19 @@ namespace WpfApp.SubPages
 
 		private Storage _selectedStorage;
 
-		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
-
 		public MainContent(User user)
 		{
 			InitializeComponent();
-
 			NavBar.Content = new NavBar(user);
-
 			Storages = Storage.Repository.GetAll().ToList();
 			UpdateUi();
 		}
 
 		private void UpdateUi()
 		{
-			if (Storages.Any())
-			{
-				SetContent(Storages.First());
-				StorageMenuItems.ItemsSource = Storages;
-			}
+			if (!Storages.Any()) return;
+			SetContent(Storages.First());
+			StorageMenuItems.ItemsSource = Storages;
 		}
 
 		/// <summary>

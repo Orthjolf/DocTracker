@@ -104,7 +104,6 @@
     </ApplicationDefinition>
     <Compile Include="Classifiers\ObjectFactory.cs" />
     <Compile Include="DataProvider\DataBaseSwitcher.cs" />
-    <Compile Include="DataProvider\MongoDb\BsonDocumentReconstituteExtension.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataAccessLayer.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataContext.cs" />
     <Compile Include="DataProvider\Repository\IDocumentRepository.cs" />
@@ -112,10 +111,12 @@
     <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataContext.cs" />
     <Compile Include="DataProvider\Synchronizer\DbSynchronizer.cs" />
+    <Compile Include="Domain\LocalDbDocumentChanges.cs" />
     <Compile Include="Domain\LoginInformation.cs" />
-    <Compile Include="Domain\TableActualityInfo.cs" />
+    <Compile Include="Domain\LastTimeModifiedTableInfo.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Enum\ConnectionType.cs" />
+    <Compile Include="Enum\DbOperation.cs" />
     <Compile Include="Enum\UserRole.cs" />
     <Compile Include="Extensions\EnumExtension.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -134,6 +135,7 @@
     </Compile>
     <Compile Include="Temp\BarCodeEncoder.cs" />
     <Compile Include="Temp\ContractFromDb.cs" />
+    <Compile Include="Temp\localDbSeed.cs" />
     <Compile Include="Temp\RandomBarCodeGenerator.cs" />
     <Compile Include="Temp\RandomContractFactory.cs" />
     <Compile Include="Domain\Action.cs" />

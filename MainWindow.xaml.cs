@@ -1,5 +1,12 @@
-﻿using System.Windows.Controls;
+﻿using System.Net.NetworkInformation;
+using System.Windows;
+using System.Windows.Controls;
+using WpfApp.DataProvider;
+using WpfApp.Domain;
+using WpfApp.Enum;
+using WpfApp.Service;
 using WpfApp.SubPages;
+using WpfApp.Temp;
 
 namespace WpfApp
 {
@@ -12,9 +19,25 @@ namespace WpfApp
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			// Сид для генерации начальных значений таблицы
+			
+
+			localDbSeed.InitRepositories();
+			localDbSeed.Generate();
+			
+			NetworkChange.NetworkAvailabilityChanged += ConnectionChanged;
+
 			Instance = this;
 			RootContent.Content = new Login();
 //			RootContent.Content = new TestDb();
+		}
+
+		void ConnectionChanged(object sender, NetworkAvailabilityEventArgs e)
+		{
+			DataBaseSwitcher.SetActiveDataBase(e.IsAvailable ? ConnectionType.Remote : ConnectionType.Local);
+			Console.Write(e.IsAvailable ? "Network connected!" : "Network dis connected!");
+			Dispatcher.Invoke(() => SetContent(new Login()));
 		}
 
 		/// <summary>
@@ -34,6 +57,14 @@ namespace WpfApp
 		{
 			Instance.Content = MainContent;
 			MainContent.SelectItem(selectedStorageId);
+		}
+
+		/// <summary>
+		/// Перейти на экран логина
+		/// </summary>
+		public static void ToLoginScreen()
+		{
+			SetContent(new Login());
 		}
 	}
 }

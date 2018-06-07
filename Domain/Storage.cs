@@ -7,7 +7,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
-		public new static Repository<Storage> Repository => Repository<Storage>.Instance;
+		public static Repository<Storage> Repository => Repository<Storage>.Instance;
 
 		/// <summary>
 		/// Название
@@ -18,5 +18,10 @@ namespace WpfApp.Domain
 		/// Адрес
 		/// </summary>
 		public string Address { get; set; }
+
+		/// <summary>
+		/// Описание
+		/// </summary>
+		public string Description { get; set; }
 	}
 }

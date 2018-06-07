@@ -9,7 +9,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Box : Entity
 	{
-		public new static Repository<Box> Repository => Repository<Box>.Instance;
+		public static Repository<Box> Repository => Repository<Box>.Instance;
 
 		/// <summary>
 		/// Идентификатор склада
@@ -20,6 +20,11 @@ namespace WpfApp.Domain
 		/// Название
 		/// </summary>
 		public string Name { get; set; }
+
+		/// <summary>
+		/// Описание
+		/// </summary>
+		public string Description { get; set; }
 
 		/// <summary>
 		/// Самая ранняя дата договора

@@ -46,6 +46,7 @@ namespace WpfApp.Domain
 		/// <returns>Последний вошедший пользователь</returns>
 		public static User GetLastUser()
 		{
+			return null;
 			if (!File.Exists(FileName)) return null;
 			var id = File.ReadAllLines(FileName)[0];
 			return User.Repository.Get(id);
