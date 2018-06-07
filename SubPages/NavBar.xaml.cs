@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using WpfApp.DataProvider.Synchronizer;
@@ -11,12 +13,11 @@ namespace WpfApp.SubPages
 {
 	public partial class NavBar : UserControl
 	{
-		public static NavBar Instance;
+		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
 		public NavBar(User user)
 		{
 			InitializeComponent();
-			Instance = this;
 			if (user == null) return;
 			if (user.Role == UserRole.Admin)
 			{
@@ -47,12 +48,20 @@ namespace WpfApp.SubPages
 		{
 			if (DbSynchronizer.LocalDbIsActual())
 			{
-				MainWindow.Instance.ShowMessageAsync("", "Локальная база актуальна,обновление не требуется");
+				MainWindow.Instance.ShowMessageAsync("Обновление не требуется",
+					"Локальная база актуальна, обновление не требуется");
 				return;
 			}
 
+			MainWindow.SetContent(new Loading("Обновление локальной базы данных"));
 			Console.Write("Обновление");
-			DbSynchronizer.UpdateLocalDb();
+
+			Task.Factory.StartNew(() =>
+				{
+					DbSynchronizer.UpdateLocalDb();
+					_resetEvent.Set();
+				})
+				.ContinueWith(result => { Dispatcher.Invoke(() => { MainWindow.ToMainScreen(); }); });
 		}
 	}
 }

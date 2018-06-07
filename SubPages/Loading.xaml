@@ -7,17 +7,18 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <mah:ProgressRing IsActive="true"
-                          Visibility="Visible"
-                          Width="100"
-                          HorizontalAlignment="Center" />
+	<Grid>
+		<mah:ProgressRing IsActive="true"
+		                  Visibility="Visible"
+		                  Width="100"
+		                  HorizontalAlignment="Center" />
 
-        <Label
-            Visibility="Visible"
-            Content="Загрузка"
-            FontSize="25"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center" />
-    </Grid>
+		<Label
+			Name="LoadingText"
+			Visibility="Visible"
+			Content="Загрузка"
+			FontSize="25"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center" />
+	</Grid>
 </UserControl>

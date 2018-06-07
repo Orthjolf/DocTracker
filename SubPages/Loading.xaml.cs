@@ -8,5 +8,11 @@ namespace WpfApp.SubPages
 		{
 			InitializeComponent();
 		}
+
+		public Loading(string text)
+		{
+			InitializeComponent();
+			LoadingText.Content = text;
+		}
 	}
 }
