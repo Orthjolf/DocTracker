@@ -20,12 +20,9 @@ namespace WpfApp
 		{
 			InitializeComponent();
 
-			// Сид для генерации начальных значений таблицы
-			
-
 			localDbSeed.InitRepositories();
 			localDbSeed.Generate();
-			
+
 			NetworkChange.NetworkAvailabilityChanged += ConnectionChanged;
 
 			Instance = this;
@@ -33,10 +30,9 @@ namespace WpfApp
 //			RootContent.Content = new TestDb();
 		}
 
-		void ConnectionChanged(object sender, NetworkAvailabilityEventArgs e)
+		private void ConnectionChanged(object sender, NetworkAvailabilityEventArgs e)
 		{
 			DataBaseSwitcher.SetActiveDataBase(e.IsAvailable ? ConnectionType.Remote : ConnectionType.Local);
-			Console.Write(e.IsAvailable ? "Network connected!" : "Network dis connected!");
 			Dispatcher.Invoke(() => SetContent(new Login()));
 		}
 
