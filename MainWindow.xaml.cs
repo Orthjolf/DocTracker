@@ -20,9 +20,11 @@ namespace WpfApp
 		{
 			InitializeComponent();
 
-			localDbSeed.InitRepositories();
-			localDbSeed.Generate();
+			DataBaseSwitcher.SetActiveDataBase(ConnectionChecker.ConnectionIsAvailable
+				? ConnectionType.Remote
+				: ConnectionType.Local);
 
+			localDbSeed.Generate();
 			NetworkChange.NetworkAvailabilityChanged += ConnectionChanged;
 
 			Instance = this;

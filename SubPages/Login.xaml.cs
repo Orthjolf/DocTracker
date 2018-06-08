@@ -2,7 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using WpfApp.DataProvider.Synchronizer;
 using WpfApp.Domain;
@@ -10,7 +9,7 @@ using WpfApp.Service;
 
 namespace WpfApp.SubPages
 {
-	public partial class Login : UserControl
+	public partial class Login
 	{
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
@@ -85,14 +84,16 @@ namespace WpfApp.SubPages
 		private void SetLoadingScreen()
 		{
 			Dispatcher.Invoke(() => { MainWindow.SetContent(new Loading()); });
+			_resetEvent.Set();
 		}
 
 		/// <summary>
 		/// Инициализация главной панели с контентом
 		/// </summary>
-		/// <param name="user"></param>
+		/// <param name="user">Текущий пользователь</param>
 		private void InitializeMainContent(User user)
 		{
+			_resetEvent.WaitOne();
 			Dispatcher.Invoke(() =>
 			{
 				MainWindow.MainContent = new MainContent(user);

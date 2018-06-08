@@ -6,7 +6,7 @@ namespace WpfApp.Domain
 {
 	public class LocalDbDocumentChanges : Entity
 	{
-		public static Repository<LocalDbDocumentChanges> Repository = Repository<LocalDbDocumentChanges>.Instance;
+		public static Repository<LocalDbDocumentChanges> Repository => Repository<LocalDbDocumentChanges>.Instance;
 
 		public DbOperation Operation { get; set; }
 

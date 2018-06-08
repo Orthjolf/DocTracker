@@ -14,12 +14,11 @@ namespace WpfApp.DataProvider.Repository
 	/// <typeparam name="T">Тип репозитория документов</typeparam>
 	public class Repository<T> : IDocumentRepository<T> where T : Entity
 	{
-		private static Repository<T> _instance;
-
-		public static Repository<T> Instance => _instance ?? (_instance = new Repository<T>());
+		public static Repository<T> Instance { get; private set; }
 
 		private Repository()
 		{
+			Console.Write("Repository<" + typeof(T) + ">");
 		}
 
 		private static IDocumentRepository<T> _dataAccessLayer;
@@ -30,6 +29,8 @@ namespace WpfApp.DataProvider.Repository
 		/// <param name="type">Тип соединения с базой</param>
 		public static void SetConnectionType(ConnectionType type)
 		{
+			if (Instance == null) Instance = new Repository<T>();
+
 			_dataAccessLayer = type == ConnectionType.Local
 				? (IDocumentRepository<T>) new MongoDbDataAccessLayer<T>()
 				: new SqlServerDataAccessLayer<T>();

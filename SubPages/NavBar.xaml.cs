@@ -1,7 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using MahApps.Metro.Controls.Dialogs;
 using WpfApp.DataProvider.Synchronizer;
 using WpfApp.Domain;
@@ -11,7 +10,7 @@ using WpfApp.Service;
 
 namespace WpfApp.SubPages
 {
-	public partial class NavBar : UserControl
+	public partial class NavBar
 	{
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
