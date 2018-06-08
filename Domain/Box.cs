@@ -9,8 +9,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Box : Entity
 	{
-		public static Repository<Box> Repository =>
-			new Lazy<Repository<Box>>(() => new Repository<Box>()).Value;
+		public static Repository<Box> Repository => Repository<Box>.Instance;
 
 		/// <summary>
 		/// Идентификатор склада
@@ -21,6 +20,11 @@ namespace WpfApp.Domain
 		/// Название
 		/// </summary>
 		public string Name { get; set; }
+
+		/// <summary>
+		/// Описание
+		/// </summary>
+		public string Description { get; set; }
 
 		/// <summary>
 		/// Самая ранняя дата договора
@@ -36,38 +40,5 @@ namespace WpfApp.Domain
 		/// Количество договоров в коробке
 		/// </summary>
 		public int ContractsCount { get; set; }
-
-		public BsonDocument Serialize()
-		{
-			var minDate = MinDate ?? DateTime.MinValue;
-			var maxDate = MaxDate ?? DateTime.MinValue;
-			return new BsonDocument
-			{
-				{"StorageId", StorageId},
-				{"Name", Name},
-				{"MinDate", minDate},
-				{"MaxDate", maxDate},
-				{"Description", Description},
-				{"ContractsCount", ContractsCount}
-			};
-		}
-
-		public static Box Reconstitute(BsonDocument bsonDocument)
-		{
-			DateTime? minDate = bsonDocument["MinDate"].ToUniversalTime();
-			DateTime? maxDate = bsonDocument["MaxDate"].ToUniversalTime();
-			if (minDate == DateTime.MinValue) minDate = null;
-			if (maxDate == DateTime.MinValue) maxDate = null;
-			return new Box
-			{
-				Id = bsonDocument["_id"].ToString(),
-				Name = bsonDocument["Name"].AsString,
-				StorageId = bsonDocument["StorageId"].AsString,
-				MinDate = minDate,
-				MaxDate = maxDate,
-				Description = bsonDocument["Description"].AsString,
-				ContractsCount = bsonDocument["ContractsCount"].AsInt32
-			};
-		}
 	}
 }

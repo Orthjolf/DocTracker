@@ -1,6 +1,4 @@
-﻿using System;
-using MongoDB.Bson;
-using WpfApp.DataProvider.Repository;
+﻿using WpfApp.DataProvider.Repository;
 
 namespace WpfApp.Domain
 {
@@ -9,8 +7,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Storage : Entity
 	{
-		public static Repository<Storage> Repository =>
-			new Lazy<Repository<Storage>>(() => new Repository<Storage>()).Value;
+		public static Repository<Storage> Repository => Repository<Storage>.Instance;
 
 		/// <summary>
 		/// Название
@@ -22,15 +19,9 @@ namespace WpfApp.Domain
 		/// </summary>
 		public string Address { get; set; }
 
-		public static Storage Reconstitute(BsonDocument storage)
-		{
-			return new Storage
-			{
-				Id = storage["_id"].ToString(),
-				Name = storage["Name"].ToString(),
-				Address = storage["Address"].ToString(),
-				Description = storage["Description"].ToString()
-			};
-		}
+		/// <summary>
+		/// Описание
+		/// </summary>
+		public string Description { get; set; }
 	}
 }

@@ -9,8 +9,7 @@ namespace WpfApp.Domain
 	/// </summary>
 	public class Contract : Entity
 	{
-		public static Repository<Contract> Repository =>
-			new Lazy<Repository<Contract>>(() => new Repository<Contract>()).Value;
+		public static Repository<Contract> Repository => Repository<Contract>.Instance;
 
 		/// <summary>
 		/// Номер контракта
@@ -62,23 +61,6 @@ namespace WpfApp.Domain
 		/// Дата выдачи займа
 		/// </summary>
 		public DateTime ContractDate { get; set; }
-
-		public static Contract Reconstitute(BsonDocument bsonDocument)
-		{
-			return new Contract
-			{
-				Id = bsonDocument["_id"].ToString(),
-				Number = bsonDocument["Number"].AsString,
-				BoxId = bsonDocument["BoxId"].AsString,
-				ClientFirstName = bsonDocument["ClientFirstName"].AsString,
-				ClientLastName = bsonDocument["ClientLastName"].AsString,
-				ClientPatronymic = bsonDocument["ClientPatronymic"].AsString,
-				PhoneNumber = bsonDocument["PhoneNumber"].AsString,
-				LoanId = bsonDocument["LoanId"].AsString,
-				PrefixOfPlace = bsonDocument["PrefixOfPlace"].AsString,
-				ContractDate = bsonDocument["ContractDate"].ToUniversalTime()
-			};
-		}
 
 		public override string ToString()
 		{

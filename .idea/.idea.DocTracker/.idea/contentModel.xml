@@ -7,10 +7,12 @@
       <e p="App.xaml" t="Include" />
       <e p="App.xaml.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
+      <e p="Classifiers" t="Include">
+        <e p="ObjectFactory.cs" t="Include" />
+      </e>
       <e p="DataProvider" t="Include">
         <e p="DataBaseSwitcher.cs" t="Include" />
         <e p="MongoDb" t="Include">
-          <e p="BsonDocumentReconstituteExtension.cs" t="Include" />
           <e p="MongoDbDataAccessLayer.cs" t="Include" />
           <e p="MongoDbDataContext.cs" t="Include" />
         </e>
@@ -22,6 +24,9 @@
           <e p="SqlServerDataAccessLayer.cs" t="Include" />
           <e p="SqlServerDataContext.cs" t="Include" />
         </e>
+        <e p="Synchronizer" t="Include">
+          <e p="DbSynchronizer.cs" t="Include" />
+        </e>
       </e>
       <e p="DocTracker.sln" t="IncludeFlat" />
       <e p="Domain" t="Include">
@@ -29,15 +34,27 @@
         <e p="Box.cs" t="Include" />
         <e p="Contract.cs" t="Include" />
         <e p="Entity.cs" t="Include" />
+        <e p="LastTimeModifiedTableInfo.cs" t="Include" />
+        <e p="LocalDbDocumentChanges.cs" t="Include" />
+        <e p="LoginInformation.cs" t="Include" />
         <e p="Storage.cs" t="Include" />
+        <e p="User.cs" t="Include" />
       </e>
       <e p="Enum" t="Include">
         <e p="ActionPerformed.cs" t="Include" />
         <e p="ConnectionType.cs" t="Include" />
+        <e p="DbOperation.cs" t="Include" />
         <e p="DocumentType.cs" t="Include" />
+        <e p="UserRole.cs" t="Include" />
+      </e>
+      <e p="Extensions" t="Include">
+        <e p="EnumExtension.cs" t="Include" />
       </e>
       <e p="MainWindow.xaml" t="Include" />
       <e p="MainWindow.xaml.cs" t="Include" />
+      <e p="Migrations" t="Include">
+        <e p="Configuration.cs" t="Include" />
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
@@ -51,15 +68,21 @@
       </e>
       <e p="Service" t="Include">
         <e p="BarCodeDecoder.cs" t="Include" />
+        <e p="ConnectionChecker.cs" t="Include" />
         <e p="ConsoleWriter.cs" t="Include" />
+        <e p="PasswordEncoder.cs" t="Include" />
       </e>
       <e p="SubPages" t="Include">
+        <e p="Administraion.xaml" t="Include" />
+        <e p="Administraion.xaml.cs" t="Include" />
         <e p="BoxContent.xaml" t="Include" />
         <e p="BoxContent.xaml.cs" t="Include" />
         <e p="ContractDetails.xaml" t="Include" />
         <e p="ContractDetails.xaml.cs" t="Include" />
-        <e p="LoadingPartial.xaml" t="Include" />
-        <e p="LoadingPartial.xaml.cs" t="Include" />
+        <e p="Loading.xaml" t="Include" />
+        <e p="Loading.xaml.cs" t="Include" />
+        <e p="Login.xaml" t="Include" />
+        <e p="Login.xaml.cs" t="Include" />
         <e p="MainContent.xaml" t="Include" />
         <e p="MainContent.xaml.cs" t="Include" />
         <e p="Modals" t="Include">
@@ -74,16 +97,23 @@
           <e p="ErrorDialog.xaml" t="Include" />
           <e p="ErrorDialog.xaml.cs" t="Include" />
         </e>
+        <e p="NavBar.xaml" t="Include" />
+        <e p="NavBar.xaml.cs" t="Include" />
         <e p="StorageContent.xaml" t="Include" />
         <e p="StorageContent.xaml.cs" t="Include" />
       </e>
       <e p="Temp" t="Include">
         <e p="BarCodeEncoder.cs" t="Include" />
         <e p="ContractFromDb.cs" t="Include" />
+        <e p="localDbSeed.cs" t="Include" />
         <e p="RandomBarCodeGenerator.cs" t="Include" />
         <e p="RandomContractFactory.cs" t="Include" />
         <e p="TestDb.xaml" t="Include" />
         <e p="TestDb.xaml.cs" t="Include" />
+      </e>
+      <e p="Tests" t="Include">
+        <e p="RepositoryTestSet.cs" t="Include" />
+        <e p="Test.cs" t="Include" />
       </e>
       <e p="WpfApp.csproj" t="IncludeRecursive" />
     </e>

@@ -69,7 +69,7 @@ namespace WpfApp.SubPages
 			var window = Window.GetWindow(this);
 			if (window == null) return;
 			window.KeyDown -= HandleKeyPress;
-			MainWindow.SetContentAsStoragesPage(_storage.Id);
+			MainWindow.ToMainScreen(_storage.Id);
 		}
 
 		/// <summary>

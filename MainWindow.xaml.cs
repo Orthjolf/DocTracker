@@ -1,6 +1,10 @@
-﻿using System;
-using System.Linq;
+﻿using System.Net.NetworkInformation;
+using System.Windows;
 using System.Windows.Controls;
+using WpfApp.DataProvider;
+using WpfApp.Domain;
+using WpfApp.Enum;
+using WpfApp.Service;
 using WpfApp.SubPages;
 using WpfApp.Temp;
 
@@ -8,29 +12,31 @@ namespace WpfApp
 {
 	public partial class MainWindow
 	{
-		private static MainWindow _instance;
+		public static MainWindow Instance;
 
-		private static MainContent _mainContent;
+		public static MainContent MainContent;
 
 		public MainWindow()
 		{
 			InitializeComponent();
-			_instance = this;
-//			_mainContent = new MainContent();
-//			RootContent.Content = _mainContent;
-			RootContent.Content = new TestDb();
 
-			showMsg();
+			DataBaseSwitcher.SetActiveDataBase(ConnectionChecker.ConnectionIsAvailable
+				? ConnectionType.Remote
+				: ConnectionType.Local);
+
+			localDbSeed.Generate();
+			NetworkChange.NetworkAvailabilityChanged += ConnectionChanged;
+
+			Instance = this;
+			RootContent.Content = new Login();
+//			RootContent.Content = new TestDb();
 		}
 
-		public async void showMsg()
+		private void ConnectionChanged(object sender, NetworkAvailabilityEventArgs e)
 		{
-//			var diag_dialog = new ModalTest();
-//			diag_dialog.Close_Button.Click += Close_Dialog;
-
-//			await this.ShowMetroDialogAsync(diag_dialog);
+			DataBaseSwitcher.SetActiveDataBase(e.IsAvailable ? ConnectionType.Remote : ConnectionType.Local);
+			Dispatcher.Invoke(() => SetContent(new Login()));
 		}
-
 
 		/// <summary>
 		/// Устанавливает содержимое главного окна
@@ -38,17 +44,25 @@ namespace WpfApp
 		/// <param name="content">Содержимое, которе будет отображаться</param>
 		public static void SetContent(UserControl content)
 		{
-			_instance.Content = content;
+			Instance.Content = content;
 		}
 
 		/// <summary>
-		/// Устанавливает содержимое главного окна панелью с ранее выбранным хранилищем
+		/// Возвращает содержимое окна к главному экрану с выбранным хранилищем
 		/// </summary>
 		/// <param name="selectedStorageId">Id ранее выбранного хранилища</param>
-		public static void SetContentAsStoragesPage(string selectedStorageId)
+		public static void ToMainScreen(string selectedStorageId = "")
 		{
-			_instance.Content = _mainContent;
-			_mainContent.SelectItem(selectedStorageId);
+			Instance.Content = MainContent;
+			MainContent.SelectItem(selectedStorageId);
+		}
+
+		/// <summary>
+		/// Перейти на экран логина
+		/// </summary>
+		public static void ToLoginScreen()
+		{
+			SetContent(new Login());
 		}
 	}
 }

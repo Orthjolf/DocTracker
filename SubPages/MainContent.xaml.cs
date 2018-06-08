@@ -1,57 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using MongoDB.Bson;
 using WpfApp.Domain;
 using WpfApp.SubPages.Modals;
 
 namespace WpfApp.SubPages
 {
-	public partial class MainContent
+	public partial class MainContent : UserControl
 	{
 		private List<Storage> Storages { get; set; }
 
 		private Storage _selectedStorage;
 
-		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
-
-		public MainContent()
+		public MainContent(User user)
 		{
 			InitializeComponent();
-
-			Task.Factory.StartNew(GetStorages)
-				.ContinueWith(result => UpdateUi());
-		}
-
-		/// <summary>
-		/// Получение списка складов
-		/// </summary>
-		private void GetStorages()
-		{
+			NavBar.Content = new NavBar(user);
 			Storages = Storage.Repository.GetAll().ToList();
-			_resetEvent.Set();
+			UpdateUi();
 		}
 
 		private void UpdateUi()
 		{
-			_resetEvent.WaitOne();
-			Dispatcher.Invoke(() =>
-			{
-				if (Storages.Any())
-				{
-					SetContent(Storages.First());
-					StorageMenuItems.ItemsSource = Storages;
-				}
-
-				LoadingIndicator.Visibility = Visibility.Hidden;
-				LoadingLabel.Visibility = Visibility.Hidden;
-				AddStorageButton.IsEnabled = true;
-				DeleteStorageButton.IsEnabled = true;
-			});
+			if (!Storages.Any()) return;
+			SetContent(Storages.First());
+			StorageMenuItems.ItemsSource = Storages;
 		}
 
 		/// <summary>
@@ -60,7 +35,11 @@ namespace WpfApp.SubPages
 		/// <param name="selectedStorageId">Id хранилища</param>
 		public void SelectItem(string selectedStorageId)
 		{
-			var storage = Storages.First(s => s.Id == selectedStorageId);
+			var storage = selectedStorageId == string.Empty
+				? Storages.FirstOrDefault()
+				: Storages.First(s => s.Id == selectedStorageId);
+
+			if (storage == null) return;
 			SetContent(storage);
 		}
 

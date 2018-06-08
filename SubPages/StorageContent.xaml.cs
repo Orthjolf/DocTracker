@@ -76,8 +76,8 @@ namespace WpfApp.SubPages
 				StorageId = _storageId,
 				Name = inputDialog.Name.Text,
 				Description = "",
-				MinDate = DateTime.MinValue,
-				MaxDate = DateTime.MinValue,
+				MinDate = null,
+				MaxDate = null,
 				ContractsCount = 0,
 			};
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
@@ -17,9 +18,12 @@ namespace WpfApp.DataProvider.MongoDb
 	{
 		private readonly string _type;
 
+		private readonly IMongoDatabase _db;
+
 		public MongoDbDataAccessLayer()
 		{
 			_type = typeof(T).ToString().Split('.').Last();
+			_db = MongoDbDataContext.Instance.Database;
 		}
 
 		/// <summary>
@@ -28,32 +32,38 @@ namespace WpfApp.DataProvider.MongoDb
 		/// <returns>Коллекция документов</returns>
 		private IMongoCollection<BsonDocument> GetCollection()
 		{
-			return MongoDbDataContext.Instance.Database.GetCollection<BsonDocument>(_type);
+			return _db.GetCollection<BsonDocument>(_type);
 		}
 
 		public T Get(string id)
 		{
 			var filter = new BsonDocument("_id", id).ToJson();
-			var bsonDocument = GetCollection().Find(filter).First();
-			return bsonDocument.Reconstitute<T>();
+			var document = GetCollection().Find(filter).First();
+			return BsonSerializer.Deserialize<T>(document);
 		}
 
 		public IReadOnlyCollection<T> GetAll()
 		{
 			var emptyFilter = new BsonDocument();
 			var bsonDocuments = GetCollection().Find(emptyFilter).ToList();
-			return bsonDocuments.Select(d => d.Reconstitute<T>()).ToList();
+			return bsonDocuments.Select(d => BsonSerializer.Deserialize<T>(d)).ToList();
 		}
 
 		public IReadOnlyCollection<T> GetFiltered(string filter)
 		{
 			var bsonDocuments = GetCollection().Find(filter).ToList();
-			return bsonDocuments.Select(d => d.Reconstitute<T>()).ToList();
+			return bsonDocuments.Select(d => BsonSerializer.Deserialize<T>(d)).ToList();
 		}
 
 		public void Add(T entity)
 		{
 			GetCollection().InsertOneAsync(entity.ToBsonDocument());
+		}
+
+		public void AddAll(List<T> entities)
+		{
+			var documents = entities.Select(e => e.ToBsonDocument());
+			GetCollection().InsertManyAsync(documents);
 		}
 
 		public void Update(T entity)
@@ -72,6 +82,12 @@ namespace WpfApp.DataProvider.MongoDb
 		public void DeleteById(string id)
 		{
 			GetCollection().DeleteOneAsync(d => d["_id"] == id);
+		}
+
+		public void DeleteAll()
+		{
+			var emptyFilter = new BsonDocument();
+			GetCollection().DeleteMany(emptyFilter);
 		}
 
 		public override string ToString()

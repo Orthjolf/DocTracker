@@ -14,10 +14,11 @@ namespace WpfApp.DataProvider.Repository
 	/// <typeparam name="T">Тип репозитория документов</typeparam>
 	public class Repository<T> : IDocumentRepository<T> where T : Entity
 	{
-		public Repository()
+		public static Repository<T> Instance { get; private set; }
+
+		private Repository()
 		{
-//			SetConnectionType(ConnectionType.Local);
-			SetConnectionType(ConnectionType.Remote);
+			Console.Write("Repository<" + typeof(T) + ">");
 		}
 
 		private static IDocumentRepository<T> _dataAccessLayer;
@@ -28,6 +29,8 @@ namespace WpfApp.DataProvider.Repository
 		/// <param name="type">Тип соединения с базой</param>
 		public static void SetConnectionType(ConnectionType type)
 		{
+			if (Instance == null) Instance = new Repository<T>();
+
 			_dataAccessLayer = type == ConnectionType.Local
 				? (IDocumentRepository<T>) new MongoDbDataAccessLayer<T>()
 				: new SqlServerDataAccessLayer<T>();
@@ -53,6 +56,11 @@ namespace WpfApp.DataProvider.Repository
 			_dataAccessLayer.Add(entity);
 		}
 
+		public void AddAll(List<T> entities)
+		{
+			_dataAccessLayer.AddAll(entities);
+		}
+
 		public void Update(T entity)
 		{
 			_dataAccessLayer.Update(entity);
@@ -66,6 +74,11 @@ namespace WpfApp.DataProvider.Repository
 		public void DeleteById(string id)
 		{
 			_dataAccessLayer.DeleteById(id);
+		}
+
+		public void DeleteAll()
+		{
+			_dataAccessLayer.DeleteAll();
 		}
 	}
 }

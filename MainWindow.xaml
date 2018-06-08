@@ -6,5 +6,5 @@
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       mc:Ignorable="d"
                       Title="Doctracker" Height="600" Width="800">
-	<ContentPresenter x:Name="RootContent" />
+    <ContentPresenter x:Name="RootContent" Grid.Row="1" />
 </controls:MetroWindow>
