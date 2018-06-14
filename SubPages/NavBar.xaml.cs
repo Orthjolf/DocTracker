@@ -24,7 +24,8 @@ namespace WpfApp.SubPages
 			}
 
 			//todo сделать через наблюдателя
-			AdministrationButton.IsEnabled = ConnectionChecker.ConnectionIsAvailable;
+//			AdministrationButton.IsEnabled = ConnectionChecker.ConnectionIsAvailable;
+			AdministrationButton.IsEnabled = false;
 			UpdateButton.IsEnabled = true;
 			UserName.Content = user.Role.GetDescription() + " " + user.Name;
 		}

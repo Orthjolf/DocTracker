@@ -2,8 +2,10 @@
 using System.Windows;
 using System.Windows.Controls;
 using WpfApp.DataProvider;
+using WpfApp.DataProvider.WebApi;
 using WpfApp.Domain;
 using WpfApp.Enum;
+using WpfApp.Scanning;
 using WpfApp.Service;
 using WpfApp.SubPages;
 using WpfApp.Temp;
@@ -19,7 +21,9 @@ namespace WpfApp
 		public MainWindow()
 		{
 			InitializeComponent();
-
+//			WebApiHttpClient.RunQuery();
+//			return;
+			
 			DataBaseSwitcher.SetActiveDataBase(ConnectionChecker.ConnectionIsAvailable
 				? ConnectionType.Remote
 				: ConnectionType.Local);
