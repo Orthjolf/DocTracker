@@ -21,17 +21,15 @@ namespace WpfApp.DataProvider.Synchronizer
 
 		/// <summary>
 		/// Актуальна ли на данный момент локальная база данных.
-		/// Определяется путем сравнения дат последнего изменения таблицы
+		/// Актуальной она считается, если с момента обновления прошло не более суток
 		/// </summary>
 		public static bool LocalDbIsActual()
 		{
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Local);
 			LocalDbActualityInfo = LastTimeModifiedTableInfo.Repository.GetAll().ToList();
-
 			DataBaseSwitcher.SetActiveDataBase(ConnectionType.Remote);
-			RemoteDbActualityInfo = LastTimeModifiedTableInfo.Repository.GetAll().ToList();
 
-			return RemoteDbActualityInfo.Max(i => i.LastTimeModified) <= LocalDbActualityInfo.Max(i => i.LastTimeModified);
+			return LocalDbActualityInfo.Max(i => i.LastTimeModified) >= DateTime.Now.AddDays(-1).Ticks;
 		}
 
 		/// <summary>
