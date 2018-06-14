@@ -55,9 +55,6 @@ namespace WpfApp.Service
 			ConnectionIsNotAvailable = e.IsAvailable;
 
 			MainWindow.ToLoginScreen();
-
-//			Dispatcher.CurrentDispatcher.Invoke(MainWindow.ToLoginScreen);
-//			Application.Current.MainWindow?.Dispatcher.Invoke(MainWindow.ToLoginScreen);
 		}
 
 

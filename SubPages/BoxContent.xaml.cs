@@ -5,16 +5,20 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using WpfApp.DataProvider.Repository;
 using WpfApp.Debug;
 using WpfApp.Domain;
 using WpfApp.Enum;
+using WpfApp.Extensions;
 using WpfApp.Scanning;
-using static WpfApp.Service.Console;
+using WpfApp.Service;
 
 namespace WpfApp.SubPages
 {
 	public partial class BoxContent
 	{
+		public static BoxContent Instance;
+
 		private readonly Storage _storage;
 
 		private readonly Box _box;
@@ -23,7 +27,7 @@ namespace WpfApp.SubPages
 
 		private string _selectedContractId;
 
-		private ActionPerformed _action;
+		private readonly KeyboardHookHelper _keyboardHookHelper;
 
 		private readonly ManualResetEvent _resetEvent = new ManualResetEvent(false);
 
@@ -32,22 +36,18 @@ namespace WpfApp.SubPages
 			InitializeComponent();
 			_box = box;
 			_storage = Storage.Repository.Get(box.StorageId);
-			_action = ActionPerformed.PutInBox;
-			//TODO перепилить
-			_contracts = Contract.Repository.GetAll().Where(c => c.BoxId == _box.Id).ToList();
-//			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
+
+			Instance = this;
+			_keyboardHookHelper = new KeyboardHookHelper();
+			_keyboardHookHelper.SetHook();
+			BarCodeListener.CurrentBoxId = box.Id;
+			BarCodeListener.Action = ActionPerformed.PutInBox;
+
+			_contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
 			if (!_contracts.Any()) return;
 
 			ContractGridItems.ItemsSource = _contracts;
-
 			SetContent(_contracts.First());
-		}
-
-		private void AddKeyDownHandler(object sender, RoutedEventArgs e)
-		{
-			var window = Window.GetWindow(this);
-			if (window == null) return;
-			window.KeyDown += HandleKeyPress;
 		}
 
 		/// <summary>
@@ -66,9 +66,8 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private void BackOnMainScreen(object sender, RoutedEventArgs e)
 		{
-			var window = Window.GetWindow(this);
-			if (window == null) return;
-			window.KeyDown -= HandleKeyPress;
+			_keyboardHookHelper.Unhook();
+			;
 			MainWindow.ToMainScreen(_storage.Id);
 		}
 
@@ -105,40 +104,29 @@ namespace WpfApp.SubPages
 
 		private void SwitchScanningMode(object sender, RoutedEventArgs e)
 		{
-			_action = ScanningModeToggle.IsChecked.GetValueOrDefault()
+			BarCodeListener.Action = ScanningModeToggle.IsChecked.GetValueOrDefault()
 				? ActionPerformed.RemovedFromBox
 				: ActionPerformed.PutInBox;
-		}
-
-		private void HandleKeyPress(object sender, KeyEventArgs e)
-		{
-			Write("Просканировано");
-			//@TODO убрать
-			if (e.Key != Key.Enter) return;
-			if (ScanningCommand.IsWorking) return;
-
-			Task.Factory.StartNew(PerformCommand)
-				.ContinueWith(result => UpdateUi());
 		}
 
 		/// <summary>
 		/// Производит действие команды при сканировании
 		/// </summary>
-		private void PerformCommand()
+		public void PerformCommand()
 		{
-			Dispatcher.Invoke(() =>
-			{
-				Success.Visibility = Visibility.Hidden;
-				Processing.Visibility = Visibility.Visible;
-				LoadingIndicator.Visibility = Visibility.Visible;
-				ScanningModeToggle.IsEnabled = false;
-			});
-			var barCode = RandomBarCodeGenerator.GetRandomBarCode();
-			ScanningCommand.DoWork(_box.Id, barCode, _action);
-			//TODO перепилить
-			_contracts = Contract.Repository.GetAll().Where(c => c.BoxId == _box.Id).ToList();
-//			_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
-			_resetEvent.Set();
+			Task.Factory.StartNew(() =>
+				{
+					Dispatcher.Invoke(() =>
+					{
+						Success.Visibility = Visibility.Hidden;
+						Processing.Visibility = Visibility.Visible;
+						LoadingIndicator.Visibility = Visibility.Visible;
+						ScanningModeToggle.IsEnabled = false;
+					});
+					_contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
+					_resetEvent.Set();
+				})
+				.ContinueWith(result => UpdateUi());
 		}
 
 		/// <summary>
