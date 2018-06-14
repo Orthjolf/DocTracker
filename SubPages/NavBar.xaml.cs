@@ -23,9 +23,7 @@ namespace WpfApp.SubPages
 				AdministrationButton.Visibility = Visibility.Visible;
 			}
 
-			//todo сделать через наблюдателя
-//			AdministrationButton.IsEnabled = ConnectionChecker.ConnectionIsAvailable;
-			AdministrationButton.IsEnabled = false;
+			AdministrationButton.Visibility = Visibility.Hidden;
 			UpdateButton.IsEnabled = true;
 			UserName.Content = user.Role.GetDescription() + " " + user.Name;
 		}

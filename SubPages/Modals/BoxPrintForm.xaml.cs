@@ -12,7 +12,9 @@ using System.Windows.Documents;
 using System.Windows.Threading;
 using System.Windows.Xps.Packaging;
 using System.Windows.Xps.Serialization;
+using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
+using WpfApp.Extensions;
 
 namespace WpfApp.SubPages.Modals
 {
@@ -37,9 +39,7 @@ namespace WpfApp.SubPages.Modals
 
 		private List<string> GetBoxInfo(Box box)
 		{
-			//TODO перепилить
-			var contracts = Contract.Repository.GetAll().Where(c => c.BoxId == box.Id).ToList();
-//			var contracts = Contract.Repository.GetByBoxId(_box.Id).ToList();
+			var contracts = Contract.Repository.GetByBoxId(box.Id).ToList();
 			return new List<string>
 			{
 				box.Name,

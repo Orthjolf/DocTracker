@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Threading;
+using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
 using WpfApp.Enum;
+using WpfApp.Extensions;
 using WpfApp.Service;
 using WpfApp.Temp;
 using Console = WpfApp.Service.Console;
@@ -56,9 +58,9 @@ namespace WpfApp.Scanning
 		/// <param name="id">Идентификатор коробки</param>
 		private static void DeleteContract(string boxId, string id)
 		{
-			//TODO переделать
-			var contracts = Contract.Repository.GetAll().Where(c => c.BoxId == boxId).ToList();
+			var contracts = Contract.Repository.GetByBoxId(boxId);
 			if (!contracts.Any()) return;
+
 			var lastContract = contracts.Last();
 			Contract.Repository.DeleteById(lastContract.Id);
 			Console.Write($"Договор с номером {lastContract.Number} удален");
@@ -70,9 +72,7 @@ namespace WpfApp.Scanning
 		/// <param name="boxId">Идентификатор коробки</param>
 		private static void UpdateBox(string boxId)
 		{
-			//TODO переделать
-			var contracts = Contract.Repository.GetAll().Where(c => c.BoxId == boxId).ToList();
-//			var contracts = Contract.Repository.GetByBoxId(boxId).ToList();
+			var contracts = Contract.Repository.GetByBoxId(boxId).ToList();
 
 			var box = Box.Repository.Get(boxId);
 			if (contracts.Any())

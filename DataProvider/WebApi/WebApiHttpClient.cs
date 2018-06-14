@@ -35,6 +35,7 @@ namespace WpfApp.DataProvider.WebApi
 			RunAsync().GetAwaiter().GetResult();
 		}
 
+		//TODO: Реализовать взаимодействие с WebApi
 		static async Task RunAsync()
 		{
 			Client.BaseAddress = new Uri("http://localhost:52316/");

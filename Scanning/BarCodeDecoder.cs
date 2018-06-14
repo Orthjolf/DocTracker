@@ -1,14 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WpfApp.Service
+namespace WpfApp.Scanning
 {
 	public static class BarCodeDecoder
 	{
 		private static char[] SourceCharacters =>
-			"01234567890абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.-/".ToCharArray();
+			"0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.-/".ToCharArray();
 
 		private const int LengthOfId = 8;
+
+		/// <summary>
+		/// Восстанавливает ID и номер договора из зашифрованного кода
+		/// </summary>
+		/// <param name="code">Код</param>
+		/// <returns>Пара ID/Номер договора</returns>
+		public static KeyValuePair<string, string> Reconstitute(string code)
+		{
+			var id = GetId(code);
+			var number = GetContractNumber(code);
+			return new KeyValuePair<string, string>(id, DecodeContractNumber(number));
+		}
 
 		/// <summary>
 		/// Расшифровывает номер договора
@@ -44,18 +56,6 @@ namespace WpfApp.Service
 		private static string GetContractNumber(string code)
 		{
 			return code.Substring(LengthOfId, code.Length - LengthOfId);
-		}
-
-		/// <summary>
-		/// Восстанавливает код и номер договора из зашифрованного кода
-		/// </summary>
-		/// <param name="code">Код</param>
-		/// <returns>Пара ID/Номер договора</returns>
-		public static KeyValuePair<string, string> Reconstitute(string code)
-		{
-			var id = GetId(code);
-			var number = GetContractNumber(code);
-			return new KeyValuePair<string, string>(id, DecodeContractNumber(number));
 		}
 	}
 }

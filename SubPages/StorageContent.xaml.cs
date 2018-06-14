@@ -8,7 +8,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using WpfApp.DataProvider.Repository;
 using WpfApp.Domain;
+using WpfApp.Extensions;
 using WpfApp.Service;
 using WpfApp.SubPages.Modals;
 using Action = System.Action;
@@ -37,9 +39,7 @@ namespace WpfApp.SubPages
 
 		private void GetBoxes()
 		{
-			//@TODO переписать
-//			_boxes = Box.Repository.GetByStorageId(_storageId).ToList();
-			_boxes = Box.Repository.GetAll().Where(b => b.StorageId == _storageId).ToList();
+			_boxes = Box.Repository.GetByStrorageId(_storageId).ToList();
 			_resetEvent.Set();
 		}
 

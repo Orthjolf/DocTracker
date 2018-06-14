@@ -9,8 +9,6 @@ namespace WpfApp.DataProvider.Synchronizer
 {
 	public static class DbSynchronizer
 	{
-		private const string FileName = @"LocalDbIsActual.txt";
-
 		/// <summary>
 		/// Информация о датах последних изменений таблиц в локальной базе
 		/// </summary>

@@ -107,6 +107,7 @@
     <Compile Include="DataProvider\DataBaseSwitcher.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataAccessLayer.cs" />
     <Compile Include="DataProvider\MongoDb\MongoDbDataContext.cs" />
+    <Compile Include="DataProvider\Repository\GenericRepositoryExtensions.cs" />
     <Compile Include="DataProvider\Repository\IDocumentRepository.cs" />
     <Compile Include="DataProvider\Repository\Repository.cs" />
     <Compile Include="DataProvider\SqlServer\SqlServerDataAccessLayer.cs" />

@@ -7,9 +7,22 @@ namespace WpfApp.Temp
 	public static class BarCodeEncoder
 	{
 		private static char[] SourceCharacters =>
-			"01234567890абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.-/".ToCharArray();
+			"0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.-/".ToCharArray();
 
 		private const int LengthOfId = 8;
+
+		/// <summary>
+		/// Кодирует ID и номер договора в числовой код
+		/// </summary>
+		/// <param name="id">Id договора меньше 8 символов</param>
+		/// <param name="contractNumber">Номер договора</param>
+		/// <returns>Числовой код</returns>
+		public static string BuildCode(string id, string contractNumber)
+		{
+			var encodedId = EncodeNumericString(id);
+			var encodedContractNumber = EncodeStringWithCharacters(contractNumber);
+			return encodedId + encodedContractNumber;
+		}
 
 		/// <summary>
 		/// Формирует числовой код на основе строки с цифрами, буквами и спец. символами
@@ -64,19 +77,6 @@ namespace WpfApp.Temp
 		{
 			var index = Array.IndexOf(SourceCharacters, c);
 			return (index < 10 ? "0" : "") + index;
-		}
-
-		/// <summary>
-		/// Кодирует ID и номер договора в числовой код
-		/// </summary>
-		/// <param name="id">Id договора меньше 8 символов</param>
-		/// <param name="contractNumber">Номер договора</param>
-		/// <returns>Числовой код</returns>
-		public static string BuildCode(string id, string contractNumber)
-		{
-			var encodedId = EncodeNumericString(id);
-			var encodedContractNumber = EncodeStringWithCharacters(contractNumber);
-			return encodedId + encodedContractNumber;
 		}
 	}
 }

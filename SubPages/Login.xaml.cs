@@ -3,8 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using MahApps.Metro.Controls.Dialogs;
+using WpfApp.DataProvider.Repository;
 using WpfApp.DataProvider.Synchronizer;
 using WpfApp.Domain;
+using WpfApp.Extensions;
 using WpfApp.Service;
 
 namespace WpfApp.SubPages
@@ -27,8 +29,7 @@ namespace WpfApp.SubPages
 		/// </summary>
 		private void LoginButtonClick(object sender, RoutedEventArgs e)
 		{
-			//todo сделать нормальный репозиторий
-			var user = User.Repository.GetAll().FirstOrDefault(u => u.Name == UserName.Text);
+			var user = User.Repository.GetByName(UserName.Text);
 			if (user == null)
 			{
 				Info.Content = "Не найден пользователь с именем " + UserName.Text;
